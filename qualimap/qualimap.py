@@ -10,8 +10,8 @@ def main():
         jar_dir = real_dirname(sys.argv[0])
         #if args.find("Xmx") > 0:
 	if args.find("Xmx") > 0:
-        	args=' '.join(sys.argv[3:])
-        	cmd = "java " + ' '.join(sys.argv[1:2]+ ["-classpath ",
+        	args=' '.join(sys.argv[2:])
+        	cmd = "java " + ' '.join([sys.argv[1], "-classpath ",
 							os.path.join(jar_dir,"qualimap.jar") + ":" + os.path.join(jar_dir,"lib/*"), 
 							"org.bioinfo.ngs.qc.qualimap.main.NgsSmartMain",
 							 args])
