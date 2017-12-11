@@ -1,0 +1,43 @@
+package:
+  name: geopandas
+  version: "0.2.1"
+
+source:
+  fn: geopandas-0.2.1.tar.gz
+  url: https://pypi.python.org/packages/02/5a/62ba0dc9cf9b10071e3552fe00ced345cc56ca2a97d95ce63e5e3a7e179b/geopandas-0.2.1.tar.gz
+  md5: a626ed98e305cbc023afa2d299e5e521
+
+build:
+  script: pip install --no-deps .
+  number: 1
+
+requirements:
+  build:
+    - python
+    - pandas ==0.20.3
+    - shapely ==1.5.16
+    - fiona ==1.7.3
+    - descartes ==1.1.0
+    - pyproj ==1.9.5.1
+
+  run:
+    - python
+    - pandas ==0.20.3
+    - shapely ==1.5.16
+    - fiona ==1.7.3
+    - descartes ==1.1.0
+    - pyproj ==1.9.5.1
+
+test:
+  # Python imports
+  imports:
+    - geopandas
+    - geopandas.datasets
+    - geopandas.io
+    - geopandas.tools
+
+about:
+  home: http://geopandas.org
+  license: BSD
+  summary: 'Geographic pandas extensions'
+  license_family: BSD
