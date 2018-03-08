@@ -1,19 +1,15 @@
-# GNU Parallel
-# updated to latest from https://github.com/ostrokach/conda-recipes-extra/tree/master/parallel
-
 package:
   name: parallel
-  version: 20160622
+  version: "20171022"
 
 source:
-  url: http://ftpmirror.gnu.org/parallel/parallel-20160622.tar.bz2
-  fn: parallel-20160622.tar.bz2
-  md5: 2050d01356921fee8b07c531576b5541
+  url: http://ftp.wayne.edu/gnu/parallel/parallel-20171022.tar.bz2
+  sha256: f7e2bb7467cd3e87c5488e324950f2710e5d6cc9c9b3c33931e71d7a2d08f8a2
 
 requirements:
   build:
   run:
-    - perl 5.22.2.1
+    - perl ==5.26.0
 
 test:
   commands:

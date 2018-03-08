@@ -1,24 +1,15 @@
 package:
   name: picard
-  version: "2.11.1"
+  version: 2.13.2
 
 source:
   fn: picard.jar
-  url: https://github.com/broadinstitute/picard/releases/download/2.11.0/picard.jar
-  md5: dcc9f8f821ccb0344191d504dd59669c
-
-build:
-  number: 0
-  skip: False
+  url: https://github.com/broadinstitute/picard/releases/download/2.13.2/picard.jar
+  sha1: f8a2d07a082957ba8e7fb8f73d5d301ff08eb7f3
 
 requirements:
-  build:
-    #- java-jdk >=8
-    - python
   run:
-    - openjdk >=1.8.0.102
-    #- java-jdk >=8
-    - python
+    - openjdk
 
 test:
   commands:
