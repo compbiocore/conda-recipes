@@ -1,0 +1,30 @@
+package:
+  name: fuzzywuzzy
+  version: "0.15.1"
+
+source:
+  fn: fuzzywuzzy-0.15.1.tar.gz
+  url: https://pypi.python.org/packages/26/5a/e03ff762537b100b3e987071698d9942b669a32a46f87968c515cad44df2/fuzzywuzzy-0.15.1.tar.gz
+  md5: fd587ade352d3f337ca0288a7418cf0b
+
+build:
+  script: pip install --no-deps .
+
+requirements:
+  build:
+    - python
+    - setuptools
+
+  run:
+    - python
+
+test:
+  # Python imports
+  imports:
+    - fuzzywuzzy
+
+about:
+  home: https://github.com/seatgeek/fuzzywuzzy
+  license: GPL
+  summary: 'Fuzzy string matching in python'
+  license_family: GPL

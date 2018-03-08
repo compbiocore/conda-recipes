@@ -1,0 +1,38 @@
+package:
+  name: gslab_tools
+  version: "3.0.5"
+
+source:
+  git_url: https://github.com/gslab-econ/gslab_python
+  git_tag: 3.0.5
+
+build:
+  script: pip install --no-deps .
+  number: 1
+
+requirements:
+  build:
+    - python
+    - requests ==2.17.3
+    - coverage ==4.4.1
+    - pytest-runner ==2.11.1
+  run:
+    - python
+    - requests ==2.17.3
+    - coverage ==4.4.1
+    - pytest-runner ==2.11.1
+
+test:
+  # Python imports
+  imports:
+    - gencat
+    - gslab_fill
+    - gslab_make
+    - gslab_make.private
+    - gslab_scons
+
+about:
+  home: https://github.com/gslab-econ/gslab_python
+  license: MIT
+  summary: 'Python tools for GSLab'
+  license_family: MIT
