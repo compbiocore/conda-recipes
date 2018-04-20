@@ -1,0 +1,20 @@
+# This is a meta-package installing the threaded version of PERL from conda-forge
+
+package:
+  name: perl-threaded
+  version: 5.22.0
+
+build:
+  number: 12
+
+requirements:
+  run:
+    - perl
+test:
+  commands:
+    - perl --help > /dev/null
+
+about:
+  home: http://www.perl.org/
+  license: Perl
+  summary: The Perl language.

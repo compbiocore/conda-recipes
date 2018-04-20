@@ -1,0 +1,34 @@
+package:
+  name: perl-gdgraph
+  version: "1.49"
+
+source:
+  fn: GDGraph-1.49.tar.gz
+  url: https://cpan.metacpan.org/authors/id/R/RU/RUZ/GDGraph-1.49.tar.gz
+  md5: 8bb270a30fea27491302b39b701b3d4e
+
+build:
+  number: 3
+
+requirements:
+  build:
+    - gcc # [linux]
+    - llvm # [osx]
+    - perl
+    - perl-gdtextutil
+    - perl-gd
+
+  run:
+    - libgcc # [not osx]
+    - perl
+    - perl-gd
+    - perl-gdtextutil
+
+test:
+  imports:
+    - GD::Graph
+
+about:
+  home: http://metacpan.org/pod/GDGraph
+  license: perl_5
+  summary: 'Produces charts with GD'
