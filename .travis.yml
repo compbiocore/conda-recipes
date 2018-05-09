@@ -1,0 +1,19 @@
+language: generic
+
+os:
+  -linux
+
+sudo: requied
+services:
+  - docker
+
+# set up docker image
+before_install:
+  - docker pull mhowison/conda-build:v2
+  - docker run -it -v conda-recipes:/home/conda/recipes mhowison/conda-build:v2
+#  - docker ps -a
+#  - docker run...
+
+install:
+  - conda-build-all conda-recipes
+#  - conda install your-package --use-local
