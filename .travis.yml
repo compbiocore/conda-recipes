@@ -3,17 +3,13 @@ language: generic
 os:
   -linux
 
-sudo: requied
+sudo: required
 services:
   - docker
 
 # set up docker image
 before_install:
   - docker pull mhowison/conda-build:v2
-  - docker run -it -v conda-recipes:/home/conda/recipes mhowison/conda-build:v2
-#  - docker ps -a
-#  - docker run...
-
-install:
-  - conda-build-all conda-recipes
-#  - conda install your-package --use-local
+  - docker run --name ccv -v conda-recipes:/home/conda/recipes mhowison/conda-build:v2
+  - docker start ccv
+  - docker exec ccv python /home/conda/recipes/build.py /home/conda/recipes compbiocore
