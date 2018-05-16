@@ -19,28 +19,6 @@ requirements:
     - libgcc
     - perl
 
-test:
-  imports:
-    - Module::Build
-    - Module::Build::Base
-    - Module::Build::Compat
-    - Module::Build::Config
-    - Module::Build::Cookbook
-    - Module::Build::Dumper
-    - Module::Build::Notes
-    - Module::Build::PPMMaker
-    - Module::Build::Platform::Default
-    - Module::Build::Platform::MacOS
-    - Module::Build::Platform::Unix
-    - Module::Build::Platform::VMS
-    - Module::Build::Platform::VOS
-    - Module::Build::Platform::Windows
-    - Module::Build::Platform::aix
-    - Module::Build::Platform::cygwin
-    - Module::Build::Platform::darwin
-    - Module::Build::Platform::os2
-    - Module::Build::PodParser
-
 about:
   home: http://metacpan.org/pod/Module-Build
   license: perl_5
