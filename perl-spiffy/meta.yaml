@@ -8,7 +8,7 @@ source:
   md5: 2ec7007c111a6bc2775bb7c57673a24b
 
 build:
-  number: 1
+  number: 2
 
 requirements:
   build:
@@ -18,8 +18,8 @@ requirements:
     - perl
 
 test:
-  imports:
-    - Spiffy
+  commands:
+   - perl -e "use Spiffy"
 
 about:
   home: https://github.com/ingydotnet/spiffy-pm

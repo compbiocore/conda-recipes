@@ -12,19 +12,15 @@ build:
 
 requirements:
   build:
-    - perl-threaded
+    - perl
     - perl-capture-tiny
     - perl-text-diff
     - perl-module-build
 
   run:
-    - perl-threaded
+    - perl
     - perl-capture-tiny
     - perl-text-diff
-
-test:
-  imports:
-    - Test::Differences
 
 about:
   home: http://metacpan.org/pod/Test-Differences

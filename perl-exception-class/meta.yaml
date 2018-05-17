@@ -8,23 +8,23 @@ source:
   md5: 07cd7a38be5f8134955e943cf666d453
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
-    - perl-threaded
+    - perl
     - perl-class-data-inheritable
     - perl-devel-stacktrace
 
   run:
-    - perl-threaded
+    - perl
     - perl-class-data-inheritable
     - perl-devel-stacktrace
 
 test:
-  imports:
-    - Exception::Class
-    - Exception::Class::Base
+  commands:
+   - perl -e "use Exception::Class"
+   - perl -e "use Exception::Class::Base"
 
 about:
   home: http://metacpan.org/release/Exception-Class

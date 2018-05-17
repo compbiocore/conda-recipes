@@ -8,7 +8,7 @@ source:
   md5: 572d355026fb0b87fc2b8c64b83cada0
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -20,8 +20,8 @@ requirements:
     - perl-sub-uplevel
 
 test:
-  imports:
-    - Test::Exception
+  commands:
+   - perl -e "use Test::Exception"
 
 about:
   home: https://github.com/Test-More/test-exception

@@ -17,11 +17,6 @@ requirements:
   run:
     - perl-threaded
 
-test:
-  # Perl 'use' tests
-  imports:
-    - Capture::Tiny
-
 about:
   home: https://github.com/dagolden/Capture-Tiny
   license: Apache 2.0

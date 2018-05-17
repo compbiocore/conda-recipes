@@ -23,9 +23,8 @@ requirements:
     - perl
 
 test:
-  imports:
-    - App::cpanminus
   commands:
+    - perl -e "use App::cpanminus"
     - HOME=/tmp cpanm --help
 
 about:

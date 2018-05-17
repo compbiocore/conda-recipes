@@ -19,10 +19,6 @@ requirements:
     - perl
     - perl-algorithm-diff
 
-test:
-  imports:
-    - Text::Diff
-
 about:
   home: http://metacpan.org/pod/Text-Diff
   license: perl_5

@@ -8,19 +8,19 @@ source:
   md5: 826ed2bc7cdd8d852d7d2d8b69aa313c
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
-    - perl-threaded
+    - perl
 
   run:
-    - perl-threaded
+    - perl
 
 test:
-  imports:
-    - Devel::StackTrace
-    - Devel::StackTrace::Frame
+  commands:
+   - perl -e "use Devel::StackTrace"
+   - perl -e "use Devel::StackTrace::Frame"
 
 about:
   home: http://metacpan.org/release/Devel-StackTrace
