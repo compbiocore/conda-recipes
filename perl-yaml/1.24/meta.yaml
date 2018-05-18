@@ -12,21 +12,21 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
-    - perl >=5.22,<6.0
+    - perl
     - perl-extutils-makemaker
     - perl-test-yaml
     - perl-test-more
 
   run:
-    - perl >=5.22,<6.0
+    - perl
 
 test:
-  impprts:
-    - YAML
+  commands:
+    - perl -e "use YAML"
 
 about:
   home: https://github.com/ingydotnet/yaml-pm

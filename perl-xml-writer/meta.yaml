@@ -12,15 +12,15 @@ build:
 
 requirements:
   build:
-    - perl-threaded
+    - perl
 
   run:
-    - perl-threaded
+    - perl
 
 test:
   # Perl 'use' tests
-  imports:
-    - XML::Writer
+  commands:
+    - perl -e "use XML::Writer"
 
 about:
   home: http://metacpan.org/pod/XML-Writer

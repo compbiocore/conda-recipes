@@ -8,29 +8,29 @@ source:
   md5: d840cbefa57c23041f0bed14940a6b22
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
-    - perl-threaded
+    - perl
 
   run:
-    - perl-threaded
+    - perl
 
 test:
   # Perl 'use' tests
   imports:
-    - XML::XPathEngine
-    - XML::XPathEngine::Boolean
-    - XML::XPathEngine::Expr
-    - XML::XPathEngine::Function
-    - XML::XPathEngine::Literal
-    - XML::XPathEngine::LocationPath
-    - XML::XPathEngine::NodeSet
-    - XML::XPathEngine::Number
-    - XML::XPathEngine::Root
-    - XML::XPathEngine::Step
-    - XML::XPathEngine::Variable
+    - perl -e "use XML::XPathEngine"
+    - perl -e "use XML::XPathEngine::Boolean"
+    - perl -e "use XML::XPathEngine::Expr"
+    - perl -e "use XML::XPathEngine::Function"
+    - perl -e "use XML::XPathEngine::Literal"
+    - perl -e "use XML::XPathEngine::LocationPath"
+    - perl -e "use XML::XPathEngine::NodeSet"
+    - perl -e "use XML::XPathEngine::Number"
+    - perl -e "use XML::XPathEngine::Root"
+    - perl -e "use XML::XPathEngine::Step"
+    - perl -e "use XML::XPathEngine::Variable"
 
 about:
   home: http://metacpan.org/pod/XML-XPathEngine

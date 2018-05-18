@@ -8,46 +8,46 @@ source:
   md5: 2914b0e6b35c35f657d426fba29b4520
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
-    - perl-threaded
+    - perl
     - perl-exporter-tiny
     - perl-moo  # for testing compatibility
 
   run:
-    - perl-threaded
+    - perl
     - perl-exporter-tiny
 
 test:
   # Perl 'use' tests
-  imports:
-    - Type::Coercion
-    #- Type::Coercion::FromMoose
-    - Type::Coercion::Union
-    - Type::Library
-    - Type::Params
-    - Type::Parser
-    - Type::Registry
-    - Type::Tiny
-    - Type::Tiny::Class
-    - Type::Tiny::Duck
-    - Type::Tiny::Enum
-    - Type::Tiny::Intersection
-    - Type::Tiny::Role
-    - Type::Tiny::Union
-    - Type::Utils
-    - Types::Common::Numeric
-    - Types::Common::String
-    - Types::Standard
-    - Types::Standard::ArrayRef
-    - Types::Standard::Dict
-    - Types::Standard::HashRef
-    - Types::Standard::Map
-    - Types::Standard::ScalarRef
-    - Types::Standard::Tuple
-    - Types::TypeTiny
+  commands:
+    - perl -e "use Type::Coercion"
+    #- perl -e "use Type::Coercion::FromMoose"
+    - perl -e "use Type::Coercion::Union"
+    - perl -e "use Type::Library"
+    - perl -e "use Type::Params"
+    - perl -e "use Type::Parser"
+    - perl -e "use Type::Registry"
+    - perl -e "use Type::Tiny"
+    - perl -e "use Type::Tiny::Class"
+    - perl -e "use Type::Tiny::Duck"
+    - perl -e "use Type::Tiny::Enum"
+    - perl -e "use Type::Tiny::Intersection"
+    - perl -e "use Type::Tiny::Role"
+    - perl -e "use Type::Tiny::Union"
+    - perl -e "use Type::Utils"
+    - perl -e "use Types::Common::Numeric"
+    - perl -e "use Types::Common::String"
+    - perl -e "use Types::Standard"
+    - perl -e "use Types::Standard::ArrayRef"
+    - perl -e "use Types::Standard::Dict"
+    - perl -e "use Types::Standard::HashRef"
+    - perl -e "use Types::Standard::Map"
+    - perl -e "use Types::Standard::ScalarRef"
+    - perl -e "use Types::Standard::Tuple"
+    - perl -e "use Types::TypeTiny"
 
 about:
   home: https://metacpan.org/release/Type-Tiny

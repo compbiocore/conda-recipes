@@ -8,21 +8,21 @@ source:
   md5: f350f1f8c13652bf85da172380b39ec8
 
 build:
-  number: 1
+  number: 2
 
 requirements:
   build:
-    - perl-threaded
+    - perl
     - perl-test-fatal
 
   run:
-    - perl-threaded
+    - perl
 
 test:
   # Perl 'use' tests
-  imports:
-    - Role::Tiny
-    - Role::Tiny::With
+  commands:
+    - perl -e "use Role::Tiny"
+    - perl -e "use Role::Tiny::With"
 
 about:
   home: http://metacpan.org/pod/Role-Tiny

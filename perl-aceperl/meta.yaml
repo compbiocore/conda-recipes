@@ -10,21 +10,21 @@ source:
     - makefile-options.patch
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
-    - perl-threaded
+    - perl
 #    - perl-cache-cache
 
   run:
-    - perl-threaded
+    - perl
 #    - perl-cache-cache
 
 test:
   # Perl 'use' tests
-  imports:
-    - Ace
+  commands:
+    - perl -e "use Ace"
 
 about:
   home: http://metacpan.org/pod/AcePerl

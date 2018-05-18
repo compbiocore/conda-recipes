@@ -8,23 +8,23 @@ source:
   md5: ba4445ee72e2f3c29da332cb0119a2ad
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
-    - perl-threaded
+    - perl
 
   run:
-    - perl-threaded
+    - perl
 
 test:
   # Perl 'use' tests
   imports:
-    - SVG
-    - SVG::DOM
-    - SVG::Element
-    - SVG::Extension
-    - SVG::XML
+    - perl -e "use SVG"
+    - perl -e "use SVG::DOM"
+    - perl -e "use SVG::Element"
+    - perl -e "use SVG::Extension"
+    - perl -e "use SVG::XML"
 
 about:
   home: http://metacpan.org/pod/SVG

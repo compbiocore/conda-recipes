@@ -8,25 +8,25 @@ source:
   md5: ed0ae02d25d7f1e89456d4d69732adc2
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
-    - perl-threaded
+    - perl
     - perl-http-date
     - perl-http-message
     - perl-lwp-mediatypes
 
   run:
-    - perl-threaded
+    - perl
     - perl-http-date
     - perl-http-message
     - perl-lwp-mediatypes
 
 test:
   # Perl 'use' tests
-  imports:
-    - HTTP::Daemon
+  commands:
+    - perl -e "use HTTP::Daemon"
 
 about:
   home: http://metacpan.org/pod/HTTP-Daemon

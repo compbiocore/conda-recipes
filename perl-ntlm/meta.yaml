@@ -8,21 +8,21 @@ source:
   md5: da314ee94b14af2a2f39b6f2c0046e73
 
 build:
-  number: 1
+  number: 2
 
 requirements:
   build:
-    - perl-threaded
+    - perl
     - perl-digest-hmac
 
   run:
-    - perl-threaded
+    - perl
     - perl-digest-hmac
 
 test:
   # Perl 'use' tests
-  imports:
-    - Authen::NTLM
+  commands:
+    - perl -e "use Authen::NTLM"
 
 about:
   home: http://metacpan.org/pod/NTLM

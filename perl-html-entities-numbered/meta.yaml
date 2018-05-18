@@ -8,20 +8,20 @@ source:
   md5: 9bc61132c10aa506d2629b37a2012729
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
-    - perl-threaded
+    - perl
 
   run:
-    - perl-threaded
+    - perl
 
 test:
   # Perl 'use' tests
-  #imports:
-  #  - HTML::Entities::Numbered
-  #  - HTML::Entities::Numbered::Table
+  commands:
+    - perl -e "use HTML::Entities::Numbered"
+    - perl -e "use HTML::Entities::Numbered::Table"
 
 about:
   home: http://metacpan.org/pod/HTML-Entities-Numbered

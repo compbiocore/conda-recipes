@@ -8,18 +8,18 @@ source:
   md5: 74c540095d84e3f054d1f8703a73ef76
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
-    - perl-threaded
+    - perl
     - perl-xml-namespacesupport
     - perl-xml-sax
     - perl-xml-parser
     - perl-xml-sax-base
 
   run:
-    - perl-threaded
+    - perl
     - perl-xml-parser
     - perl-xml-sax-base
     - perl-xml-sax
@@ -27,9 +27,8 @@ requirements:
 
 test:
   # Perl 'use' tests
-  imports:
-    - XML::SAX::Expat
-
+  commands:
+    - perl -e "use XML::SAX::Expat"
 about:
   home: http://metacpan.org/pod/XML-SAX-Expat
   license: perl_5

@@ -8,19 +8,19 @@ source:
   md5: 222cca76161cd956d724286d36b607da
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
-    - perl-threaded
+    - perl
 
   run:
-    - perl-threaded
+    - perl
 
 test:
   # Perl 'use' tests
-  imports:
-    - XML::NamespaceSupport
+  commands:
+    - perl -e "use XML::NamespaceSupport"
 
 about:
   home: http://metacpan.org/pod/XML-NamespaceSupport

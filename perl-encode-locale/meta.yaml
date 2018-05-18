@@ -7,7 +7,7 @@ source:
   url: https://cpan.metacpan.org/authors/id/G/GA/GAAS/Encode-Locale-1.05.tar.gz
 
 build:
-  number: 4
+  number: 5
 
 requirements:
   build:
@@ -19,8 +19,8 @@ requirements:
     - perl
 
 test:
-  imports:
-    - Encode::Locale
+  commands:
+    - perl -e "use Encode::Locale"
 
 about:
   home: https://metacpan.org/pod/Encode::Locale

@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -19,17 +19,17 @@ requirements:
     - perl-mime-base64
     - perl-extutils-makemaker
     - openssl
-    - zlib {{CONDA_ZLIB}}*
+#    - zlib {{CONDA_ZLIB}}*
 
   run:
     - perl
     - perl-mime-base64
     - openssl
-    - zlib {{CONDA_ZLIB}}*
+#    - zlib {{CONDA_ZLIB}}*
 
 test:
-  imports:
-    - Net::SSLeay
+  commands:
+    - perl -e "use Net::SSLeay"
 
 about:
   home: http://metacpan.org/pod/Net::SSLeay

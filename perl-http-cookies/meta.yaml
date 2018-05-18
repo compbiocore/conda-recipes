@@ -8,23 +8,23 @@ source:
   md5: ecfd0eeb88512033352c2f13c9580f03
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
-    - perl-threaded
+    - perl
     - perl-http-date
     - perl-http-message
 
   run:
-    - perl-threaded
+    - perl
     - perl-http-date
     - perl-http-message
 
 test:
   # Perl 'use' tests
-  imports:
-    - HTTP::Cookies
+  commands:
+    - perl -e "use HTTP::Cookies"
 
 about:
   home: http://metacpan.org/pod/HTTP-Cookies

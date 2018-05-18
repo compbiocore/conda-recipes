@@ -12,11 +12,11 @@ build:
 
 requirements:
   build:
-    - perl >=5.22,<6.0
+    - perl
     - perl-test-yaml
 
   run:
-    - perl >=5.22,<6.0
+    - perl
 
 test:
   includes:

@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -23,8 +23,8 @@ requirements:
     - perl
 
 test:
-  imports:
-    - YAML::XS
+  commands:
+    - perl -e "use YAML::XS"
 
 about:
   home: https://github.com/ingydotnet/yaml-libyaml-pm

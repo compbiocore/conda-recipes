@@ -11,21 +11,21 @@ source:
    # - fix.patch
 
 build:
-  number: 3
+  number: 4
 
 requirements:
   build:
     - gcc
-    - perl-threaded
+    - perl
 
   run:
     - libgcc
-    - perl-threaded
+    - perl
 
 test:
   # Perl 'use' tests
-  imports:
-    - Scalar::Util
+  commands:
+    - perl -e "use Scalar::Util"
 
 about:
   home: http://metacpan.org/pod/Scalar-List-Utils

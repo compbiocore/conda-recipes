@@ -8,21 +8,21 @@ source:
   md5: 83f636b477741f3a014585bb9cc079a6
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
-    - perl-threaded
+    - perl
     - perl-http-date
 
   run:
-    - perl-threaded
+    - perl
     - perl-http-date
 
 test:
   # Perl 'use' tests
-  imports:
-    - File::Listing
+  commands:
+    - perl -e "use File::Listing"
 
 about:
   home: http://metacpan.org/pod/File-Listing

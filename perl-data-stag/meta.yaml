@@ -8,11 +8,11 @@ source:
   md5: f803acf74f1bfccc118aeac5483ee871
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
-    - perl-threaded
+    - perl
     - perl-io-string
     - perl-graph
     - perl-json
@@ -22,7 +22,7 @@ requirements:
     - perl-mldbm
 
   run:
-    - perl-threaded
+    - perl
     - perl-io-string
     - perl-graph
     - perl-json
@@ -32,37 +32,37 @@ requirements:
     - perl-mldbm
 
 test:
-  imports:
-    - Data::Stag
-    - Data::Stag::Arr2HTML
-    - Data::Stag::Base
-    - Data::Stag::BaseGenerator
-    - Data::Stag::BaseHandler
-    - Data::Stag::ChainHandler
-    - Data::Stag::DTDWriter
-    - Data::Stag::GraphHandler
-    - Data::Stag::HashDB
-    - Data::Stag::ITextParser
-    - Data::Stag::ITextWriter
-    - Data::Stag::IndentParser
-    - Data::Stag::IndentWriter
-    - Data::Stag::JSONWriter
-    - Data::Stag::PerlWriter
-    - Data::Stag::PodParser
-    #- Data::Stag::SAX2Stag   # fails; unable to find object method "DEAD"
-    - Data::Stag::Simple
-    - Data::Stag::StagDB
-    - Data::Stag::StagI
-    - Data::Stag::StagImpl
-    - Data::Stag::SxprParser
-    - Data::Stag::SxprWriter
-    - Data::Stag::Util
-    - Data::Stag::Writer
-    - Data::Stag::XMLParser
-    - Data::Stag::XMLWriter
-    - Data::Stag::XSLHandler
-    - Data::Stag::XSLTHandler
-    - Data::Stag::null
+  commands:
+    - perl -e "use Data::Stag"
+    - perl -e "use Data::Stag::Arr2HTML"
+    - perl -e "use Data::Stag::Base"
+    - perl -e "use Data::Stag::BaseGenerator"
+    - perl -e "use Data::Stag::BaseHandler"
+    - perl -e "use Data::Stag::ChainHandler"
+    - perl -e "use Data::Stag::DTDWriter"
+    - perl -e "use Data::Stag::GraphHandler"
+    - perl -e "use Data::Stag::HashDB"
+    - perl -e "use Data::Stag::ITextParser"
+    - perl -e "use Data::Stag::ITextWriter"
+    - perl -e "use Data::Stag::IndentParser"
+    - perl -e "use Data::Stag::IndentWriter"
+    - perl -e "use Data::Stag::JSONWriter"
+    - perl -e "use Data::Stag::PerlWriter"
+    - perl -e "use Data::Stag::PodParser"
+    #- perl -e "use Data::Stag::SAX2Stag   # fails; unable to find object method "DEAD""
+    - perl -e "use Data::Stag::Simple"
+    - perl -e "use Data::Stag::StagDB"
+    - perl -e "use Data::Stag::StagI"
+    - perl -e "use Data::Stag::StagImpl"
+    - perl -e "use Data::Stag::SxprParser"
+    - perl -e "use Data::Stag::SxprWriter"
+    - perl -e "use Data::Stag::Util"
+    - perl -e "use Data::Stag::Writer"
+    - perl -e "use Data::Stag::XMLParser"
+    - perl -e "use Data::Stag::XMLWriter"
+    - perl -e "use Data::Stag::XSLHandler"
+    - perl -e "use Data::Stag::XSLTHandler"
+    - perl -e "use Data::Stag::null"
 
 about:
   home: http://metacpan.org/pod/Data-Stag

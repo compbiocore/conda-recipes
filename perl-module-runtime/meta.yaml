@@ -8,20 +8,20 @@ source:
   md5: a6597bc25536a30476f0d75b64d35734
 
 build:
-  number: 1
+  number: 2
 
 requirements:
   build:
-    - perl-threaded
+    - perl
     - perl-module-build
 
   run:
-    - perl-threaded
+    - perl
 
 test:
   # Perl 'use' tests
-  imports:
-    - Module::Runtime
+  commands:
+    - perl -e "use Module::Runtime"
 
 about:
   home: http://metacpan.org/pod/Module-Runtime

@@ -10,22 +10,22 @@ source:
     - makefile-pl.patch
 
 build:
-  number: 1
+  number: 2
 
 requirements:
   build:
-    - perl-threaded
+    - perl
     - tidyp
 
   run:
-    - perl-threaded
+    - perl
     - tidyp
 
 test:
   # Perl 'use' tests
-  imports:
-    - HTML::Tidy
-    - HTML::Tidy::Message
+  commands:
+    - perl -e "use HTML::Tidy"
+    - perl -e "use HTML::Tidy::Message"
 
 about:
   home: http://github.com/petdance/html-tidy

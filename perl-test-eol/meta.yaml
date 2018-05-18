@@ -8,19 +8,19 @@ source:
   md5: 1255e6ef49c417845aa70441c4b40c90
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
-    - perl-threaded
+    - perl
 
   run:
-    - perl-threaded
+    - perl
 
 test:
   # Perl 'use' tests
-  imports:
-    - Test::EOL
+  commands:
+    - perl -e "use Test::EOL"
 
 about:
   home: http://metacpan.org/release/Test-EOL

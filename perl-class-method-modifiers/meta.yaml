@@ -8,21 +8,21 @@ source:
   md5: c6982e9e89325713d5afaff82cfe1744
 
 build:
-  number: 1
+  number: 2
 
 requirements:
   build:
-    - perl-threaded
+    - perl
     - perl-test-requires
     - perl-test-fatal
 
   run:
-    - perl-threaded
+    - perl
 
 test:
   # Perl 'use' tests
-  imports:
-    - Class::Method::Modifiers
+  commands:
+    - perl -e "use Class::Method::Modifiers"
 
 about:
   home: https://github.com/moose/Class-Method-Modifiers

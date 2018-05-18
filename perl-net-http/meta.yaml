@@ -8,26 +8,26 @@ source:
   md5: 3d84d17f64c7316d69e7eb7b4e292b9a
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
-    - perl-threaded
+    - perl
     - perl-io-socket-ssl
     - perl-uri
 
   run:
-    - perl-threaded
+    - perl
     - perl-io-socket-ssl
     - perl-uri
 
 test:
   # Perl 'use' tests
-  imports:
-    - Net::HTTP
-    - Net::HTTP::Methods
-    - Net::HTTP::NB
-    - Net::HTTPS
+  commands:
+    - perl -e "use Net::HTTP"
+    - perl -e "use Net::HTTP::Methods"
+    - perl -e "use Net::HTTP::NB"
+    - perl -e "use Net::HTTPS"
 
 about:
   home: http://metacpan.org/pod/Net-HTTP

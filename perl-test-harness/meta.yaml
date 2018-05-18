@@ -8,7 +8,7 @@ source:
   md5: c1ff25da5dfdf77adea13dc3465638dd
 
 build:
-  number: 2
+  number: 3
 
 requirements:
   build:
@@ -19,10 +19,10 @@ requirements:
 
 test:
   # Perl 'use' tests
-  imports:
-    - Test::Harness
-    - TAP::Harness
-    - TAP::Parser
+  commands:
+    - perl -e "use Test::Harness"
+    - perl -e "use TAP::Harness"
+    - perl -e "use TAP::Parser"
 
 about:
   home: http://testanything.org/

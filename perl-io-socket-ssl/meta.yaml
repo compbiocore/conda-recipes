@@ -8,21 +8,21 @@ source:
   md5: 9d1be9159475fe67afa5f2e238808086
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
-    - perl-threaded
+    - perl
     - perl-net-ssleay
 
   run:
-    - perl-threaded
+    - perl
     - perl-net-ssleay
 
 test:
   # Perl 'use' tests
-  imports:
-    - IO::Socket::SSL
+  commands:
+    - perl -e "use IO::Socket::SSL"
 
 about:
   home: https://github.com/noxxi/p5-io-socket-ssl

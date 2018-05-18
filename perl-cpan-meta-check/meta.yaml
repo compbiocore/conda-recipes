@@ -9,18 +9,18 @@ source:
 
 requirements:
   build:
-    - perl-threaded
+    - perl
     - perl-test-deep
 
   run:
-    - perl-threaded
+    - perl
 
 build:
-  number: 1
+  number: 2
 
 test:
-  imports:
-    - CPAN::Meta::Check
+  commands:
+    - perl -e "use CPAN::Meta::Check"
 
 about:
   home: http://metacpan.org/pod/CPAN-Meta-Check

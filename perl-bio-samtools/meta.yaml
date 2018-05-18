@@ -10,31 +10,31 @@ source:
     - build-pl.patch
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
-    - perl-threaded
+    - perl
     - perl-bioperl-core
     - perl-module-build
     - samtools <=0.1.17
-    - zlib {{CONDA_ZLIB}}*
+#    - zlib {{CONDA_ZLIB}}*
 
   run:
-    - perl-threaded
+    - perl
     - perl-bioperl-core
-    - zlib {{CONDA_ZLIB}}*
+#    - zlib {{CONDA_ZLIB}}*
 
 test:
-  imports:
-    - Bio::DB::Bam::AlignWrapper
-    - Bio::DB::Bam::Alignment
-    - Bio::DB::Bam::Pileup
-    - Bio::DB::Bam::PileupWrapper
-    - Bio::DB::Bam::Query
-    - Bio::DB::Bam::Target
-    - Bio::DB::Sam
-    - Bio::DB::Sam::Constants
+  commands:
+    - perl -e "use Bio::DB::Bam::AlignWrapper"
+    - perl -e "use Bio::DB::Bam::Alignment"
+    - perl -e "use Bio::DB::Bam::Pileup"
+    - perl -e "use Bio::DB::Bam::PileupWrapper"
+    - perl -e "use Bio::DB::Bam::Query"
+    - perl -e "use Bio::DB::Bam::Target"
+    - perl -e "use Bio::DB::Sam"
+    - perl -e "use Bio::DB::Sam::Constants"
 
 about:
   home: 'http://search.cpan.org/~lds/Bio-SamTools-1.43/'

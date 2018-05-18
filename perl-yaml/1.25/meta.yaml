@@ -1,0 +1,64 @@
+{% set name = "perl-yaml" %}
+{% set version = "1.25" %}
+{% set sha256 = "be05ffd948eee71d5f7e02151eeddcfd39d90c799885c1ca8b048b1a6b5c819a" %}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  fn: YAML-1.25.tar.gz
+  url: https://cpan.metacpan.org/authors/id/T/TI/TINITA/YAML-1.25.tar.gz
+  sha256: {{ sha256 }}
+
+# If this is a new build for the same version, increment the build
+# number. If you do not include this key, it defaults to 0.
+build:
+  number: 0
+
+requirements:
+  build:
+    - perl
+    - perl-extutils-makemaker
+    - perl-encode
+    - perl-test-yaml
+    - perl-test-deep
+    #- perl-test-more
+
+  run:
+    - perl
+
+test:
+  # Perl 'use' tests
+  commands:
+    - perl -e "use YAML"
+    - perl -e "use YAML::Any"
+    - perl -e "use YAML::Dumper"
+    - perl -e "use YAML::Dumper::Base"
+    - perl -e "use YAML::Error"
+    - perl -e "use YAML::Loader"
+    - perl -e "use YAML::Loader::Base"
+    - perl -e "use YAML::Marshall"
+    - perl -e "use YAML::Mo"
+    - perl -e "use YAML::Node"
+    - perl -e "use YAML::Tag"
+    - perl -e "use YAML::Type::blessed"
+    - perl -e "use YAML::Type::code"
+    - perl -e "use YAML::Type::glob"
+    - perl -e "use YAML::Type::ref"
+    - perl -e "use YAML::Type::regexp"
+    - perl -e "use YAML::Type::undef"
+    - perl -e "use YAML::Types"
+    - perl -e "use YAML::Warning"
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+about:
+  home: https://github.com/ingydotnet/yaml-pm
+  license: perl_5
+  summary: "YAML Ain't Markup Language™"
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

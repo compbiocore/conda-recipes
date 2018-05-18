@@ -8,26 +8,25 @@ source:
   md5: e91acf0a800b190d13585a47de775bdd
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
-    - perl-threaded
+    - perl
 
   run:
-    - perl-threaded
+    - perl
 
 test:
   # Perl 'use' tests
-  imports:
-    - IO::AtomicFile
-    - IO::InnerFile
-    - IO::Lines
-    - IO::Scalar
-    - IO::ScalarArray
-    - IO::Stringy
-    - IO::Wrap
-    - IO::WrapTie
+  commands:
+    - perl -e "use IO::AtomicFile"
+    - perl -e "use IO::InnerFile"
+    - perl -e "use IO::Lines"
+    - perl -e "use IO::Scalar"
+    - perl -e "use IO::ScalarArray"
+    - perl -e "use IO::Stringy"
+    - perl -e "use IO::Wrap"
 
 about:
   home: http://metacpan.org/pod/IO-stringy

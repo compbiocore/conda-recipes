@@ -13,20 +13,18 @@ build:
 requirements:
   build:
     - gcc
-    - perl-threaded
+    - perl
     #- gcc # [not osx]
     #- llvm # [osx]
 
   run:
     - libgcc
-    - perl-threaded
-
-
+    - perl
 
 test:
   # Perl 'use' tests
-  imports:
-    - Scalar::Util
+  commands:
+    - perl -e "use Scalar::Util"
 
 about:
   home: http://metacpan.org/pod/Scalar-List-Utils

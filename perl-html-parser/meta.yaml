@@ -21,14 +21,14 @@ requirements:
 
 test:
   # Perl 'use' tests
-  #imports:
-  #  - HTML::Entities
-  #  - HTML::Filter
-  #  - HTML::HeadParser
-  #  - HTML::LinkExtor
-  #  - HTML::Parser
-  #  - HTML::PullParser
-  #  - HTML::TokeParser
+  commands:
+  - perl -e "use HTML::Entities"
+  - perl -e "use HTML::Filter"
+  - perl -e "use HTML::HeadParser"
+  - perl -e "use HTML::LinkExtor"
+  - perl -e "use HTML::Parser"
+  - perl -e "use HTML::PullParser"
+  - perl -e "use HTML::TokeParser"
 
 about:
   home: http://metacpan.org/pod/HTML-Parser

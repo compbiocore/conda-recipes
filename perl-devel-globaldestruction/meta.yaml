@@ -8,21 +8,21 @@ source:
   md5: e7be00040827e204b2b6cba2f3166074
 
 build:
-  number: 1
+  number: 2
 
 requirements:
   build:
-    - perl-threaded
+    - perl
     - perl-sub-exporter-progressive
 
   run:
-    - perl-threaded
+    - perl
     - perl-sub-exporter-progressive
 
 test:
   # Perl 'use' tests
-  imports:
-    - Devel::GlobalDestruction
+  commands:
+    - perl -e "use Devel::GlobalDestruction"
 
 about:
   home: https://metacpan.org/release/Devel-GlobalDestruction

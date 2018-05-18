@@ -8,19 +8,19 @@ source:
   md5: 6e4f8ab76e38dc3f3fec6a0f575bf132
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
-    - perl-threaded
+    - perl
 
   run:
-    - perl-threaded
+    - perl
 
 test:
   # Perl 'use' tests
-  imports:
-    - File::Slurper
+  commands:
+    - perl -e "use File::Slurper"
 
 about:
   home: http://metacpan.org/pod/File-Slurper

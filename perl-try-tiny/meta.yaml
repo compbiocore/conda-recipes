@@ -8,7 +8,7 @@ source:
   md5: 1a12a51cfeb7e2c301e4ae093c7ecdfb
 
 build:
-  number: 2
+  number: 3
 
 requirements:
   build:
@@ -20,9 +20,8 @@ requirements:
 
 test:
   # Perl 'use' tests
-  imports:
-    - Try::Tiny
-
+  commands:
+    - perl -e "use Try::Tiny"
 about:
   home: https://github.com/karenetheridge/Try-Tiny
   license: mit

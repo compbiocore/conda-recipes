@@ -8,21 +8,21 @@ source:
   md5: dda3c03335665cdeff91c37a269b833b
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
-    - perl-threaded
+    - perl
     - perl-common-sense
 
   run:
-    - perl-threaded
+    - perl
     - perl-common-sense
 
 test:
   # Perl 'use' tests
-  imports:
-    - JSON::XS
+  commands:
+    - perl -e "use JSON::XS"
 
 about:
   home: 'http://search.cpan.org/~mlehmann/JSON-XS/'

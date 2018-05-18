@@ -25,8 +25,8 @@ requirements:
     - perl-xsloader
 
 test:
-  imports:
-    - MIME::Base64
+  commands:
+    - perl -e "use MIME::Base64"
 
 about:
   home: http://metacpan.org/pod/MIME::Base64

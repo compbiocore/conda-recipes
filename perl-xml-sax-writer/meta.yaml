@@ -12,22 +12,22 @@ build:
 
 requirements:
   build:
-    - perl-threaded
+    - perl
     - perl-xml-filter-buffertext
     - perl-xml-namespacesupport
     - perl-xml-sax-base
 
   run:
-    - perl-threaded
+    - perl
     - perl-xml-filter-buffertext
     - perl-xml-namespacesupport
     - perl-xml-sax-base
 
 test:
   # Perl 'use' tests
-  imports:
-    - XML::SAX::Writer
-    - XML::SAX::Writer::XML
+  commands:
+    - perl -e "use XML::SAX::Writer"
+    - perl -e "use XML::SAX::Writer::XML"
 
 about:
   home: https://github.com/perigrin/xml-sax-writer

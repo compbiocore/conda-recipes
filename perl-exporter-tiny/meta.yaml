@@ -9,20 +9,20 @@ source:
 
 requirements:
   build:
-    - perl-threaded
+    - perl
     - perl-test-fatal
     - perl-test-warnings
 
   run:
-    - perl-threaded
+    - perl
 
 build:
-  number: 1
+  number: 2
 
 test:
-  imports:
-    - Exporter::Shiny
-    - Exporter::Tiny
+  commands:
+    - perl -e "use Exporter::Shiny"
+    - perl -e "use Exporter::Tiny"
 
 about:
   home: https://metacpan.org/release/Exporter-Tiny

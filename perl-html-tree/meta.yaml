@@ -8,11 +8,11 @@ source:
   md5: d9271d60b872ed6fbe68b2d0fe8c450e
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
-    - perl-threaded
+    - perl
     - perl-html-parser
     - perl-module-build
     - perl-html-tagset
@@ -24,7 +24,7 @@ requirements:
     - perl-libwww-perl      # LWP::UserAgent package
 
   run:
-    - perl-threaded
+    - perl
     - perl-html-parser
     - perl-html-tagset
     # optional features; "perl-html-formatter" is commented out to avoid
@@ -35,12 +35,12 @@ requirements:
 
 test:
   # Perl 'use' tests
-  imports:
-    - HTML::AsSubs
-    - HTML::Element
-    - HTML::Parse
-    - HTML::Tree
-    - HTML::TreeBuilder
+  commands:
+    - perl -e "use HTML::AsSubs"
+    - perl -e "use HTML::Element"
+    - perl -e "use HTML::Parse"
+    - perl -e "use HTML::Tree"
+    - perl -e "use HTML::TreeBuilder"
 
 about:
   home: http://metacpan.org/pod/HTML-Tree

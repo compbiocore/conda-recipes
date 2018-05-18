@@ -8,11 +8,11 @@ source:
   md5: 6888c9d8728cd6f3ea3c9754461c9f94
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
-    - perl-threaded
+    - perl
     - perl-ntlm
     - perl-encode-locale
     - perl-file-listing
@@ -28,7 +28,7 @@ requirements:
     - perl-www-robotrules
 
   run:
-    - perl-threaded
+    - perl
     - perl-ntlm
     - perl-encode-locale
     - perl-file-listing
@@ -45,30 +45,30 @@ requirements:
 
 test:
   # Perl 'use' tests
-  imports:
-    - LWP
-    - LWP::Authen::Basic
-    - LWP::Authen::Digest
-    - LWP::Authen::Ntlm
-    - LWP::ConnCache
-    - LWP::Debug
-    - LWP::DebugFile
-    - LWP::MemberMixin
-    - LWP::Protocol
-    #- LWP::Protocol::GHTTP     # not supported; requires GNOME GHTTP library
-    - LWP::Protocol::cpan
-    - LWP::Protocol::data
-    - LWP::Protocol::file
-    - LWP::Protocol::ftp
-    - LWP::Protocol::gopher
-    - LWP::Protocol::http
-    - LWP::Protocol::loopback
-    #- LWP::Protocol::mailto    # not tested; requires "sendmail" executable
-    - LWP::Protocol::nntp
-    - LWP::Protocol::nogo
-    - LWP::RobotUA
-    - LWP::Simple
-    - LWP::UserAgent
+  commands:
+    - perl -e "use LWP"
+    - perl -e "use LWP::Authen::Basic"
+    - perl -e "use LWP::Authen::Digest"
+    - perl -e "use LWP::Authen::Ntlm"
+    - perl -e "use LWP::ConnCache"
+    - perl -e "use LWP::Debug"
+    - perl -e "use LWP::DebugFile"
+    - perl -e "use LWP::MemberMixin"
+    - perl -e "use LWP::Protocol"
+    #- perl -e "use LWP::Protocol::GHTTP     # not supported; requires GNOME GHTTP library"
+    - perl -e "use LWP::Protocol::cpan"
+    - perl -e "use LWP::Protocol::data"
+    - perl -e "use LWP::Protocol::file"
+    - perl -e "use LWP::Protocol::ftp"
+    - perl -e "use LWP::Protocol::gopher"
+    - perl -e "use LWP::Protocol::http"
+    - perl -e "use LWP::Protocol::loopback"
+    #- perl -e "use LWP::Protocol::mailto    # not tested; requires "sendmail" executable"
+    - perl -e "use LWP::Protocol::nntp"
+    - perl -e "use LWP::Protocol::nogo"
+    - perl -e "use LWP::RobotUA"
+    - perl -e "use LWP::Simple"
+    - perl -e "use LWP::UserAgent"
 
 about:
   home: http://metacpan.org/pod/libwww-perl

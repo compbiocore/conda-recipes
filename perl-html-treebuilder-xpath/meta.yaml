@@ -8,23 +8,23 @@ source:
   md5: a3fa3b73ff51dd6ec63be394dcd2a3b5
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
-    - perl-threaded
+    - perl
     - perl-html-tree
     - perl-xml-xpathengine
 
   run:
-    - perl-threaded
+    - perl
     - perl-html-tree
     - perl-xml-xpathengine
 
 test:
   # Perl 'use' tests
-  imports:
-    - HTML::TreeBuilder::XPath
+  commands:
+    - perl -e "use HTML::TreeBuilder::XPath"
 
 about:
   home: http://metacpan.org/pod/HTML-TreeBuilder-XPath
