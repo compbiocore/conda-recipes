@@ -1,44 +1,29 @@
-package:
-  name: perl-moo
-  version: "2.001000"
-
-source:
-  fn: Moo-2.001000.tar.gz
-  url: https://cpan.metacpan.org/authors/id/H/HA/HAARG/Moo-2.001000.tar.gz
-  md5: 25d1b88c9246ac323a267bf0d32fbfdb
-
-build:
-  number: 2
-
-requirements:
-  build:
-    - perl
-    - perl-class-method-modifiers
-    - perl-devel-globaldestruction
-    - perl-module-runtime
-    - perl-role-tiny
-    - perl-test-fatal
-
-  run:
-    - perl
-    - perl-class-method-modifiers
-    - perl-devel-globaldestruction
-    - perl-module-runtime
-    - perl-role-tiny
-
-test:
-  # Perl 'use' tests
-  imports:
-    - perl -e "use Moo"
-    # Skip these since they need more complicated tests than 'use ...;'
-    #- Moo::Object
-    #- Moo::Role
-    #- Moo::sification
-    # Skip these since we don't anticipate having to interface with Moose
-    #- Moo::HandleMoose
-    #- Moo::HandleMoose::FakeMetaClass
-
 about:
   home: http://metacpan.org/pod/Moo
   license: perl_5
-  summary: 'Minimalist Object Orientation (with Moose compatibility)'
+  summary: Minimalist Object Orientation (with Moose compatibility)
+build:
+  number: 3
+package:
+  name: perl-moo
+  version: '2.001000'
+requirements:
+  build:
+  - perl
+  - perl-class-method-modifiers
+  - perl-devel-globaldestruction
+  - perl-module-runtime
+  - perl-role-tiny
+  - perl-test-fatal
+  run:
+  - perl
+  - perl-class-method-modifiers
+  - perl-devel-globaldestruction
+  - perl-module-runtime
+  - perl-role-tiny
+source:
+  fn: Moo-2.001000.tar.gz
+  md5: 25d1b88c9246ac323a267bf0d32fbfdb
+  url: https://cpan.metacpan.org/authors/id/H/HA/HAARG/Moo-2.001000.tar.gz
+test:
+  commands: perl -e "use Moo"

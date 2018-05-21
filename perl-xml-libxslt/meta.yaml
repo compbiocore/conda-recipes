@@ -12,10 +12,14 @@ requirements:
   - perl
   - perl-xml-libxml
   - libxslt
+  - libiconv
+
   run:
   - perl
   - perl-xml-libxml
   - libxslt
+  - libiconv
+
 source:
   fn: XML-LibXSLT-1.94.tar.gz
   md5: a32045699c001d960d6f94891f9e853c

@@ -1,0 +1,58 @@
+{% set version = "2.9.8" %}
+
+package:
+  name: libxml2
+  version: {{ version }}
+
+source:
+  url: https://git.gnome.org/browse/libxml2/snapshot/libxml2-{{ version }}.tar.gz
+  sha256: ff879b0d9142564bfe63df9753df936f05150afdd7bae07261f12d4dad33ba4a
+
+build:
+  number: 0
+  # vc 9 probably need some patches, skipping it for now.
+  skip: True  # [(win and py27) or (win and py36)]
+  features:
+    - vc14  # [win and (py35 or py36)]
+
+requirements:
+  build:
+    - python  # [win]
+    - autoconf  # [not win]
+    - automake  # [not win]
+    - libtool  # [not win]
+    - pkg-config  # [not win]
+    - icu 58.*  # [not win]
+    - libiconv 1.15
+    - zlib 1.2.11
+    - xz 5.2.*  # [not win]
+    - vc 9  # [win and py27]
+    - vc 14  # [win and (py35 or py36)]
+  run:
+    - icu 58.*  # [not win]
+    - libiconv 1.15
+    - zlib 1.2.11
+    - xz 5.2.*  # [not win]
+    - vc 9  # [win and py27]
+    - vc 14  # [win and (py35 or py36)]
+
+test:
+  files:
+    - test.xml
+  commands:
+    - xmllint test.xml
+    - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
+    - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
+
+about:
+  home: http://xmlsoft.org/
+  license: MIT
+  license_file: Copyright
+  summary: 'The XML C parser and toolkit of Gnome.'
+
+extra:
+  recipe-maintainers:
+    - ocefpaf
+    - jakirkham
+    - gillins
+    - jschueller

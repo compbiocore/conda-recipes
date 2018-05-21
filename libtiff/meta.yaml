@@ -1,0 +1,56 @@
+{% set version = "4.0.9" %}
+
+package:
+  name: libtiff
+  version: {{ version }}
+
+source:
+  url: http://download.osgeo.org/libtiff/tiff-{{ version }}.tar.gz
+  sha256: 6e7bdeec2c310734e734d19aae3a71ebe37a4d842e0e23dbb1b8921c0026cfcd
+
+build:
+  number: 0
+  skip: true  # [win and py36]
+  features:
+    - vc9  # [win and py27]
+    - vc14  # [win and (py35 or py36)]
+
+requirements:
+  build:
+    - python  # [win]
+    - cmake  # [win]
+    - toolchain
+    - zlib 1.2.11
+    - jpeg 9*
+    - xz 5.2.*  # [not win]
+    - vc 9  # [win and py27]
+    - vc 14  # [win and (py35 or py36)]
+  run:
+    - zlib 1.2.11
+    - jpeg 9*
+    - xz 5.2.*  # [not win]
+    - vc 9  # [win and py27]
+    - vc 14  # [win and (py35 or py36)]
+
+test:
+  commands:
+    - test -f ${PREFIX}/lib/libtiff.a  # [unix]
+    - test -f ${PREFIX}/lib/libtiffxx.a  # [unix]
+    - test -f ${PREFIX}/lib/libtiff.so  # [linux]
+    - test -f ${PREFIX}/lib/libtiff.dylib  # [osx]
+    - test -f ${PREFIX}/lib/libtiffxx.so  # [linux]
+    - test -f ${PREFIX}/lib/libtiffxx.dylib  # [osx]
+    - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
+    - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
+
+about:
+  home: http://www.remotesensing.org/libtiff/
+  license: HPND
+  license_file: COPYRIGHT
+  summary: 'Support for the Tag Image File Format (TIFF).'
+
+extra:
+   recipe-maintainers:
+    - jakirkham
+    - ocefpaf
+    - stuarteberg

@@ -10,8 +10,12 @@ package:
 requirements:
   build:
   - perl
+  - perl-test-simple
+
   run:
   - perl
+  - perl-test-simple
+  
 source:
   fn: Test-NoWarnings-1.04.tar.gz
   md5: 682ed043f7d3e38f3dfd8745fd21c49a

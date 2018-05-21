@@ -12,10 +12,12 @@ requirements:
   - perl
   - perl-bioperl-core
   - perl-module-build
-  - samtools <=0.1.17
+  - samtools
+  
   run:
   - perl
   - perl-bioperl-core
+
 source:
   fn: Bio-SamTools-1.43.tar.gz
   md5: d36d7bfe91d6eaa8d220a2cb08d04a94
