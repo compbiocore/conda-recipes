@@ -1,38 +1,31 @@
-package:
-  name: perl-moo
-  version: "2.000002"
-
-source:
-  fn: Moo-2.000002.tar.gz
-  url: https://cpan.metacpan.org/authors/id/H/HA/HAARG/Moo-2.000002.tar.gz
-  md5: 8b84a7289fc6247de5ec5d151105fd6b
-
-build:
-  number: 2
-
-requirements:
-  build:
-    - perl
-    - perl-module-runtime
-    - perl-role-tiny
-    - perl-class-method-modifiers
-    - perl-devel-globaldestruction
-    - perl-test-fatal
-
-  run:
-    - perl
-    - perl-module-runtime
-    - perl-role-tiny
-    - perl-class-method-modifiers
-    - perl-devel-globaldestruction
-    - perl-scalar-list-utils
-
-test:
-  # Perl 'use' tests
-  commands:
-    - perl -e "use Moo"
-
 about:
   home: http://metacpan.org/pod/Moo
   license: perl_5
-  summary: 'Minimalist Object Orientation (with Moose compatibility)'
+  summary: Minimalist Object Orientation (with Moose compatibility)
+build:
+  number: 2
+package:
+  name: perl-moo
+  version: '2.000002'
+requirements:
+  build:
+  - perl
+  - perl-module-runtime
+  - perl-role-tiny
+  - perl-class-method-modifiers
+  - perl-devel-globaldestruction
+  - perl-test-fatal
+  run:
+  - perl
+  - perl-module-runtime
+  - perl-role-tiny
+  - perl-class-method-modifiers
+  - perl-devel-globaldestruction
+  - perl-scalar-list-utils
+source:
+  fn: Moo-2.000002.tar.gz
+  md5: 8b84a7289fc6247de5ec5d151105fd6b
+  url: https://cpan.metacpan.org/authors/id/H/HA/HAARG/Moo-2.000002.tar.gz
+test:
+  commands:
+  - perl -e "use Moo"

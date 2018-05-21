@@ -1,27 +1,19 @@
-package:
-  name: perl-text-glob
-  version: "0.11"
-
-source:
-  url: https://cpan.metacpan.org/authors/id/R/RC/RCLAMP/Text-Glob-0.11.tar.gz
-  md5: d001559c504a2625dd117bd1558f07f7
-
-# build:
-  # number: 1
-
-requirements:
-  build:
-    - perl
-    - perl-module-build
-  run:
-    - perl
-
-test:
-  # Perl 'use' tests
-  imports:
-    - Text::Glob
-
 about:
   home: https://metacpan.org/pod/Text::Glob
   license: perl_5
-  summary: 'match globbing patterns against text'
+  summary: match globbing patterns against text
+package:
+  name: perl-text-glob
+  version: '0.11'
+requirements:
+  build:
+  - perl
+  - perl-module-build
+  run:
+  - perl
+source:
+  md5: d001559c504a2625dd117bd1558f07f7
+  url: https://cpan.metacpan.org/authors/id/R/RC/RCLAMP/Text-Glob-0.11.tar.gz
+test:
+  commands:
+  - perl -e "use Text::Glob"

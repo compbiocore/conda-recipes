@@ -1,29 +1,22 @@
-package:
-  name: perl-html-entities-numbered
-  version: "0.04"
-
-source:
-  fn: HTML-Entities-Numbered-0.04.tar.gz
-  url: http://cpan.metacpan.org/authors/id/T/TA/TANIGUCHI/HTML-Entities-Numbered-0.04.tar.gz
-  md5: 9bc61132c10aa506d2629b37a2012729
-
-build:
-  number: 1
-
-requirements:
-  build:
-    - perl
-
-  run:
-    - perl
-
-test:
-  # Perl 'use' tests
-  commands:
-    - perl -e "use HTML::Entities::Numbered"
-    - perl -e "use HTML::Entities::Numbered::Table"
-
 about:
   home: http://metacpan.org/pod/HTML-Entities-Numbered
   license: unknown
-  summary: 'Conversion of numbered HTML entities'
+  summary: Conversion of numbered HTML entities
+build:
+  number: 1
+package:
+  name: perl-html-entities-numbered
+  version: '0.04'
+requirements:
+  build:
+  - perl
+  run:
+  - perl
+source:
+  fn: HTML-Entities-Numbered-0.04.tar.gz
+  md5: 9bc61132c10aa506d2629b37a2012729
+  url: http://cpan.metacpan.org/authors/id/T/TA/TANIGUCHI/HTML-Entities-Numbered-0.04.tar.gz
+test:
+  commands:
+  - perl -e "use HTML::Entities::Numbered"
+  - perl -e "use HTML::Entities::Numbered::Table"

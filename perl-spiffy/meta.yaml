@@ -1,27 +1,21 @@
-package:
-  name: perl-spiffy
-  version: "0.46"
-
-source:
-  fn: Spiffy-0.46.tar.gz
-  url: http://cpan.metacpan.org/authors/id/I/IN/INGY/Spiffy-0.46.tar.gz
-  md5: 2ec7007c111a6bc2775bb7c57673a24b
-
-build:
-  number: 2
-
-requirements:
-  build:
-    - perl
-
-  run:
-    - perl
-
-test:
-  commands:
-   - perl -e "use Spiffy"
-
 about:
   home: https://github.com/ingydotnet/spiffy-pm
   license: perl_5
-  summary: 'Spiffy Perl Interface Framework For You'
+  summary: Spiffy Perl Interface Framework For You
+build:
+  number: 2
+package:
+  name: perl-spiffy
+  version: '0.46'
+requirements:
+  build:
+  - perl
+  run:
+  - perl
+source:
+  fn: Spiffy-0.46.tar.gz
+  md5: 2ec7007c111a6bc2775bb7c57673a24b
+  url: http://cpan.metacpan.org/authors/id/I/IN/INGY/Spiffy-0.46.tar.gz
+test:
+  commands:
+  - perl -e "use Spiffy"

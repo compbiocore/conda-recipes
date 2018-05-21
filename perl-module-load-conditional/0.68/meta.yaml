@@ -11,36 +11,45 @@ source:
   url: https://cpan.metacpan.org/authors/id/B/BI/BINGOS/Module-Load-Conditional-0.68.tar.gz
   sha256: {{ sha256 }}
 
+# If this is a new build for the same version, increment the build
+# number. If you do not include this key, it defaults to 0.
 build:
   number: 0
 
 requirements:
   build:
-    - perl >=5.22,<6.0
+    - perl
     - perl-locale-maketext-simple
-    #- perl-version
-    - perl-module-corelist
-    - perl-module-metadata >=1.000005
+    - perl-version
     - perl-module-load
-    - perl-params-check
     - perl-extutils-makemaker
-    - perl-test-more
+    - perl-module-metadata
+    - perl-params-check
+    - perl-module-corelist
+    #- perl-test-more
 
   run:
-    - perl >=5.22,<6.0
-    #- perl-version
-    - perl-module-corelist
-    - perl-module-metadata >=1.000005
+    - perl
+    - perl-version
     - perl-module-load
     - perl-params-check
+    - perl-module-corelist
     - perl-locale-maketext-simple
+    - perl-module-metadata
 
 test:
   # Perl 'use' tests
-  imports:
-    - Module::Load::Conditional
+  commands:
+    - perl -e "use Module::Load::Conditional"
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
 
 about:
-  home: http://metacpan.org/pod/Module::Load::Conditional
+  home: http://metacpan.org/pod/Module-Load-Conditional
   license: perl_5
   summary: 'Looking up module information / loading at runtime'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

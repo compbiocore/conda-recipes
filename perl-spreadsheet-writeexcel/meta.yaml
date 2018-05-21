@@ -1,51 +1,44 @@
-package:
-  name: perl-spreadsheet-writeexcel
-  version: "2.40"
-
-source:
-  fn: Spreadsheet-WriteExcel-2.40.tar.gz
-  url: http://cpan.metacpan.org/authors/id/J/JM/JMCNAMARA/Spreadsheet-WriteExcel-2.40.tar.gz
-  md5: b3262290e96985ee12d81c861a389790
-
-build:
-  number: 0
-
-requirements:
-  build:
-    - perl-threaded
-    - perl-parse-recdescent
-    - perl-ole-storage_lite
-
-  run:
-    - perl-threaded
-    - perl-parse-recdescent
-    - perl-ole-storage_lite
-
-test:
-  # Perl 'use' tests
-  imports:
-    - Spreadsheet::WriteExcel
-    - Spreadsheet::WriteExcel::BIFFwriter
-    - Spreadsheet::WriteExcel::Big
-    - Spreadsheet::WriteExcel::Chart
-    - Spreadsheet::WriteExcel::Chart::Area
-    - Spreadsheet::WriteExcel::Chart::Bar
-    - Spreadsheet::WriteExcel::Chart::Column
-    - Spreadsheet::WriteExcel::Chart::External
-    - Spreadsheet::WriteExcel::Chart::Line
-    - Spreadsheet::WriteExcel::Chart::Pie
-    - Spreadsheet::WriteExcel::Chart::Scatter
-    - Spreadsheet::WriteExcel::Chart::Stock
-    - Spreadsheet::WriteExcel::Examples
-    - Spreadsheet::WriteExcel::Format
-    - Spreadsheet::WriteExcel::Formula
-    - Spreadsheet::WriteExcel::OLEwriter
-    - Spreadsheet::WriteExcel::Properties
-    - Spreadsheet::WriteExcel::Utility
-    - Spreadsheet::WriteExcel::Workbook
-    - Spreadsheet::WriteExcel::Worksheet
-
 about:
   home: http://metacpan.org/pod/Spreadsheet-WriteExcel
   license: perl_5
-  summary: 'Write to a cross platform Excel binary file'
+  summary: Write to a cross platform Excel binary file
+build:
+  number: 0
+package:
+  name: perl-spreadsheet-writeexcel
+  version: '2.40'
+requirements:
+  build:
+  - perl-parse-recdescent
+  - perl-ole-storage_lite
+  - perl
+  run:
+  - perl-parse-recdescent
+  - perl-ole-storage_lite
+  - perl
+source:
+  fn: Spreadsheet-WriteExcel-2.40.tar.gz
+  md5: b3262290e96985ee12d81c861a389790
+  url: http://cpan.metacpan.org/authors/id/J/JM/JMCNAMARA/Spreadsheet-WriteExcel-2.40.tar.gz
+test:
+  commands:
+  - perl -e "use Spreadsheet::WriteExcel"
+  - perl -e "use Spreadsheet::WriteExcel::BIFFwriter"
+  - perl -e "use Spreadsheet::WriteExcel::Big"
+  - perl -e "use Spreadsheet::WriteExcel::Chart"
+  - perl -e "use Spreadsheet::WriteExcel::Chart::Area"
+  - perl -e "use Spreadsheet::WriteExcel::Chart::Bar"
+  - perl -e "use Spreadsheet::WriteExcel::Chart::Column"
+  - perl -e "use Spreadsheet::WriteExcel::Chart::External"
+  - perl -e "use Spreadsheet::WriteExcel::Chart::Line"
+  - perl -e "use Spreadsheet::WriteExcel::Chart::Pie"
+  - perl -e "use Spreadsheet::WriteExcel::Chart::Scatter"
+  - perl -e "use Spreadsheet::WriteExcel::Chart::Stock"
+  - perl -e "use Spreadsheet::WriteExcel::Examples"
+  - perl -e "use Spreadsheet::WriteExcel::Format"
+  - perl -e "use Spreadsheet::WriteExcel::Formula"
+  - perl -e "use Spreadsheet::WriteExcel::OLEwriter"
+  - perl -e "use Spreadsheet::WriteExcel::Properties"
+  - perl -e "use Spreadsheet::WriteExcel::Utility"
+  - perl -e "use Spreadsheet::WriteExcel::Workbook"
+  - perl -e "use Spreadsheet::WriteExcel::Worksheet"

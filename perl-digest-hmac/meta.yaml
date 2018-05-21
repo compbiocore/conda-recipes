@@ -1,28 +1,21 @@
-package:
-  name: perl-digest-hmac
-  version: "1.03"
-
-source:
-  fn: Digest-HMAC-1.03.tar.gz
-  url: http://cpan.metacpan.org/authors/id/G/GA/GAAS/Digest-HMAC-1.03.tar.gz
-  md5: e6a5d6f552da16eacb5157ea4369ff9d
-
-build:
-  number: 2
-
-requirements:
-  build:
-    - perl
-
-  run:
-    - perl
-
-test:
-  # Perl 'use' tests
-  commands:
-    - perl -e "use Digest::HMAC"
-
 about:
   home: http://metacpan.org/pod/Digest-HMAC
   license: perl_5
-  summary: 'Keyed-Hashing for Message Authentication'
+  summary: Keyed-Hashing for Message Authentication
+build:
+  number: 2
+package:
+  name: perl-digest-hmac
+  version: '1.03'
+requirements:
+  build:
+  - perl
+  run:
+  - perl
+source:
+  fn: Digest-HMAC-1.03.tar.gz
+  md5: e6a5d6f552da16eacb5157ea4369ff9d
+  url: http://cpan.metacpan.org/authors/id/G/GA/GAAS/Digest-HMAC-1.03.tar.gz
+test:
+  commands:
+  - perl -e "use Digest::HMAC"

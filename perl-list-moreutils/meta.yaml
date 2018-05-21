@@ -12,9 +12,12 @@ requirements:
     - perl
     - perl-exporter-tiny
     - perl-test-leaktrace >=0.16
+    - perl-app-cpanminus
+
   run:
     - perl
     - perl-exporter-tiny
+    - perl-app-cpanminus
 
 build:
   number: 0

@@ -1,37 +1,26 @@
-{% set version = "1.84" %}
-{% set sha256 = "823ec3cbb428309d6a9e56f362a9300693ce3215b7fede109adb7be361fff177" %}
-
-package:
-  name: perl-net-ssleay
-  version: {{ version }}
-
-source:
-  fn: Net-SSLeay-{{ version }}.tar.gz
-  url: https://cpan.metacpan.org/authors/id/M/MI/MIKEM/Net-SSLeay-1.84.tar.gz
-  sha256: {{ sha256 }}
-
-build:
-  number: 1
-
-requirements:
-  build:
-    - perl
-    - perl-mime-base64
-    - perl-extutils-makemaker
-    - openssl
-#    - zlib {{CONDA_ZLIB}}*
-
-  run:
-    - perl
-    - perl-mime-base64
-    - openssl
-#    - zlib {{CONDA_ZLIB}}*
-
-test:
-  commands:
-    - perl -e "use Net::SSLeay"
-
 about:
   home: http://metacpan.org/pod/Net::SSLeay
   license: perl_5
-  summary: 'Perl extension for using OpenSSL'
+  summary: Perl extension for using OpenSSL
+build:
+  number: 1
+package:
+  name: perl-net-ssleay
+  version: 1.84
+requirements:
+  build:
+  - perl
+  - perl-mime-base64
+  - perl-extutils-makemaker
+  - openssl
+  run:
+  - perl
+  - perl-mime-base64
+  - openssl
+source:
+  fn: Net-SSLeay-1.84.tar.gz
+  sha256: 823ec3cbb428309d6a9e56f362a9300693ce3215b7fede109adb7be361fff177
+  url: https://cpan.metacpan.org/authors/id/M/MI/MIKEM/Net-SSLeay-1.84.tar.gz
+test:
+  commands:
+  - perl -e "use Net::SSLeay"

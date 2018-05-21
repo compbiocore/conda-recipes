@@ -1,34 +1,23 @@
-{% set name = "perl-acme-damn" %}
-{% set version = "0.08" %}
-{% set sha256 = "310d2d03ff912dcd42e4d946174099f41fe3a2dd57a497d6bd65baf1759b7e0e" %}
-
-package:
-  name: {{ name|lower }}
-  version: {{ version }}
-
-source:
-  fn: Acme-Damn-{{ version }}.tar.gz
-  url: https://cpan.metacpan.org/authors/id/I/IB/IBB/Acme-Damn-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
-
-build:
-  number: 0
-
-requirements:
-  build:
-    - perl
-    - perl-extutils-makemaker
-    - perl-test-exception
-    #- perl-test-more
-
-  run:
-    - perl
-
-test:
-  imports:
-    - Acme::Damn
-
 about:
   home: http://metacpan.org/pod/Acme::Damn
   license: perl_5
-  summary: "'Unbless' Perl objects."
+  summary: '''Unbless'' Perl objects.'
+build:
+  number: 0
+package:
+  name: perl-acme-damn
+  version: 0.08
+requirements:
+  build:
+  - perl
+  - perl-extutils-makemaker
+  - perl-test-exception
+  run:
+  - perl
+source:
+  fn: Acme-Damn-0.08.tar.gz
+  sha256: 310d2d03ff912dcd42e4d946174099f41fe3a2dd57a497d6bd65baf1759b7e0e
+  url: https://cpan.metacpan.org/authors/id/I/IB/IBB/Acme-Damn-0.08.tar.gz
+test:
+  commands:
+  - perl -e "use Acme::Damn"

@@ -1,22 +1,22 @@
-package:
-  name: perl-set-intervaltree
-  version: 0.10
-source:
-  fn: Set-IntervalTree-0.10.tar.gz
-  url: http://search.cpan.org/CPAN/authors/id/B/BE/BENBOOTH/Set-IntervalTree-0.10.tar.gz
-  sha256: e3bd9ccf0d074b5f879eef1ed88254983697bf83d02744fce62150ee46553ebc
-build:
-  number: 4
-requirements:
-  build:
-    - perl
-  run:
-    - libgcc
-    - perl
-test:
-  imports:
-    - Set::IntervalTree
 about:
   home: https://metacpan.org/pod/Set::IntervalTree
   license: perl_5
   summary: An interval tree implementation in PERL.
+build:
+  number: 5
+package:
+  name: perl-set-intervaltree
+  version: 0.1
+requirements:
+  build:
+  - perl
+  run:
+  - libgcc
+  - perl
+source:
+  fn: Set-IntervalTree-0.10.tar.gz
+  sha256: e3bd9ccf0d074b5f879eef1ed88254983697bf83d02744fce62150ee46553ebc
+  url: http://search.cpan.org/CPAN/authors/id/B/BE/BENBOOTH/Set-IntervalTree-0.10.tar.gz
+test:
+  commands:
+  - perl -e "use Set::IntervalTree"

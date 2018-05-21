@@ -8,20 +8,20 @@ source:
   md5: 5eac99e7882970f41886c3e0cec185d8
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
-    - perl-threaded
+    - perl
 
   run:
-    - perl-threaded
+    - perl
 
 test:
   # Perl 'use' tests
-  imports:
-    - Test::LeakTrace
-    - Test::LeakTrace::Script
+  commands:
+    - perl -e "use Test::LeakTrace"
+    - perl -e "use Test::LeakTrace::Script"
 
 about:
   home: http://metacpan.org/pod/Test-LeakTrace

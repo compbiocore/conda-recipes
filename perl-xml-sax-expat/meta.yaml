@@ -1,35 +1,29 @@
-package:
-  name: perl-xml-sax-expat
-  version: "0.51"
-
-source:
-  fn: XML-SAX-Expat-0.51.tar.gz
-  url: http://cpan.metacpan.org/authors/id/B/BJ/BJOERN/XML-SAX-Expat-0.51.tar.gz
-  md5: 74c540095d84e3f054d1f8703a73ef76
-
-build:
-  number: 1
-
-requirements:
-  build:
-    - perl
-    - perl-xml-namespacesupport
-    - perl-xml-sax
-    - perl-xml-parser
-    - perl-xml-sax-base
-
-  run:
-    - perl
-    - perl-xml-parser
-    - perl-xml-sax-base
-    - perl-xml-sax
-    - perl-xml-namespacesupport
-
-test:
-  # Perl 'use' tests
-  commands:
-    - perl -e "use XML::SAX::Expat"
 about:
   home: http://metacpan.org/pod/XML-SAX-Expat
   license: perl_5
-  summary: 'SAX Driver for Expat'
+  summary: SAX Driver for Expat
+build:
+  number: 1
+package:
+  name: perl-xml-sax-expat
+  version: '0.51'
+requirements:
+  build:
+  - perl
+  - perl-xml-namespacesupport
+  - perl-xml-sax
+  - perl-xml-parser
+  - perl-xml-sax-base
+  run:
+  - perl
+  - perl-xml-parser
+  - perl-xml-sax-base
+  - perl-xml-sax
+  - perl-xml-namespacesupport
+source:
+  fn: XML-SAX-Expat-0.51.tar.gz
+  md5: 74c540095d84e3f054d1f8703a73ef76
+  url: http://cpan.metacpan.org/authors/id/B/BJ/BJOERN/XML-SAX-Expat-0.51.tar.gz
+test:
+  commands:
+  - perl -e "use XML::SAX::Expat"

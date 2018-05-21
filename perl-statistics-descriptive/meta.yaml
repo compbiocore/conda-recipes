@@ -8,25 +8,25 @@ source:
   md5: e38cfbc1e3962d099b62a14a57a175f1
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
-    - perl-threaded
+    - perl
     - perl-module-build
     - perl-list-moreutils
 
   run:
-    - perl-threaded
+    - perl
     - perl-list-moreutils
 
 test:
   # Perl 'use' tests
-  imports:
-    - Statistics::Descriptive
-    - Statistics::Descriptive::Smoother
-    - Statistics::Descriptive::Smoother::Exponential
-    - Statistics::Descriptive::Smoother::Weightedexponential
+  commands:
+    - perl -e "use Statistics::Descriptive"
+    - perl -e "use Statistics::Descriptive::Smoother"
+    - perl -e "use Statistics::Descriptive::Smoother::Exponential"
+    - perl -e "use Statistics::Descriptive::Smoother::Weightedexponential"
 
 about:
   home: http://web-cpan.shlomifish.org/modules/Statistics-Descriptive/

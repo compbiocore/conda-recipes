@@ -1,37 +1,22 @@
-{% set version = "1.69" %}
-{% set sha256 = "b74b16ea626b6f8061821bb350674c638a98be1fc766eadb24fec6635998b42d" %}
-package:
-  name: perl-uri
-  version: {{ version }}
-
-source:
-  fn: URI-{{ version }}.tar.gz
-  url: https://cpan.metacpan.org/authors/id/E/ET/ETHER/URI-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
-#  patches:
-   # List any patch files here
-   # - fix.patch
-
-build:
-  number: 5
-
-requirements:
-  build:
-    - perl
-
-  run:
-    - perl
-
-test:
-  commands:
-    - perl -e "use URI"
-    - perl -e "use URI::Escape"
-
 about:
   home: http://metacpan.org/pod/URI
   license: perl_5
-  summary: 'Uniform Resource Identifiers (absolute and relative)'
-
-# See
-# http://docs.continuum.io/conda/build.html for
-# more information about meta.yaml
+  summary: Uniform Resource Identifiers (absolute and relative)
+build:
+  number: 5
+package:
+  name: perl-uri
+  version: 1.69
+requirements:
+  build:
+  - perl
+  run:
+  - perl
+source:
+  fn: URI-1.69.tar.gz
+  sha256: b74b16ea626b6f8061821bb350674c638a98be1fc766eadb24fec6635998b42d
+  url: https://cpan.metacpan.org/authors/id/E/ET/ETHER/URI-1.69.tar.gz
+test:
+  commands:
+  - perl -e "use URI"
+  - perl -e "use URI::Escape"

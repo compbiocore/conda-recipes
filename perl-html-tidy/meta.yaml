@@ -1,33 +1,26 @@
-package:
-  name: perl-html-tidy
-  version: "1.56"
-
-source:
-  fn: HTML-Tidy-1.56.tar.gz
-  url: http://cpan.metacpan.org/authors/id/P/PE/PETDANCE/HTML-Tidy-1.56.tar.gz
-  md5: dd4c0909e93033512606abf2f4e65dae
-  patches:
-    - makefile-pl.patch
-
-build:
-  number: 2
-
-requirements:
-  build:
-    - perl
-    - tidyp
-
-  run:
-    - perl
-    - tidyp
-
-test:
-  # Perl 'use' tests
-  commands:
-    - perl -e "use HTML::Tidy"
-    - perl -e "use HTML::Tidy::Message"
-
 about:
   home: http://github.com/petdance/html-tidy
   license: artistic_2
-  summary: '(X)HTML validation in a Perl object'
+  summary: (X)HTML validation in a Perl object
+build:
+  number: 2
+package:
+  name: perl-html-tidy
+  version: '1.56'
+requirements:
+  build:
+  - perl
+  - tidyp
+  run:
+  - perl
+  - tidyp
+source:
+  fn: HTML-Tidy-1.56.tar.gz
+  md5: dd4c0909e93033512606abf2f4e65dae
+  patches:
+  - makefile-pl.patch
+  url: http://cpan.metacpan.org/authors/id/P/PE/PETDANCE/HTML-Tidy-1.56.tar.gz
+test:
+  commands:
+  - perl -e "use HTML::Tidy"
+  - perl -e "use HTML::Tidy::Message"

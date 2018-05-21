@@ -1,34 +1,27 @@
-package:
-  name: perl-io-stringy
-  version: "2.111"
-
-source:
-  fn: IO-stringy-2.111.tar.gz
-  url: https://cpan.metacpan.org/authors/id/D/DS/DSKOLL/IO-stringy-2.111.tar.gz
-  md5: e91acf0a800b190d13585a47de775bdd
-
-build:
-  number: 1
-
-requirements:
-  build:
-    - perl
-
-  run:
-    - perl
-
-test:
-  # Perl 'use' tests
-  commands:
-    - perl -e "use IO::AtomicFile"
-    - perl -e "use IO::InnerFile"
-    - perl -e "use IO::Lines"
-    - perl -e "use IO::Scalar"
-    - perl -e "use IO::ScalarArray"
-    - perl -e "use IO::Stringy"
-    - perl -e "use IO::Wrap"
-
 about:
   home: http://metacpan.org/pod/IO-stringy
   license: unknown
-  summary: 'write a file which is updated atomically'
+  summary: write a file which is updated atomically
+build:
+  number: 1
+package:
+  name: perl-io-stringy
+  version: '2.111'
+requirements:
+  build:
+  - perl
+  run:
+  - perl
+source:
+  fn: IO-stringy-2.111.tar.gz
+  md5: e91acf0a800b190d13585a47de775bdd
+  url: https://cpan.metacpan.org/authors/id/D/DS/DSKOLL/IO-stringy-2.111.tar.gz
+test:
+  commands:
+  - perl -e "use IO::AtomicFile"
+  - perl -e "use IO::InnerFile"
+  - perl -e "use IO::Lines"
+  - perl -e "use IO::Scalar"
+  - perl -e "use IO::ScalarArray"
+  - perl -e "use IO::Stringy"
+  - perl -e "use IO::Wrap"
