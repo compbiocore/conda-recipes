@@ -51,10 +51,10 @@ requirements:
   - perl-aceperl
   - perl-algorithm-munkres
   - perl-array-compare
-#  - perl-bio-asn1-entrezgene
-#  - perl-bio-featureio
+  - perl-bio-asn1-entrezgene
+  - perl-bio-featureio
   - perl-bio-phylo
-#  - perl-bio-samtools
+  - perl-bio-samtools
   - perl-clone
   - perl-convert-binary-c
   - perl-db-file

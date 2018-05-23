@@ -19,3 +19,9 @@ source:
 extra:
   identifiers:
     - biotools:samtools
+
+requirements:
+  build:
+    - ncurses
+  run:
+    - ncurses

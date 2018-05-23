@@ -10,7 +10,8 @@ from jinja2 import Environment, FileSystemLoader
 # CentOS6, conda-build/2.1.10, python/2.7
 
 # this script is written for python/3.6 however
-# Usage: python perl_checker.py -d $CONDA-RECIPES
+# Usage: python perl_checker.py -d $CONDA-RECIPE
+# or verbose Usage: python perl_checker.py -d $CONDA-RECIPE -v 1
 
 # checks for perl-threaded and modifies to just perl
 # if finds, returns 1
@@ -34,6 +35,7 @@ def perl_threaded(meta):
 	return flag
 
 # checks for imports and modifies to commands
+# if finds, returns 1
 def imports(meta):
 	has_imports = meta['test'].get('imports')
 	if has_imports:

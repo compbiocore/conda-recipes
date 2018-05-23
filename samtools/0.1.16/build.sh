@@ -1,5 +1,5 @@
 #!/bin/sh
-#sed -i.bak 's/-lcurses/-lncurses/' Makefile
+sed -i.bak 's/-lcurses/-lncurses -ltinfo/' Makefile
 make
 mkdir -p $PREFIX/bin
 mv samtools $PREFIX/bin

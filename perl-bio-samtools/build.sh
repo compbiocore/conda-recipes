@@ -1,4 +1,12 @@
 #!/bin/bash
+wget http://depot.galaxyproject.org/package/source/samtools/samtools-0.1.16.tar.bz2
+tar xjf samtools-0.1.16.tar.bz2 && cd samtools-0.1.16
+#make CFLAGS="-fPIC -lncurses -ltinfo"
+sed -i.bak 's/-lcurses/-lncurses -ltinfo/' Makefile
+make CFLAGS="-fPIC"
+#export SAMTOOLS=`pwd`
+export SAMTOOLS=$PWD
+#cpanm Bio::DB::Sam
 
 # Make sure pipes to tee don't hide configuration or test failures
 set -o pipefail
@@ -6,7 +14,9 @@ set -o pipefail
 export C_INCLUDE_PATH=${PREFIX}/include
 
 # Tell the build system where to find samtools
-export SAMTOOLS="${PREFIX}"
+#export SAMTOOLS="${PREFIX}"
+
+cd ../
 
 # If it has Build.PL use that, otherwise use Makefile.PL
 if [ -f Build.PL ]; then
