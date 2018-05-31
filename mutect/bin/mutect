@@ -1,0 +1,3 @@
+#!/bin/sh
+BASEDIR=$(dirname "$0")
+java -Xmx2g -jar $BASEDIR/../jar/muTect-1.1.6.jar

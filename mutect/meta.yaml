@@ -1,0 +1,18 @@
+package:
+  name: mutect
+  version: "1.1.4"
+
+source:
+  url: http://archive.broadinstitute.org/cancer/cga/sites/default/files/data/tools/mutect/muTect-1.1.4-bin.zip
+
+build:
+  number: 1
+
+requirements:
+  run:
+    - openjdk
+
+about:
+  home: http://archive.broadinstitute.org/cancer/cga/mutect
+  license: Custom
+  license_file: LICENSE.TXT

@@ -1,0 +1,52 @@
+package:
+  name: polysolver
+  version: "1.0"
+
+source:
+  url: http://archive.broadinstitute.org/cancer/cga/sites/default/files/data/tools/polysolver/polysolver_v1.0.tar.gz
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - perl
+#    - perl-app-cpanminus
+    - perl-math-basecalc
+    - perl-list-moreutils
+    - perl-list-util
+    - perl-parallel-forkmanager
+    - perl-posix
+    - perl-dumpvalue
+    - perl-data-dumper
+    - novoalign
+    - gatk
+    - strelka
+    - mutect
+  run:
+    - gatk
+    - samtools <=0.1.18
+    - strelka
+    - novoalign
+    - mutect
+    - openjdk
+    - perl-math-basecalc
+    - perl-list-moreutils
+    - perl-list-util
+    - perl-parallel-forkmanager
+    - perl-posix
+    - perl-dumpvalue
+    - perl-data-dumper
+    - perl-bioperl
+
+test:
+  source_files:
+    - test/test.bam
+    - test/test.bam.bai
+    - test/test.tumor.bam
+    - test/winners.hla.txt
+
+about:
+  home: http://archive.broadinstitute.org/cancer/cga/polysolver
+  license: Custom
+  license_file: license/POLYSOLVER_license.docx
