@@ -1,0 +1,40 @@
+#Recipe from: https://github.com/conda-forge/jupyterlab-feedstock
+
+{% set version = "0.31.2" %}
+
+package:
+  name: jupyterlab
+  version: {{ version }}
+
+source:
+    fn: jupyterlab-{{ version }}.tar.gz
+    url: https://pypi.io/packages/source/j/jupyterlab/jupyterlab-{{ version }}.tar.gz
+build:
+  number: 1
+  script: python setup.py install --single-version-externally-managed --record record.txt
+  entry_points:
+    - jupyter-lab = jupyterlab.labapp:main
+    - jupyter-labextension = jupyterlab.labextensions:main
+
+requirements:
+  build:
+    - python
+    - setuptools
+  run:
+    - python
+    - jupyterlab_launcher >=0.4.0
+    - notebook >=4.3
+
+test:
+  imports:
+    - jupyterlab
+
+about:
+  home: https://github.com/jupyterlab/jupyterlab
+  license: BSD 3-Clause
+  summary: A pre-alpha version of a computational environment for Jupyter.
+
+extra:
+  recipe-maintainers:
+    - jasongrout
+    - blink1073
