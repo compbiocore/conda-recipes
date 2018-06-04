@@ -1,0 +1,24 @@
+about:
+  home: https://metacpan.org/pod/Data::UUID
+  license: Perl
+  summary: Globally/Universally Unique Identifiers (GUIDs/UUIDs)
+build:
+  number: 4
+package:
+  name: perl-data-uuid
+  version: '1.221'
+requirements:
+  build:
+  - gcc
+  - perl-app-cpanminus
+  - perl-module-build
+  - perl
+  run:
+  - libgcc
+  - perl
+source:
+  fn: Data-UUID-1.221.tar.gz
+  url: https://cpan.metacpan.org/authors/id/R/RJ/RJBS/Data-UUID-1.221.tar.gz
+test:
+  commands:
+  - perl -e "use Data::UUID"

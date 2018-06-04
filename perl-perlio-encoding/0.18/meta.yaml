@@ -1,0 +1,14 @@
+about:
+  home: http://metacpan.org/pod/PerlIO::encoding
+  license: perl_5
+  summary: encoding layer
+build:
+  number: 0
+package:
+  name: perl-perlio-encoding
+  version: 0.18
+requirements:
+  build:
+  - perl
+  run:
+  - perl

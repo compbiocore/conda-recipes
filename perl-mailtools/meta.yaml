@@ -1,0 +1,34 @@
+about:
+  home: http://metacpan.org/pod/MailTools
+  license: perl_5
+  summary: Various e-mail related modules
+build:
+  number: 0
+package:
+  name: perl-mailtools
+  version: '2.14'
+requirements:
+  build:
+  - perl-timedate
+  - perl
+  run:
+  - perl-timedate
+  - perl
+source:
+  fn: MailTools-2.14.tar.gz
+  md5: 813ae849683367bb75e6be89e4e8cc46
+  url: https://cpan.metacpan.org/authors/id/M/MA/MARKOV/MailTools-2.14.tar.gz
+test:
+  commands:
+  - perl -e "use Mail::Address"
+  - perl -e "use Mail::Cap"
+  - perl -e "use Mail::Field"
+  - perl -e "use Mail::Field::AddrList"
+  - perl -e "use Mail::Field::Date"
+  - perl -e "use Mail::Field::Generic"
+  - perl -e "use Mail::Filter"
+  - perl -e "use Mail::Header"
+  - perl -e "use Mail::Internet"
+  - perl -e "use Mail::Mailer"
+  - perl -e "use Mail::Send"
+  - perl -e "use Mail::Util"

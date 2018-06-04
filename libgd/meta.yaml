@@ -1,0 +1,67 @@
+{% set version = "2.2.5" %}
+{% set sha256 = "a66111c9b4a04e818e9e2a37d7ae8d4aae0939a100a36b0ffb52c706a09074b5" %}
+
+package:
+  name: libgd
+  version: {{ version }}
+
+source:
+  url: https://github.com/libgd/libgd/releases/download/gd-{{version}}/libgd-{{ version }}.tar.gz
+  sha256: {{ sha256 }}
+  patches:
+    # see: https://github.com/libgd/libgd/issues/367
+    - patches/linux-fontconfig-basic.patch
+
+build:
+  skip: True  # [win]
+  number: 3
+
+requirements:
+  build:
+    - automake
+    - gettext
+    - pkg-config
+    - expat 2.2.*
+    - fontconfig 2.12.*
+    - freetype 2.8.1
+    - icu 58.*
+    - jpeg 9*
+    - libiconv 1.15
+    - libpng >=1.6.32,<1.6.35
+    - libtiff >=4.0.8,<4.0.10
+#    - libwebp 0.5.*
+    - libwebp
+    - zlib 1.2.11
+  run:
+    - expat 2.2.*
+    - fontconfig 2.12.*
+    - freetype 2.8.1
+    - icu 58.*
+    - jpeg 9*
+    - libiconv 1.15
+    - libpng >=1.6.32,<1.6.35
+    - libtiff >=4.0.8,<4.0.10
+#    - libwebp 0.5.*
+    - libwebp
+    - zlib 1.2.11
+
+test:
+  commands:
+    - test -f $PREFIX/lib/libgd.a      # [linux]
+    - test -f $PREFIX/lib/libgd.dylib  # [osx]
+    - test -f $PREFIX/lib/libgd.la
+    - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
+    - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
+
+about:
+    home: http://libgd.github.io/
+    summary: 'Library for the dynamic creation of images.'
+    license: GD
+    license_family: BSD
+    license_file: COPYING
+
+extra:
+  recipe-maintainers:
+    - croth1
+    - ChrisBarker-NOAA
+    - ocefpaf

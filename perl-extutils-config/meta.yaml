@@ -1,0 +1,25 @@
+about:
+  home: http://metacpan.org/pod/ExtUtils-Config
+  license: perl_5
+  summary: A wrapper for perl's configuration
+build:
+  number: 0
+  skip: true
+package:
+  name: perl-extutils-config
+  version: '0.008'
+requirements:
+  build:
+  - perl-app-cpanminus
+  - perl-pathtools
+  - perl-extutils-makemaker
+  - perl
+  run:
+  - perl
+source:
+  fn: ExtUtils-Config-0.008.tar.gz
+  md5: 565a7b09c7cac5907a25bbe2c959a717
+  url: http://cpan.metacpan.org/authors/id/L/LE/LEONT/ExtUtils-Config-0.008.tar.gz
+test:
+  commands:
+  - perl -e "use ExtUtils::Config"

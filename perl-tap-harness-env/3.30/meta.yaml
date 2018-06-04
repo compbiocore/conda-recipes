@@ -1,0 +1,14 @@
+about:
+  home: http://metacpan.org/pod/TAP::Harness::Env
+  license: perl_5
+  summary: Parsing harness related environmental variables where appropriate
+build:
+  number: 0
+package:
+  name: perl-tap-harness-env
+  version: 3.3
+requirements:
+  build:
+  - perl
+  run:
+  - perl

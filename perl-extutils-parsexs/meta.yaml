@@ -1,0 +1,24 @@
+about:
+  home: http://metacpan.org/pod/ExtUtils::ParseXS
+  license: unknown
+  summary: converts Perl XS code into C code
+package:
+  name: perl-extutils-parsexs
+  version: '3.28'
+requirements:
+  build:
+  - perl
+  run:
+  - perl
+test:
+  commands:
+  - perl -e "use ExtUtils::ParseXS"
+  - perl -e "use ExtUtils::ParseXS::Constants"
+  - perl -e "use ExtUtils::ParseXS::CountLines"
+  - perl -e "use ExtUtils::ParseXS::Eval"
+  - perl -e "use ExtUtils::ParseXS::Utilities"
+  - perl -e "use ExtUtils::Typemaps"
+  - perl -e "use ExtUtils::Typemaps::Cmd"
+  - perl -e "use ExtUtils::Typemaps::InputMap"
+  - perl -e "use ExtUtils::Typemaps::OutputMap"
+  - perl -e "use ExtUtils::Typemaps::Type"

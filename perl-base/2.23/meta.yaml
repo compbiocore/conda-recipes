@@ -1,0 +1,22 @@
+about:
+  home: http://metacpan.org/pod/base
+  license: unknown
+  summary: compile-time class fields
+build:
+  number: 0
+package:
+  name: perl-base
+  version: 2.23
+requirements:
+  build:
+  - perl
+  - perl-extutils-makemaker
+  run:
+  - perl
+source:
+  fn: base-2.23.tar.gz
+  sha256: 40f55841299a9fe6fab03cd098f94e9221fb516978e9ef40fd8ff2cbd6625dde
+  url: https://cpan.metacpan.org/authors/id/R/RJ/RJBS/base-2.23.tar.gz
+test:
+  commands:
+  - perl -e "use base"

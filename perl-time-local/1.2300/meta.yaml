@@ -1,0 +1,17 @@
+about:
+  home: http://metacpan.org/pod/Time::Local
+  license: perl_5
+  summary: efficiently compute time from local and GMT time
+build:
+  number: 0
+package:
+  name: perl-time-local
+  version: 1.23
+requirements:
+  build:
+  - perl
+  run:
+  - perl
+test:
+  commands:
+  - perl -e "use Time::Local"

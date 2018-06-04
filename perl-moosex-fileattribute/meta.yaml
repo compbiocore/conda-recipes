@@ -1,0 +1,28 @@
+about:
+  home: http://metacpan.org/pod/MooseX-FileAttribute
+  license: perl_5
+  summary: sugar for classes that have file or directory attributes
+build:
+  number: 0
+  skip: true
+package:
+  name: perl-moosex-fileattribute
+  version: '0.02'
+requirements:
+  build:
+  - perl-extutils-makemaker
+  - perl-moosex-types
+  - perl-test-exception
+  - perl-moosex-types-path-class
+  - perl-moose
+  - perl
+  run:
+  - perl-moosex-types
+  - perl-moosex-types-path-class
+  - perl-moose
+  - perl
+source:
+  fn: MooseX-FileAttribute-0.02.tar.gz
+  md5: 6024b41ed243cfcb65f97ed0b7750627
+  url: http://cpan.metacpan.org/authors/id/J/JR/JROCKWAY/MooseX-FileAttribute-0.02.tar.gz
+test:

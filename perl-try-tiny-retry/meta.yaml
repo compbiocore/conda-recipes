@@ -1,0 +1,23 @@
+about:
+  home: https://github.com/dagolden/Try-Tiny-Retry
+  license: Apache-2.0
+  summary: Just like Try::Tiny, but with retry instead of try.
+build:
+  number: 0
+package:
+  name: perl-try-tiny-retry
+  version: '0.002'
+requirements:
+  build:
+  - perl
+  - perl-try-tiny
+  run:
+  - perl
+  - perl-try-tiny
+source:
+  fn: Try-Tiny-Retry-0.002.tar.gz
+  sha256: 4f6dd3addcab7dd2726f450cecaaadb21b33da59bec5df58f07fd91a87d9c38a
+  url: https://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN/Try-Tiny-Retry-0.002.tar.gz
+test:
+  commands:
+  - perl -e "use Try::Tiny::Retry"

@@ -1,0 +1,45 @@
+{% set version = "2.2.5" %}
+
+package:
+  name: expat
+  version: {{ version }}
+
+source:
+  url: http://downloads.sourceforge.net/project/expat/expat/{{ version }}/expat-{{ version }}.tar.bz2
+  sha256: d9dc32efba7e74f788fcc4f212a43216fc37cf5f23f4c2339664d473353aedf6
+
+build:
+  number: 0
+  skip: True  # [win and py36]
+  features:
+    - vc9  # [win and py27]
+    - vc14  # [win and (py35 or py36)]
+
+requirements:
+  build:
+    - python  # [win]
+    - cmake  # [win]
+    - msinttypes  # [win]
+    - vc 9  # [win and py27]
+    - vc 14  # [win and (py35 or py36)]
+  run:
+    - vc 9  # [win and py27]
+    - vc 14  # [win and (py35 or py36)]
+
+test:
+  commands:
+    - xmlwf -h
+    - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
+    - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
+
+about:
+  home: http://expat.sourceforge.net/
+  license: MIT
+  license_file: COPYING
+  summary: 'Expat XML parser library in C.'
+
+extra:
+  recipe-maintainers:
+    - kwilcox
+    - ocefpaf
+    - pelson

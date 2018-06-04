@@ -1,0 +1,21 @@
+about:
+  home: http://metacpan.org/pod/XML-SAX-Base
+  license: perl_5
+  summary: Base class for SAX Drivers and Filters
+build:
+  number: 2
+package:
+  name: perl-xml-sax-base
+  version: '1.08'
+requirements:
+  build:
+  - perl
+  run:
+  - perl
+source:
+  fn: XML-SAX-Base-1.08.tar.gz
+  md5: 38c8c3247dfd080712596118d70dbe32
+  url: http://cpan.metacpan.org/authors/id/G/GR/GRANTM/XML-SAX-Base-1.08.tar.gz
+test:
+  commands:
+  - perl -e "use XML::SAX::Base"

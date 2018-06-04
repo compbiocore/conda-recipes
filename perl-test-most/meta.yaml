@@ -1,0 +1,32 @@
+about:
+  home: http://metacpan.org/pod/Test-Most
+  license: unknown
+  summary: Most commonly needed test functions and features
+build:
+  number: 2
+package:
+  name: perl-test-most
+  version: '0.34'
+requirements:
+  build:
+  - perl
+  - perl-exception-class
+  - perl-test-deep
+  - perl-test-differences
+  - perl-test-exception
+  - perl-test-warn
+  run:
+  - perl
+  - perl-exception-class
+  - perl-test-deep
+  - perl-test-differences
+  - perl-test-exception
+  - perl-test-warn
+source:
+  fn: Test-Most-0.34.tar.gz
+  md5: 6fa1f097bedbc18f46b08ac9eb79bba9
+  url: http://cpan.metacpan.org/authors/id/O/OV/OVID/Test-Most-0.34.tar.gz
+test:
+  commands:
+  - perl -e "use Test::Most"
+  - perl -e "use Test::Most::Exception"

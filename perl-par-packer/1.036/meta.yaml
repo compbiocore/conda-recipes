@@ -1,0 +1,36 @@
+about:
+  home: http://metacpan.org/pod/PAR::Packer
+  license: perl_5
+  summary: PAR Packager
+build:
+  number: 2
+  skip: true
+package:
+  name: perl-par-packer
+  version: 1.036
+requirements:
+  build:
+  - perl
+  - perl-text-parsewords
+  - perl-extutils-makemaker
+  - perl-module-build
+  - perl-par
+  - perl-par-dist
+  - perl-module-scandeps
+  - perl-getopt-long
+  - perl-getopt-argvfile
+  run:
+  - perl
+  - perl-text-parsewords
+  - perl-par
+  - perl-par-dist
+  - perl-module-scandeps
+  - perl-getopt-long
+  - perl-getopt-argvfile
+source:
+  fn: PAR-Packer-1.036.tar.gz
+  sha256: 0335937d93cd1f14faf553d746ba873d3a1b39fac58ce27dc1783b52c6bf0e70
+  url: https://cpan.metacpan.org/authors/id/R/RS/RSCHUPP/PAR-Packer-1.036.tar.gz
+test:
+  commands:
+  - perl -e "use PAR::Packer"

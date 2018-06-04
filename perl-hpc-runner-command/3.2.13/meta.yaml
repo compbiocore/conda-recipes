@@ -1,0 +1,117 @@
+about:
+  home: https://github.com/biosails/HPC-Runner-Command
+  license: perl_5
+  summary: Create composable bioinformatics hpc analyses.
+build:
+  number: 0
+package:
+  name: perl-hpc-runner-command
+  version: 3.2.13
+requirements:
+  build:
+  - perl
+  - perl-app-cpanminus
+  - perl-mce
+  - perl-archive-tar
+  - perl-test-class-moose
+  - perl-file-homedir
+  - perl-list-moreutils >=0.428
+  - perl-module-build-tiny
+  - perl-algorithm-dependency
+  - perl-git-wrapper
+  - perl-git-wrapper-plus
+  - perl-dbm-deep
+  - perl-file-path
+  - perl-mce
+  - perl-json-xs
+  - perl-file-slurp
+  - perl-log-log4perl
+  - perl-sort-versions
+  - perl-moose
+  - perl-moosex-app
+  - perl-moosex-types
+  - perl-moosex-types-path-tiny
+  - perl-moosex-app-role-log4perl
+  - perl-moosex-getopt
+  - perl-moosex-nonmoose
+  - perl-datetime
+  - perl-string-approx
+  - perl-capture-tiny
+  - perl-version-next
+  - perl-text-ansitable
+  - perl-namespace-autoclean
+  - perl-io-interactive
+  - perl-list-uniq
+  - perl-text-diff
+  - perl-text-asciitable
+  - perl-try-tiny
+  - perl-json
+  - perl-datetime
+  - perl-test-class-moose
+  - perl-path-tiny
+  - perl-template-toolkit
+  - perl-params-validate
+  - perl-yaml
+  - perl-yaml-libyaml
+  - perl-params-validate
+  - perl-type-tiny
+  - perl-array-compare
+  - perl-types-standard
+  - perl-number-compare
+  - perl-file-find-rule
+  run:
+  - perl
+  - perl-mce
+  - perl-app-cpanminus
+  - perl-archive-tar
+  - perl-moosex-app
+  - perl-file-homedir
+  - perl-algorithm-dependency
+  - perl-git-wrapper
+  - perl-git-wrapper-plus
+  - perl-dbm-deep
+  - perl-file-path
+  - perl-mce
+  - perl-json-xs
+  - perl-file-slurp
+  - perl-log-log4perl
+  - perl-sort-versions
+  - perl-datetime
+  - perl-string-approx
+  - perl-moose
+  - perl-moosex-types
+  - perl-moosex-types-path-tiny
+  - perl-moosex-app-role-log4perl
+  - perl-moosex-getopt
+  - perl-moosex-nonmoose
+  - perl-version-next
+  - perl-text-ansitable
+  - perl-namespace-autoclean
+  - perl-io-interactive
+  - perl-list-uniq
+  - perl-datetime
+  - perl-text-asciitable
+  - perl-try-tiny
+  - perl-json
+  - perl-path-tiny
+  - perl-template-toolkit
+  - perl-params-validate
+  - perl-yaml
+  - perl-yaml-libyaml
+  - perl-params-validate
+  - perl-type-tiny
+  - perl-array-compare
+  - perl-types-standard
+  - perl-number-compare
+  - perl-file-find-rule
+  - perl-list-moreutils >=0.428
+source:
+  fn: HPC-Runner-Command-3.2.13.tar.gz
+  sha256: 0c478cf3ba614b8e616fd3df818064c600c074622398b715e4bb8a6d11b3a8aa
+  url: https://github.com/biosails/HPC-Runner-Command/archive/3.2.13.tar.gz
+test:
+  commands:
+  - hpcrunner.pl --help
+  - hpcrunner.pl submit_jobs --help
+  - hpcrunner.pl execute_job --help
+  - hpcrunner.pl execute_array --help

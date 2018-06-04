@@ -1,0 +1,23 @@
+about:
+  home: http://metacpan.org/pod/Config::Tiny
+  license: perl_5
+  summary: Read/Write .ini style files with as little code as possible
+package:
+  name: perl-config-tiny
+  version: '2.23'
+requirements:
+  build:
+  - perl-extutils-makemaker
+  - perl-pathtools
+  - perl-test-simple
+  - perl
+  run:
+  - perl-pathtools
+  - perl
+source:
+  fn: Config-Tiny-2.23.tgz
+  md5: 6c3bc610c4bc587e1441e651e01584ce
+  url: https://cpan.metacpan.org/authors/id/R/RS/RSAVAGE/Config-Tiny-2.23.tgz
+test:
+  commands:
+  - perl -e "use Config::Tiny"

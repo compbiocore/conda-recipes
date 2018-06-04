@@ -1,0 +1,21 @@
+about:
+  home: https://github.com/dagolden/Path-Tiny
+  license: apache_2_0
+  summary: File path utility
+build:
+  number: 2
+package:
+  name: perl-path-tiny
+  version: '0.076'
+requirements:
+  build:
+  - perl
+  run:
+  - perl
+source:
+  fn: Path-Tiny-0.076.tar.gz
+  md5: 495b965187a59af9b99c0f4709013746
+  url: https://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN/Path-Tiny-0.076.tar.gz
+test:
+  commands:
+  - perl -e "use Path::Tiny"

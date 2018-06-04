@@ -1,0 +1,24 @@
+about:
+  home: http://metacpan.org/pod/IO-Socket-INET6
+  license: perl_5
+  summary: Object interface for AF_INET/AF_INET6 domain sockets
+build:
+  number: 0
+package:
+  name: perl-io-socket-inet6
+  version: '2.72'
+requirements:
+  build:
+  - perl-module-build
+  - perl-socket6
+  - perl
+  run:
+  - perl-socket6
+  - perl
+source:
+  fn: IO-Socket-INET6-2.72.tar.gz
+  md5: 510ddc1bd75a8340ca7226123fb545c1
+  url: http://cpan.metacpan.org/authors/id/S/SH/SHLOMIF/IO-Socket-INET6-2.72.tar.gz
+test:
+  commands:
+  - perl -e "use IO::Socket::INET6"

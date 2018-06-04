@@ -1,0 +1,44 @@
+about:
+  home: http://search.cpan.org/~tsibley/Bio-Cigar-1.01
+  license: perl_5
+  summary: Parse CIGAR strings and translate coordinates to/from reference/query
+build:
+  number: 0
+package:
+  name: perl-bio-cigar
+  version: 1.01
+requirements:
+  build:
+  - perl
+  - perl-test
+  - perl-extutils-makemaker
+  - perl-pod-escapes
+  - perl-carp
+  - perl-termreadkey
+  - perl-class-methodmaker
+  - perl-bioperl
+  - perl-test-more
+  - perl-extutils-makemaker
+  - perl-namespace-clean
+  - perl-moo
+  - perl-type-tiny
+  run:
+  - perl
+  - perl-test
+  - perl-pod-escapes
+  - perl-carp
+  - perl-termreadkey
+  - perl-class-methodmaker
+  - perl-bioperl
+  - perl-test-more
+  - perl-extutils-makemaker
+  - perl-namespace-clean
+  - perl-moo
+  - perl-type-tiny
+source:
+  fn: Bio-Cigar-1.01.tar.gz
+  sha256: 1844e28fbe1aa4574228d8411eec275c42431a07145da2dce0544e4b8f299d82
+  url: http://search.cpan.org/CPAN/authors/id/T/TS/TSIBLEY/Bio-Cigar-1.01.tar.gz
+test:
+  commands:
+  - perl -e "use Bio::Cigar"

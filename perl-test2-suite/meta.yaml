@@ -1,0 +1,92 @@
+about:
+  home: http://metacpan.org/pod/Test2::Suite
+  license: perl_5
+  summary: Distribution with a rich set of tools built upon the Test2 framework.
+package:
+  name: perl-test2-suite
+  version: '0.000061'
+requirements:
+  build:
+  - perl-test-simple
+  - perl-scalar-list-utils
+  - perl-importer
+  - perl-extutils-makemaker
+  - perl
+  run:
+  - perl-test-simple
+  - perl-scalar-list-utils
+  - perl-importer
+  - perl
+source:
+  fn: Test2-Suite-0.000061.tar.gz
+  md5: ee5b2dc4c1e60d4a2db3f601b1c4b71e
+  url: https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Test2-Suite-0.000061.tar.gz
+test:
+  commands:
+  - perl -e "use Test2::Bundle"
+  - perl -e "use Test2::Bundle::Extended"
+  - perl -e "use Test2::Bundle::More"
+  - perl -e "use Test2::Bundle::Simple"
+  - perl -e "use Test2::Compare"
+  - perl -e "use Test2::Compare::Array"
+  - perl -e "use Test2::Compare::Bag"
+  - perl -e "use Test2::Compare::Base"
+  - perl -e "use Test2::Compare::Bool"
+  - perl -e "use Test2::Compare::Custom"
+  - perl -e "use Test2::Compare::DeepRef"
+  - perl -e "use Test2::Compare::Delta"
+  - perl -e "use Test2::Compare::Event"
+  - perl -e "use Test2::Compare::EventMeta"
+  - perl -e "use Test2::Compare::Hash"
+  - perl -e "use Test2::Compare::Meta"
+  - perl -e "use Test2::Compare::Negatable"
+  - perl -e "use Test2::Compare::Number"
+  - perl -e "use Test2::Compare::Object"
+  - perl -e "use Test2::Compare::OrderedSubset"
+  - perl -e "use Test2::Compare::Pattern"
+  - perl -e "use Test2::Compare::Ref"
+  - perl -e "use Test2::Compare::Regex"
+  - perl -e "use Test2::Compare::Scalar"
+  - perl -e "use Test2::Compare::Set"
+  - perl -e "use Test2::Compare::String"
+  - perl -e "use Test2::Compare::Undef"
+  - perl -e "use Test2::Compare::Wildcard"
+  - perl -e "use Test2::Mock"
+  - perl -e "use Test2::Plugin"
+  - perl -e "use Test2::Plugin::BailOnFail"
+  - perl -e "use Test2::Plugin::DieOnFail"
+  - perl -e "use Test2::Plugin::ExitSummary"
+  - perl -e "use Test2::Plugin::SRand"
+  - perl -e "use Test2::Plugin::UTF8"
+  - perl -e "use Test2::Require"
+  - perl -e "use Test2::Require::AuthorTesting"
+  - perl -e "use Test2::Require::EnvVar"
+  - perl -e "use Test2::Require::Fork"
+  - perl -e "use Test2::Require::Module"
+  - perl -e "use Test2::Require::Perl"
+  - perl -e "use Test2::Require::RealFork"
+  - perl -e "use Test2::Require::Threads"
+  - perl -e "use Test2::Suite"
+  - perl -e "use Test2::Todo"
+  - perl -e "use Test2::Tools"
+  - perl -e "use Test2::Tools::Basic"
+  - perl -e "use Test2::Tools::Class"
+  - perl -e "use Test2::Tools::ClassicCompare"
+  - perl -e "use Test2::Tools::Compare"
+  - perl -e "use Test2::Tools::Defer"
+  - perl -e "use Test2::Tools::Encoding"
+  - perl -e "use Test2::Tools::Event"
+  - perl -e "use Test2::Tools::Exception"
+  - perl -e "use Test2::Tools::Exports"
+  - perl -e "use Test2::Tools::Grab"
+  - perl -e "use Test2::Tools::Mock"
+  - perl -e "use Test2::Tools::Ref"
+  - perl -e "use Test2::Tools::Subtest"
+  - perl -e "use Test2::Tools::Target"
+  - perl -e "use Test2::Tools::Warnings"
+  - perl -e "use Test2::Util::Grabber"
+  - perl -e "use Test2::Util::Ref"
+  - perl -e "use Test2::Util::Stash"
+  - perl -e "use Test2::Util::Sub"
+  - perl -e "use Test2::Util::Table"
+  - perl -e "use Test2::Util::Table::LineBreak"

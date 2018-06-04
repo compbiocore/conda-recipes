@@ -1,0 +1,23 @@
+about:
+  home: https://github.com/moose/Class-Method-Modifiers
+  license: perl_5
+  summary: Provides Moose-like method modifiers
+build:
+  number: 2
+package:
+  name: perl-class-method-modifiers
+  version: '2.11'
+requirements:
+  build:
+  - perl
+  - perl-test-requires
+  - perl-test-fatal
+  run:
+  - perl
+source:
+  fn: Class-Method-Modifiers-2.11.tar.gz
+  md5: c6982e9e89325713d5afaff82cfe1744
+  url: http://cpan.metacpan.org/authors/id/E/ET/ETHER/Class-Method-Modifiers-2.11.tar.gz
+test:
+  commands:
+  - perl -e "use Class::Method::Modifiers"

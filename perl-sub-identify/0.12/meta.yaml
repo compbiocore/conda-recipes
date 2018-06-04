@@ -1,0 +1,21 @@
+about:
+  home: http://metacpan.org/pod/Sub::Identify
+  license: perl_5
+  summary: Retrieve names of code references
+build:
+  number: 0
+package:
+  name: perl-sub-identify
+  version: 0.12
+requirements:
+  build:
+  - perl
+  run:
+  - perl
+source:
+  fn: Sub-Identify-0.12.tar.gz
+  sha256: 83bb785a66113b4a966db0a4186fd1dd07987acdacb4502b1e1558f817dde825
+  url: https://cpan.metacpan.org/authors/id/R/RG/RGARCIA/Sub-Identify-0.12.tar.gz
+test:
+  commands:
+  - perl -e "use Sub::Identify"

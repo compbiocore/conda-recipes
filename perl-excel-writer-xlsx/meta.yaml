@@ -1,0 +1,53 @@
+about:
+  home: http://jmcnamara.github.com/excel-writer-xlsx/
+  license: perl_5
+  summary: Create a new file in the Excel 2007+ XLSX format.
+package:
+  name: perl-excel-writer-xlsx
+  version: '0.95'
+requirements:
+  build:
+  - perl
+  - perl-extutils-makemaker
+  - perl-archive-zip
+  run:
+  - perl
+  - perl-archive-zip
+source:
+  fn: Excel-Writer-XLSX-0.95.tar.gz
+  md5: 377094b38e541afdbb21a02a7d433ac3
+  url: https://cpan.metacpan.org/authors/id/J/JM/JMCNAMARA/Excel-Writer-XLSX-0.95.tar.gz
+test:
+  commands:
+  - perl -e "use Excel::Writer::XLSX"
+  - perl -e "use Excel::Writer::XLSX::Chart"
+  - perl -e "use Excel::Writer::XLSX::Chart::Area"
+  - perl -e "use Excel::Writer::XLSX::Chart::Bar"
+  - perl -e "use Excel::Writer::XLSX::Chart::Column"
+  - perl -e "use Excel::Writer::XLSX::Chart::Doughnut"
+  - perl -e "use Excel::Writer::XLSX::Chart::Line"
+  - perl -e "use Excel::Writer::XLSX::Chart::Pie"
+  - perl -e "use Excel::Writer::XLSX::Chart::Radar"
+  - perl -e "use Excel::Writer::XLSX::Chart::Scatter"
+  - perl -e "use Excel::Writer::XLSX::Chart::Stock"
+  - perl -e "use Excel::Writer::XLSX::Chartsheet"
+  - perl -e "use Excel::Writer::XLSX::Drawing"
+  - perl -e "use Excel::Writer::XLSX::Examples"
+  - perl -e "use Excel::Writer::XLSX::Format"
+  - perl -e "use Excel::Writer::XLSX::Package::App"
+  - perl -e "use Excel::Writer::XLSX::Package::Comments"
+  - perl -e "use Excel::Writer::XLSX::Package::ContentTypes"
+  - perl -e "use Excel::Writer::XLSX::Package::Core"
+  - perl -e "use Excel::Writer::XLSX::Package::Custom"
+  - perl -e "use Excel::Writer::XLSX::Package::Packager"
+  - perl -e "use Excel::Writer::XLSX::Package::Relationships"
+  - perl -e "use Excel::Writer::XLSX::Package::SharedStrings"
+  - perl -e "use Excel::Writer::XLSX::Package::Styles"
+  - perl -e "use Excel::Writer::XLSX::Package::Table"
+  - perl -e "use Excel::Writer::XLSX::Package::Theme"
+  - perl -e "use Excel::Writer::XLSX::Package::VML"
+  - perl -e "use Excel::Writer::XLSX::Package::XMLwriter"
+  - perl -e "use Excel::Writer::XLSX::Shape"
+  - perl -e "use Excel::Writer::XLSX::Utility"
+  - perl -e "use Excel::Writer::XLSX::Workbook"
+  - perl -e "use Excel::Writer::XLSX::Worksheet"

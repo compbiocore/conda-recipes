@@ -1,0 +1,82 @@
+about:
+  home: https://github.com/libwww-perl/URI
+  license: perl_5
+  summary: Uniform Resource Identifiers (absolute and relative)
+build:
+  number: 1
+package:
+  name: perl-uri
+  version: 1.74
+requirements:
+  build:
+  - perl
+  - perl-test
+  - perl-parent
+  - perl-exporter
+  - perl-extutils-makemaker
+  - perl-file-temp
+  - perl-carp
+  - perl-mime-base64
+  - perl-encode
+  - perl-test-needs
+  - perl-data-dumper
+  - perl-constant
+  - perl-app-cpanminus
+  run:
+  - perl
+  - perl-parent
+  - perl-exporter
+  - perl-carp
+  - perl-mime-base64
+  - perl-encode
+  - perl-data-dumper
+  - perl-constant
+source:
+  fn: URI-1.74.tar.gz
+  sha256: a9c254f45f89cb1dd946b689dfe433095404532a4543bdaab0b71ce0fdcdd53d
+  url: https://cpan.metacpan.org/authors/id/E/ET/ETHER/URI-1.74.tar.gz
+test:
+  commands:
+  - perl -e "use URI"
+  - perl -e "use URI::Escape"
+  - perl -e "use URI::Heuristic"
+  - perl -e "use URI::IRI"
+  - perl -e "use URI::QueryParam"
+  - perl -e "use URI::Split"
+  - perl -e "use URI::URL"
+  - perl -e "use URI::WithBase"
+  - perl -e "use URI::data"
+  - perl -e "use URI::file"
+  - perl -e "use URI::file::Base"
+  - perl -e "use URI::file::FAT"
+  - perl -e "use URI::file::Mac"
+  - perl -e "use URI::file::OS2"
+  - perl -e "use URI::file::QNX"
+  - perl -e "use URI::file::Unix"
+  - perl -e "use URI::file::Win32"
+  - perl -e "use URI::ftp"
+  - perl -e "use URI::gopher"
+  - perl -e "use URI::http"
+  - perl -e "use URI::https"
+  - perl -e "use URI::ldap"
+  - perl -e "use URI::ldapi"
+  - perl -e "use URI::ldaps"
+  - perl -e "use URI::mailto"
+  - perl -e "use URI::mms"
+  - perl -e "use URI::news"
+  - perl -e "use URI::nntp"
+  - perl -e "use URI::pop"
+  - perl -e "use URI::rlogin"
+  - perl -e "use URI::rsync"
+  - perl -e "use URI::rtsp"
+  - perl -e "use URI::rtspu"
+  - perl -e "use URI::sftp"
+  - perl -e "use URI::sip"
+  - perl -e "use URI::sips"
+  - perl -e "use URI::snews"
+  - perl -e "use URI::ssh"
+  - perl -e "use URI::telnet"
+  - perl -e "use URI::tn3270"
+  - perl -e "use URI::urn"
+  - perl -e "use URI::urn::isbn"
+  - perl -e "use URI::urn::oid"

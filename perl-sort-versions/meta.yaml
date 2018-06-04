@@ -1,0 +1,23 @@
+about:
+  home: https://github.com/neilb/Sort-Versions
+  license: perl_5
+  summary: a perl 5 module for sorting of revision-like numbers
+package:
+  name: perl-sort-versions
+  version: '1.62'
+requirements:
+  build:
+  - perl-extutils-makemaker
+  - perl-test-simple
+  - perl-apache-test
+  - perl
+  run:
+  - perl-apache-test
+  - perl
+source:
+  fn: Sort-Versions-1.62.tar.gz
+  md5: c975afa9dd114951d902aa4a81ead685
+  url: https://cpan.metacpan.org/authors/id/N/NE/NEILB/Sort-Versions-1.62.tar.gz
+test:
+  commands:
+  - perl -e "use Sort::Versions"

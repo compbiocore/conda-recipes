@@ -1,0 +1,83 @@
+about:
+  home: http://www.sanger.ac.uk/
+  license: gpl_3
+  summary: Multilocus sequence type checking using blast
+build:
+  number: 0
+package:
+  name: perl-bio-mlst-check
+  version: 2.1.1706216
+requirements:
+  build:
+  - perl
+  - perl-file-touch
+  - perl-test-exception
+  - perl-lib
+  - perl-regexp-common
+  - perl-try-tiny
+  - perl-file-slurp
+  - perl-moose
+  - perl-test-most
+  - perl-test-mockmodule
+  - perl-text-csv
+  - perl-getopt-long
+  - perl-xml-libxml
+  - perl-file-path
+  - perl-file-which
+  - perl-file-temp
+  - perl-data-dumper
+  - perl-exporter
+  - perl-string-util
+  - perl-extutils-makemaker
+  - perl-env-path
+  - perl-parallel-forkmanager
+  - perl-bioperl
+  - perl-lwp-simple
+  - blast
+  run:
+  - perl
+  - perl-file-temp
+  - perl-data-dumper
+  - perl-exporter
+  - perl-lib
+  - perl-regexp-common
+  - perl-try-tiny
+  - perl-moose
+  - perl-text-csv
+  - perl-getopt-long
+  - perl-xml-libxml
+  - perl-file-path
+  - perl-parallel-forkmanager
+  - perl-file-which
+  - perl-bioperl
+  - perl-lwp-simple
+  - blast
+source:
+  fn: Bio-MLST-Check-2.1.1706216.tar.gz
+  sha256: f339ba9ab7269859fa5393ef0f9fe2418eb3c5261d23be970797769854e4811b
+  url: https://cpan.metacpan.org/authors/id/A/AJ/AJPAGE/Bio-MLST-Check-2.1.1706216.tar.gz
+test:
+  commands:
+  - perl -e "use Bio::MLST::Blast::BlastN"
+  - perl -e "use Bio::MLST::Blast::Database"
+  - perl -e "use Bio::MLST::CDC::Convert"
+  - perl -e "use Bio::MLST::Check"
+  - perl -e "use Bio::MLST::CheckMultipleSpecies"
+  - perl -e "use Bio::MLST::CompareAlleles"
+  - perl -e "use Bio::MLST::DatabaseSettings"
+  - perl -e "use Bio::MLST::Databases"
+  - perl -e "use Bio::MLST::Download::Database"
+  - perl -e "use Bio::MLST::Download::Databases"
+  - perl -e "use Bio::MLST::Download::Downloadable"
+  - perl -e "use Bio::MLST::FilterAlleles"
+  - perl -e "use Bio::MLST::NormaliseFasta"
+  - perl -e "use Bio::MLST::OutputFasta"
+  - perl -e "use Bio::MLST::ProcessFasta"
+  - perl -e "use Bio::MLST::SearchForFiles"
+  - perl -e "use Bio::MLST::SequenceType"
+  - perl -e "use Bio::MLST::Spreadsheet::File"
+  - perl -e "use Bio::MLST::Spreadsheet::Row"
+  - perl -e "use Bio::MLST::Types"
+  - perl -e "use Bio::MLST::Validate::Executable"
+  - perl -e "use Bio::MLST::Validate::File"
+  - perl -e "use Bio::MLST::Validate::Resource"

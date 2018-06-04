@@ -1,0 +1,17 @@
+about:
+  home: http://metacpan.org/pod/base
+  license: unknown
+  summary: compile-time class fields
+build:
+  number: 0
+package:
+  name: perl-base
+  version: 2.22
+requirements:
+  build:
+  - perl
+  run:
+  - perl
+test:
+  commands:
+  - perl -e "use base"

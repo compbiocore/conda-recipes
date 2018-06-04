@@ -1,0 +1,21 @@
+about:
+  home: https://github.com/tokuhirom/Test-Requires
+  license: perl_5
+  summary: Checks to see if the module can be loaded
+build:
+  number: 2
+package:
+  name: perl-test-requires
+  version: '0.10'
+requirements:
+  build:
+  - perl
+  run:
+  - perl
+source:
+  fn: Test-Requires-0.10.tar.gz
+  md5: 0d5da779609d0c8fa6f796b45ff8c6f3
+  url: https://cpan.metacpan.org/authors/id/T/TO/TOKUHIROM/Test-Requires-0.10.tar.gz
+test:
+  commands:
+  - perl -e "use Test::Requires"

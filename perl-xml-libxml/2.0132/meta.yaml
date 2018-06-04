@@ -1,0 +1,94 @@
+{% set name = "perl-xml-libxml" %}
+{% set version = "2.0132" %}
+{% set sha256 = "721452e3103ca188f5968ab06d5ba29fe8e00e49f4767790882095050312d476" %}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  fn: XML-LibXML-2.0132.tar.gz
+  url: https://cpan.metacpan.org/authors/id/S/SH/SHLOMIF/XML-LibXML-2.0132.tar.gz
+  sha256: {{ sha256 }}
+
+# If this is a new build for the same version, increment the build
+# number. If you do not include this key, it defaults to 0.
+build:
+  number: 0
+
+requirements:
+  build:
+    - perl
+    - perl-xml-sax-base
+    - perl-xml-namespacesupport
+    - perl-xml-sax
+    - perl-base
+    - perl-parent
+    - perl-extutils-makemaker
+    - libxml2
+    #- perl-test-more
+    #- perl-strict
+    #- perl-warnings
+
+  run:
+    - perl
+    - perl-xml-sax-base
+    - perl-base
+    - perl-xml-namespacesupport
+    - perl-xml-sax
+    - perl-parent
+    - libxml2
+    #- perl-test-more
+    #- perl-strict
+    #- perl-warnings
+
+test:
+  # Perl 'use' tests
+  commands:
+    - perl -e "use XML::LibXML"
+#    - perl -e "use XML::LibXML::Attr"
+    - perl -e "use XML::LibXML::AttributeHash"
+    - perl -e "use XML::LibXML::Boolean"
+#    - perl -e "use XML::LibXML::CDATASection"
+#    - perl -e "use XML::LibXML::Comment"
+    - perl -e "use XML::LibXML::Common"
+    - perl -e "use XML::LibXML::Devel"
+#    - perl -e "use XML::LibXML::Document"
+#    - perl -e "use XML::LibXML::DocumentFragment"
+#    - perl -e "use XML::LibXML::Dtd"
+#    - perl -e "use XML::LibXML::Element"
+    - perl -e "use XML::LibXML::ErrNo"
+    - perl -e "use XML::LibXML::Error"
+#    - perl -e "use XML::LibXML::InputCallback"
+    - perl -e "use XML::LibXML::Literal"
+#    - perl -e "use XML::LibXML::NamedNodeMap"
+#    - perl -e "use XML::LibXML::Namespace"
+#    - perl -e "use XML::LibXML::Node"
+    - perl -e "use XML::LibXML::NodeList"
+    - perl -e "use XML::LibXML::Number"
+#    - perl -e "use XML::LibXML::PI"
+#    - perl -e "use XML::LibXML::Pattern"
+    - perl -e "use XML::LibXML::Reader"
+#    - perl -e "use XML::LibXML::RegExp"
+#    - perl -e "use XML::LibXML::RelaxNG"
+    - perl -e "use XML::LibXML::SAX"
+#    - perl -e "use XML::LibXML::SAX::AttributeNode"
+    - perl -e "use XML::LibXML::SAX::Builder"
+    - perl -e "use XML::LibXML::SAX::Generator"
+#    - perl -e "use XML::LibXML::SAX::Parser"
+#    - perl -e "use XML::LibXML::Schema"
+#    - perl -e "use XML::LibXML::Text"
+    - perl -e "use XML::LibXML::XPathContext"
+#    - perl -e "use XML::LibXML::XPathExpression"
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+about:
+  home: https://github.com/shlomif/perl-XML-LibXML
+  license: perl_5
+  summary: 'Interface to Gnome libxml2 xml parsing and DOM library'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

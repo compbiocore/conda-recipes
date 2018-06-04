@@ -1,0 +1,44 @@
+about:
+  home: https://github.com/ICGC-TCGA-PanCancer/PCAP-core
+  license: GPLv3
+  summary: NGS reference implementations and helper code for the IGCG/TCGA Pan-Cancer
+    Analysis Project
+build:
+  number: 3
+  skip: true
+package:
+  name: perl-pcap
+  version: 1.11.1
+requirements:
+  build:
+  - gcc
+  - perl-app-cpanminus
+  - perl-file-sharedir-install
+  - perl-module-build
+  - perl-bio-db-sam
+  - perl-bioperl
+  - perl-gd
+  - perl-ipc-system-simple
+  - perl-sanger-cgp-vcf
+  - perl-encode-locale
+  - perl-lwp-simple
+  - perl-xml-parser
+  - perl
+  run:
+  - libgcc
+  - perl-bio-db-sam
+  - perl-bioperl
+  - perl-encode-locale
+  - perl-gd
+  - perl-ipc-system-simple
+  - perl-sanger-cgp-vcf
+  - perl-encode-locale
+  - perl-lwp-simple
+  - perl-xml-parser
+  - perl
+source:
+  fn: PCAP-v1.11.1.tar.gz
+  url: https://github.com/ICGC-TCGA-PanCancer/PCAP-core/archive/v1.11.1.tar.gz
+test:
+  commands:
+  - perl -e "use PCAP"

@@ -1,0 +1,24 @@
+about:
+  home: http://metacpan.org/pod/Pod::Parser
+  license: unknown
+  summary: Modules for parsing/translating POD format documents
+build:
+  number: 0
+package:
+  name: perl-pod-parser
+  version: 1.63
+requirements:
+  build:
+  - perl
+  - perl-extutils-makemaker
+  - perl-app-cpanminus
+  run:
+  - perl
+  - perl-app-cpanminus
+source:
+  fn: Pod-Parser-1.63.tar.gz
+  sha256: dbe0b56129975b2f83a02841e8e0ed47be80f060686c66ea37e529d97aa70ccd
+  url: https://cpan.metacpan.org/authors/id/M/MA/MAREKR/Pod-Parser-1.63.tar.gz
+test:
+  commands:
+  - perl -e "use Pod::Parser"

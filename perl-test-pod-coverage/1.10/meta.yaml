@@ -1,0 +1,25 @@
+about:
+  home: http://metacpan.org/pod/Test::Pod::Coverage
+  license: artistic_2
+  summary: Check for pod coverage in your distribution
+build:
+  number: 0
+package:
+  name: perl-test-pod-coverage
+  version: 1.1
+requirements:
+  build:
+  - perl
+  - perl-extutils-makemaker
+  - perl-lib
+  - perl-app-cpanminus
+  run:
+  - perl
+  - perl-app-cpanminus
+source:
+  fn: Test-Pod-Coverage-1.10.tar.gz
+  sha256: 48c9cca9f7d99eee741176445b431adf09c029e1aa57c4703c9f46f7601d40d4
+  url: https://cpan.metacpan.org/authors/id/N/NE/NEILB/Test-Pod-Coverage-1.10.tar.gz
+test:
+  commands:
+  - perl -e 'Test::Pod::Coverage'

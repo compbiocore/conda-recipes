@@ -1,0 +1,20 @@
+about:
+  home: http://metacpan.org/pod/Heap::Simple::XS
+  license: unknown
+  summary: An XS implementation of the Heap::Simple interface
+build:
+  number: 0
+package:
+  name: perl-heap-simple-xs
+  version: '0.10'
+requirements:
+  build:
+  - gcc
+  - perl
+  run:
+  - libgcc
+  - perl
+source:
+  fn: Heap-Simple-XS-0.10.tar.gz
+  md5: 0611ac7984f6ddc3aaa60c75d2257803
+  url: http://cpan.metacpan.org/authors/id/T/TH/THOSPEL/Heap-Simple-XS-0.10.tar.gz

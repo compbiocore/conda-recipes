@@ -1,0 +1,22 @@
+about:
+  home: https://metacpan.org/pod/Perl::Unsafe::Signals
+  license: Perl
+  summary: Allow unsafe handling of signals in selected blocks
+build:
+  number: 0
+package:
+  name: perl-perl-unsafe-signals
+  version: '0.03'
+requirements:
+  build:
+  - perl-app-cpanminus
+  - perl
+  run:
+  - perl
+source:
+  fn: Perl-Unsafe-Signals-0.03.tar.gz
+  md5: 3eced0ffa43e5f9978aa9f83a0e13562
+  url: https://cpan.metacpan.org/authors/id/R/RG/RGARCIA/Perl-Unsafe-Signals-0.03.tar.gz
+test:
+  commands:
+  - perl -e "use Perl::Unsafe::Signals"

@@ -1,0 +1,39 @@
+{% set name = "perl-test-deep" %}
+{% set version = "1.128" %}
+{% set sha256 = "852d7e836fba8269b0b755082051a24a1a309d015a8b76838790af9e3760092f" %}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  fn: Test-Deep-1.128.tar.gz
+  url: https://cpan.metacpan.org/authors/id/R/RJ/RJBS/Test-Deep-1.128.tar.gz
+  sha256: {{ sha256 }}
+
+# If this is a new build for the same version, increment the build
+# number. If you do not include this key, it defaults to 0.
+build:
+  number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-extutils-makemaker
+    - perl-test-simple
+    #- perl-scalar-util
+    #- perl-test-more
+
+  run:
+    - perl
+    - perl-test-simple
+    #- perl-scalar-util
+
+about:
+  home: http://github.com/rjbs/Test-Deep/
+  license: perl_5
+  summary: 'Extremely flexible deep comparison'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

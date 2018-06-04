@@ -1,0 +1,24 @@
+about:
+  home: http://metacpan.org/pod/Test
+  license: unknown
+  summary: provides a simple framework for writing test scripts
+build:
+  number: 0
+package:
+  name: perl-test
+  version: 1.26
+requirements:
+  build:
+  - perl
+  - perl-extutils-makemaker
+  - perl-test-harness
+  run:
+  - perl
+  - perl-test-harness
+source:
+  fn: Test-1.26.tar.gz
+  sha256: f7701bd28e05e7f82fe9a181bbab38f53fa6aeae48d2a810da74d1b981d4f392
+  url: https://cpan.metacpan.org/authors/id/J/JE/JESSE/Test-1.26.tar.gz
+test:
+  commands:
+  - perl -e "use Test"

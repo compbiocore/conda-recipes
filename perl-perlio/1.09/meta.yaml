@@ -1,0 +1,14 @@
+about:
+  home: http://metacpan.org/pod/PerlIO
+  license: perl_5
+  summary: On demand loader for PerlIO layers and root of PerlIO::* name space
+build:
+  number: 0
+package:
+  name: perl-perlio
+  version: 1.09
+requirements:
+  build:
+  - perl
+  run:
+  - perl

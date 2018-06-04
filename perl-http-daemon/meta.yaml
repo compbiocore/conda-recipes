@@ -1,0 +1,27 @@
+about:
+  home: http://metacpan.org/pod/HTTP-Daemon
+  license: perl_5
+  summary: a simple http server class
+build:
+  number: 1
+package:
+  name: perl-http-daemon
+  version: '6.01'
+requirements:
+  build:
+  - perl
+  - perl-http-date
+  - perl-http-message
+  - perl-lwp-mediatypes
+  run:
+  - perl
+  - perl-http-date
+  - perl-http-message
+  - perl-lwp-mediatypes
+source:
+  fn: HTTP-Daemon-6.01.tar.gz
+  md5: ed0ae02d25d7f1e89456d4d69732adc2
+  url: http://cpan.metacpan.org/authors/id/G/GA/GAAS/HTTP-Daemon-6.01.tar.gz
+test:
+  commands:
+  - perl -e "use HTTP::Daemon"

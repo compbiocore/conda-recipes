@@ -1,0 +1,38 @@
+about:
+  home: http://metacpan.org/release/Package-Stash
+  license: perl_5
+  summary: routines for manipulating stashes
+build:
+  number: 0
+package:
+  name: perl-package-stash
+  version: '0.37'
+requirements:
+  build:
+  - perl
+  - perl-pathtools
+  - perl-text-parsewords
+  - perl-test-requires
+  - perl-extutils-makemaker
+  - perl-getopt-long
+  - perl-apache-test
+  - perl-module-implementation
+  - perl-test-fatal
+  - perl-scalar-list-utils
+  - perl-dist-checkconflicts
+  - perl-test-simple
+  run:
+  - perl
+  - perl-getopt-long
+  - perl-module-implementation
+  - perl-apache-test
+  - perl-dist-checkconflicts
+  - perl-scalar-list-utils
+source:
+  fn: Package-Stash-0.37.tar.gz
+  md5: 7e47a8261312e1cf3d12bd2007916b66
+  url: http://cpan.metacpan.org/authors/id/D/DO/DOY/Package-Stash-0.37.tar.gz
+test:
+  commands:
+  - perl -e "use Package::Stash"
+  - perl -e "use Package::Stash::PP"

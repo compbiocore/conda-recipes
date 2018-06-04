@@ -1,0 +1,32 @@
+about:
+  home: http://metacpan.org/pod/Regexp-Common
+  license: mit
+  summary: Provide commonly requested regular expressions
+package:
+  name: perl-regexp-common
+  version: '2016060801'
+requirements:
+  build:
+  - perl-extutils-makemaker
+  - perl
+  run:
+  - perl-extutils-makemaker
+  - perl
+source:
+  fn: Regexp-Common-2016060801.tar.gz
+  md5: 566c7c851b6a1cbf1a82a5d3bc7d5d11
+  url: https://cpan.metacpan.org/authors/id/A/AB/ABIGAIL/Regexp-Common-2016060801.tar.gz
+test:
+  commands:
+  - perl -e "use Regexp::Common"
+  - perl -e "use Regexp::Common::CC"
+  - perl -e "use Regexp::Common::balanced"
+  - perl -e "use Regexp::Common::comment"
+  - perl -e "use Regexp::Common::delimited"
+  - perl -e "use Regexp::Common::lingua"
+  - perl -e "use Regexp::Common::list"
+  - perl -e "use Regexp::Common::net"
+  - perl -e "use Regexp::Common::number"
+  - perl -e "use Regexp::Common::profanity"
+  - perl -e "use Regexp::Common::whitespace"
+  - perl -e "use Regexp::Common::zip"

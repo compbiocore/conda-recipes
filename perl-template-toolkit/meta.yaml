@@ -1,0 +1,29 @@
+about:
+  home: http://metacpan.org/pod/Template-Toolkit
+  license: perl_5
+  summary: comprehensive template processing system
+build:
+  number: 1
+package:
+  name: perl-template-toolkit
+  version: '2.26'
+requirements:
+  build:
+  - perl-appconfig
+  - perl-cgi
+  - perl-image-info
+  - perl-image-size
+  - perl-test-leaktrace
+  - perl
+  run:
+  - perl-appconfig
+  - perl-cgi
+  - perl-image-info
+  - perl-image-size
+  - perl-test-leaktrace
+  - perl
+source:
+  fn: Template-Toolkit-2.26.tar.gz
+  md5: 4c289856ebee446ebbe2629b24f0734b
+  url: http://cpan.metacpan.org/authors/id/A/AB/ABW/Template-Toolkit-2.26.tar.gz
+test:

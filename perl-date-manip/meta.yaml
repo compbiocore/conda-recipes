@@ -1,0 +1,59 @@
+about:
+  home: http://metacpan.org/pod/Date::Manip
+  license: perl_5
+  summary: Date manipulation routines
+build:
+  number: 0
+package:
+  name: perl-date-manip
+  version: '6.57'
+requirements:
+  build:
+  - perl-pathtools
+  - perl-extutils-makemaker
+  - perl-encode-locale
+  - perl-test-inter
+  - perl-io-all
+  - perl-test-simple
+  - perl
+  run:
+  - perl-pathtools
+  - perl-encode-locale
+  - perl-io-all
+  - perl
+source:
+  fn: Date-Manip-6.57.tar.gz
+  md5: cd87e060f87662fc4cfebe7b3867ddf6
+  url: https://cpan.metacpan.org/authors/id/S/SB/SBECK/Date-Manip-6.57.tar.gz
+test:
+  commands:
+  - perl -e "use Date::Manip"
+  - perl -e "use Date::Manip::Base"
+  - perl -e "use Date::Manip::DM5"
+  - perl -e "use Date::Manip::DM5abbrevs"
+  - perl -e "use Date::Manip::DM6"
+  - perl -e "use Date::Manip::Date"
+  - perl -e "use Date::Manip::Delta"
+  - perl -e "use Date::Manip::Lang::catalan"
+  - perl -e "use Date::Manip::Lang::danish"
+  - perl -e "use Date::Manip::Lang::dutch"
+  - perl -e "use Date::Manip::Lang::english"
+  - perl -e "use Date::Manip::Lang::finnish"
+  - perl -e "use Date::Manip::Lang::french"
+  - perl -e "use Date::Manip::Lang::german"
+  - perl -e "use Date::Manip::Lang::index"
+  - perl -e "use Date::Manip::Lang::italian"
+  - perl -e "use Date::Manip::Lang::norwegian"
+  - perl -e "use Date::Manip::Lang::polish"
+  - perl -e "use Date::Manip::Lang::portugue"
+  - perl -e "use Date::Manip::Lang::romanian"
+  - perl -e "use Date::Manip::Lang::russian"
+  - perl -e "use Date::Manip::Lang::spanish"
+  - perl -e "use Date::Manip::Lang::swedish"
+  - perl -e "use Date::Manip::Lang::turkish"
+  - perl -e "use Date::Manip::Obj"
+  - perl -e "use Date::Manip::Recur"
+  - perl -e "use Date::Manip::TZ"
+  - perl -e "use Date::Manip::TZ_Base"
+  - perl -e "use Date::Manip::TZdata"
+  - perl -e "use Date::Manip::Zones"
