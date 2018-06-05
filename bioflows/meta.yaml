@@ -26,7 +26,7 @@ requirements:
     - gsnap
     - htseq
     - subread
-    #- salmon
+    - samtools
     - pyyaml
     - jsonpickle
     - sqlalchemy
