@@ -3,6 +3,7 @@
 mkdir -p $PREFIX/bin
 mkdir -p build
 cd build
-cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS:STRING="-march=haswell"
+cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS:STRING="-march=corei7-avx"
+#-DCMAKE_CXX_FLAGS:STRING="-march=haswell"
 make razers3
 cp bin/razers3 $PREFIX/bin

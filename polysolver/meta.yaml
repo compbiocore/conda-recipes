@@ -16,20 +16,21 @@ requirements:
     - perl-list-moreutils
     - perl-list-util
     - perl-parallel-forkmanager
-    - perl-posix
     - perl-dumpvalue
     - perl-data-dumper
+    - rsync
+    - libgcc
+    - zlib
     - novoalign
-    - gatk
-    - strelka
-    - mutect
+    - mutect 1.1.6
   run:
-    - gatk
     - samtools <=0.1.18
-    - strelka
     - novoalign
-    - mutect
+    - mutect 1.1.6
     - openjdk
+    - rsync
+    - zlib
+    - libgcc
     - perl-math-basecalc
     - perl-list-moreutils
     - perl-list-util
@@ -44,7 +45,7 @@ test:
     - test/test.bam
     - test/test.bam.bai
     - test/test.tumor.bam
-    - test/winners.hla.txt
+    - test/orig.winners.hla.txt
 
 about:
   home: http://archive.broadinstitute.org/cancer/cga/polysolver

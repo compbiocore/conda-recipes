@@ -1,0 +1,18 @@
+package:
+  name: mutect
+  version: "1.1.6"
+
+source:
+  url: https://github.com/broadinstitute/mutect/archive/1.1.6.zip
+
+build:
+  number: 1
+
+requirements:
+  run:
+    - openjdk
+
+about:
+  home: http://archive.broadinstitute.org/cancer/cga/mutect
+  license: Custom
+  license_file: mutect.LICENSE.TXT
