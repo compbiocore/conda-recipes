@@ -57,7 +57,7 @@ test:
     - pytest
     - pytest-runner
     - requests
-    - requests_mock
+    - requests-mock
 
 about:
   home: http://libcloud.apache.org/

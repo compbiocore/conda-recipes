@@ -32,7 +32,7 @@ unset JAVA_HOME
 
 # This is needed to force pkg-config to *also* search for system libraries.
 # We cannot use cairo without this since it depends on a good few X11 things.
-export PKG_CONFIG_PATH=/usr/lib/pkgconfig
+export PKG_CONFIG_PATH=~/miniconda2/lib/pkgconfig
 
 mkdir -p $PREFIX/lib
 
@@ -44,7 +44,6 @@ mkdir -p $PREFIX/lib
             --enable-memory-profiling       \
             --with-tk-config=${TK_CONFIG}   \
             --with-tcl-config=${TCL_CONFIG} \
-            --with-x                        \
             --with-pic                      \
             --with-cairo                    \
             --with-curses                   \

@@ -28,7 +28,7 @@ requirements:
     - future
     - colorama
     - netifaces ==0.10.4
-
+    - setproctitle
 test:
   imports:
     - radical
@@ -39,7 +39,7 @@ test:
     - radical.utils.plugins
     - radical.utils.plugins.unittests_1
     - radical.utils.plugins.unittests_2
-    - radical.utils.queue_network
+    #- radical.utils.queue_network
 
 about:
   home: https://www.github.com/radical-cybertools/radical.utils/

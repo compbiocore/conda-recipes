@@ -22,22 +22,22 @@ source:
 
 requirements:
   build:
-    - llvm # [osx]
-    - gcc ==4.8.5 # [linux]
-    - autoconf 2.69 pl5.*
-    - boost ==1.63.0
-    - icu 58.*
+    - gcc #==4.8.5 # [linux]
+    - libgcc #==4.8.5# [linux]
+    - autoconf 
+    - boost
+    - icu 
     - cmake
     - zlib
     - bzip2
     - unzip
-    - jemalloc ==4.5.0
+    - jemalloc
     - tbb
   run:
     - libgcc # [linux]
-    - boost ==1.63.0
-    - icu 58.*
-    - jemalloc ==4.5.0
+    - boost
+    - icu 
+    - jemalloc
     - tbb
     - zlib
     - bzip2

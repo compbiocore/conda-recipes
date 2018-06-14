@@ -8,8 +8,6 @@ source:
   fn: autoconf-{{ version }}.tar.gz
   url: http://ftp.gnu.org/gnu/autoconf/autoconf-{{ version }}.tar.gz
   sha256: 954bd69b391edc12d6a4a51a2dd1476543da5c6bbf05a95b59dc0dd6fd4c2969
-#  patches:
-#    - shebang.patch
 
 build:
   number: 4
@@ -27,7 +25,6 @@ test:
   commands:
     - autoconf --help
     - conda inspect linkages -p $PREFIX autoconf  # [not win]
-    - conda inspect objects -p $PREFIX autoconf  # [osx]
 
 about:
   home: http://www.gnu.org/software/autoconf/

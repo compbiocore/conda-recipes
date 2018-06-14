@@ -1,0 +1,106 @@
+{% set name = "parse" %}
+{% set version = "1.8.2" %}
+{% set hash_type = "sha256" %}
+{% set hash_value = "8048dde3f5ca07ad7ac7350460952d83b63eaacecdac1b37f45fd74870d849d2" %}
+
+package:
+  name: '{{ name|lower }}'
+  version: '{{ version }}'
+
+source:
+  fn: '{{ name }}-{{ version }}.tar.gz'
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  '{{ hash_type }}': '{{ hash_value }}'
+
+build:
+  number: 0
+  script: python setup.py install  --single-version-externally-managed --record=record.txt
+
+requirements:
+  build:
+    - python
+    - setuptools
+  run:
+    - python
+
+about:
+  home: https://github.com/r1chardj0n3s/parse
+  license: BSD License
+  license_family: BSD
+  license_file: ''
+  summary: parse() is the opposite of format()
+  description: "Parse strings using a specification based on the Python format() syntax.\n\n   ``parse()`` is the opposite of ``format()``\n\nThe module is set up to only export ``parse()``, ``search()``\
+    \ and\n``findall()`` when ``import *`` is used:\n\n>>> from parse import *\n\nFrom there it's a simple thing to parse a string:\n\n>>> parse(\"It's {}, I love it!\", \"It's spam, I love it!\")\n<Result\
+    \ ('spam',) {}>\n>>> _[0]\n'spam'\n\nOr to search a string for some pattern:\n\n>>> search('Age: {:d}\\n', 'Name: Rufus\\nAge: 42\\nColor: red\\n')\n<Result (42,) {}>\n\nOr find all the occurrences\
+    \ of some pattern in a string:\n\n>>> ''.join(r.fixed[0] for r in findall(\">{}<\", \"<p>the <b>bold</b> text</p>\"))\n'the bold text'\n\nIf you're going to use the same pattern to match lots of strings\
+    \ you can\ncompile it once:\n\n>>> from parse import compile\n>>> p = compile(\"It's {}, I love it!\")\n>>> print(p)\n<Parser \"It's {}, I love it!\">\n>>> p.parse(\"It's spam, I love it!\")\n<Result\
+    \ ('spam',) {}>\n\n(\"compile\" is not exported for ``import *`` usage as it would override the\nbuilt-in ``compile()`` function)\n\n\nFormat Syntax\n-------------\n\nA basic version of the `Format\
+    \ String Syntax`_ is supported with anonymous\n(fixed-position), named and formatted fields::\n\n   {[field name]:[format spec]}\n\nField names must be a valid Python identifiers, including dotted names;\n\
+    element indexes imply dictionaries (see below for example).\n\nNumbered fields are also not supported: the result of parsing will include\nthe parsed fields in the order they are parsed.\n\nThe conversion\
+    \ of fields to types other than strings is done based on the\ntype in the format specification, which mirrors the ``format()`` behaviour.\nThere are no \"!\" field conversions like ``format()`` has.\n\
+    \nSome simple parse() format string examples:\n\n>>> parse(\"Bring me a {}\", \"Bring me a shrubbery\")\n<Result ('shrubbery',) {}>\n>>> r = parse(\"The {} who say {}\", \"The knights who say Ni!\"\
+    )\n>>> print(r)\n<Result ('knights', 'Ni!') {}>\n>>> print(r.fixed)\n('knights', 'Ni!')\n>>> r = parse(\"Bring out the holy {item}\", \"Bring out the holy hand grenade\")\n>>> print(r)\n<Result () {'item':\
+    \ 'hand grenade'}>\n>>> print(r.named)\n{'item': 'hand grenade'}\n>>> print(r['item'])\nhand grenade\n\nDotted names and indexes are possible though the application must make\nadditional sense of the\
+    \ result:\n\n>>> r = parse(\"Mmm, {food.type}, I love it!\", \"Mmm, spam, I love it!\")\n>>> print(r)\n<Result () {'food.type': 'spam'}>\n>>> print(r.named)\n{'food.type': 'spam'}\n>>> print(r['food.type'])\n\
+    spam\n>>> r = parse(\"My quest is {quest[name]}\", \"My quest is to seek the holy grail!\")\n>>> print(r)\n<Result () {'quest': {'name': 'to seek the holy grail!'}}>\n>>> print(r['quest'])\n{'name':\
+    \ 'to seek the holy grail!'}\n>>> print(r['quest']['name'])\nto seek the holy grail!\n\n\nFormat Specification\n--------------------\n\nMost often a straight format-less ``{}`` will suffice where a\
+    \ more complex\nformat specification might have been used.\n\nMost of `format()`'s `Format Specification Mini-Language`_ is supported:\n\n   [[fill]align][0][width][.precision][type]\n\nThe differences\
+    \ between `parse()` and `format()` are:\n\n- The align operators will cause spaces (or specified fill character) to be\n  stripped from the parsed value. The width is not enforced; it just indicates\n\
+    \  there may be whitespace or \"0\"s to strip.\n- Numeric parsing will automatically handle a \"0b\", \"0o\" or \"0x\" prefix.\n  That is, the \"#\" format character is handled automatically by d, b,\
+    \ o\n  and x formats. For \"d\" any will be accepted, but for the others the correct\n  prefix must be present if at all.\n- Numeric sign is handled automatically.\n- The thousands separator is handled\
+    \ automatically if the \"n\" type is used.\n- The types supported are a slightly different mix to the format() types.  Some\n  format() types come directly over: \"d\", \"n\", \"%\", \"f\", \"e\", \"\
+    b\", \"o\" and \"x\".\n  In addition some regular expression character group types \"D\", \"w\", \"W\", \"s\"\n  and \"S\" are also available.\n- The \"e\" and \"g\" types are case-insensitive so there\
+    \ is not need for\n  the \"E\" or \"G\" types.\n\n===== =========================================== ========\nType  Characters Matched                          Output\n===== ===========================================\
+    \ ========\n w    Letters and underscore                      str\n W    Non-letter and underscore                   str\n s    Whitespace                                  str\n S    Non-whitespace\
+    \                              str\n d    Digits (effectively integer numbers)        int\n D    Non-digit                                   str\n n    Numbers with thousands separators (, or .)  int\n\
+    \ %    Percentage (converted to value/100.0)       float\n f    Fixed-point numbers                         float\n e    Floating-point numbers with exponent        float\n      e.g. 1.1e-10, NAN (all\
+    \ case insensitive)\n g    General number format (either d, f or e)    float\n b    Binary numbers                              int\n o    Octal numbers                               int\n x    Hexadecimal\
+    \ numbers (lower and upper case)  int\n ti   ISO 8601 format date/time                   datetime\n      e.g. 1972-01-20T10:21:36Z (\"T\" and \"Z\"\n      optional)\n te   RFC2822 e-mail format date/time\
+    \             datetime\n      e.g. Mon, 20 Jan 1972 10:21:36 +1000\n tg   Global (day/month) format date/time         datetime\n      e.g. 20/1/1972 10:21:36 AM +1:00\n ta   US (month/day) format date/time\
+    \             datetime\n      e.g. 1/20/1972 10:21:36 PM +10:30\n tc   ctime() format date/time                    datetime\n      e.g. Sun Sep 16 01:03:52 1973\n th   HTTP log format date/time    \
+    \               datetime\n      e.g. 21/Nov/2011:00:07:11 +0000\n ts   Linux system log format date/time           datetime\n      e.g. Nov  9 03:37:44\n tt   Time                                  \
+    \      time\n      e.g. 10:21:36 PM -5:30\n===== =========================================== ========\n\nSome examples of typed parsing with ``None`` returned if the typing\ndoes not match:\n\n>>> parse('Our\
+    \ {:d} {:w} are...', 'Our 3 weapons are...')\n<Result (3, 'weapons') {}>\n>>> parse('Our {:d} {:w} are...', 'Our three weapons are...')\n>>> parse('Meet at {:tg}', 'Meet at 1/2/2011 11:00 PM')\n<Result\
+    \ (datetime.datetime(2011, 2, 1, 23, 0),) {}>\n\nAnd messing about with alignment:\n\n>>> parse('with {:>} herring', 'with     a herring')\n<Result ('a',) {}>\n>>> parse('spam {:^} spam', 'spam    lovely\
+    \     spam')\n<Result ('lovely',) {}>\n\nNote that the \"center\" alignment does not test to make sure the value is\ncentered - it just strips leading and trailing whitespace.\n\nSome notes for the\
+    \ date and time types:\n\n- the presence of the time part is optional (including ISO 8601, starting\n  at the \"T\"). A full datetime object will always be returned; the time\n  will be set to 00:00:00.\
+    \ You may also specify a time without seconds.\n- when a seconds amount is present in the input fractions will be parsed\n  to give microseconds.\n- except in ISO 8601 the day and month digits may be\
+    \ 0-padded.\n- the date separator for the tg and ta formats may be \"-\" or \"/\".\n- named months (abbreviations or full names) may be used in the ta and tg\n  formats in place of numeric months.\n\
+      - as per RFC 2822 the e-mail format may omit the day (and comma), and the\n  seconds but nothing else.\n- hours greater than 12 will be happily accepted.\n- the AM/PM are optional, and if PM is found\
+    \ then 12 hours will be added\n  to the datetime object's hours amount - even if the hour is greater\n  than 12 (for consistency.)\n- in ISO 8601 the \"Z\" (UTC) timezone part may be a numeric offset\n\
+      - timezones are specified as \"+HH:MM\" or \"-HH:MM\". The hour may be one or two\n  digits (0-padded is OK.) Also, the \":\" is optional.\n- the timezone is optional in all except the e-mail format\
+    \ (it defaults to\n  UTC.)\n- named timezones are not handled yet.\n\nNote: attempting to match too many datetime fields in a single parse() will\ncurrently result in a resource allocation issue. A\
+    \ TooManyFields exception\nwill be raised in this instance. The current limit is about 15. It is hoped\nthat this limit will be removed one day.\n\n.. _`Format String Syntax`:\n  http://docs.python.org/library/string.html#format-string-syntax\n\
+    .. _`Format Specification Mini-Language`:\n  http://docs.python.org/library/string.html#format-specification-mini-language\n\n\nResult and Match Objects\n------------------------\n\nThe result of a\
+    \ ``parse()`` and ``search()`` operation is either ``None`` (no match), a\n``Result`` instance or a ``Match`` instance if ``evaluate_result`` is False.\n\nThe ``Result`` instance has three attributes:\n\
+    \nfixed\n   A tuple of the fixed-position, anonymous fields extracted from the input.\nnamed\n   A dictionary of the named fields extracted from the input.\nspans\n   A dictionary mapping the names\
+    \ and fixed position indices matched to a\n   2-tuple slice range of where the match occurred in the input.\n   The span does not include any stripped padding (alignment or width).\n\nThe ``Match``\
+    \ instance has one method:\n\nevaluate_result()\n   Generates and returns a ``Result`` instance for this ``Match`` object.\n\n\n\nCustom Type Conversions\n-----------------------\n\nIf you wish to have\
+    \ matched fields automatically converted to your own type you\nmay pass in a dictionary of type conversion information to ``parse()`` and\n``compile()``.\n\nThe converter will be passed the field string\
+    \ matched. Whatever it returns\nwill be substituted in the ``Result`` instance for that field.\n\nYour custom type conversions may override the builtin types if you supply one\nwith the same identifier.\n\
+    \n>>> def shouty(string):\n...    return string.upper()\n...\n>>> parse('{:shouty} world', 'hello world', dict(shouty=shouty))\n<Result ('HELLO',) {}>\n\nIf the type converter has the optional ``pattern``\
+    \ attribute, it is used as\nregular expression for better pattern matching (instead of the default one).\n\n>>> def parse_number(text):\n...    return int(text)\n>>> parse_number.pattern = r'\\d+'\n\
+    >>> parse('Answer: {number:Number}', 'Answer: 42', dict(Number=parse_number))\n<Result () {'number': 42}>\n>>> _ = parse('Answer: {:Number}', 'Answer: Alice', dict(Number=parse_number))\n>>> assert\
+    \ _ is None, \"MISMATCH\"\n\nYou can also use the ``with_pattern(pattern)`` decorator to add this\ninformation to a type converter function:\n\n>>> from parse import with_pattern\n>>> @with_pattern(r'\\\
+    d+')\n... def parse_number(text):\n...    return int(text)\n>>> parse('Answer: {number:Number}', 'Answer: 42', dict(Number=parse_number))\n<Result () {'number': 42}>\n\nA more complete example of a\
+    \ custom type might be:\n\n>>> yesno_mapping = {\n...     \"yes\":  True,   \"no\":    False,\n...     \"on\":   True,   \"off\":   False,\n...     \"true\": True,   \"false\": False,\n... }\n>>> @with_pattern(r\"\
+    |\".join(yesno_mapping))\n... def parse_yesno(text):\n...     return yesno_mapping[text.lower()]\n\n\n----\n\n**Version history (in brief)**:\n\n- 1.8.2 clarify message on invalid format specs (thanks\
+    \ Rick Teachey)\n- 1.8.1 ensure bare hexadecimal digits are not matched\n- 1.8.0 support manual control over result evaluation (thanks Timo Furrer)\n- 1.7.0 parse dict fields (thanks Mark Visser) and\
+    \ adapted to allow\n  more than 100 re groups in Python 3.5+ (thanks David King)\n- 1.6.6 parse Linux system log dates (thanks Alex Cowan)\n- 1.6.5 handle precision in float format (thanks Levi Kilcher)\n\
+      - 1.6.4 handle pipe \"|\" characters in parse string (thanks Martijn Pieters)\n- 1.6.3 handle repeated instances of named fields, fix bug in PM time\n  overflow\n- 1.6.2 fix logging to use local, not\
+    \ root logger (thanks Necku)\n- 1.6.1 be more flexible regarding matched ISO datetimes and timezones in\n  general, fix bug in timezones without \":\" and improve docs\n- 1.6.0 add support for optional\
+    \ ``pattern`` attribute in user-defined types\n  (thanks Jens Engel)\n- 1.5.3 fix handling of question marks\n- 1.5.2 fix type conversion error with dotted names (thanks Sebastian Thiel)\n- 1.5.1 implement\
+    \ handling of named datetime fields\n- 1.5 add handling of dotted field names (thanks Sebastian Thiel)\n- 1.4.1 fix parsing of \"0\" in int conversion (thanks James Rowe)\n- 1.4 add __getitem__ convenience\
+    \ access on Result.\n- 1.3.3 fix Python 2.5 setup.py issue.\n- 1.3.2 fix Python 3.2 setup.py issue.\n- 1.3.1 fix a couple of Python 3.2 compatibility issues.\n- 1.3 added search() and findall(); removed\
+    \ compile() from ``import *``\n  export as it overwrites builtin.\n- 1.2 added ability for custom and override type conversions to be\n  provided; some cleanup\n- 1.1.9 to keep things simpler number\
+    \ sign is handled automatically;\n  significant robustification in the face of edge-case input.\n- 1.1.8 allow \"d\" fields to have number base \"0x\" etc. prefixes;\n  fix up some field type interactions\
+    \ after stress-testing the parser;\n  implement \"%\" type.\n- 1.1.7 Python 3 compatibility tweaks (2.5 to 2.7 and 3.2 are supported).\n- 1.1.6 add \"e\" and \"g\" field types; removed redundant \"\
+    h\" and \"X\";\n  removed need for explicit \"#\".\n- 1.1.5 accept textual dates in more places; Result now holds match span\n  positions.\n- 1.1.4 fixes to some int type conversion; implemented \"\
+    =\" alignment; added\n  date/time parsing with a variety of formats handled.\n- 1.1.3 type conversion is automatic based on specified field types. Also added\n  \"f\" and \"n\" types.\n- 1.1.2 refactored,\
+    \ added compile() and limited ``from parse import *``\n- 1.1.1 documentation improvements\n- 1.1.0 implemented more of the `Format Specification Mini-Language`_\n  and removed the restriction on mixing\
+    \ fixed-position and named fields\n- 1.0.0 initial release\n\nThis code is copyright 2012-2017 Richard Jones <richard@python.org>\nSee the end of the source file for the license of use."
+  doc_url: ''
+  dev_url: ''
+
+extra:
+  recipe-maintainers: ''

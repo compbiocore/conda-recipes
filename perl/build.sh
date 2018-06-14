@@ -12,9 +12,12 @@ fi
 
 sh Configure -Dusethreads -Duserelocatableinc -Dprefix=$PREFIX -de -Aldflags="$LDFLAGS"
 make
-
+make test
 # change permissions again after building
 chmod -R o-w $SRC_DIR
-
-make test
+#mypath="/conda/bin:/usr/bin:/bin:/usr/local/bin/:/usr/local/sbin:/sbin"
+#(
+#PATH=$mypath
+#make test
+#)
 make install
