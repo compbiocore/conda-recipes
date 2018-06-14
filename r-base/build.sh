@@ -52,6 +52,7 @@ mkdir -p $PREFIX/lib
             --with-recommended-packages=no  \
             --with-blas="$MKL"              \
             --with-lapack                   \
+            --with-x=no                     \
             LIBnn=lib
 
 if cat src/include/config.h | grep "undef HAVE_PANGOCAIRO"; then
