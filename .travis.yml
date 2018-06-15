@@ -12,4 +12,5 @@ before_install:
   - docker pull mhowison/conda-build:v2
   - docker run --name ccv -v conda-recipes:/home/conda/recipes mhowison/conda-build:v2
   - docker start ccv
+  - docker exec ccv sudo yum install -y git
   - docker exec ccv python /home/conda/recipes/build.py /home/conda/recipes compbiocore

@@ -11,13 +11,12 @@ source:
 
 requirements:
   build:
-  - gcc  # [not osx]
-  - llvm # [osx]
+  - gcc 
   - zlib
   - curl
   run:
-  - libgcc # [not osx]
-  - perl 5.22.2.1
+  - libgcc
+  - perl 
   - zlib
   - curl
 
