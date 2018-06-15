@@ -11,6 +11,6 @@ services:
 before_install:
   - docker pull mhowison/conda-build:v2
   - docker run  -v conda-recipes:/home/conda/recipes mhowison/conda-build:v2 
-  - docker start 
+  #- docker start 
   - docker exec -t sudo yum -y install git
   - docker exec -t ccv python /home/conda/recipes/build.py /home/conda/recipes compbiocore
