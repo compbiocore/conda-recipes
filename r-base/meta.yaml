@@ -23,7 +23,7 @@ build:
 
 requirements:
   build:
-    - gcc ==5.4.0
+    - gcc >=5.4.0 
     - pkg-config
     - mkl
     - bzip2 

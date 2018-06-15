@@ -38,3 +38,5 @@ requirements:
     - qualimap
     - sra-tools
     - lftp
+    - gatk
+    - r-base
