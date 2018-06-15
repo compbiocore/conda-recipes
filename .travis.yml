@@ -10,7 +10,7 @@ services:
 # set up docker image
 before_install:
   - docker pull mhowison/conda-build:v2
-  - docker run -v conda-recipes:/home/conda/recipes --name cbc -d  mhowison/conda-build:v2 
+  - docker run -v conda-recipes:/home/conda/recipes --name cbc -d --rm  mhowison/conda-build:v2 
   - docker ps -a
   - docker exec cbc sudo yum -y install git
   - docker exec cbc python /home/conda/recipes/build.py /home/conda/recipes compbiocore
