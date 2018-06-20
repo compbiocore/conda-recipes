@@ -7,7 +7,7 @@ import json
 import yaml
 import glob
 import logging
-from subprocess import PIPE, check_call, Popen
+from subprocess import PIPE, call, check_call, Popen
 
 from conda_build.config import Config
 
@@ -66,7 +66,11 @@ def build(root):
     # Quote is need in case the root path has spaces in it.
     build_cmd = 'conda build --dirty "%s"' % root
     log.info('Building: {0}'.format(build_cmd))
-    proc = check_call(build_cmd, shell=True)
+    proc = call(build_cmd, shell=True)
+    if proc==1:
+        with open("failed_recipes.txt",a) as f:
+            f.write(root+"\n")
+    #proc = check_call(build_cmd, shell=True)
     log.info(proc)
 
 
