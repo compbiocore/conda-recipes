@@ -1,0 +1,68 @@
+{% set name = "harfbuzz" %}
+{% set version = "1.8.1" %}
+{% set sha256 = "fbed6392ddb085e45e6090a9f389f72926d0e355f4b0a2ef51d35cf21686df45" %}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  url: https://www.freedesktop.org/software/{{ name }}/release/{{ name }}-{{ version }}.tar.bz2
+  sha256: {{ sha256 }}
+
+build:
+  number: 0
+  skip: true  # [py3k or win]
+  detect_binary_files_with_prefix: true
+
+requirements:
+  build:
+    - automake
+    - libtool
+    - pkg-config
+    - cairo 1.14.*
+    - glib 2.55.*
+    - freetype 
+    - icu 58.*
+    - graphite2 
+    - gobject-introspection 1.55.*
+    - python
+  run:
+    - cairo 1.14.*
+    - glib 2.55.*
+    - freetype 
+    - icu 58.*
+    - graphite2 
+
+test:
+  commands:
+    # Libraries/headers.
+    {% set libs = [
+        "libharfbuzz-icu",
+        "libharfbuzz"
+        ] %}
+    {% for lib in libs %}
+    - test -f $PREFIX/lib/{{ lib }}.dylib  # [osx]
+    - test -f $PREFIX/lib/{{ lib }}.so  # [linux]
+    {% endfor %}
+    - test -f $PREFIX/include/harfbuzz/hb-ft.h  # [not win]
+    # CLI tests.
+    - hb-view --version  # [linux]
+    - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
+    - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
+
+about:
+  home: http://www.freedesktop.org/wiki/Software/HarfBuzz/
+  license: MIT
+  license_file: COPYING
+  summary: 'An OpenType text shaping engine.'
+  description: |
+    HarfBuzz is a text shaping library. New Harbuzz targets various font
+    technologies while Old HarfBuzz targets only OpenType fonts.
+  doc_url: https://www.freedesktop.org/wiki/Software/HarfBuzz/
+  dev_url: https://github.com/behdad/harfbuzz
+
+extra:
+  recipe-maintainers:
+    - ocefpaf
+    - pkgw

@@ -35,7 +35,7 @@ requirements:
     - libtiff 
     - libxml2 
     - ncurses
-    - pango 
+    - pango
     - pcre 
     - readline 
     - tk 
@@ -44,7 +44,7 @@ requirements:
     - libgcc >=5.4.0
     - mkl
     - bzip2
-    - cairo 
+    - cairo
     - curl
     - icu 
     - jpeg 
