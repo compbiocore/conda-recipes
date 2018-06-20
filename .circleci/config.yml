@@ -1,0 +1,13 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: mhowison/conda-build:v3
+    steps:
+      - checkout
+      - run:
+          name: Cloning
+          command: git clone https://github.com/compbiocore/conda-recipes.git
+      - run:
+          name: Print the Current Time
+          command: date

@@ -47,7 +47,7 @@ def build_upload_recipes(p, channel):
                 if is_not_uploaded(name, version, build_number, channel):
                     build(root)
                     if os.environ['TRAVIS_SECURE_ENV_VARS'] == 'true':
-                        upload(name, version, channel)
+                #        upload(name, version, channel)
                     else:
                         log.info("Uploading not available in Pull Requests")
                 else:
