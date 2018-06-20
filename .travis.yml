@@ -10,7 +10,7 @@ services:
 # set up docker image
 before_install:
   - docker pull mhowison/conda-build:v2
-  - docker run --name cbc -a stdin -a stdout -a stderr mhowison/conda-build:v2 /bin/bash -c "sudo yum -y install git; mkdir /home/conda/recipes; git clone https://github.com/compbiocore/conda-recipes.git; pwd;  ls -ltrh ; echo 'directory listing'; python /home/conda/recipes/build.py /home/conda/recipes compbiocore"
+  - docker run --name cbc -a stdin -a stdout -a stderr mhowison/conda-build:v2 /bin/bash -c "sudo yum -y install git; cd /home/conda; mkdir recipes; cd recipes; git clone https://github.com/compbiocore/conda-recipes.git; pwd;  ls -ltrh ; echo 'directory listing'; python /home/conda/recipes/build.py /home/conda/recipes compbiocore"
   - docker ps -a
   #- docker exec cbc sudo yum -y install git
   #- docker exec cbc python /home/conda/recipes/build.py /home/conda/recipes compbiocore
