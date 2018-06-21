@@ -2,18 +2,18 @@ version: 2
 jobs:
   build:
     docker:
-      - image: mhowison/conda-build:v3
+      - image: compbiocore/dockerfiles:v1
     steps:
       - checkout
       - run:
-          name: Cloning
-          command: git clone https://github.com/compbiocore/conda-recipes.git
+          name: Create container
+          command: docker run --name cbc -it -d compbiocore/dockerfiles:v1 /bin/bash
+      - run:
+          name: Copy recipes
+          command: docker cp recipes cbc:/home/conda
+      - run:
+          name: Copy build scripts
+          command: docker cp ci_scripts cbc:/home/conda
       - run:
           name: Building
-          command: python /home/conda/recipes/build.py /home/conda/recipes compbiocore
-      - run:
-          name: Installing
-          command: python /home/conda/recipes/install.py /home/conda/recipes compbiocore
-      - run:
-          name: Dependency conflicts
-          commands: python /home/conda/recipes/dependency_conflicts.py
+          command: docker exec cbc sh -c "python /home/conda/ci_scripts/build.py /home/conda/recipes compbiocore"

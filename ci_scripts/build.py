@@ -46,11 +46,12 @@ def build_upload_recipes(p, channel):
                 env = Environment(loader=FileSystemLoader(root))
                 template = env.get_template('meta.yaml')
                 meta = yaml.load(template.render())
+                
                 name = meta['package']['name']
                 version = meta['package']['version']
                 try:
                     build_number = meta['build']['number']
-                except KeyError:
+                except: # Should be a KeyError but possible a TypeError or others as well
                     # Build number is 0 if not specified
                     build_number = 0
                 if is_not_uploaded(name, version, build_number, channel):
@@ -86,13 +87,16 @@ def build(root):
         the directory path for the recipe.
     '''
     # Quote is need in case the root path has spaces in it.
-    build_cmd = 'conda build --dirty "%s"' % root
+    #build_cmd = 'conda build --dirty "%s"' % root
+    build_cmd = 'conda build -c compbiocore "%s"' % root
     log.info('Building: {0}'.format(build_cmd))
     try:
         proc = Popen(build_cmd, shell=True, stdout=PIPE, stderr=subprocess.STDOUT)
+        proc.terminate()
         return True
     except (OSError, subprocess.CalledProcessError) as exception:
         log.info("Exception occured: " + str(exception))
+        proc.terminate()
         log.info("Build failed.")
 #        with open("failed_recipes.txt",'a') as f:
 #            f.write(root+"\n")

@@ -25,8 +25,6 @@ requirements:
     - libgcc
 
 test:
-  requires:
-    - python {{ os.environ.get('PY_VER', '') + '*' }}  # [win]
   commands:
     - bzip2 --help  # [unix]
     {% set bzip2_executables = [
