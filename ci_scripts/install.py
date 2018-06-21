@@ -28,6 +28,7 @@ def build_upload_recipes(p, channel):
     channel : str
         Anaconda channel where the packages will be uploaded.
     '''
+    passed 
     for root, dirs, files in os.walk(p):
         has_recipe = 'meta.yaml' in files
         if not dirs and has_recipe:

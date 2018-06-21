@@ -7,6 +7,7 @@ import json
 import yaml
 import glob
 import logging
+import subprocess
 from subprocess import PIPE, call, check_call, Popen
 from jinja2 import Environment, FileSystemLoader
 
@@ -32,6 +33,10 @@ def build_upload_recipes(p, channel):
     channel : str
         Anaconda channel where the packages will be uploaded.
     '''
+    build_error = 0
+    build_passed = 0
+    failed_recipes = ""
+    #open('failed_recipes.txt','w').close() # clean failed recipes file
     for root, dirs, files in os.walk(p):
         has_recipe = 'meta.yaml' in files
         if not dirs and has_recipe:
@@ -49,16 +54,26 @@ def build_upload_recipes(p, channel):
                     # Build number is 0 if not specified
                     build_number = 0
                 if is_not_uploaded(name, version, build_number, channel):
-                    build(root)
+                    build_call = build(root)
+                    if build_call==0:
+                        build_passed+=1
+                    else:
+                        build_error+=1
+                        failed_recipes=failed_recipes+root+"\n"
                     #if os.environ['TRAVIS_SECURE_ENV_VARS'] == 'true':
                     #    upload(name, version, channel)
                     #else:
                     #    log.info("Uploading not available in Pull Requests")
-                    log.info("Not uploading at the moment")
+                    log.info("Not uploading at the moment...")
                 else:
                     # Only new packages (either version or build_number)
                     log.info("Skipping package: {0}-{1}-{2}".format(
                         name, version, build_number))
+    log.info("Number of successfully built packages: {0}".format(build_passed))
+    log.info("Number of errored packages while building: {0}".format(build_error))
+    if build_error > 0:
+        log.error("Have failed recipes: {0}".format(failed_recipes))
+        raise ValueError("Have failed recipes. Please check log.")
 
 
 def build(root):
@@ -71,12 +86,16 @@ def build(root):
     # Quote is need in case the root path has spaces in it.
     build_cmd = 'conda build --dirty "%s"' % root
     log.info('Building: {0}'.format(build_cmd))
-    proc = call(build_cmd, shell=True)
-    if proc==1:
-        with open("failed_recipes.txt",'a') as f:
-            f.write(root+"\n")
-    #proc = check_call(build_cmd, shell=True)
-    log.info(proc)
+    try:
+        proc = Popen(build_cmd, shell=True, stdout=PIPE, stderr=subprocess.STDOUT)
+        return True
+    except (OSError, subprocess.CalledProcessError) as exception:
+        log.info("Exception occured: " + str(exception))
+        log.info("Build failed.")
+#        with open("failed_recipes.txt",'a') as f:
+#            f.write(root+"\n")
+# need to figure out how docker permissions work...
+        return False
 
 
 def is_not_uploaded(name, version, build_number, channel):
