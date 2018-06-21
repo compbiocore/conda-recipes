@@ -60,7 +60,8 @@ def build_upload_recipes(p, channel):
                     else:
                         build_error+=1
                         failed_recipes=failed_recipes+root+"\n"
-                    call('conda clean -a', shell=True)
+                    log.info("Cleaning environment.")
+                    call('conda clean -a -y', shell=True)
                     #if os.environ['TRAVIS_SECURE_ENV_VARS'] == 'true':
                     #    upload(name, version, channel)
                     #else:
