@@ -60,6 +60,7 @@ def build_upload_recipes(p, channel):
                     else:
                         build_error+=1
                         failed_recipes=failed_recipes+root+"\n"
+                    call('conda clean -a', shell=True)
                     #if os.environ['TRAVIS_SECURE_ENV_VARS'] == 'true':
                     #    upload(name, version, channel)
                     #else:
@@ -146,7 +147,8 @@ def is_not_uploaded(name, version, build_number, channel):
     if build_number > max(
             i['build_number'] for i in pkg if i['version'] == version):
         return True
-    return False
+#    return False (return False if we don't want to build, but for now we want to build everything!)
+    return True
 
 
 def upload(name, version, channel):
