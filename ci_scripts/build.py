@@ -59,10 +59,13 @@ def build_upload_recipes(p, channel):
                     if build_call==0:
                         build_passed+=1
                     else:
+                        log.info("Failed build: {0}".format(root))
                         build_error+=1
                         failed_recipes=failed_recipes+root+"\n"
                     log.info("Cleaning environment.")
-                    call('conda clean -a -y', shell=True)
+                    FNULL = open(os.devnull, 'w')
+                    call('conda clean -a -y', shell=True, stdout=FNULL, stderr=subprocess.STDOUT)
+                    FNULL.close()
                     #if os.environ['TRAVIS_SECURE_ENV_VARS'] == 'true':
                     #    upload(name, version, channel)
                     #else:
@@ -90,18 +93,21 @@ def build(root):
     #build_cmd = 'conda build --dirty "%s"' % root
     build_cmd = 'conda build -c compbiocore "%s"' % root
     log.info('Building: {0}'.format(build_cmd))
-    try:
-        proc = Popen(build_cmd, shell=True, stdout=PIPE, stderr=subprocess.STDOUT)
-        proc.terminate()
-        return True
-    except (OSError, subprocess.CalledProcessError) as exception:
-        log.info("Exception occured: " + str(exception))
-        proc.terminate()
-        log.info("Build failed.")
+    FNULL = open(os.devnull, 'w')
+    proc = call(build_cmd, shell=True, stdout=FNULL, stderr=subprocess.STDOUT)
+    FNULL.close()
+    return(proc)
+    #    proc = Popen(build_cmd, shell=True, stdout=PIPE, stderr=subprocess.STDOUT)
+#        proc.terminate()
+#        return True
+#    except (OSError, subprocess.CalledProcessError) as exception:
+#        log.info("Exception occured: " + str(exception))
+#        proc.terminate()
+#        log.info("Build failed.")
 #        with open("failed_recipes.txt",'a') as f:
 #            f.write(root+"\n")
 # need to figure out how docker permissions work...
-        return False
+#        return False
 
 
 def is_not_uploaded(name, version, build_number, channel):
