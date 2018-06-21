@@ -10,10 +10,8 @@ services:
 # set up docker image
 before_install:
   - docker pull mhowison/conda-build:v2
-  - docker run --name cbc -a stdin -a stdout -a stderr mhowison/conda-build:v2 /bin/bash -c "sudo yum -y install git; cd /home/conda; mkdir recipes"
-  - docker cp -r * cbc:/home/conda/recipes
+  - docker run --name cbc -a stdin -a stdout -a stderr mhowison/conda-build:v2 /bin/bash -c "sudo yum -y install git"
+  - docker cp recipes cbc:/home/conda
   - docker ps -a
-  - docker exec cbc "pwd; ls -ltrh; echo 'directory listing'; python /home/conda/recipes/build.py /home/conda/recipes compbiocore"
-  #- docker exec cbc sudo yum -y install git
-  #- docker exec cbc python /home/conda/recipes/build.py /home/conda/recipes compbiocore
-  #- docker start 
+  - docker exec cbc "pwd; ls -ltrh; echo 'directory listing'; python /home/conda/recipes/ci_scripts/build.py /home/conda/recipes compbiocore"
+  # should become docker exec only on the modified recipe later on.
