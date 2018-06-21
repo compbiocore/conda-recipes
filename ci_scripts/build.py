@@ -8,6 +8,7 @@ import yaml
 import glob
 import logging
 from subprocess import PIPE, call, check_call, Popen
+from jinja2 import Environment, FileSystemLoader
 
 from conda_build.config import Config
 
@@ -36,7 +37,10 @@ def build_upload_recipes(p, channel):
         if not dirs and has_recipe:
             with open(os.path.join(root, 'meta.yaml')) as f:
                 log.info("Checking {}".format(root))
-                meta = yaml.load(f)
+                # for Jinja
+                env = Environment(loader=FileSystemLoader(root))
+                template = env.get_template('meta.yaml')
+                meta = yaml.load(template.render())
                 name = meta['package']['name']
                 version = meta['package']['version']
                 try:
@@ -46,10 +50,11 @@ def build_upload_recipes(p, channel):
                     build_number = 0
                 if is_not_uploaded(name, version, build_number, channel):
                     build(root)
-                    if os.environ['TRAVIS_SECURE_ENV_VARS'] == 'true':
-                        upload(name, version, channel)
-                    else:
-                        log.info("Uploading not available in Pull Requests")
+                    #if os.environ['TRAVIS_SECURE_ENV_VARS'] == 'true':
+                    #    upload(name, version, channel)
+                    #else:
+                    #    log.info("Uploading not available in Pull Requests")
+                    log.info("Not uploading at the moment")
                 else:
                     # Only new packages (either version or build_number)
                     log.info("Skipping package: {0}-{1}-{2}".format(
@@ -68,7 +73,7 @@ def build(root):
     log.info('Building: {0}'.format(build_cmd))
     proc = call(build_cmd, shell=True)
     if proc==1:
-        with open("failed_recipes.txt",a) as f:
+        with open("failed_recipes.txt",'a') as f:
             f.write(root+"\n")
     #proc = check_call(build_cmd, shell=True)
     log.info(proc)
@@ -148,6 +153,22 @@ def upload(name, version, channel):
         shell=True)
     log.info(proc)
 
+def install(name, version, channel):
+    '''Install a built package. If there are dependency conflicts with the base environment,
+    output to a log file.
+    Parameters
+    ----------
+    name: str
+        Package name.
+    version : str
+        Package version.
+    channel : str
+        Channel where package was uploaded.
+    '''
+    install_cmd = 'conda install -c %s %s=%s' % (channel, name, version)
+    log.info('Installing: {0}'.format(install_cmd))
+    proc = call(install_cmd, shell=True)
+    
 
 if __name__ == '__main__':
     build_upload_recipes(sys.argv[1], sys.argv[2])
