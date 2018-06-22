@@ -6,6 +6,10 @@ This is the conda recipe repository for the [Computational Biology Core (CBC)](h
 
 The build system for all the recipes is CentOS 6 with conda build 3. A Docker image of our build system is on [Dockerhub](https://hub.docker.com/r/compbiocore/dockerfiles/) if needed.
 
+# Our CI workflow
+
+To maintain package quality and compatibility we keep a `main` conda environment which has recent versions of gcc, zlib and other vital software. For each recipe that is uploaded,
+
 # Contributors
 
 Fernando Gelin, August Guang, Andrew Leith, Ashok Ragavendran.
