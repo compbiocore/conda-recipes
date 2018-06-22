@@ -64,8 +64,7 @@ def build_upload_recipes(p, channel):
                         failed_recipes=failed_recipes+root+"\n"
                     log.info("Cleaning environment.")
                     FNULL = open(os.devnull, 'w')
-                    call('conda clean -a -y', shell=True, stdout=FNULL, stderr=subprocess.STDOUT)
-                    FNULL.close()
+                    call('conda clean -a -y', shell=True, stdout=FNULL, stderr=subprocess.STDOUT, close_fds=True)
                     #if os.environ['TRAVIS_SECURE_ENV_VARS'] == 'true':
                     #    upload(name, version, channel)
                     #else:
@@ -94,8 +93,7 @@ def build(root):
     build_cmd = 'conda build -c compbiocore "%s"' % root
     log.info('Building: {0}'.format(build_cmd))
     FNULL = open(os.devnull, 'w')
-    proc = call(build_cmd, shell=True, stdout=FNULL, stderr=subprocess.STDOUT)
-    FNULL.close()
+    proc = call(build_cmd, shell=True, stdout=FNULL, stderr=subprocess.STDOUT, close_fds=True)
     return(proc)
     #    proc = Popen(build_cmd, shell=True, stdout=PIPE, stderr=subprocess.STDOUT)
 #        proc.terminate()
