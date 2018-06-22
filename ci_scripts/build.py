@@ -8,6 +8,7 @@ import yaml
 import glob
 import logging
 import subprocess
+import argparse
 from subprocess import PIPE, call, check_call, Popen
 from jinja2 import Environment, FileSystemLoader
 
@@ -106,6 +107,7 @@ def build(root):
 #            f.write(root+"\n")
 # need to figure out how docker permissions work...
 #        return False
+    # install()
 
 
 def is_not_uploaded(name, version, build_number, channel):
@@ -195,10 +197,17 @@ def install(name, version, channel):
     channel : str
         Channel where package was uploaded.
     '''
+    env_cmd = 'conda env create -f environment.yml'
     install_cmd = 'conda install -c %s %s=%s' % (channel, name, version)
     log.info('Installing: {0}'.format(install_cmd))
     proc = call(install_cmd, shell=True)
     
 
 if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description='Build, upload and install recipes')
+
+    ds = ' [%(default)s]'
+    parser.add_argument('-d', '--dir', help='directory with recipes')
+    parser.add_argument('-v', '--verbose', help='verbose')
+    opts = parser.parse_args()
     build_upload_recipes(sys.argv[1], sys.argv[2])
