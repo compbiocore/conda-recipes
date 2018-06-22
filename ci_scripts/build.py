@@ -93,9 +93,9 @@ def build(root):
     #build_cmd = 'conda build --dirty "%s"' % root
     build_cmd = 'conda build -c compbiocore "%s"' % root
     log.info('Building: {0}'.format(build_cmd))
-    #FNULL = open(os.devnull, 'w')
-    proc = call(build_cmd, shell=True)
-    #return(proc)
+    FNULL = open(os.devnull, 'w')
+    proc = call(build_cmd, shell=True, stdout=FNULL, stderr=subprocess.STDOUT, close_fds=True)
+    return(proc)
     #    proc = Popen(build_cmd, shell=True, stdout=PIPE, stderr=subprocess.STDOUT)
 #        proc.terminate()
 #        return True
@@ -205,11 +205,11 @@ def install(name, version, channel):
     
 
 if __name__ == '__main__':
-    #parser = argparse.ArgumentParser(description='Build, upload and install recipes with logs to identify errors.')
+    parser = argparse.ArgumentParser(description='Build, upload and install recipes with logs to identify errors.')
 
-    #ds = ' [%(default)s]'
-    #parser.add_argument('-d', '--dir', help='directory with recipes')
-    #parser.add_argument('-c', '--channel', help='channel to build and upload recipes to')
-    #parser.add_argument('-e', '--environment', help='conda environment.yml to replicate base env from')
-    #opts = parser.parse_args()
-    build_upload_recipes(sys.argv[1], sys.argv[2])
+    ds = ' [%(default)s]'
+    parser.add_argument('-d', '--dir', help='directory with recipes')
+    parser.add_argument('-c', '--channel', help='channel to build and upload recipes to')
+    parser.add_argument('-e', '--environment', help='conda environment.yml to replicate base env from')
+    opts = parser.parse_args()
+    #build_upload_recipes(sys.argv[1], sys.argv[2])

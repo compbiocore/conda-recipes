@@ -8,7 +8,7 @@ The build system for all the recipes is CentOS 6 with conda build 3. A Docker im
 
 # Our CI workflow
 
-To maintain package quality and compatibility we keep a `main` conda environment which has recent versions of gcc, zlib and other vital software. For each recipe that is uploaded,
+To maintain package quality and compatibility we keep a `main` conda environment which has recent versions of gcc, zlib and other vital software. For each recipe that is pushed, we first check...
 
 # Contributors
 
