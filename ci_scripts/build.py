@@ -93,9 +93,9 @@ def build(root):
     #build_cmd = 'conda build --dirty "%s"' % root
     build_cmd = 'conda build -c compbiocore "%s"' % root
     log.info('Building: {0}'.format(build_cmd))
-    FNULL = open(os.devnull, 'w')
-    proc = call(build_cmd, shell=True, stdout=FNULL, stderr=subprocess.STDOUT, close_fds=True)
-    return(proc)
+    #FNULL = open(os.devnull, 'w')
+    proc = call(build_cmd, shell=True)
+    #return(proc)
     #    proc = Popen(build_cmd, shell=True, stdout=PIPE, stderr=subprocess.STDOUT)
 #        proc.terminate()
 #        return True

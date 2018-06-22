@@ -14,5 +14,5 @@ before_install:
   - docker cp recipes cbc:/home/conda
   - docker cp ci_scripts cbc:/home/conda
   - docker ps -a
-  - travis_wait mvn docker exec cbc sh -c "python /home/conda/ci_scripts/build.py /home/conda/recipes compbiocore"
+  - docker exec cbc sh -c "python /home/conda/ci_scripts/build.py /home/conda/recipes compbiocore"
   # should become docker exec only on the modified recipe later on.
