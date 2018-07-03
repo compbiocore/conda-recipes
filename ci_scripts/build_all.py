@@ -22,12 +22,12 @@ handler.setLevel(logging.INFO)
 log.addHandler(handler)
 log.setLevel(logging.INFO)
 
-def build_recipes(recipes, channel):
-    '''Build multiple recipes recursively.
+def build_upload_recipes(p, channel):
+    '''Build & upload recipes recursively in a directory.
     Parameters
     ----------
-    recipes : set
-        Set of recipes to build.
+    p : str
+        Path to the recipes.
     channel : str
         Anaconda channel where the packages will be uploaded.
     '''
@@ -35,49 +35,50 @@ def build_recipes(recipes, channel):
     build_passed = 0
     failed_recipes = ""
 
-    for p in recipes:
-        for root, dirs, files in os.walk(p):
-            has_recipe = 'meta.yaml' in files
-            if not dirs and has_recipe:
-                with open(os.path.join(root, 'meta.yaml')) as f:
-                    log.info("Checking {}".format(root))
+    for root, dirs, files in os.walk(p):
+        has_recipe = 'meta.yaml' in files
+        if not dirs and has_recipe:
+            with open(os.path.join(root, 'meta.yaml')) as f:
+                log.info("Checking {}".format(root))
 
-                    # for Jinja
-                    env = Environment(loader=FileSystemLoader(root))
-                    template = env.get_template('meta.yaml')
-                    meta = yaml.load(template.render())
+                # for Jinja
+                env = Environment(loader=FileSystemLoader(root))
+                template = env.get_template('meta.yaml')
+                meta = yaml.load(template.render())
                 
-                    name = meta['package']['name']
-                    version = meta['package']['version']
-                    try:
-                        build_number = meta['build']['number']
-                    except: # Should be a KeyError but possible a TypeError or others as well
-                        # Build number is 0 if not specified
-                        build_number = 0
-                    if is_not_uploaded(name, version, build_number, channel):
-                        build_call = build(root)
-                        if build_call==0:
-                            build_passed+=1
-                            if os.environ['TRAVIS_SECURE_ENV_VARS'] == 'true':
-                                install.install(name, version, channel, environment, readme)
-                            else:
-                                log.info('Uploading not available.')
-                        else:
-                            log.info("Failed build: {0}".format(root))
-                            build_error+=1
-                            failed_recipes=failed_recipes+root+"\n"
-                        log.info("Cleaning environment.")
-                        FNULL = open(os.devnull, 'w')
-                        call('conda clean -a -y', shell=True, stdout=FNULL, stderr=subprocess.STDOUT, close_fds=True)
+                name = meta['package']['name']
+                version = meta['package']['version']
+                try:
+                    build_number = meta['build']['number']
+                except: # Should be a KeyError but possible a TypeError or others as well
+                    # Build number is 0 if not specified
+                    build_number = 0
+                if is_not_uploaded(name, version, build_number, channel):
+                    build_call = build(root)
+                    if build_call==0:
+                        build_passed+=1
                     else:
-                        # Only new packages (either version or build_number)
-                        log.info("Skipping package: {0}-{1}-{2}".format(
-                            name, version, build_number))
+                        log.info("Failed build: {0}".format(root))
+                        build_error+=1
+                        failed_recipes=failed_recipes+root+"\n"
+                    log.info("Cleaning environment.")
+                    FNULL = open(os.devnull, 'w')
+                    call('conda clean -a -y', shell=True, stdout=FNULL, stderr=subprocess.STDOUT, close_fds=True)
+                    #if os.environ['TRAVIS_SECURE_ENV_VARS'] == 'true':
+                    #    upload(name, version, channel)
+                    #else:
+                    #    log.info("Uploading not available in Pull Requests")
+                    log.info("Not uploading at the moment...")
+                else:
+                    # Only new packages (either version or build_number)
+                    log.info("Skipping package: {0}-{1}-{2}".format(
+                        name, version, build_number))
     log.info("Number of successfully built packages: {0}".format(build_passed))
     log.info("Number of errored packages while building: {0}".format(build_error))
     if build_error > 0:
         log.error("Have failed recipes: {0}".format(failed_recipes))
         raise ValueError("Have failed recipes. Please check log.")
+
 
 def build(root):
     '''Build a recipe.
@@ -155,35 +156,27 @@ def is_not_uploaded(name, version, build_number, channel):
     if build_number > max(
             i['build_number'] for i in pkg if i['version'] == version):
         return True
-    return False
+    return True
 
 def changed_recipes(diff_files):
-    recipes = set()
-    for file in diff_files.split('\n'):
+    recipes = []
+    for file in diff_files:
         if file.startswith('recipes'):
-            folder = file.split('/')[1]
-            recipes.add('recipes/'+folder)
-    return recipes
+            recipes.append(file)
+            
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Build, upload and install recipes with logs to identify errors.')
 
     ds = ' [%(default)s]'
     parser.add_argument('-r', '--readme', help='path to README.md')
+    parser.add_argument('-d', '--dir', help='directory with recipes')
     parser.add_argument('-c', '--channel', help='channel to build and upload recipes to')
     parser.add_argument('-e', '--environment', help='conda environment.yml to replicate base env from')
     opts = parser.parse_args()
 
+    recipes = opts.dir
     channel = opts.channel
     env = opts.environment
 
-    if os.environ['TRAVIS_COMMIT_RANGE']=='true':
-        diff_files_cmd = 'git diff --name-only {0}'.format(os.environ['TRAVIS_COMMIT_RANGE'])
-    else:
-        diff_files_cmd = 'git diff --name-only'
-    diff_files = check_output(diff_files_cmd, shell=True,universal_newlines=True)
-    log.info('Changed files are: {0}'.format(diff_files))
-    recipes = changed_recipes(diff_files)
-    log.info('Changed recipes are: {0}'.format(recipes))
-
-    build_recipes(recipes, channel)
+    build_upload_recipes(recipes, channel)
