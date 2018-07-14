@@ -10,9 +10,7 @@ services:
 # set up docker image
 before_install:
   - docker pull compbiocore/dockerfiles:v1
-  - docker run --name cbc -it -d compbiocore/dockerfiles:v1 /bin/bash 'git clone --branch=travis-ci https://github.com/compbiocore/conda-recipes.git'
-  - docker cp recipes cbc:/home/conda
-  - docker cp ci_scripts cbc:/home/conda
-  - docker ps -a
+  - docker run --name cbc -it -d compbiocore/dockerfiles:v1 /bin/bash
+  - docker exec cbc sh -c 'cd conda; git clone --branch=install https://github.com/compbiocore/conda-recipes.git'
   - docker exec cbc sh -c "python /home/conda/ci_scripts/build.py /home/conda/recipes compbiocore"
   # should become docker exec only on the modified recipe later on.

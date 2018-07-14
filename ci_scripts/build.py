@@ -22,7 +22,7 @@ handler.setLevel(logging.INFO)
 log.addHandler(handler)
 log.setLevel(logging.INFO)
 
-def build_recipes(recipes, channel):
+def build_recipes(recipes, channel, environment, readme):
     '''Build multiple recipes recursively.
     Parameters
     ----------
@@ -30,6 +30,8 @@ def build_recipes(recipes, channel):
         Set of recipes to build.
     channel : str
         Anaconda channel where the packages will be uploaded.
+    environment : str
+        
     '''
     build_error = 0
     build_passed = 0
@@ -186,4 +188,4 @@ if __name__ == '__main__':
     recipes = changed_recipes(diff_files)
     log.info('Changed recipes are: {0}'.format(recipes))
 
-    build_recipes(recipes, channel)
+    build_recipes(recipes, channel, environment, readme)
