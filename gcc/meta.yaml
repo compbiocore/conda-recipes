@@ -16,7 +16,7 @@ extra:
   mpfr:
     source:
       fn: mpfr-3.1.5.tar.bz2
-      url: http://www.mpfr.org/mpfr-current/mpfr-3.1.5.tar.bz2
+      url: http://www.mpfr.org/mpfr-3.1.5/mpfr-3.1.5.tar.bz2
       md5: b1d23a55588e3b2a13e3be66bc69fd8d
   mpc:
     source:

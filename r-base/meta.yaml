@@ -1,11 +1,10 @@
 package:
   name: r-base
-  version: "3.4.2"
+  version: "3.4.3"
 
 source:
-  url: https://cran.r-project.org/src/base/R-3/R-3.4.2.tar.gz
-  sha256: 971e30c2436cf645f58552905105d75788bd9733bddbcb7c4fbff4c1a6d80c64
-
+  url: https://cran.r-project.org/src/base/R-3/R-3.4.3.tar.gz
+  md5: bc55db54f992fda9049201ca62d2a584
 build:
   number: 0
   rpaths:
@@ -24,40 +23,40 @@ build:
 
 requirements:
   build:
-    - gcc ==5.4.0
+    - gcc >=5.4.0 
     - pkg-config
     - mkl
-    - bzip2 ==1.0.6
-    - cairo ==1.14.10
-    - curl ==7.55.1
-    - icu ==58.2
-    - jpeg ==8d
-    - libpng ==1.6.32
-    - libtiff ==4.0.6
-    - libxml2 ==2.9.4
-    - ncurses ==6.0
-    - pango ==1.40.11
-    - pcre ==8.41
-    - readline ==6.2
-    - tk ==8.5.18
-    - zlib ==1.2.11
+    - bzip2 
+    - cairo
+    - curl 
+    - icu 
+    - jpeg 
+    - libpng 
+    - libtiff 
+    - libxml2 
+    - ncurses
+    - pango 
+    - pcre 
+    - readline 
+    - tk 
+    - zlib
   run:
     - libgcc >=5.4.0
     - mkl
-    - bzip2 ==1.0.6
-    - cairo ==1.14.10
-    - curl ==7.55.1
-    - icu ==58.2
-    - jpeg ==8d
-    - libpng ==1.6.32
-    - libtiff ==4.0.6
-    - libxml2 ==2.9.4
-    - ncurses ==6.0
-    - pango ==1.40.11
-    - pcre ==8.41
-    - readline ==6.2
-    - tk ==8.5.18
-    - zlib ==1.2.11
+    - bzip2
+    - cairo 
+    - curl
+    - icu 
+    - jpeg 
+    - libpng 
+    - libtiff 
+    - libxml2 
+    - ncurses
+    - pango 
+    - pcre 
+    - readline 
+    - tk 
+    - zlib 
 
 test:
   commands:

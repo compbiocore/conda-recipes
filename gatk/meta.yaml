@@ -13,13 +13,10 @@ build:
 
 requirements:
   run:
-    - openjdk >=8,<9
+    - openjdk 
     - bzip2 # needed by gatk-register to extract GATK archive
     - python
-    - r-gplots
-    - r-ggplot2
-    - r-gsalib
-    - r-reshape
+    - r-base
 
 test:
   commands:

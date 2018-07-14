@@ -8,30 +8,14 @@ package:
 source:
   url: http://download.icu-project.org/files/icu4c/{{ version }}/icu4c-{{ version_under }}-src.tgz
   sha256: 2b0a4410153a9b20de0e20c7d8b66049a72aef244b53683d0d7521371683da0c
-  patches:
-    # Include an extra header when using mingw.
-    - icu4c-4_9_1-mingw-w64-mkdir-compatibility.patch  # [win]
-    # Omit lib prefix on libraries.
-    - icu-config.patch  # [win]
 
 build:
   number: 0
-  skip: True  # [win and py36]
-  features:
-    - vc9  # [win and py27]
-    - vc14  # [win and (py35 or py36)]
+  skip: True  # [win]
 
 requirements:
   build:
-    - python  # [win]
-    - m2-base  # [win]
-    - m2-make  # [win]
-    - toolchain
-    - vc 9  # [win and py27]
-    - vc 14  # [win and (py35 or py36)]
   run:
-    - vc 9  # [win and py27]
-    - vc 14  # [win and (py35 or py36)]
 
 test:
   files:
@@ -51,7 +35,6 @@ test:
      ] %}
     {% for each_lib in libs %}
     - test -f $PREFIX/lib/{{ each_lib }}.a  # [not win]
-    - test -f $PREFIX/lib/{{ each_lib }}.{{ version }}.dylib   # [osx]
     - test -f $PREFIX/lib/{{ each_lib }}.so.{{ version }}  # [linux]
     {% endfor %}
 
@@ -64,7 +47,6 @@ test:
     - icu-config --help  # [not win]
     - makeconv gb-18030-2000.ucm
     - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
-    - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
 
 about:
   home: http://site.icu-project.org/

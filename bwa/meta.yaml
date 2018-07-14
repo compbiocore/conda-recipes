@@ -14,12 +14,11 @@ source:
 
 requirements:
   build:
-    - gcc   # [not osx]
-    - llvm  # [osx]
+    - gcc >=5.4.0 
     - zlib
   run:
     - zlib
-    - libgcc  # [not osx]
+    - libgcc >=5.4.0
     - perl
 
 test:
