@@ -2,13 +2,16 @@ about:
   home: https://github.com/rjbs/Test-Fatal
   license: perl_5
   summary: incredibly simple helpers for testing code with exceptions
+
 build:
   number: 2
+
 package:
   name: perl-test-fatal
   version: '0.014'
+
 requirements:
-  build:
+  host:
   - perl
   - perl-try-tiny
   run:
@@ -19,5 +22,5 @@ source:
   md5: 7954f6d2e3607be10c0fbd69063a3d1b
   url: https://cpan.metacpan.org/authors/id/R/RJ/RJBS/Test-Fatal-0.014.tar.gz
 test:
-  commands:
-  - perl -e "use Test::Fatal"
+  imports:
+    - Test::Fatal
