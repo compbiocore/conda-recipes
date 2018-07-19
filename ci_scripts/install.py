@@ -31,10 +31,7 @@ def install(name, version, channel, environment, readme):
 
     if proc==0:
         log.info('No conflicts with main environment.')
-        if os.environ['TRAVIS_SECURE_ENV_VARS'] == 'true':
-            upload(name, version, channel)
-        else:
-            log.info("Uploading not available in Pull Requests")
+        upload(name, version, channel)
     else:
         log.info('%s conflicts with main environment' % name)
         ## TODO: modify readme todo...
