@@ -18,6 +18,10 @@ requirements:
   run:
     - perl
 
+test:
+  imports:
+    - Capture::Tiny
+
 about:
   home: https://github.com/dagolden/Capture-Tiny
   license: apache_2_0
