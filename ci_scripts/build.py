@@ -60,10 +60,11 @@ def build_recipes(recipes, channel, environment, readme):
                         build_call = build(root)
                         if build_call==0:
                             build_passed+=1
-                            if os.environ['TRAVIS_SECURE_ENV_VARS'] == 'true':
-                                install.install(name, version, channel, environment, readme)
-                            else:
-                                log.info('Uploading not available.')
+                            #if os.environ['TRAVIS_SECURE_ENV_VARS'] == 'true':
+                            #    install.install(name, version, channel, environment, readme)
+                            #else:
+                            #    log.info('Uploading not available.')
+                            install.install(name, version, channel, environment, readme)
                         else:
                             log.info("Failed build: {0}".format(root))
                             build_error+=1
@@ -171,6 +172,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Build, upload and install recipes with logs to identify errors.')
 
     ds = ' [%(default)s]'
+    parser.add_argument('range', help='commit range')
     parser.add_argument('-r', '--readme', help='path to README.md')
     parser.add_argument('-c', '--channel', help='channel to build and upload recipes to')
     parser.add_argument('-e', '--environment', help='conda environment.yml to replicate base env from')
@@ -179,10 +181,11 @@ if __name__ == '__main__':
     channel = opts.channel
     env = opts.environment
 
-    if os.environ['TRAVIS_COMMIT_RANGE']=='true':
-        diff_files_cmd = 'git diff --name-only {0}'.format(os.environ['TRAVIS_COMMIT_RANGE'])
-    else:
-        diff_files_cmd = 'git diff --name-only'
+    #if os.environ['TRAVIS_COMMIT_RANGE']=='true':
+    #    diff_files_cmd = 'git diff --name-only {0}'.format(os.environ['TRAVIS_COMMIT_RANGE'])
+    #else:
+    #    diff_files_cmd = 'git diff --name-only'
+    diff_files_cmd = 'git diff --name-only {0}'.format(opts.range)
     diff_files = check_output(diff_files_cmd, shell=True, universal_newlines=True)
     log.info('Changed files are: {0}'.format(diff_files))
     recipes = changed_recipes(diff_files)
