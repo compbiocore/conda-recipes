@@ -32,7 +32,7 @@ def build_recipes(recipes, channel, environment, readme):
     channel : str
         Anaconda channel where the packages will be uploaded.
     environment : str
-        
+        Path to environment yaml from which to reconstruct files
     '''
     build_error = 0
     build_passed = 0
@@ -181,6 +181,7 @@ if __name__ == '__main__':
 
     channel = opts.channel
     env = opts.environment
+    readme = opts.readme
 
     #if os.environ['TRAVIS_COMMIT_RANGE']=='true':
     #    diff_files_cmd = 'git diff --name-only {0}'.format(os.environ['TRAVIS_COMMIT_RANGE'])
@@ -192,4 +193,4 @@ if __name__ == '__main__':
     recipes = changed_recipes(diff_files)
     log.info('Changed recipes are: {0}'.format(recipes))
 
-    build_recipes(recipes, channel, environment, readme)
+    build_recipes(recipes, channel, env, readme)
