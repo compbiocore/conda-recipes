@@ -185,6 +185,7 @@ if __name__ == '__main__':
     #    diff_files_cmd = 'git diff --name-only {0}'.format(os.environ['TRAVIS_COMMIT_RANGE'])
     #else:
     #    diff_files_cmd = 'git diff --name-only'
+    print(opts.range)
     diff_files_cmd = 'git diff --name-only {0}'.format(opts.range)
     diff_files = check_output(diff_files_cmd, shell=True, universal_newlines=True)
     log.info('Changed files are: {0}'.format(diff_files))
