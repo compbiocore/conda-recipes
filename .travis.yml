@@ -15,7 +15,7 @@ before_install:
 
 script:
   - docker exec cbc sh -c "cd /home/conda/conda-recipes; python /home/conda/conda-recipes/ci_scripts/build.py $TRAVIS_COMMIT_RANGE -c compbiocore -e /home/conda/conda-recipes/ci_scripts/environment.yml -r /home/conda/conda-recipes/README.md"
-  - docker exec cbc sh -c "cd /home/conda/conda-recipes; git commit -a -m 'updating conflicting recipes'; git push origin install"
+  - docker exec cbc sh -c "cd /home/conda/conda-recipes; git commit -a -m 'updating conflicting recipes'; git push 'https://${GH_TOKEN}@github.com/compbiocore/conda-recipes.git' install"
 
 after_install:
   - docker stop cbc
