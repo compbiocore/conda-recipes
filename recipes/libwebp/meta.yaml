@@ -33,8 +33,6 @@ requirements:
     - giflib  # [unix]
 
 test:
-  requires:
-    - python {{ environ['PY_VER'] + '*' }}  # [win]
   commands:
     - test -f $PREFIX/lib/libwebp.a  # [unix]
     - test -f $PREFIX/lib/libwebp.dylib  # [osx]

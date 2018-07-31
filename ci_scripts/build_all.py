@@ -1,13 +1,13 @@
-# Taken from https://github.com/biocore/conda-recipes/blob/master/ci/main.py
-# and modified from Python2.7
-
 import os
 import sys
 import json
 import yaml
 import glob
 import logging
-from subprocess import PIPE, check_call, Popen
+import argparse
+from subprocess import PIPE, call, check_call, Popen, check_output
+from jinja2 import Environment, FileSystemLoader
+import install
 
 from conda_build.config import Config
 
@@ -31,29 +31,53 @@ def build_upload_recipes(p, channel):
     channel : str
         Anaconda channel where the packages will be uploaded.
     '''
+    build_error = 0
+    build_passed = 0
+    failed_recipes = ""
+
     for root, dirs, files in os.walk(p):
         has_recipe = 'meta.yaml' in files
         if not dirs and has_recipe:
             with open(os.path.join(root, 'meta.yaml')) as f:
                 log.info("Checking {}".format(root))
-                meta = yaml.load(f)
+
+                # for Jinja
+                env = Environment(loader=FileSystemLoader(root))
+                template = env.get_template('meta.yaml')
+                meta = yaml.load(template.render())
+                
                 name = meta['package']['name']
                 version = meta['package']['version']
                 try:
                     build_number = meta['build']['number']
-                except KeyError:
+                except: # Should be a KeyError but possible a TypeError or others as well
                     # Build number is 0 if not specified
                     build_number = 0
                 if is_not_uploaded(name, version, build_number, channel):
-                    build(root)
-                    if os.environ['TRAVIS_SECURE_ENV_VARS'] == 'true':
-                        upload(name, version, channel)
+                    build_call = build(root)
+                    if build_call==0:
+                        build_passed+=1
                     else:
-                        log.info("Uploading not available in Pull Requests")
+                        log.info("Failed build: {0}".format(root))
+                        build_error+=1
+                        failed_recipes=failed_recipes+root+"\n"
+                    log.info("Cleaning environment.")
+                    FNULL = open(os.devnull, 'w')
+                    call('conda clean -a -y', shell=True, stdout=FNULL, stderr=subprocess.STDOUT, close_fds=True)
+                    #if os.environ['TRAVIS_SECURE_ENV_VARS'] == 'true':
+                    #    upload(name, version, channel)
+                    #else:
+                    #    log.info("Uploading not available in Pull Requests")
+                    log.info("Not uploading at the moment...")
                 else:
                     # Only new packages (either version or build_number)
                     log.info("Skipping package: {0}-{1}-{2}".format(
                         name, version, build_number))
+    log.info("Number of successfully built packages: {0}".format(build_passed))
+    log.info("Number of errored packages while building: {0}".format(build_error))
+    if build_error > 0:
+        log.error("Have failed recipes: {0}".format(failed_recipes))
+        raise ValueError("Have failed recipes. Please check log.")
 
 
 def build(root):
@@ -64,10 +88,24 @@ def build(root):
         the directory path for the recipe.
     '''
     # Quote is need in case the root path has spaces in it.
-    build_cmd = 'conda build --dirty "%s"' % root
+    #build_cmd = 'conda build --dirty "%s"' % root
+    build_cmd = 'conda build -c compbiocore "%s"' % root
     log.info('Building: {0}'.format(build_cmd))
-    proc = check_call(build_cmd, shell=True)
-    log.info(proc)
+    FNULL = open(os.devnull, 'w')
+    proc = call(build_cmd, shell=True, stdout=FNULL, stderr=subprocess.STDOUT, close_fds=True)
+    return(proc)
+    #    proc = Popen(build_cmd, shell=True, stdout=PIPE, stderr=subprocess.STDOUT)
+#        proc.terminate()
+#        return True
+#    except (OSError, subprocess.CalledProcessError) as exception:
+#        log.info("Exception occured: " + str(exception))
+#        proc.terminate()
+#        log.info("Build failed.")
+#        with open("failed_recipes.txt",'a') as f:
+#            f.write(root+"\n")
+# need to figure out how docker permissions work...
+#        return False
+    # install()
 
 
 def is_not_uploaded(name, version, build_number, channel):
@@ -118,32 +156,27 @@ def is_not_uploaded(name, version, build_number, channel):
     if build_number > max(
             i['build_number'] for i in pkg if i['version'] == version):
         return True
-    return False
+    return True
 
-
-def upload(name, version, channel):
-    '''Upload a built package.
-    Parameters
-    ----------
-    name : str
-        Package name.
-    version : str
-        Package version.
-    channel : str
-        Channel where the package will be uploaded.
-    '''
-    built_glob = os.path.join(
-        config.bldpkgs_dir,
-        '{0}-{1}*.tar.bz2'.format(name, version))
-    built = glob.glob(built_glob)[0]
-    upload_cmd = 'anaconda -t {token} upload -u %s %s' % (channel, built)
-    # Do not show decrypted token!
-    log.info('Uploading: {0}'.format(upload_cmd))
-    proc = check_call(
-        upload_cmd.format(token=os.environ['ANACONDA_TOKEN']),
-        shell=True)
-    log.info(proc)
-
+def changed_recipes(diff_files):
+    recipes = []
+    for file in diff_files:
+        if file.startswith('recipes'):
+            recipes.append(file)
+            
 
 if __name__ == '__main__':
-    build_upload_recipes(sys.argv[1], sys.argv[2])
+    parser = argparse.ArgumentParser(description='Build, upload and install recipes with logs to identify errors.')
+
+    ds = ' [%(default)s]'
+    parser.add_argument('-r', '--readme', help='path to README.md')
+    parser.add_argument('-d', '--dir', help='directory with recipes')
+    parser.add_argument('-c', '--channel', help='channel to build and upload recipes to')
+    parser.add_argument('-e', '--environment', help='conda environment.yml to replicate base env from')
+    opts = parser.parse_args()
+
+    recipes = opts.dir
+    channel = opts.channel
+    env = opts.environment
+
+    build_upload_recipes(recipes, channel)

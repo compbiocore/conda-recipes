@@ -9,9 +9,15 @@ services:
 
 # set up docker image
 before_install:
-  - docker pull mhowison/conda-build:v2
-  - docker run -v conda-recipes:/home/conda/recipes --name cbc -a stdin -a stdout -a stderr mhowison/conda-build:v2 /bin/bash -c "sudo yum -y install git; cd /home/conda/recipes; pwd;  ls -ltrh ; echo 'directory listing'; python /home/conda/recipes/build.py /home/conda/recipes compbiocore"
-  - docker ps -a
-  #- docker exec cbc sudo yum -y install git
-  #- docker exec cbc python /home/conda/recipes/build.py /home/conda/recipes compbiocore
-  #- docker start 
+  - docker pull compbiocore/dockerfiles:v1
+  - docker run --name cbc -it -d compbiocore/dockerfiles:v1 /bin/bash
+  - docker exec cbc sh -c 'cd /home/conda; git clone --branch=install https://github.com/compbiocore/conda-recipes.git'
+
+script:
+  - docker exec cbc sh -c "cd /home/conda/conda-recipes; python /home/conda/conda-recipes/ci_scripts/build.py $TRAVIS_COMMIT_RANGE -c compbiocore -e /home/conda/conda-recipes/ci_scripts/environment.yml -r /home/conda/conda-recipes/README.md"
+  - docker exec cbc sh -c "cd /home/conda/conda-recipes; git commit -a -m 'updating conflicting recipes'; git push 'https://${GH_TOKEN}@github.com/compbiocore/conda-recipes.git' install"
+
+after_install:
+  - docker stop cbc
+  - docker rm cbc
+  # should become docker exec only on the modified recipe later on.
