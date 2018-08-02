@@ -1,0 +1,44 @@
+{% set version = "1.1.0" %}
+
+package:
+  name: mpc
+  version: {{ version }}
+
+source:
+  fn: mpc-{{ version }}.tar.gz
+  url: https://ftp.gnu.org/gnu/mpc/mpc-{{ version }}.tar.gz
+  sha256: 6985c538143c1208dcb1ac42cedad6ff52e267b47e5f970183a3e75125b43c2e
+  patches:
+  - patches/build-vc14.patch
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - toolchain
+    - m4              # [unix]
+    - libtool         # [unix]
+    - gmp >=5.0.1,<7  # [unix]
+    - mpfr 
+  run:
+    - gmp >=5.0.1,<7  # [unix]
+    - mpfr 
+
+test:
+  commands:
+    - test -f ${PREFIX}/include/mpc.h                           # [unix]
+    - test -f ${PREFIX}/lib/libmpc.a                            # [unix]
+    - test -f ${PREFIX}/lib/libmpc.so                           # [linux]
+
+about:
+  home: http://www.multiprecision.org/
+  license: LGPL 3
+  license_file: {{ SRC_DIR }}/COPYING.LESSER
+  summary: A C library for the arithmetic of complex numbers with arbitrarily high precision.
+
+extra:
+  recipe-maintainers:
+    - isuruf
+    - jakirkham
+    - saraedum

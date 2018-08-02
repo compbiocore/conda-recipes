@@ -41,7 +41,7 @@ requirements:
     - tk 
     - zlib
   run:
-    - libgcc >=5.4.0
+    - gcc >=5.4.0
     - mkl
     - bzip2
     - cairo 

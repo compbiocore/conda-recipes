@@ -7,7 +7,7 @@ sed -i.bak 's/^CPPFLAGS =$//g' htslib-$PKG_VERSION/Makefile
 sed -i.bak 's/^LDFLAGS  =$//g' htslib-$PKG_VERSION/Makefile
 
 # varfilter.py in install fails because we don't install Python
-sed -i.bak 's#misc/varfilter.py##g' Makefile
+#sed -i.bak 's#misc/varfilter.py##g' Makefile
 
 # Remove rdynamic which can cause build issues on OSX
 # https://sourceforge.net/p/samtools/mailman/message/34699333/
@@ -23,7 +23,8 @@ make
 cd ..
 # Problem with ncurses from default channel we now get in bioconda so skip tview
 # https://github.com/samtools/samtools/issues/577
-./configure --prefix=$PREFIX --enable-libcurl --without-curses
+#./configure --prefix=$PREFIX --enable-libcurl --without-curses
+./configure --prefix=$PREFIX --enable-libcurl LIBS=-ltinfo  --enable-plugins --with-plugin-path=htslib-$PKG_VERSION LDFLAGS='-Wl,--add-needed'
 make install prefix=$PREFIX LIBS+=-lcrypto LIBS+=-lcurl
 
 mkdir -p ${PREFIX}/lib

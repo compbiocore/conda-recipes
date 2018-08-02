@@ -13,7 +13,7 @@ requirements:
 
 test:
   commands:
-    - "picard 2>&1 | grep 'USAGE: PicardCommandLine'"
+    - "picard -h 2>&1 | grep 'USAGE: PicardCommandLine'"
 
 about:
   home: "http://broadinstitute.github.io/picard/"

@@ -10,7 +10,7 @@ def main():
 	jar_dir = real_dirname(sys.argv[0])
 	if args.find("Xmx") > 0:
     		args=sys.argv[1] + " " + ' '.join(sys.argv[3:])
-    		cmd = "java " + ' '.join(sys.argv[2:3]i +  " -jar " + os.path.join(jar_dir,"picard.jar " + args
+    		cmd = "java " + ' '.join(sys.argv[2:3]) +  " -jar " + os.path.join(jar_dir,"picard.jar") + " " + args
 	else:
     		cmd = "java -Xmx1000M  -jar " + os.path.join(jar_dir,"picard.jar") + " " + args
 		print cmd

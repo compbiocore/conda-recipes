@@ -12,14 +12,14 @@ source:
 requirements:
   build:
     - gcc
-    - freetype ==2.5.5
-    - fontconfig ==2.12.1
-    - zlib ==1.2.8
+    - freetype 
+    - fontconfig 
+    - zlib 
   run:
     - libgcc
-    - freetype ==2.5.5
-    - fontconfig ==2.12.1
-    - zlib ==1.2.8
+    - freetype 
+    - fontconfig 
+    - zlib 
 
 test:
   commands:

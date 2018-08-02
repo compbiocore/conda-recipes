@@ -19,9 +19,7 @@ extra:
 requirements:
   build:
     - gcc # [not osx]
-    - llvm # [osx]
-    - perl 5.22.2.1
-    - libiconv
+    - perl 
     - libxml2
   run:
     - libgcc # [not osx]

@@ -1,14 +1,13 @@
 #!/bin/bash
 
-OPT=$PREFIX/opt/picard-$PKG_VERSION
+TGT="$PREFIX/share/$PKG_NAME-$PKG_VERSION-$PKG_BUILDNUM"
+mkdir -p "$TGT"
+mkdir -p "${PREFIX}/bin"
 
-mkdir -p $PREFIX/bin
-mkdir -p $OPT
+cp picard.jar $TGT/picard.jar
 
-cp picard.jar $OPT/picard-${PKG_VERSION}.jar
+cp $RECIPE_DIR/picard.py $TGT/picard
+ln -s $TGT/picard $PREFIX/bin
+chmod 0755 "${PREFIX}/bin/picard"
 
-# create helper script in bin
-echo "#!/bin/sh
-java -jar $OPT/picard-${PKG_VERSION}.jar \"\$@\"" >$PREFIX/bin/picard
-
-chmod 755 $PREFIX/bin/picard
+ls -l $TGT/
