@@ -11,7 +11,7 @@ requirements:
     - zlib
     - binutils 2.25*
   run:
-    - perl i#5.20.3.1
+    - perl #5.20.3.1
     - zlib
     - binutils 2.25*
 about:
@@ -19,7 +19,7 @@ about:
   license: Non-commercial
   summary: Genomic mapping and alignment program for mRNA and EST sequences
 build:
-  number: 0
+  number: 1
   skip: True # [osx]
   binary_has_prefix_files:
     - bin/atoiindex
