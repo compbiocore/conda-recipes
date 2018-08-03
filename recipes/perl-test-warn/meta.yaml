@@ -8,15 +8,15 @@ source:
   md5: 8306b998a96d2cc69266b5248d550472
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
-    - perl-threaded
+    - perl
     - perl-sub-uplevel
 
   run:
-    - perl-threaded
+    - perl
     - perl-sub-uplevel
 
 test:
