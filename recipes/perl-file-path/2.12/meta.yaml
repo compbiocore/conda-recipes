@@ -13,12 +13,10 @@ requirements:
   - perl-extutils-makemaker
   - perl-carp
   - perl-devel-symdump
-  - perl-app-cpanminus
   run:
   - perl
   - perl-carp
   - perl-devel-symdump
-  - perl-app-cpanminus
 source:
   fn: File-Path-2.12.tar.gz
   sha256: bbf61a0d37c135c694e80f4ea344932bdc5474c213025ae307ea52cb6886d17e

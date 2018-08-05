@@ -8,7 +8,7 @@ package:
   name: perl-http-message
   version: '6.11'
 requirements:
-  build:
+  host:
   - perl
   - perl-encode-locale
   - perl-http-date

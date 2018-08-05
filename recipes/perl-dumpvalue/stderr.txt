@@ -1,0 +1,10 @@
+INFO:conda_build.variants:Adding in variants from internal_defaults
+INFO:conda_build.variants:Adding in variants from config.variant
+INFO:conda_build.metadata:Attempting to finalize metadata for perl-dumpvalue
+INFO:conda_build.build:Packaging perl-dumpvalue
+INFO:conda_build.build:Packaging perl-dumpvalue-1.17-pl526_0
+INFO:conda_build.build:Updating index at /home/conda/miniconda2/conda-bld/linux-64 to make package installable with dependencies
+INFO:conda_build.build:Updating index at /home/conda/miniconda2/conda-bld/noarch to make package installable with dependencies
+INFO:conda_build.variants:Adding in variants from /tmp/tmptURXdQ/info/recipe/conda_build_config.yaml
++ perl -e 'use Dumpvalue'
++ exit 0

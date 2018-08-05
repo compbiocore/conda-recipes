@@ -10,10 +10,10 @@ source:
 requirements:
   build:
     - gcc
-    - perl 5.22.2.1
+    - perl
   run:
     - libgcc
-    - perl 5.22.2.1
+    - perl
 
 test:
   imports:

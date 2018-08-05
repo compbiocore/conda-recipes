@@ -18,3 +18,5 @@ else
     exit 1
 fi
 
+chmod u+w $PREFIX/bin/config_data
+

@@ -16,7 +16,6 @@ requirements:
   - perl-parent
   - perl-extutils-makemaker
   - perl-carp
-  - perl-app-cpanminus
   run:
   - perl
   - perl-exporter
@@ -24,7 +23,6 @@ requirements:
   - perl-constant
   - perl-parent
   - perl-carp
-  - perl-app-cpanminus
 source:
   fn: File-Temp-0.2304.tar.gz
   sha256: 13415323e48f7c9f34efdedf3d35141a7c3435e2beb8c6b922229dc317d321ac

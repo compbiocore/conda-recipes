@@ -51,7 +51,7 @@ requirements:
   - perl-aceperl
   - perl-algorithm-munkres
   - perl-array-compare
-  - perl-bio-asn1-entrezgene
+  #- perl-bio-asn1-entrezgene
   - perl-bio-featureio
   - perl-bio-phylo
   - perl-bio-samtools

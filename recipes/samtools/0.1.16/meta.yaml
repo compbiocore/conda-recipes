@@ -21,7 +21,7 @@ extra:
     - biotools:samtools
 
 requirements:
-  build:
+  host:
     - ncurses
   run:
     - ncurses

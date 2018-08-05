@@ -17,3 +17,7 @@ else
     echo 'Unable to find Build.PL or Makefile.PL. You need to modify build.sh.'
     exit 1
 fi
+
+for i in $(ls blib/script); do
+    chmod u+w $PREFIX/bin/$i
+done
