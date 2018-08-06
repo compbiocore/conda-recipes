@@ -1,6 +1,6 @@
 package:
   name: r-base
-  version: "3.4.3"
+  version: "3.5.1"
 
 source:
   url: https://cran.r-project.org/src/base/R-3/R-3.5.1.tar.gz

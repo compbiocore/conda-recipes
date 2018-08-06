@@ -6,7 +6,7 @@ package:
   version: {{ SRA_TOOLS_VERSION }}
 
 build:
-  number: 0
+  number: 1
 
 source:
   fn: sra-tools-{{ SRA_TOOLS_VERSION }}.tar.gz

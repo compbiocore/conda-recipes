@@ -1,6 +1,6 @@
 {% set name = "biopython" %}
-{% set version = "1.70" %}
-{% set sha256 = "4a7c5298f03d1a45523f32bae1fffcff323ea9dce007fb1241af092f5ab2e45b" %}
+{% set version = "1.72" %}
+{% set sha256 = "ab6b492443adb90c66267b3d24d602ae69a93c68f4b9f135ba01cb06d36ce5a2" %}
 
 package:
   name: {{ name|lower }}
@@ -12,18 +12,19 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
   build:
     - python
     - setuptools
-    - numpy 1.8.*  # [not (win and (py35 or py36))]
+    - numpy  # [not (win and (py35 or py36))]
   run:
     - python
-    - numpy >=1.8  # [not (win and (py35 or py36))]
-
+    - numpy  # [not (win and (py35 or py36))]
+    - mmtf-python
+    - reportlab
 test:
   imports:
     - Bio
@@ -69,7 +70,7 @@ test:
     - Bio.PDB
     - Bio.PDB.QCPSuperimposer
     #Requires soft dependency mmtf-python
-    #- Bio.PDB.mmtf
+    - Bio.PDB.mmtf
     - Bio.Pathway
     - Bio.Pathway.Rep
     - Bio.Phylo
