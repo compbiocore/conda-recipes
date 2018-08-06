@@ -17,3 +17,8 @@ else
     echo 'Unable to find Build.PL or Makefile.PL. You need to modify build.sh.'
     exit 1
 fi
+
+# https://github.com/conda/conda-build/issues/2824
+for i in $(ls blib/script); do
+    chmod u+w $PREFIX/bin/$i
+done

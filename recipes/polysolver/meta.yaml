@@ -9,7 +9,7 @@ build:
   number: 0
 
 requirements:
-  build:
+  host:
     - perl
 #    - perl-app-cpanminus
     - perl-math-basecalc
@@ -19,18 +19,17 @@ requirements:
     - perl-dumpvalue
     - perl-data-dumper
     - rsync
-    - libgcc
     - zlib
     - novoalign
     - mutect 1.1.6
   run:
+    - perl
     - samtools <=0.1.18
     - novoalign
     - mutect 1.1.6
     - openjdk
     - rsync
     - zlib
-    - libgcc
     - perl-math-basecalc
     - perl-list-moreutils
     - perl-list-util

@@ -19,32 +19,31 @@ build:
 requirements:
   build:
     - perl
+    - perl-test-requiresinternet
+    - perl-extutils-makemaker
     - perl-io-socket-ssl
     - perl-mozilla-ca
-    - perl-extutils-makemaker
-    - perl-test-requiresinternet
-    - perl-libwww-perl
     - perl-net-http
+    - perl-libwww-perl
     #- perl-test-more
 
   run:
     - perl
     - perl-io-socket-ssl
     - perl-mozilla-ca
-    - perl-libwww-perl
     - perl-net-http
+    - perl-libwww-perl
 
 test:
   # Perl 'use' tests
-  commands:
-    - perl -e "use LWP::Protocol::https"
-#    - perl -e "use LWP::Protocol::https::Socket" # same file
+  imports:
+    - LWP::Protocol::https
 
   # You can also put a file called run_test.pl (or run_test.py) in the recipe
   # that will be run at test time.
 
 about:
-  home: http://metacpan.org/pod/LWP-Protocol-https
+  home: http://metacpan.org/pod/LWP::Protocol::https
   license: perl_5
   summary: 'Provide https support for LWP::UserAgent'
 

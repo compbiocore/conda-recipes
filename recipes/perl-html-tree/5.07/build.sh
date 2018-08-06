@@ -23,3 +23,6 @@ fi
 # See
 # http://docs.continuum.io/conda/build.html
 # for a list of environment variables that are set during the build process.
+
+# https://github.com/conda/conda-build/issues/2824
+chmod u+w $PREFIX/bin/htmltree

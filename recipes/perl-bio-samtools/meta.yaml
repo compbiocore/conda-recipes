@@ -7,8 +7,9 @@ build:
 package:
   name: perl-bio-samtools
   version: '1.43'
+
 requirements:
-  build:
+  host:
   - perl
   - perl-bioperl-core
   - perl-module-build
