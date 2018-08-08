@@ -10,7 +10,7 @@ source:
 build:
   script: pip install --no-deps .
   binary_relocation: False
-
+  number: 1
 requirements:
   build:
     - python
@@ -19,13 +19,15 @@ requirements:
     - gcc
     - xz
     - zlib
-    - bzip2 ==1.0.6
+    - bzip2
+    #- bzip2 ==1.0.6
   run:
     - python
     - libgcc
     - xz
     - zlib
-    - bzip2 ==1.0.6
+    - bzip2
+    #- bzip2 ==1.0.6
 
 test:
   imports:

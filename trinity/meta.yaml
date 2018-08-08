@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 build:
-  number: 0
+  number: 1
   skip: True  # [osx]
 
 source:
@@ -16,11 +16,14 @@ source:
 requirements:
   build:
     - gcc
-    - zlib ==1.2.8
+    - zlib
+    #- zlib ==1.2.8
   run:
     - libgcc
-    - zlib ==1.2.8
-    - openjdk ==1.8.0.102
+    - zlib
+    - openjdk
+    #- zlib ==1.2.8
+    #- openjdk ==1.8.0.102
 
 test:
   commands:
