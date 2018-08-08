@@ -2,7 +2,7 @@
 # Makefile.  Generated from Makefile.in by configure.
 #
 
-INSTALL_DIR := /home/conda/miniconda2/conda-bld/polysolver_1528813249169/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_/share/strelka
+INSTALL_DIR := /home/conda/miniconda2/conda-bld/hla-polysolver_1533667146612/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeh/share/strelka
 
 export INSTALL_DIR
 
