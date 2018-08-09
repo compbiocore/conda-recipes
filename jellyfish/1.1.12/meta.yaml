@@ -3,15 +3,18 @@ build:
 
 package:
   name: jellyfish
-  version: "1.1.11"
+  version: "1.1.12"
 source:
-  fn: v1.1.11.zip
-  url: https://github.com/gmarcais/Jellyfish/archive/43fc99e4d44d11f115dc6741ff705cf7e113f251.zip
-  md5: 618afc01dd54305689f4deab656e482e
+  fn: jellyfish-1.1.12.tar.gz
+  url: https://github.com/gmarcais/Jellyfish/releases/download/v1.1.12/jellyfish-1.1.12.tar.gz
+  md5: 175e6fc48ca0b4ba845614cdb4467387
 requirements:
   build:
     - yaggo >=1.5.8
     - gcc
+    - autoconf
+    - automake
+    - libtool
   run:
     - libgcc
 test:
