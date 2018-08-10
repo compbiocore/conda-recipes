@@ -1,0 +1,22 @@
+about:
+  home: http://metacpan.org/pod/Filesys-Df
+  license: unknown
+  summary: Perl extension for filesystem disk space information.
+build:
+  number: 2
+  skip: false
+package:
+  name: perl-filesys-df
+  version: '0.92'
+requirements:
+  build:
+  - gcc
+  - perl
+  run:
+  - libgcc
+  - perl
+source:
+  fn: Filesys-Df-0.92.tar.gz
+  md5: a8b0aa3e5151a8a6c8b3067625980934
+  url: http://cpan.metacpan.org/authors/id/I/IG/IGUTHRIE/Filesys-Df-0.92.tar.gz
+test:

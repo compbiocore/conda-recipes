@@ -1,0 +1,17 @@
+about:
+  home: http://metacpan.org/pod/Params::Check
+  license: perl_5
+  summary: Templated based param validation
+build:
+  number: 0
+package:
+  name: perl-params-check
+  version: 0.38
+requirements:
+  build:
+  - perl
+  run:
+  - perl
+test:
+  commands:
+  - perl -e "use Params::Check"

@@ -1,0 +1,23 @@
+about:
+  home: http://metacpan.org/pod/Role-Tiny
+  license: perl_5
+  summary: Roles. Like a nouvelle cuisine portion size slice of Moose.
+build:
+  number: 2
+package:
+  name: perl-role-tiny
+  version: '2.000001'
+requirements:
+  build:
+  - perl
+  - perl-test-fatal
+  run:
+  - perl
+source:
+  fn: Role-Tiny-2.000001.tar.gz
+  md5: f350f1f8c13652bf85da172380b39ec8
+  url: https://cpan.metacpan.org/authors/id/H/HA/HAARG/Role-Tiny-2.000001.tar.gz
+test:
+  commands:
+  - perl -e "use Role::Tiny"
+  - perl -e "use Role::Tiny::With"

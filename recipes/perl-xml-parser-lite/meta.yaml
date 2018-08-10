@@ -1,0 +1,22 @@
+about:
+  home: http://metacpan.org/pod/XML-Parser-Lite
+  license: perl_5
+  summary: Lightweight pure-perl XML Parser (based on regexps)
+build:
+  number: 1
+package:
+  name: perl-xml-parser-lite
+  version: '0.721'
+requirements:
+  build:
+  - perl-test-requires
+  - perl
+  run:
+  - perl
+source:
+  fn: XML-Parser-Lite-0.721.tar.gz
+  md5: ad8a87b9bf413aa540c7cb724d650808
+  url: https://cpan.metacpan.org/authors/id/P/PH/PHRED/XML-Parser-Lite-0.721.tar.gz
+test:
+  commands:
+  - perl -e "use XML::Parser::Lite"

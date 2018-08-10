@@ -1,0 +1,21 @@
+about:
+  home: http://metacpan.org/pod/HTML-Tagset
+  license: unknown
+  summary: data tables useful in parsing HTML
+build:
+  number: 2
+package:
+  name: perl-html-tagset
+  version: '3.20'
+requirements:
+  build:
+  - perl
+  run:
+  - perl
+source:
+  fn: HTML-Tagset-3.20.tar.gz
+  md5: d2bfa18fe1904df7f683e96611e87437
+  url: http://cpan.metacpan.org/authors/id/P/PE/PETDANCE/HTML-Tagset-3.20.tar.gz
+test:
+  commands:
+  - perl -e "use HTML::Tagset"

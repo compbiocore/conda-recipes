@@ -1,0 +1,30 @@
+about:
+  home: http://metacpan.org/release/Params-Validate
+  license: artistic_2
+  summary: Validate method/function parameters
+build:
+  number: 0
+package:
+  name: perl-params-validate
+  version: 1.26
+requirements:
+  build:
+  - perl
+  - perl-module-implementation
+  - perl-test-fatal
+  - perl-test-requires
+  - perl-xsloader
+  - perl-module-build
+  - perl-extutils-makemaker
+  run:
+  - perl
+  - libgcc
+  - perl-module-implementation
+  - perl-xsloader
+source:
+  fn: Params-Validate-1.26.tar.gz
+  sha256: 821ac3cfa9715b94f60926faf316b9ff722785594b37036202371ad2303a72ed
+  url: https://cpan.metacpan.org/authors/id/D/DR/DROLSKY/Params-Validate-1.26.tar.gz
+test:
+  commands:
+  - perl -e "use Params::Validate"

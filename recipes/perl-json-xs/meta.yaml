@@ -1,0 +1,23 @@
+about:
+  home: http://search.cpan.org/~mlehmann/JSON-XS/
+  license: perl_5
+  summary: JSON serialising/deserialising, done correctly and fast
+build:
+  number: 1
+package:
+  name: perl-json-xs
+  version: '2.34'
+requirements:
+  build:
+  - perl
+  - perl-common-sense
+  run:
+  - perl
+  - perl-common-sense
+source:
+  fn: JSON-XS-2.34.tar.gz
+  md5: dda3c03335665cdeff91c37a269b833b
+  url: https://cpan.metacpan.org/authors/id/M/ML/MLEHMANN/JSON-XS-2.34.tar.gz
+test:
+  commands:
+  - perl -e "use JSON::XS"

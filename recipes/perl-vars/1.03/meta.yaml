@@ -1,0 +1,14 @@
+about:
+  home: http://metacpan.org/pod/vars
+  license: perl_5
+  summary: Perl pragma to predeclare global variable names
+build:
+  number: 0
+package:
+  name: perl-vars
+  version: 1.03
+requirements:
+  build:
+  - perl
+  run:
+  - perl

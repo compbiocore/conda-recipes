@@ -1,0 +1,50 @@
+about:
+  home: http://metacpan.org/pod/SVG-Graph
+  license: unknown
+  summary: Visualize your data in Scalable Vector Graphics (SVG) format.
+build:
+  number: 0
+package:
+  name: perl-svg-graph
+  version: '0.02'
+requirements:
+  build:
+  - perl-module-build
+  - perl-tree-dag_node
+  - perl-math-derivative
+  - perl-math-spline
+  - perl-svg
+  - perl-statistics-descriptive
+  - perl
+  run:
+  - perl-tree-dag_node
+  - perl-math-spline
+  - perl-math-derivative
+  - perl-svg
+  - perl-statistics-descriptive
+  - perl
+source:
+  fn: SVG-Graph-0.02.tar.gz
+  md5: e922f0b323056ecf306eb8085db283f5
+  url: http://cpan.metacpan.org/authors/id/A/AL/ALLENDAY/SVG-Graph-0.02.tar.gz
+test:
+  commands:
+  - perl -e "use SVG::Graph"
+  - perl -e "use SVG::Graph::Data"
+  - perl -e "use SVG::Graph::Data::Datum"
+  - perl -e "use SVG::Graph::Data::Node"
+  - perl -e "use SVG::Graph::Data::Tree"
+  - perl -e "use SVG::Graph::File"
+  - perl -e "use SVG::Graph::Frame"
+  - perl -e "use SVG::Graph::Glyph"
+  - perl -e "use SVG::Graph::Glyph::axis"
+  - perl -e "use SVG::Graph::Glyph::bar"
+  - perl -e "use SVG::Graph::Glyph::barflex"
+  - perl -e "use SVG::Graph::Glyph::bezier"
+  - perl -e "use SVG::Graph::Glyph::bubble"
+  - perl -e "use SVG::Graph::Glyph::heatmap"
+  - perl -e "use SVG::Graph::Glyph::line"
+  - perl -e "use SVG::Graph::Glyph::pictogram"
+  - perl -e "use SVG::Graph::Glyph::scatter"
+  - perl -e "use SVG::Graph::Glyph::tree"
+  - perl -e "use SVG::Graph::Glyph::wedge"

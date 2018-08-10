@@ -1,0 +1,24 @@
+about:
+  home: https://metacpan.org/release/Config-AutoConf
+  license: perl_5
+  summary: A module to implement some of AutoConf macros in pure perl.
+build:
+  number: 2
+package:
+  name: perl-config-autoconf
+  version: '0.311'
+requirements:
+  build:
+  - gcc
+  - perl-capture-tiny
+  - perl
+  run:
+  - perl-capture-tiny
+  - perl
+source:
+  fn: Config-AutoConf-0.311.tar.gz
+  md5: fa19f46bbd5bb0bd23ee41e8fd7b533f
+  url: https://cpan.metacpan.org/authors/id/R/RE/REHSACK/Config-AutoConf-0.311.tar.gz
+test:
+  commands:
+  - perl -e "use Config::AutoConf"

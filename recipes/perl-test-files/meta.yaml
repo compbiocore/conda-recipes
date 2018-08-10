@@ -1,0 +1,27 @@
+about:
+  home: http://metacpan.org/pod/Test::Files
+  license: unknown
+  summary: A Test::Builder based module to ease testing with files and dirs
+package:
+  name: perl-test-files
+  version: '0.14'
+requirements:
+  build:
+  - perl-test-builder-tester
+  - perl-test-simple
+  - perl-algorithm-diff
+  - perl-text-diff
+  - perl
+  run:
+  - perl-test-builder-tester
+  - perl-test-simple
+  - perl-algorithm-diff
+  - perl-text-diff
+  - perl
+source:
+  fn: Test-Files-0.14.tar.gz
+  md5: 52139ac7bfcd77ebc0469d1dae18b80e
+  url: http://cpan.metacpan.org/authors/id/P/PH/PHILCROW/Test-Files-0.14.tar.gz
+test:
+  commands:
+  - perl -e "use Test::Files"

@@ -1,0 +1,25 @@
+about:
+  home: http://metacpan.org/pod/MLDBM-Sync
+  license: unknown
+  summary: safe concurrent access to MLDBM databases
+build:
+  number: 0
+package:
+  name: perl-mldbm-sync
+  version: '0.30'
+requirements:
+  build:
+  - perl-mldbm
+  - perl-tie-cache
+  - perl
+  run:
+  - perl-mldbm
+  - perl-tie-cache
+  - perl
+source:
+  fn: MLDBM-Sync-0.30.tar.gz
+  md5: 1bb4e8d4bd6a30eee3f1126956409321
+  url: http://cpan.metacpan.org/authors/id/C/CH/CHAMAS/MLDBM-Sync-0.30.tar.gz
+test:
+  commands:
+  - perl -e "use MLDBM::Sync"

@@ -1,0 +1,23 @@
+about:
+  home: http://metacpan.org/pod/WWW-RobotRules
+  license: perl_5
+  summary: database of robots.txt-derived permissions
+build:
+  number: 1
+package:
+  name: perl-www-robotrules
+  version: '6.02'
+requirements:
+  build:
+  - perl
+  - perl-uri
+  run:
+  - perl
+  - perl-uri
+source:
+  fn: WWW-RobotRules-6.02.tar.gz
+  md5: b7186e8b8b3701e70c22abf430742403
+  url: http://cpan.metacpan.org/authors/id/G/GA/GAAS/WWW-RobotRules-6.02.tar.gz
+test:
+  commands:
+  - perl -e "use WWW::RobotRules"

@@ -1,0 +1,27 @@
+about:
+  home: http://metacpan.org/pod/Tie::RefHash::Weak
+  license: unknown
+  summary: A Tie::RefHash subclass with weakened references in the keys.
+build:
+  number: 0
+package:
+  name: perl-tie-refhash-weak
+  version: 0.09
+requirements:
+  build:
+  - perl >5.22,<6.0
+  - perl-tie-refhash
+  - perl-variable-magic
+  - perl-task-weaken
+  run:
+  - perl >5.22,<6.0
+  - perl-tie-refhash
+  - perl-variable-magic
+  - perl-task-weaken
+source:
+  fn: Tie-RefHash-Weak-0.09.tar.gz
+  sha256: bcb4fb2b7575e4caec320577e21e500b0f3ad29fede380d5b54bb84543e76988
+  url: https://cpan.metacpan.org/authors/id/N/NU/NUFFIN/Tie-RefHash-Weak-0.09.tar.gz
+test:
+  commands:
+  - perl -e "use Tie::RefHash::Weak"

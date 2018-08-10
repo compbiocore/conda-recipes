@@ -1,0 +1,14 @@
+about:
+  home: http://metacpan.org/pod/locale
+  license: perl_5
+  summary: Perl pragma to use or avoid POSIX locales for built-in operations
+build:
+  number: 0
+package:
+  name: perl-locale
+  version: 1.03
+requirements:
+  build:
+  - perl
+  run:
+  - perl

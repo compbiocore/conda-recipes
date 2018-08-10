@@ -1,0 +1,17 @@
+about:
+  home: http://metacpan.org/pod/Unicode::Normalize
+  license: perl_5
+  summary: Unicode Normalization Forms
+build:
+  number: 0
+package:
+  name: perl-unicode-normalize
+  version: 1.18
+requirements:
+  build:
+  - perl
+  run:
+  - perl
+test:
+  commands:
+  - perl -e "use Unicode::Normalize"

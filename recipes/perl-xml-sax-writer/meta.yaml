@@ -1,0 +1,28 @@
+about:
+  home: https://github.com/perigrin/xml-sax-writer
+  license: perl_5
+  summary: SAX2 XML Writer
+build:
+  number: 0
+package:
+  name: perl-xml-sax-writer
+  version: '0.56'
+requirements:
+  build:
+  - perl
+  - perl-xml-filter-buffertext
+  - perl-xml-namespacesupport
+  - perl-xml-sax-base
+  run:
+  - perl
+  - perl-xml-filter-buffertext
+  - perl-xml-namespacesupport
+  - perl-xml-sax-base
+source:
+  fn: XML-SAX-Writer-0.56.tar.gz
+  md5: e5fa5e2b2f6867b1aca9b5b43e1ce361
+  url: https://cpan.metacpan.org/authors/id/P/PE/PERIGRIN/XML-SAX-Writer-0.56.tar.gz
+test:
+  commands:
+  - perl -e "use XML::SAX::Writer"
+  - perl -e "use XML::SAX::Writer::XML"

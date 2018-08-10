@@ -1,0 +1,25 @@
+about:
+  home: https://metacpan.org/pod/DBD::SQLite
+  license: Perl
+  summary: Self Contained RDBMS in a DBI Driver
+build:
+  number: 2
+package:
+  name: perl-dbd-sqlite
+  version: '1.50'
+requirements:
+  build:
+  - gcc
+  - perl-app-cpanminus
+  - perl-module-build
+  - perl-dbi
+  - perl
+  run:
+  - perl-dbi
+  - perl
+source:
+  fn: DBD-SQLite-1.50.tar.gz
+  url: http://search.cpan.org/CPAN/authors/id/I/IS/ISHIGAKI/DBD-SQLite-1.50.tar.gz
+test:
+  commands:
+  - perl -e "use DBD::SQLite"

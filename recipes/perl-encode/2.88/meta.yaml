@@ -1,0 +1,26 @@
+about:
+  home: http://metacpan.org/pod/Encode
+  license: perl_5
+  summary: allows you to write your script in non-ASCII and non-UTF-8
+build:
+  number: 0
+package:
+  name: perl-encode
+  version: 2.88
+requirements:
+  build:
+  - perl
+  - perl-exporter
+  - perl-extutils-makemaker
+  - perl-parent
+  run:
+  - perl
+  - perl-exporter
+  - perl-parent
+source:
+  fn: Encode-2.88.tar.gz
+  sha256: e45ce444dfc87b01a16d3029d9a027beab1fdeff9860699b4b62a141420be338
+  url: https://cpan.metacpan.org/authors/id/D/DA/DANKOGAI/Encode-2.88.tar.gz
+test:
+  commands:
+  - perl -e "use Encode"

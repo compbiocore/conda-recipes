@@ -1,0 +1,117 @@
+============================================================
+Warning: Importing conda-verify failed.  Please be sure to test your packages.  conda install conda-verify to make this message go away.
+============================================================
+Adding in variants from internal_defaults
+Adding in variants from config.variant
+Attempting to finalize metadata for perl-dumpvalue
+Solving environment: ...working... done
+Solving environment: ...working... done
+BUILD START: [u'perl-dumpvalue-1.17-pl526_0.tar.bz2']
+Solving environment: ...working... done
+Solving environment: ...working... done
+
+## Package Plan ##
+
+  environment location: /home/conda/miniconda2/conda-bld/perl-dumpvalue_1533300405184/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeh
+
+
+The following NEW packages will be INSTALLED:
+
+    libgcc-ng:               7.2.0-hdf63c60_3             
+    perl:                    5.26.2-h470a237_0 conda-forge
+    perl-extutils-makemaker: 6.66-pl526_1      local      
+
+Preparing transaction: ...working... done
+Verifying transaction: ...working... done
+Executing transaction: ...working... done
+Checking if your kit is complete...
+Looks good
+Generating a Unix-style Makefile
+Writing Makefile for Dumpvalue
+Writing MYMETA.yml and MYMETA.json
+cp lib/Dumpvalue.pm blib/lib/Dumpvalue.pm
+Manifying 1 pod document
+PERL_DL_NONLAZY=1 "/home/conda/miniconda2/conda-bld/perl-dumpvalue_1533300405184/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeh/bin/perl" "-MExtUtils::Command::MM" "-MTest::Harness" "-e" "undef *Test::Harness::Switches; test_harness(0, 'blib/lib', 'blib/arch')" t/*.t
+t/Dumpvalue.t ........... ok
+t/release-pod-syntax.t .. skipped: these tests are for release candidate testing
+All tests successful.
+Files=2, Tests=88,  0 wallclock secs ( 0.01 usr  0.01 sys +  0.07 cusr  0.00 csys =  0.09 CPU)
+Result: PASS
+Manifying 1 pod document
+Installing /home/conda/miniconda2/conda-bld/perl-dumpvalue_1533300405184/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeh/lib/site_perl/5.26.2/Dumpvalue.pm
+Installing /home/conda/miniconda2/conda-bld/perl-dumpvalue_1533300405184/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeh/man/man3/Dumpvalue.3
+Appending installation info to /home/conda/miniconda2/conda-bld/perl-dumpvalue_1533300405184/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeh/lib/5.26.2/x86_64-linux-thread-multi/perllocal.pod
+Source cache directory is: /home/conda/miniconda2/conda-bld/src_cache
+Downloading source to cache: Dumpvalue-1.17_9ea74606b5.tar.gz
+Downloading https://cpan.metacpan.org/authors/id/F/FL/FLORA/Dumpvalue-1.17.tar.gz
+Success
+Extracting download
+source tree in: /home/conda/miniconda2/conda-bld/perl-dumpvalue_1533300405184/work
+
+Resource usage statistics from building perl-dumpvalue:
+   Process count: 1
+   CPU time: unavailable
+   Memory: 2.7M
+   Disk usage: 228B
+   Time elapsed: 0:00:02.0
+
+Packaging perl-dumpvalue
+Packaging perl-dumpvalue-1.17-pl526_0
+number of files: 3
+Fixing permissions
+Detected hard-coded path in text file lib/5.26.2/x86_64-linux-thread-multi/perllocal.pod
+Detected hard-coded path in text file lib/site_perl/5.26.2/x86_64-linux-thread-multi/auto/Dumpvalue/.packlist
+updating: perl-dumpvalue-1.17-pl526_0.tar.bz2
+TEST START: /home/conda/miniconda2/conda-bld/linux-64/perl-dumpvalue-1.17-pl526_0.tar.bz2
+Updating index at /home/conda/miniconda2/conda-bld/linux-64 to make package installable with dependencies
+Updating index at /home/conda/miniconda2/conda-bld/noarch to make package installable with dependencies
+Adding in variants from /tmp/tmptURXdQ/info/recipe/conda_build_config.yaml
+Renaming work directory,  /home/conda/miniconda2/conda-bld/perl-dumpvalue_1533300405184/work  to  /home/conda/miniconda2/conda-bld/perl-dumpvalue_1533300405184/work_moved_perl-dumpvalue-1.17-pl526_0_linux-64
+Solving environment: ...working... done
+
+## Package Plan ##
+
+  environment location: /home/conda/miniconda2/conda-bld/perl-dumpvalue_1533300405184/_test_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_pla
+
+
+The following NEW packages will be INSTALLED:
+
+    libgcc-ng:      7.2.0-hdf63c60_3             
+    perl:           5.26.2-h470a237_0 conda-forge
+    perl-dumpvalue: 1.17-pl526_0      local      
+
+Preparing transaction: ...working... done
+Verifying transaction: ...working... done
+Executing transaction: ...working... done
+
+Resource usage statistics from testing perl-dumpvalue:
+   Process count: 1
+   CPU time: unavailable
+   Memory: 2.5M
+   Disk usage: 12B
+   Time elapsed: 0:00:02.0
+
+TEST END: /home/conda/miniconda2/conda-bld/linux-64/perl-dumpvalue-1.17-pl526_0.tar.bz2
+Renaming work directory,  /home/conda/miniconda2/conda-bld/perl-dumpvalue_1533300405184/work  to  /home/conda/miniconda2/conda-bld/perl-dumpvalue_1533300405184/work_moved_perl-dumpvalue-1.17-pl526_0_linux-64_main_build_loop
+# Automatic uploading is disabled
+# If you want to upload package(s) to anaconda.org later, type:
+
+anaconda upload /home/conda/miniconda2/conda-bld/linux-64/perl-dumpvalue-1.17-pl526_0.tar.bz2
+
+# To have conda build upload to anaconda.org automatically, use
+# $ conda config --set anaconda_upload yes
+
+anaconda_upload is not set.  Not uploading wheels: []
+####################################################################################
+Resource usage summary:
+
+Total time: 0:00:25.3
+CPU usage: sys=0:00:00.0, user=0:00:00.0
+Maximum memory usage observed: 2.7M
+Total disk usage observed (not including envs): 240B
+
+
+####################################################################################
+Source and build intermediates have been left in /home/conda/miniconda2/conda-bld.
+There are currently 67 accumulated.
+To remove them, you can run the ```conda build purge``` command

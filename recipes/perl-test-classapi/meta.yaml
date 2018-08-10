@@ -1,0 +1,27 @@
+about:
+  home: http://metacpan.org/pod/Test::ClassAPI
+  license: perl_5
+  summary: Provides basic first-pass API testing for large class trees
+package:
+  name: perl-test-classapi
+  version: '1.06'
+requirements:
+  build:
+  - perl-extutils-makemaker
+  - perl-class-inspector
+  - perl-params-util
+  - perl-pathtools
+  - perl-test-simple
+  - perl-config-tiny
+  - perl
+  run:
+  - perl-test-simple
+  - perl-config-tiny
+  - perl-class-inspector
+  - perl-params-util
+  - perl-pathtools
+  - perl
+source:
+  fn: Test-ClassAPI-1.06.tar.gz
+  md5: ee31a9e1ecedcf720a9e89461a83442e
+  url: http://cpan.metacpan.org/authors/id/A/AD/ADAMK/Test-ClassAPI-1.06.tar.gz

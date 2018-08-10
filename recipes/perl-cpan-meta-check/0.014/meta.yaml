@@ -1,0 +1,59 @@
+{% set name = "perl-cpan-meta-check" %}
+{% set version = "0.014" %}
+{% set sha256 = "28a0572bfc1c0678d9ce7da48cf521097ada230f96eb3d063fcbae1cfe6a351f" %}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  fn: CPAN-Meta-Check-0.014.tar.gz
+  url: https://cpan.metacpan.org/authors/id/L/LE/LEONT/CPAN-Meta-Check-0.014.tar.gz
+  sha256: {{ sha256 }}
+
+# If this is a new build for the same version, increment the build
+# number. If you do not include this key, it defaults to 0.
+build:
+  number: 0
+
+requirements:
+  build:
+    - perl
+    - perl-test-deep
+    - perl-cpan-meta-requirements
+    - perl-exporter
+    - perl-base
+    - perl-lib
+    - perl-env
+    - perl-cpan-meta
+    - perl-extutils-makemaker
+    - perl-module-metadata
+    #- perl-strict
+    #- perl-warnings
+    #- perl-test-more
+
+  run:
+    - perl
+    - perl-base
+    - perl-cpan-meta-requirements
+    - perl-exporter
+    - perl-module-metadata
+    #- perl-strict
+    #- perl-warnings
+
+test:
+  # Perl 'use' tests
+  commands:
+    - perl -e "use CPAN::Meta::Check"
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+about:
+  home: http://metacpan.org/pod/CPAN-Meta-Check
+  license: perl_5
+  summary: 'Verify requirements in a CPAN::Meta object'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

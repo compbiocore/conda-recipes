@@ -1,0 +1,36 @@
+about:
+  home: https://github.com/moose/MooseX-Types-Path-Tiny
+  license: perl_5
+  summary: MooseX::Types::Path::Tiny - Path::Tiny types and coercions for Moose
+build:
+  number: 0
+package:
+  name: perl-moosex-types-path-tiny
+  version: 0.012
+requirements:
+  build:
+  - toolchain
+  - perl
+  - perl-app-cpanminus
+  - perl-pathtools
+  - perl-path-tiny
+  - perl-moose
+  - perl-moosex-types
+  - perl-module-build-tiny
+  - perl-params-validate
+  - perl-moosex-getopt
+  run:
+  - perl
+  - perl-app-cpanminus
+  - perl-path-tiny
+  - perl-moose
+  - perl-moosex-types
+  - perl-params-validate
+  - perl-moosex-getopt
+source:
+  fn: MooseX-Types-Path-Tiny-0.012.tar.gz
+  sha256: 19eede02dd654e70f73e34cd7af0063765173bcaefeeff1bdbe21318ecfd9158
+  url: https://cpan.metacpan.org/authors/id/E/ET/ETHER/MooseX-Types-Path-Tiny-0.012.tar.gz
+test:
+  commands:
+  - perl -e "use MooseX::Types::Path::Tiny"

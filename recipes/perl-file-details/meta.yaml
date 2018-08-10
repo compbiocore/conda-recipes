@@ -1,0 +1,22 @@
+about:
+  home: http://metacpan.org/pod/File::Details
+  license: perl_5
+  summary: File details in an object, stat, hash, etc..
+package:
+  name: perl-file-details
+  version: '0.003'
+requirements:
+  build:
+  - perl-extutils-makemaker
+  - perl-class-accessor
+  - perl
+  run:
+  - perl-class-accessor
+  - perl
+source:
+  fn: File-Details-0.003.tar.gz
+  md5: 557b420008cf640740932249957c6b89
+  url: https://cpan.metacpan.org/authors/id/R/RE/RECSKY/File-Details-0.003.tar.gz
+test:
+  commands:
+  - perl -e "use File::Details"

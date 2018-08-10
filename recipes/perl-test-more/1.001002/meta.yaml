@@ -1,0 +1,14 @@
+about:
+  home: http://metacpan.org/pod/Test::More
+  license: perl_5
+  summary: yet another framework for writing test scripts
+build:
+  number: 0
+package:
+  name: perl-test-more
+  version: 1.001002
+requirements:
+  build:
+  - perl
+  run:
+  - perl

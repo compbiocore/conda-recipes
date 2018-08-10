@@ -1,0 +1,43 @@
+{% set name = "perl-text-parsewords" %}
+{% set version = "3.30" %}
+{% set sha256 = "85e0238179dd43997e58c66bd51611182bc7d533505029a2db0d3232edaff5e8" %}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  fn: Text-ParseWords-3.30.tar.gz
+  url: https://cpan.metacpan.org/authors/id/C/CH/CHORNY/Text-ParseWords-3.30.tar.gz
+  sha256: {{ sha256 }}
+
+# If this is a new build for the same version, increment the build
+# number. If you do not include this key, it defaults to 0.
+build:
+  number: 0
+
+requirements:
+  build:
+    - perl
+    - perl-extutils-makemaker
+    #- perl-scalar-util
+
+  run:
+    - perl
+
+test:
+  # Perl 'use' tests
+  imports:
+    - Text::ParseWords
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+about:
+  home: http://metacpan.org/pod/Text::ParseWords
+  license: perl_5
+  summary: 'parse text into an array of tokens or array of arrays'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

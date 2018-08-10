@@ -1,0 +1,167 @@
+about:
+  home: http://biophylo.blogspot.com/
+  license: perl_5
+  summary: An object-oriented Perl toolkit for analyzing and manipulating phyloinformatic
+    data.
+build:
+  number: 1
+package:
+  name: perl-bio-phylo
+  version: '0.58'
+requirements:
+  host:
+  - perl
+  - perl-pdf-api2
+  - perl-gd
+  - perl-html-treebuilder-xpath
+  - perl-json
+  - perl-math-cdf
+  - perl-math-random
+  - perl-svg
+  - perl-xml-libxml
+  - perl-xml-twig
+  - perl-template-toolkit
+  - perl-uri
+  - perl-libwww-perl
+  run:
+  - perl
+  - perl-pdf-api2
+  - perl-gd
+  - perl-html-treebuilder-xpath
+  - perl-json
+  - perl-math-cdf
+  - perl-math-random
+  - perl-svg
+  - perl-xml-libxml
+  - perl-xml-twig
+  - perl-template-toolkit
+  - perl-uri
+  - perl-libwww-perl
+source:
+  fn: Bio-Phylo-0.58.tar.gz
+  md5: 7e7a8956222831282cab7444f6632c0c
+  url: http://cpan.metacpan.org/authors/id/R/RV/RVOSA/Bio-Phylo-0.58.tar.gz
+  patches:
+    - 29-treemodels.t.patch
+test:
+  commands:
+  - perl -e "use Bio::Phylo"
+  - perl -e "use Bio::Phylo::EvolutionaryModels"
+  - perl -e "use Bio::Phylo::Factory"
+  - perl -e "use Bio::Phylo::Forest"
+  - perl -e "use Bio::Phylo::Forest::DrawNodeRole"
+  - perl -e "use Bio::Phylo::Forest::DrawTreeRole"
+  - perl -e "use Bio::Phylo::Forest::Node"
+  - perl -e "use Bio::Phylo::Forest::NodeRole"
+  - perl -e "use Bio::Phylo::Forest::Tree"
+  - perl -e "use Bio::Phylo::Forest::TreeRole"
+  - perl -e "use Bio::Phylo::Generator"
+  - perl -e "use Bio::Phylo::IO"
+  - perl -e "use Bio::Phylo::Identifiable"
+  - perl -e "use Bio::Phylo::Listable"
+  - perl -e "use Bio::Phylo::ListableRole"
+  - perl -e "use Bio::Phylo::Matrices"
+  - perl -e "use Bio::Phylo::Matrices::Character"
+  - perl -e "use Bio::Phylo::Matrices::Characters"
+  - perl -e "use Bio::Phylo::Matrices::Datatype"
+  - perl -e "use Bio::Phylo::Matrices::Datatype::Continuous"
+  - perl -e "use Bio::Phylo::Matrices::Datatype::Custom"
+  - perl -e "use Bio::Phylo::Matrices::Datatype::Dna"
+  - perl -e "use Bio::Phylo::Matrices::Datatype::Illumina"
+  - perl -e "use Bio::Phylo::Matrices::Datatype::Mixed"
+  - perl -e "use Bio::Phylo::Matrices::Datatype::Protein"
+  - perl -e "use Bio::Phylo::Matrices::Datatype::Restriction"
+  - perl -e "use Bio::Phylo::Matrices::Datatype::Rna"
+  - perl -e "use Bio::Phylo::Matrices::Datatype::Sanger"
+  - perl -e "use Bio::Phylo::Matrices::Datatype::Solexa"
+  - perl -e "use Bio::Phylo::Matrices::Datatype::Standard"
+  - perl -e "use Bio::Phylo::Matrices::Datum"
+  - perl -e "use Bio::Phylo::Matrices::DatumRole"
+  - perl -e "use Bio::Phylo::Matrices::Matrix"
+  - perl -e "use Bio::Phylo::Matrices::MatrixRole"
+  - perl -e "use Bio::Phylo::Matrices::TypeSafeData"
+  - perl -e "use Bio::Phylo::Mediators::TaxaMediator"
+  - perl -e "use Bio::Phylo::Models::Substitution::Dna"
+  - perl -e "use Bio::Phylo::Models::Substitution::Dna::F81"
+  - perl -e "use Bio::Phylo::Models::Substitution::Dna::GTR"
+  - perl -e "use Bio::Phylo::Models::Substitution::Dna::HKY85"
+  - perl -e "use Bio::Phylo::Models::Substitution::Dna::JC69"
+  - perl -e "use Bio::Phylo::Models::Substitution::Dna::K80"
+  - perl -e "use Bio::Phylo::NeXML::DOM"
+  - perl -e "use Bio::Phylo::NeXML::DOM::Document"
+  - perl -e "use Bio::Phylo::NeXML::DOM::Document::Libxml"
+  - perl -e "use Bio::Phylo::NeXML::DOM::Document::Twig"
+  - perl -e "use Bio::Phylo::NeXML::DOM::Element"
+  - perl -e "use Bio::Phylo::NeXML::DOM::Element::Libxml"
+  - perl -e "use Bio::Phylo::NeXML::DOM::Element::Twig"
+  - perl -e "use Bio::Phylo::NeXML::Entities"
+  - perl -e "use Bio::Phylo::NeXML::Meta"
+  - perl -e "use Bio::Phylo::NeXML::Meta::XMLLiteral"
+  - perl -e "use Bio::Phylo::NeXML::Writable"
+  - perl -e "use Bio::Phylo::Parsers::Abstract"
+  - perl -e "use Bio::Phylo::Parsers::Adjacency"
+  - perl -e "use Bio::Phylo::Parsers::Fasta"
+  - perl -e "use Bio::Phylo::Parsers::Fastq"
+  - perl -e "use Bio::Phylo::Parsers::Figtree"
+  - perl -e "use Bio::Phylo::Parsers::Newick"
+  - perl -e "use Bio::Phylo::Parsers::Nexml"
+  - perl -e "use Bio::Phylo::Parsers::Nexus"
+  - perl -e "use Bio::Phylo::Parsers::Phylip"
+  - perl -e "use Bio::Phylo::Parsers::Phyloxml"
+  - perl -e "use Bio::Phylo::Parsers::Table"
+  - perl -e "use Bio::Phylo::Parsers::Taxlist"
+  - perl -e "use Bio::Phylo::Parsers::Tnrs"
+  - perl -e "use Bio::Phylo::Parsers::Tolweb"
+  - perl -e "use Bio::Phylo::Parsers::Ubiocbmeta"
+  - perl -e "use Bio::Phylo::Parsers::Ubiometa"
+  - perl -e "use Bio::Phylo::Parsers::Ubiosearch"
+  - perl -e "use Bio::Phylo::PhyloWS"
+  - perl -e "use Bio::Phylo::PhyloWS::Client"
+  - perl -e "use Bio::Phylo::PhyloWS::Resource"
+  - perl -e "use Bio::Phylo::PhyloWS::Resource::Description"
+  - perl -e "use Bio::Phylo::PhyloWS::Service"
+  - perl -e "use Bio::Phylo::PhyloWS::Service::Timetree"
+  - perl -e "use Bio::Phylo::PhyloWS::Service::Tolweb"
+  - perl -e "use Bio::Phylo::PhyloWS::Service::UbioClassificationBank"
+  - perl -e "use Bio::Phylo::PhyloWS::Service::UbioNameBank"
+  - perl -e "use Bio::Phylo::Project"
+  - perl -e "use Bio::Phylo::Set"
+  - perl -e "use Bio::Phylo::Taxa"
+  - perl -e "use Bio::Phylo::Taxa::TaxaLinker"
+  - perl -e "use Bio::Phylo::Taxa::Taxon"
+  - perl -e "use Bio::Phylo::Taxa::TaxonLinker"
+  - perl -e "use Bio::Phylo::Treedrawer"
+  - perl -e "use Bio::Phylo::Treedrawer::Abstract"
+  - perl -e "use Bio::Phylo::Treedrawer::Canvas"
+  - perl -e "use Bio::Phylo::Treedrawer::Gif"
+  - perl -e "use Bio::Phylo::Treedrawer::Jpeg"
+  - perl -e "use Bio::Phylo::Treedrawer::Pdf"
+  - perl -e "use Bio::Phylo::Treedrawer::Png"
+  - perl -e "use Bio::Phylo::Treedrawer::Processing"
+  - perl -e "use Bio::Phylo::Treedrawer::Svg"
+  - perl -e "use Bio::Phylo::Unparsers::Abstract"
+  - perl -e "use Bio::Phylo::Unparsers::Adjacency"
+  - perl -e "use Bio::Phylo::Unparsers::Cdao"
+  - perl -e "use Bio::Phylo::Unparsers::Fasta"
+  - perl -e "use Bio::Phylo::Unparsers::Hennig86"
+  - perl -e "use Bio::Phylo::Unparsers::Html"
+  - perl -e "use Bio::Phylo::Unparsers::Mrp"
+  - perl -e "use Bio::Phylo::Unparsers::Newick"
+  - perl -e "use Bio::Phylo::Unparsers::Nexml"
+  - perl -e "use Bio::Phylo::Unparsers::Nexus"
+  - perl -e "use Bio::Phylo::Unparsers::Nwmsrdf"
+  - perl -e "use Bio::Phylo::Unparsers::Pagel"
+  - perl -e "use Bio::Phylo::Unparsers::Phylip"
+  - perl -e "use Bio::Phylo::Unparsers::Phyloxml"
+  - perl -e "use Bio::Phylo::Unparsers::Rss1"
+  - perl -e "use Bio::Phylo::Unparsers::Taxlist"
+  - perl -e "use Bio::Phylo::Util::CONSTANT"
+  - perl -e "use Bio::Phylo::Util::CONSTANT::Int"
+  - perl -e "use Bio::Phylo::Util::Dependency"
+  - perl -e "use Bio::Phylo::Util::Exceptions"
+  - perl -e "use Bio::Phylo::Util::IDPool"
+  - perl -e "use Bio::Phylo::Util::Logger"
+  - perl -e "use Bio::Phylo::Util::MOP"
+  - perl -e "use Bio::Phylo::Util::OptionalInterface"
+  - perl -e "use Bio::Phylo::Util::StackTrace"
+  - perl -e "use Bio::PhyloRole"

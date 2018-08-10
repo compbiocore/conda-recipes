@@ -1,0 +1,23 @@
+about:
+  home: http://metacpan.org/pod/Text::Tabs+Wrap
+  license: unknown
+  summary: Expand tabs and do simple line wrapping
+build:
+  number: 0
+package:
+  name: perl-text-tabs-wrap
+  version: '2013.0523'
+requirements:
+  build:
+  - perl-extutils-makemaker
+  - perl
+  run:
+  - perl
+source:
+  fn: Text-Tabs+Wrap-2013.0523.tar.gz
+  md5: 3e421ed3810803512af8d13bad548993
+  url: http://cpan.metacpan.org/authors/id/M/MU/MUIR/modules/Text-Tabs+Wrap-2013.0523.tar.gz
+test:
+  commands:
+  - perl -e "use Text::Tabs"
+  - perl -e "use Text::Wrap"

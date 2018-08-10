@@ -1,0 +1,14 @@
+about:
+  home: http://metacpan.org/pod/blib
+  license: perl_5
+  summary: Use MakeMaker's uninstalled version of a package
+build:
+  number: 0
+package:
+  name: perl-blib
+  version: 1.06
+requirements:
+  build:
+  - perl
+  run:
+  - perl

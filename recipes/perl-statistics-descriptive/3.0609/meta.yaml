@@ -1,0 +1,24 @@
+about:
+  home: https://metacpan.org/pod/Statistics::Descriptive
+  license: Perl
+  summary: Module of basic descriptive statistical functions
+build:
+  number: 4
+package:
+  name: perl-statistics-descriptive
+  version: '3.0609'
+requirements:
+  build:
+  - gcc
+  - perl-app-cpanminus
+  - perl-module-build
+  - perl
+  run:
+  - libgcc
+  - perl
+source:
+  fn: Statistics-Descriptive-3.0609.tar.gz
+  url: https://cpan.metacpan.org/authors/id/S/SH/SHLOMIF/Statistics-Descriptive-3.0609.tar.gz
+test:
+  commands:
+  - perl -e "use Statistics::Descriptive"

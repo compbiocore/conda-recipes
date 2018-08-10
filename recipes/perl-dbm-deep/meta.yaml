@@ -1,0 +1,56 @@
+about:
+  home: http://metacpan.org/pod/DBM::Deep
+  license: perl_5
+  summary: A pure perl multi-level hash/array DBM that supports transactions
+package:
+  name: perl-dbm-deep
+  version: '2.0013'
+requirements:
+  build:
+  - perl-file-path
+  - perl-test-simple
+  - perl-test-deep
+  - perl-scalar-list-utils
+  - perl-test-warn
+  - perl-test-exception
+  - perl-module-build
+  - perl-digest-md5
+  - perl-dbi
+  - perl
+  run:
+  - perl-digest-md5
+  - perl-scalar-list-utils
+  - perl-dbi
+  - perl
+source:
+  fn: DBM-Deep-2.0013.tar.gz
+  md5: ea3e7afa296a4c7b87cf06eac3b674bf
+  url: https://cpan.metacpan.org/authors/id/R/RK/RKINYON/DBM-Deep-2.0013.tar.gz
+test:
+  commands:
+  - perl -e "use DBM::Deep"
+  - perl -e "use DBM::Deep::Array"
+  - perl -e "use DBM::Deep::Engine"
+  - perl -e "use DBM::Deep::Engine::DBI"
+  - perl -e "use DBM::Deep::Engine::File"
+  - perl -e "use DBM::Deep::Hash"
+  - perl -e "use DBM::Deep::Iterator"
+  - perl -e "use DBM::Deep::Iterator::DBI"
+  - perl -e "use DBM::Deep::Iterator::File"
+  - perl -e "use DBM::Deep::Iterator::File::BucketList"
+  - perl -e "use DBM::Deep::Iterator::File::Index"
+  - perl -e "use DBM::Deep::Null"
+  - perl -e "use DBM::Deep::Sector"
+  - perl -e "use DBM::Deep::Sector::DBI"
+  - perl -e "use DBM::Deep::Sector::DBI::Reference"
+  - perl -e "use DBM::Deep::Sector::DBI::Scalar"
+  - perl -e "use DBM::Deep::Sector::File"
+  - perl -e "use DBM::Deep::Sector::File::BucketList"
+  - perl -e "use DBM::Deep::Sector::File::Data"
+  - perl -e "use DBM::Deep::Sector::File::Index"
+  - perl -e "use DBM::Deep::Sector::File::Null"
+  - perl -e "use DBM::Deep::Sector::File::Reference"
+  - perl -e "use DBM::Deep::Sector::File::Scalar"
+  - perl -e "use DBM::Deep::Storage"
+  - perl -e "use DBM::Deep::Storage::DBI"
+  - perl -e "use DBM::Deep::Storage::File"

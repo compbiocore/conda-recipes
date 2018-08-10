@@ -1,0 +1,91 @@
+Checking if your kit is complete...
+Looks good
+Generating a Unix-style Makefile
+Writing Makefile for Module::Metadata
+Writing MYMETA.yml and MYMETA.json
+cp lib/Module/Metadata.pm blib/lib/Module/Metadata.pm
+Manifying blib/man3/Module::Metadata.3
+PERL_DL_NONLAZY=1 /home/conda/miniconda2/conda-bld/perl-module-metadata_1526748859239/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_/bin/perl "-MExtUtils::Command::MM" "-MTest::Harness" "-e" "undef *Test::Harness::Switches; test_harness(0, 'blib/lib', 'blib/arch')" t/*.t
+t/00-report-prereqs.t .. ok
+t/contains_pod.t ....... ok
+t/encoding.t ........... ok
+t/endpod.t ............. ok
+t/extract-package.t .... ok
+t/extract-version.t .... ok
+t/metadata.t ........... ok
+t/taint.t .............. ok
+t/version.t ............ ok
+All tests successful.
+Files=9, Tests=348,  0 wallclock secs ( 0.09 usr  0.01 sys +  0.49 cusr  0.04 csys =  0.63 CPU)
+Result: PASS
+Installing /home/conda/miniconda2/conda-bld/perl-module-metadata_1526748859239/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_/lib/site_perl/5.20.3/Module/Metadata.pm
+Installing /home/conda/miniconda2/conda-bld/perl-module-metadata_1526748859239/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_/man/man3/Module::Metadata.3
+Appending installation info to /home/conda/miniconda2/conda-bld/perl-module-metadata_1526748859239/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_/lib/5.20.3/x86_64-linux-thread-multi/perllocal.pod
+BUILD START: perl-module-metadata-1.000033-pl5.20.3_0
+    (actual version deferred until further download or env creation)
+updating index in: /home/conda/miniconda2/conda-bld/linux-64
+removing: perl-module-metadata-1.000033-pl5.20.3_0.tar.bz2
+updating index in: /home/conda/miniconda2/conda-bld/noarch
+
+The following NEW packages will be INSTALLED:
+
+    perl:                    5.20.3.1-0        compbiocore
+    perl-app-cpanminus:      1.7043-pl5.20.3_0 local      
+    perl-base:               2.23-pl5.20.3_0   local      
+    perl-carp:               1.38-pl5.20.3_0   local      
+    perl-constant:           1.33-pl5.20.3_0   local      
+    perl-devel-symdump:      2.18-pl5.20.3_0   local      
+    perl-exporter:           5.72-pl5.20.3_0   local      
+    perl-extutils-makemaker: 6.66-pl5.20.3_1   local      
+    perl-file-path:          2.12-pl5.20.3_0   local      
+    perl-file-temp:          0.2304-pl5.20.3_0 local      
+    perl-lib:                0.63-pl5.20.3_0   local      
+    perl-parent:             0.236-pl5.20.3_0  local      
+    perl-version:            0.9923-pl5.20.3_0 local      
+
+Source cache directory is: /home/conda/miniconda2/conda-bld/src_cache
+Found source in cache: Module-Metadata-1.000033.tar.gz
+Extracting download
+BUILD START (revised): perl-module-metadata-1.000033-pl5.20.3_0
+Package: perl-module-metadata-1.000033-pl5.20.3_0
+source tree in: /home/conda/miniconda2/conda-bld/perl-module-metadata_1526748859239/work/Module-Metadata-1.000033
+number of files: 2
+Fixing permissions
+Fixing permissions
+Detected hard-coded path in text file lib/site_perl/5.20.3/x86_64-linux-thread-multi/auto/Module/Metadata/.packlist
+/home/conda/miniconda2/conda-bld/linux-64/perl-module-metadata-1.000033-pl5.20.3_0.tar.bz2
+updating index in: /home/conda/miniconda2/conda-bld
+updating index in: /home/conda/miniconda2/conda-bld/noarch
+updating index in: /home/conda/miniconda2/conda-bld/linux-64
+updating: perl-module-metadata-1.000033-pl5.20.3_0.tar.bz2
+updating index in: /home/conda/miniconda2/conda-bld
+TEST START: /home/conda/miniconda2/conda-bld/linux-64/perl-module-metadata-1.000033-pl5.20.3_0.tar.bz2
+Deleting work directory, /home/conda/miniconda2/conda-bld/perl-module-metadata_1526748859239/work/Module-Metadata-1.000033
+updating index in: /home/conda/miniconda2/conda-bld/linux-64
+updating index in: /home/conda/miniconda2/conda-bld/noarch
+
+The following NEW packages will be INSTALLED:
+
+    perl:                    5.20.3.1-0          compbiocore
+    perl-carp:               1.38-pl5.20.3_0     local      
+    perl-exporter:           5.72-pl5.20.3_0     local      
+    perl-extutils-makemaker: 6.66-pl5.20.3_1     local      
+    perl-module-metadata:    1.000033-pl5.20.3_0 local      
+    perl-version:            0.9923-pl5.20.3_0   local      
+
+TEST END: /home/conda/miniconda2/conda-bld/linux-64/perl-module-metadata-1.000033-pl5.20.3_0.tar.bz2
+# If you want to upload package(s) to anaconda.org later, type:
+
+anaconda upload /home/conda/miniconda2/conda-bld/linux-64/perl-module-metadata-1.000033-pl5.20.3_0.tar.bz2
+
+# To have conda build upload to anaconda.org automatically, use
+# $ conda config --set anaconda_upload yes
+
+anaconda_upload is not set.  Not uploading wheels: []
+
+
+
+####################################################################################
+Source and build intermediates have been left in /home/conda/miniconda2/conda-bld.
+There are currently 430 accumulated.
+To remove them, you can run the ```conda build purge``` command

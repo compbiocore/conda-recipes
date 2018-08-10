@@ -1,0 +1,16 @@
+about:
+  home: http://metacpan.org/pod/Config::Simple
+  license: unknown
+  summary: simple configuration file class
+package:
+  name: perl-config-simple
+  version: '4.58'
+requirements:
+  build:
+  - perl
+  run:
+  - perl
+source:
+  fn: Config-Simple-4.58.tar.gz
+  md5: f014aec54f0a1e2e880d317180fce502
+  url: http://cpan.metacpan.org/authors/id/S/SH/SHERZODR/Config-Simple-4.58.tar.gz

@@ -1,0 +1,21 @@
+about:
+  home: http://metacpan.org/pod/Importer
+  license: perl_5
+  summary: Alternative but compatible interface to modules that export symbols.
+package:
+  name: perl-importer
+  version: '0.024'
+requirements:
+  build:
+  - perl-test-simple
+  - perl-extutils-makemaker
+  - perl
+  run:
+  - perl
+source:
+  fn: Importer-0.024.tar.gz
+  md5: 2d29c79e65e221105a23e28c239b688f
+  url: https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Importer-0.024.tar.gz
+test:
+  commands:
+  - perl -e "use Importer"

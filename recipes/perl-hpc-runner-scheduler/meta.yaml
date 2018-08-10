@@ -1,0 +1,43 @@
+about:
+  home: https://github.com/jerowe/HPC-Runner-Scheduler
+  license: perl_5
+  summary: Base Library for HPC::Runner::Slurm and HPC::Runner::PBS
+build:
+  number: 0
+  skip: true
+package:
+  name: perl-hpc-runner-scheduler
+  version: '0.09'
+requirements:
+  build:
+  - perl-app-cpanminus
+  - perl-json
+  - perl-template-toolkit
+  - perl-module-build-tiny
+  - perl-test-simple
+  - perl-pathtools
+  - perl-moose
+  - perl-moosex-getopt
+  - perl-log-log4perl
+  - perl-hpc-runner
+  - perl-scalar-list-utils
+  - perl
+  run:
+  - perl-app-cpanminus
+  - perl-json
+  - perl-template-toolkit
+  - perl-module-build-tiny
+  - perl-pathtools
+  - perl-moose
+  - perl-moosex-getopt
+  - perl-log-log4perl
+  - perl-hpc-runner
+  - perl-scalar-list-utils
+  - perl
+source:
+  fn: HPC-Runner-Scheduler-0.09.tar.gz
+  md5: a95b4c35f448afc63a27261638b9ae42
+  url: https://cpan.metacpan.org/authors/id/J/JI/JILLROWE/HPC-Runner-Scheduler-0.09.tar.gz
+test:
+  commands:
+  - perl -e "use HPC::Runner::Scheduler"

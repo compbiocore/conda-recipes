@@ -1,0 +1,22 @@
+about:
+  home: http://metacpan.org/pod/Devel::Symdump
+  license: perl_5
+  summary: dump symbol names or the symbol table
+build:
+  number: 0
+package:
+  name: perl-devel-symdump
+  version: 2.18
+requirements:
+  build:
+  - perl
+  - perl-extutils-makemaker
+  run:
+  - perl
+source:
+  fn: Devel-Symdump-2.18.tar.gz
+  sha256: 826f81a107f5592a2516766ed43beb47e10cc83edc9ea48090b02a36040776c0
+  url: https://cpan.metacpan.org/authors/id/A/AN/ANDK/Devel-Symdump-2.18.tar.gz
+test:
+  commands:
+  - perl -e "use Devel::Symdump"

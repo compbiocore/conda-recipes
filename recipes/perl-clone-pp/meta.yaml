@@ -1,0 +1,22 @@
+about:
+  home: http://metacpan.org/pod/Clone::PP
+  license: perl_5
+  summary: Recursively copy Perl datatypes
+package:
+  name: perl-clone-pp
+  version: '1.06'
+requirements:
+  build:
+  - perl
+  - perl-apache-test
+  - perl-extutils-makemaker
+  run:
+  - perl
+  - perl-apache-test
+source:
+  fn: Clone-PP-1.06.tar.gz
+  md5: 1aa5a17c47f168488d013bd6051658fa
+  url: http://cpan.metacpan.org/authors/id/N/NE/NEILB/Clone-PP-1.06.tar.gz
+test:
+  commands:
+  - perl -e "use Clone::PP"

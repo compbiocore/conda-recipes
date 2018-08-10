@@ -1,0 +1,47 @@
+about:
+  home: http://moose.perl.org/
+  license: perl_5
+  summary: A postmodern object system for Perl 5
+build:
+  number: 0
+package:
+  name: perl-moose
+  version: 2.2009
+requirements:
+  build:
+  - perl
+  - perl-app-cpanminus
+  - perl-pathtools
+  - perl-module-runtime
+  - perl-extutils-makemaker
+  - perl-try-tiny
+  - perl-test-warnings
+  - perl-scalar-list-utils >=1.45
+  - perl-package-stash
+  - perl-sub-exporter
+  - perl-test-more
+  - perl-list-someutils
+  - perl-datetime
+  - perl-dbm-deep
+  - perl-test-deep
+  - perl-yaml
+  run:
+  - perl
+  - perl-app-cpanminus
+  - perl-pathtools
+  - perl-module-runtime
+  - perl-extutils-makemaker
+  - perl-try-tiny
+  - perl-test-warnings
+  - perl-scalar-list-utils >=1.45
+  - perl-package-stash
+  - perl-sub-exporter
+  - perl-datetime
+source:
+  fn: Moose-2.2009.tar.gz
+  sha256: 63ba8a5e27dbcbdbac2cd8f4162fff50a31e9829d8955a196a5898240c02d194
+  url: https://cpan.metacpan.org/authors/id/E/ET/ETHER/Moose-2.2009.tar.gz
+test:
+  commands:
+  - which perl
+  - perl -V

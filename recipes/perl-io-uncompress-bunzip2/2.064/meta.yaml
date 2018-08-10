@@ -1,0 +1,14 @@
+about:
+  home: http://metacpan.org/pod/IO::Uncompress::Bunzip2
+  license: perl_5
+  summary: Read bzip2 files/buffers
+build:
+  number: 0
+package:
+  name: perl-io-uncompress-bunzip2
+  version: 2.064
+requirements:
+  build:
+  - perl
+  run:
+  - perl

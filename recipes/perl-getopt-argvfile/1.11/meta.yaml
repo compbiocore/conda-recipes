@@ -1,0 +1,27 @@
+about:
+  home: http://metacpan.org/pod/Getopt::ArgvFile
+  license: artistic_1
+  summary: interpolates script options from files into @ARGV or another array
+build:
+  number: 0
+package:
+  name: perl-getopt-argvfile
+  version: '1.11'
+requirements:
+  build:
+  - perl
+  - perl-test-harness
+  - perl-text-parsewords
+  - perl-test-simple
+  run:
+  - perl
+  - perl-test-harness
+  - perl-text-parsewords
+  - perl-test-simple
+source:
+  fn: Getopt-ArgvFile-1.11.tar.gz
+  md5: 42117db2af4a24c062b2da25d4fdf756
+  url: https://cpan.metacpan.org/authors/id/J/JS/JSTENZEL/Getopt-ArgvFile-1.11.tar.gz
+test:
+  commands:
+  - perl -e "use Getopt::ArgvFile"

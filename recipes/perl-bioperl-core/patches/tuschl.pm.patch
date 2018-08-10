@@ -1,0 +1,15 @@
+diff --git a/Bio/Tools/SiRNA/Ruleset/tuschl.pm b/Bio/Tools/SiRNA/Ruleset/tuschl.pm.new
+index 825d42e..0374ee1 100644
+--- a/Bio/Tools/SiRNA/Ruleset/tuschl.pm
++++ b/Bio/Tools/SiRNA/Ruleset/tuschl.pm.new
+@@ -178,8 +178,8 @@ sub _get_oligos {
+ 	    my $target = $2;
+ 
+ 	    # check for too many Gs (or Cs on the other strand)
+-	    next if ( $target =~ /G{ $self->gstring,}/io );
+-	    next if ( $target =~ /C{ $self->gstring,}/io );
++	    next if ( $target =~ /G\{ $self->gstring,\}/io );
++	    next if ( $target =~ /C\{ $self->gstring,\}/io );
+ # 	skip Ns (for filtering)
+ 	    next if ( $target =~ /N/i);
+ 

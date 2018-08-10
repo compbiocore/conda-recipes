@@ -1,0 +1,14 @@
+about:
+  home: http://metacpan.org/pod/CPAN::Meta::Validator
+  license: perl_5
+  summary: validate CPAN distribution metadata structures
+build:
+  number: 0
+package:
+  name: perl-cpan-meta-validator
+  version: 2.14064
+requirements:
+  build:
+  - perl
+  run:
+  - perl

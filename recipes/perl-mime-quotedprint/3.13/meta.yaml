@@ -1,0 +1,14 @@
+about:
+  home: http://metacpan.org/pod/MIME::QuotedPrint
+  license: perl_5
+  summary: Encoding and decoding of quoted-printable strings
+build:
+  number: 0
+package:
+  name: perl-mime-quotedprint
+  version: 3.13
+requirements:
+  build:
+  - perl
+  run:
+  - perl

@@ -1,0 +1,22 @@
+about:
+  home: https://github.com/dluxhu/perl-parallel-forkmanager
+  license: perl_5
+  summary: A simple parallel processing fork manager
+build:
+  number: 0
+package:
+  name: perl-parallel-forkmanager
+  version: '1.17'
+requirements:
+  build:
+  - perl-test-warn
+  - perl
+  run:
+  - perl
+source:
+  fn: Parallel-ForkManager-1.17.tar.gz
+  md5: be82b8b9bd3bff04f0fcec37b1de43d2
+  url: https://cpan.metacpan.org/authors/id/Y/YA/YANICK/Parallel-ForkManager-1.17.tar.gz
+test:
+  commands:
+  - perl -e "use Parallel::ForkManager"

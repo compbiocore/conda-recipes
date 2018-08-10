@@ -1,0 +1,23 @@
+about:
+  home: http://metacpan.org/pod/PerlIO-gzip
+  license: perl_5
+  summary: PerlIO interface to gzip/gunzip
+build:
+  number: 3
+package:
+  name: perl-perlio-gzip
+  version: '0.19'
+requirements:
+  build:
+  - perl
+  - zlib *
+  run:
+  - perl
+  - zlib *
+source:
+  fn: PerlIO-gzip-0.19.tar.gz
+  md5: dbcfc1450f6b593b65048b8ced061c98
+  url: https://cpan.metacpan.org/authors/id/N/NW/NWCLARK/PerlIO-gzip-0.19.tar.gz
+test:
+  commands:
+  - perl -e "use PerlIO::gzip"

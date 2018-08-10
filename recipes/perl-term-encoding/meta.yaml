@@ -1,0 +1,21 @@
+about:
+  home: http://metacpan.org/pod/Term::Encoding
+  license: perl_5
+  summary: Detect encoding of the current terminal
+build:
+  number: 0
+package:
+  name: perl-term-encoding
+  version: '0.02'
+requirements:
+  build:
+  - perl
+  run:
+  - perl
+source:
+  fn: Term-Encoding-0.02.tar.gz
+  md5: 67b7fb38ec7779a3fb79a047fd7edbb5
+  url: http://cpan.metacpan.org/authors/id/M/MI/MIYAGAWA/Term-Encoding-0.02.tar.gz
+test:
+  commands:
+  - perl -e "use Term::Encoding"
