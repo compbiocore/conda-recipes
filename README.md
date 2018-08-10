@@ -6,6 +6,14 @@ This is the conda recipe repository for the [Computational Biology Core (CBC)](h
 
 The build system for all the recipes is CentOS 6 with conda build 3. A Docker image of our build system is on [Dockerhub](https://hub.docker.com/r/compbiocore/dockerfiles/) if needed.
 
+# Build command
+
+From within the recipe directory, build the package by tying:
+
+```
+conda build -c compbiocore . --perl 5.26.2
+```
+
 # Our CI workflow
 
 To maintain package quality and compatibility we provide a `main` environment which is a set of up-to-date packages that we maintain and are commonly used by the Brown community for their daily workflows.
