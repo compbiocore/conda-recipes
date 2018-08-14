@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: runtime module handling
 build:
-  number: 2
+  number: 1
 package:
   name: perl-module-runtime
   version: '0.014'

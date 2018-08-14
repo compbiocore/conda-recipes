@@ -3,7 +3,7 @@ about:
   license: Perl
   summary: Provide an interface to ZIP archive files
 build:
-  number: 3
+  number: 1
 package:
   name: perl-archive-zip
   version: '1.55'

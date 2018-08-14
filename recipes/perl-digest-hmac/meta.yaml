@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Keyed-Hashing for Message Authentication
 build:
-  number: 2
+  number: 1
 package:
   name: perl-digest-hmac
   version: '1.03'

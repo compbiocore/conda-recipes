@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: SAX2 XML Writer
 build:
-  number: 0
+  number: 1
 package:
   name: perl-xml-sax-writer
   version: '0.56'

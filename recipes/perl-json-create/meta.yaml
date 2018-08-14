@@ -3,7 +3,7 @@ about:
   license: Artistic License (Perl) 1.0 | GNU General Public License (GPL)
   summary: Fast, minimal, UTF-8-only serialization of data to JSON.
 build:
-  number: 0
+  number: 1
 package:
   name: perl-json-create
   version: '0.24'

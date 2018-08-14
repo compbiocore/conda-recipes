@@ -3,7 +3,7 @@ about:
   license: artistic_2
   summary: (X)HTML validation in a Perl object
 build:
-  number: 2
+  number: 1
 package:
   name: perl-html-tidy
   version: '1.56'

@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: provides screen dump of Perl data.
 build:
-  number: 0
+  number: 1
 package:
   name: perl-dumpvalue
   version: 1.17

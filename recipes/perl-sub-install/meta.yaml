@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: install subroutines into packages easily
 build:
-  number: 2
+  number: 1
 package:
   name: perl-sub-install
   version: '0.928'

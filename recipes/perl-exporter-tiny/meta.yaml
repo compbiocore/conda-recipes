@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Exporter with the features of Sub::Exporter but only core dependencies
 build:
-  number: 2
+  number: 1
 package:
   name: perl-exporter-tiny
   version: '0.042'

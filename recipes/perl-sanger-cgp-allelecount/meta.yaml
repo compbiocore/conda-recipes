@@ -3,7 +3,7 @@ about:
   license: GPLv3
   summary: Support code for NGS copy number algorithm
 build:
-  number: 3
+  number: 1
   skip: true
 package:
   name: perl-sanger-cgp-allelecount

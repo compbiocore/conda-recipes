@@ -3,7 +3,7 @@ about:
   license: agpl_3
   summary: A Moose Role for basic File IO
 build:
-  number: 0
+  number: 1
 package:
   name: perl-filedirutil
   version: v0.03

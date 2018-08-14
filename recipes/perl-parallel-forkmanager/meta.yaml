@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: A simple parallel processing fork manager
 build:
-  number: 0
+  number: 1
 package:
   name: perl-parallel-forkmanager
   version: '1.17'

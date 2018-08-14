@@ -3,7 +3,7 @@ about:
   license: Perl
   summary: Locate per-dist and per-module shared files
 build:
-  number: 4
+  number: 1
 package:
   name: perl-file-sharedir
   version: '1.102'

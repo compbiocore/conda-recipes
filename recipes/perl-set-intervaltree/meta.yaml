@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: An interval tree implementation in PERL.
 build:
-  number: 5
+  number: 1
 package:
   name: perl-set-intervaltree
   version: 0.1

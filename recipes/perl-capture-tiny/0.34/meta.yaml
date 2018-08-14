@@ -3,7 +3,7 @@ about:
   license: Apache 2.0
   summary: Capture STDOUT and STDERR from Perl, XS or external programs
 build:
-  number: 2
+  number: 1
 package:
   name: perl-capture-tiny
   version: '0.34'

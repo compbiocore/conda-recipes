@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Convert numbers between various bases
 build:
-  number: 0
+  number: 1
 package:
   name: perl-math-basecalc
   version: 1.019

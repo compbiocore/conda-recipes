@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Convert POD data to formatted ASCII text
 build:
-  number: 0
+  number: 1
 package:
   name: perl-pod-plaintext
   version: 2.07

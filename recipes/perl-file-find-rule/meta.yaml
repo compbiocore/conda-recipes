@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Alternative interface to File::Find
 build:
-  number: 2
+  number: 1
 package:
   name: perl-file-find-rule
   version: '0.34'

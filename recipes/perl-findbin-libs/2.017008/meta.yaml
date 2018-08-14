@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: locate and a 'use lib' or export directories based on $FindBin::Bin.
 build:
-  number: 0
+  number: 1
 package:
   name: perl-findbin-libs
   version: '2.017008'

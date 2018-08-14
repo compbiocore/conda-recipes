@@ -3,7 +3,7 @@ about:
   license: unknown
   summary: Perl extension for filesystem disk space information.
 build:
-  number: 2
+  number: 1
   skip: false
 package:
   name: perl-filesys-df

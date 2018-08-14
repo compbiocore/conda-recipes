@@ -3,7 +3,7 @@ about:
   license: unknown
   summary: Generate Recursive-Descent Parsers
 build:
-  number: 0
+  number: 1
 package:
   name: perl-parse-recdescent
   version: '1.967013'

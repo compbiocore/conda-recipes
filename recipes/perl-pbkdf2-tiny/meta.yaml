@@ -3,7 +3,7 @@ about:
   license: apache_2_0
   summary: Minimalist PBKDF2 (RFC 2898) with HMAC-SHA1 or HMAC-SHA2
 build:
-  number: 0
+  number: 1
   skip: true
 package:
   name: perl-pbkdf2-tiny

@@ -3,7 +3,7 @@ about:
   license: artistic_2
   summary: TTF font support for Perl
 build:
-  number: 0
+  number: 1
 package:
   name: perl-font-ttf
   version: '1.05'

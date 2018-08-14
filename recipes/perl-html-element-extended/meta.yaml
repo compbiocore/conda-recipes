@@ -4,7 +4,7 @@ about:
   summary: Perl extension for manipulating a table composed of HTML::Element style
     components.
 build:
-  number: 0
+  number: 1
 package:
   name: perl-html-element-extended
   version: '1.18'

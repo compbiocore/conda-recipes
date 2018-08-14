@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: basic set operations
 build:
-  number: 0
+  number: 1
 package:
   name: perl-set-scalar
   version: '1.29'

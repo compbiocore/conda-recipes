@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Provide the stuff missing in List::Util
 build:
-  number: 0
+  number: 1
 package:
   name: perl-list-someutils
   version: 0.53

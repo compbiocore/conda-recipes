@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Number::Misc - handy utilities for numbers
 build:
-  number: 0
+  number: 1
 package:
   name: perl-number-misc
   version: '1.2'

@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Implementation of the soundex algorithm.
 build:
-  number: 0
+  number: 1
 package:
   name: perl-text-soundex
   version: '3.05'

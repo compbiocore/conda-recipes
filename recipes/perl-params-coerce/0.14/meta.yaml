@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Allows your classes to do coercion of parameters
 build:
-  number: 0
+  number: 1
 package:
   name: perl-params-coerce
   version: 0.14

@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Perl extension for generating Scalable Vector Graphics (SVG) documents
 build:
-  number: 2
+  number: 1
 package:
   name: perl-svg
   version: '2.64'

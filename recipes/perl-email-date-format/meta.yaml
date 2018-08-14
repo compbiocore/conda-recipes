@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: produce RFC 2822 date strings
 build:
-  number: 0
+  number: 1
 package:
   name: perl-email-date-format
   version: '1.005'

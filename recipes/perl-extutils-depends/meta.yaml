@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Easily build XS extensions that depend on XS extensions
 build:
-  number: 0
+  number: 1
 package:
   name: perl-extutils-depends
   version: '0.405'

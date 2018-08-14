@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: routines for manipulating stashes
 build:
-  number: 0
+  number: 1
 package:
   name: perl-package-stash
   version: '0.37'

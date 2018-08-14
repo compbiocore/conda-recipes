@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Interface to Adobe Font Metrics files
 build:
-  number: 2
+  number: 1
 package:
   name: perl-font-afm
   version: '1.20'

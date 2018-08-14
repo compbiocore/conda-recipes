@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Regular expression-based Perl Parser for NCBI Entrez Gene
 build:
-  number: 2
+  number: 1
 package:
   name: perl-bio-asn1-entrezgene
   version: 1.72

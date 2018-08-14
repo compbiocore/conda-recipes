@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Compare XML in perl tests
 build:
-  number: 0
+  number: 1
 package:
   name: perl-test-xml
   version: '0.08'

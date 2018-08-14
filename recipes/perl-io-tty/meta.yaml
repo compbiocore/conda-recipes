@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Pseudo ttys and constants
 build:
-  number: 0
+  number: 1
 package:
   name: perl-io-tty
   version: '1.12'

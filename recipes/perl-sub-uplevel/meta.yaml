@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: apparently run a function in a higher stack frame
 build:
-  number: 2
+  number: 1
 package:
   name: perl-sub-uplevel
   version: '0.25'

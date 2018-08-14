@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Fine-grained cloning support for Moose objects.
 build:
-  number: 0
+  number: 1
 package:
   name: perl-moosex-clone
   version: 0.06

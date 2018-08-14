@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: SQL parsing and processing engine
 build:
-  number: 0
+  number: 1
 package:
   name: perl-sql-statement
   version: '1.407'

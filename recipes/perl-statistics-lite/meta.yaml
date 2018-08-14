@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Small stats stuff.
 build:
-  number: 0
+  number: 1
 package:
   name: perl-statistics-lite
   version: '3.62'

@@ -3,7 +3,7 @@ about:
   license: unknown
   summary: Japanese Charset Handler
 build:
-  number: 0
+  number: 1
 package:
   name: perl-jcode
   version: '2.07'

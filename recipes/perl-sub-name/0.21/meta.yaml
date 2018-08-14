@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: (Re)name a sub
 build:
-  number: 0
+  number: 1
 package:
   name: perl-sub-name
   version: 0.21

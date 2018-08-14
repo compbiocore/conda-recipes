@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Base Library for HPC::Runner::Slurm and HPC::Runner::PBS
 build:
-  number: 0
+  number: 1
   skip: true
 package:
   name: perl-hpc-runner-scheduler

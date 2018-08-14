@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Utilities to write and check a MANIFEST file
 build:
-  number: 2
+  number: 1
 package:
   name: perl-extutils-manifest
   version: '1.70'

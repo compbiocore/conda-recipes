@@ -4,7 +4,7 @@ about:
   summary: Generate probabilities and quantiles from several statistical probability
     functions
 build:
-  number: 4
+  number: 1
 package:
   name: perl-math-cdf
   version: '0.1'

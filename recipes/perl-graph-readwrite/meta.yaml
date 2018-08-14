@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Write out directed graph in Dot format
 build:
-  number: 0
+  number: 1
 package:
   name: perl-graph-readwrite
   version: '2.09'

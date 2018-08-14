@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Unit testing without external dependencies
 build:
-  number: 0
+  number: 1
 package:
   name: perl-test-unit-lite
   version: 0.1202

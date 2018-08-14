@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Use MakeMaker's uninstalled version of a package
 build:
-  number: 0
+  number: 1
 package:
   name: perl-blib
   version: 1.06

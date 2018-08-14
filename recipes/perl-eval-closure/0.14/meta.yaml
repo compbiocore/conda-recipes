@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: safely and cleanly create closures via string eval
 build:
-  number: 0
+  number: 1
 package:
   name: perl-eval-closure
   version: 0.14

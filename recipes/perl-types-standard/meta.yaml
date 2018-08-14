@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: bundled set of built-in types for Type::Tiny
 build:
-  number: 0
+  number: 1
 package:
   name: perl-types-standard
   version: 1.002001

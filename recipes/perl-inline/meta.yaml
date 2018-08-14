@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Write Perl Subroutines in Other Programming Languages
 build:
-  number: 0
+  number: 1
 package:
   name: perl-inline
   version: '0.80'

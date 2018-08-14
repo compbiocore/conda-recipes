@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Compare elements of two or more lists
 build:
-  number: 0
+  number: 1
 package:
   name: perl-list-compare
   version: 0.53

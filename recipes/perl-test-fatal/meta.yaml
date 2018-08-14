@@ -4,7 +4,7 @@ about:
   summary: incredibly simple helpers for testing code with exceptions
 
 build:
-  number: 2
+  number: 1
 
 package:
   name: perl-test-fatal

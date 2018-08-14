@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: 'Submit Bioinformatics HPC Workflows with the Slurm scheduler '
 build:
-  number: 3
+  number: 1
   skip: true
 package:
   name: perl-hpc-runner-slurm

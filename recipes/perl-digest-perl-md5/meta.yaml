@@ -3,7 +3,7 @@ about:
   license: unknown
   summary: Perl Implementation of Rivest's MD5 algorithm
 build:
-  number: 0
+  number: 1
 package:
   name: perl-digest-perl-md5
   version: '1.9'

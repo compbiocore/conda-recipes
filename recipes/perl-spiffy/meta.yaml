@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Spiffy Perl Interface Framework For You
 build:
-  number: 2
+  number: 1
 package:
   name: perl-spiffy
   version: '0.46'

@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Uniform Resource Identifiers (absolute and relative)
 build:
-  number: 5
+  number: 1
 package:
   name: perl-uri
   version: 1.69

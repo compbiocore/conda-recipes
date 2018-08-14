@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: yet another framework for writing test scripts
 build:
-  number: 0
+  number: 1
 package:
   name: perl-test-more
   version: 1.001002

@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: PerlIO interface to gzip/gunzip
 build:
-  number: 3
+  number: 1
 package:
   name: perl-perlio-gzip
   version: '0.19'

@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Utilities to test STDOUT and STDERR messages.
 build:
-  number: 0
+  number: 1
 package:
   name: perl-test-output
   version: '1.03'

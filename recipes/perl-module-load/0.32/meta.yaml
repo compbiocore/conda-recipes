@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Load modules in a DWIM style
 build:
-  number: 0
+  number: 1
 package:
   name: perl-module-load
   version: 0.32

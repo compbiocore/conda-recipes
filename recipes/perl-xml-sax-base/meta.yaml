@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Base class for SAX Drivers and Filters
 build:
-  number: 2
+  number: 1
 package:
   name: perl-xml-sax-base
   version: '1.08'

@@ -3,7 +3,7 @@ about:
   license: GPLv3
   summary: a set of common perl utilities for generating consistent Vcf headers
 build:
-  number: 3
+  number: 1
   skip: true
 package:
   name: perl-sanger-cgp-vcf

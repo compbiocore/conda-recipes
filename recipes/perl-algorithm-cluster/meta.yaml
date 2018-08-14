@@ -3,7 +3,7 @@ about:
   license: unknown
   summary: Perl interface to the C Clustering Library
 build:
-  number: 0
+  number: 1
 package:
   name: perl-algorithm-cluster
   version: '1.52'

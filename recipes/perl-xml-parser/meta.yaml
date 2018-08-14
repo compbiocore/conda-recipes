@@ -3,7 +3,7 @@ about:
   license: Perl
   summary: A perl module for parsing XML documents
 build:
-  number: 5
+  number: 1
 package:
   name: perl-xml-parser
   version: '2.44'

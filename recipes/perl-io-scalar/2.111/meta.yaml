@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: 'IO:: interface for reading/writing a scalar'
 build:
-  number: 0
+  number: 1
 package:
   name: perl-io-scalar
   version: 2.111

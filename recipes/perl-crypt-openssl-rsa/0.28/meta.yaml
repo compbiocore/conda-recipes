@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: RSA encoding and decoding, using the openSSL libraries
 build:
-  number: 0
+  number: 1
   skip: true
 package:
   name: perl-crypt-openssl-rsa

@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Retrieve names of code references
 build:
-  number: 0
+  number: 1
 package:
   name: perl-sub-identify
   version: 0.12

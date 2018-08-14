@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: portably perform operations on file names
 build:
-  number: 0
+  number: 1
 package:
   name: perl-file-spec
   version: 3.4801

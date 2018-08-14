@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Trap exit codes, exceptions, output, etc
 build:
-  number: 3
+  number: 1
   skip: false
 package:
   name: perl-test-trap

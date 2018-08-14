@@ -3,7 +3,7 @@ about:
   license: unknown
   summary: supporting module for SOAP::Lite
 build:
-  number: 0
+  number: 1
 package:
   name: perl-io-sessiondata
   version: '1.03'

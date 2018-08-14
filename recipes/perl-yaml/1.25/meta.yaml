@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: "YAML Ain't Markup Language\u2122"
 build:
-  number: 0
+  number: 1
 package:
   name: perl-yaml
   version: 1.25

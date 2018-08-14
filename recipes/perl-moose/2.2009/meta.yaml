@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: A postmodern object system for Perl 5
 build:
-  number: 0
+  number: 1
 package:
   name: perl-moose
   version: 2.2009

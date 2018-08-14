@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Get information about a class and its structure
 build:
-  number: 0
+  number: 1
 package:
   name: perl-class-inspector
   version: '1.28'

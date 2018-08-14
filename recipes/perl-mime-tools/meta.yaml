@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Tools to manipulate MIME messages
 build:
-  number: 0
+  number: 1
 package:
   name: perl-mime-tools
   version: '5.507'

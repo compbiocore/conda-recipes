@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Low-Level Interface to bzip2 compression library
 build:
-  number: 2
+  number: 1
 package:
   name: perl-compress-raw-bzip2
   version: 2.069

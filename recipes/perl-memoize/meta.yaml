@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Make functions faster by trading space for time
 build:
-  number: 2
+  number: 1
 package:
   name: perl-memoize
   version: 1.03

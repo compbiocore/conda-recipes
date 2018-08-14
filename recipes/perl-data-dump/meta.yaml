@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Pretty printing of data structure
 build:
-  number: 3
+  number: 1
   skip: false
 package:
   name: perl-data-dump

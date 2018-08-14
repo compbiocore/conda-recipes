@@ -3,7 +3,7 @@ about:
   license: perl
   summary: Read/Write YAML files with as little code as possible
 build:
-  number: 0
+  number: 1
 package:
   name: perl-yaml-tiny
   version: '1.70'

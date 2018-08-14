@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Extremely flexible deep comparison
 build:
-  number: 2
+  number: 1
 package:
   name: perl-test-deep
   version: '1.120'

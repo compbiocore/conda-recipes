@@ -3,7 +3,7 @@ about:
   license: artistic_2
   summary: An N-ary tree
 build:
-  number: 0
+  number: 1
 package:
   name: perl-tree-dag_node
   version: '1.29'

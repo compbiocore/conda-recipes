@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Opinionated Bioinformatics Genomics Workflow Creator
 build:
-  number: 0
+  number: 1
 package:
   name: perl-biox-workflow-command
   version: 2.3.2

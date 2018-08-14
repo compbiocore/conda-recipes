@@ -3,7 +3,7 @@ about:
   license: unknown
   summary: Sort a file or merge sort multiple files
 build:
-  number: 2
+  number: 1
 package:
   name: perl-file-sort
   version: '1.01'

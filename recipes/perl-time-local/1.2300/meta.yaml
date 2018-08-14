@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: efficiently compute time from local and GMT time
 build:
-  number: 0
+  number: 1
 package:
   name: perl-time-local
   version: 1.23

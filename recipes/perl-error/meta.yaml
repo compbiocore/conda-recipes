@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Error/exception handling in an OO-ish way
 build:
-  number: 0
+  number: 1
 package:
   name: perl-error
   version: '0.17024'

@@ -3,7 +3,7 @@ about:
   license: open_source
   summary: ''
 build:
-  number: 2
+  number: 1
   skip: true
 package:
   name: perl-statistics-basic

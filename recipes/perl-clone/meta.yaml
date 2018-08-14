@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: recursively copy Perl datatypes
 build:
-  number: 0
+  number: 1
 package:
   name: perl-clone
   version: '0.38'

@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Perl pragma to predeclare global variable names
 build:
-  number: 0
+  number: 1
 package:
   name: perl-vars
   version: 1.03

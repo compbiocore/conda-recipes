@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: return name and handle of a temporary file safely
 build:
-  number: 0
+  number: 1
 package:
   name: perl-file-temp
   version: 0.2304

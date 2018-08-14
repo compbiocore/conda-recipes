@@ -4,7 +4,7 @@ about:
   summary: ExifTool is a platform-independent Perl library plus a command-line application
     for reading, writing and editing meta information in a wide variety of files.
 build:
-  number: 0
+  number: 1
 package:
   name: perl-image-exiftool
   version: 10.4

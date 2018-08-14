@@ -3,7 +3,7 @@ about:
   license: unknown
   summary: Expand tabs and do simple line wrapping
 build:
-  number: 0
+  number: 1
 package:
   name: perl-text-tabs-wrap
   version: '2013.0523'

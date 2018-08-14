@@ -3,7 +3,7 @@ about:
   license: artistic_2
   summary: XS implementation of parts of Class::Load
 build:
-  number: 0
+  number: 1
 package:
   name: perl-class-load-xs
   version: '0.09'

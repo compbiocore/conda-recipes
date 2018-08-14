@@ -3,7 +3,7 @@ about:
   license: Perl
   summary: Self Contained RDBMS in a DBI Driver
 build:
-  number: 2
+  number: 1
 package:
   name: perl-dbd-sqlite
   version: '1.50'

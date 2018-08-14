@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: A library to extract height/width from images
 build:
-  number: 0
+  number: 1
 package:
   name: perl-inline-c
   version: '0.76'

@@ -3,7 +3,7 @@ about:
   license: unknown
   summary: simplistic interface to pkg-config
 build:
-  number: 0
+  number: 1
 package:
   name: perl-extutils-pkgconfig
   version: '1.16'

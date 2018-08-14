@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Framework for writing test tools that all work together.
 build:
-  number: 0
+  number: 1
 package:
   name: perl-test2
   version: 1.302075

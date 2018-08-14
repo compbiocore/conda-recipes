@@ -3,7 +3,7 @@ about:
   license: unknown
   summary: Visualize your data in Scalable Vector Graphics (SVG) format.
 build:
-  number: 0
+  number: 1
 package:
   name: perl-svg-graph
   version: '0.02'

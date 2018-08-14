@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: A progress bar for things that take a while
 build:
-  number: 0
+  number: 1
 package:
   name: perl-term-progressbar
   version: 2.21

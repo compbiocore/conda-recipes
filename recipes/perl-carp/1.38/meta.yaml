@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: alternative warn and die for modules
 build:
-  number: 0
+  number: 1
 package:
   name: perl-carp
   version: 1.38

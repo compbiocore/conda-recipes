@@ -3,7 +3,7 @@ about:
   license: unknown
   summary: Create and manipulate PAR distributions
 build:
-  number: 0
+  number: 1
 package:
   name: perl-par-dist
   version: 0.49

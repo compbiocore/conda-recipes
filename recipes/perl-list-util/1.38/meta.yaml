@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: A selection of general-utility list subroutines
 build:
-  number: 0
+  number: 1
 package:
   name: perl-list-util
   version: 1.38

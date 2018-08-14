@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: persistence for Perl data structures
 build:
-  number: 0
+  number: 1
 package:
   name: perl-storable
   version: 3.11

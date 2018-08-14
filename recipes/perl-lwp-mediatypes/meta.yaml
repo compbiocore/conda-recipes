@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Guess media type for a file or a URL
 build:
-  number: 2
+  number: 1
 package:
   name: perl-lwp-mediatypes
   version: '6.02'

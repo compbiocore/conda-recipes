@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: A Stringprep Profile for User Names and Passwords (RFC 4013)
 build:
-  number: 2
+  number: 1
 package:
   name: perl-authen-sasl-saslprep
   version: '1.011'

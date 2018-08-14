@@ -3,7 +3,7 @@ about:
   license: open_source
   summary: Traverse Perl data structures.
 build:
-  number: 0
+  number: 1
 package:
   name: perl-data-walk
   version: 2.01

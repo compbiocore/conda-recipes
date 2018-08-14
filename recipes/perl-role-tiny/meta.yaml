@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Roles. Like a nouvelle cuisine portion size slice of Moose.
 build:
-  number: 2
+  number: 1
 package:
   name: perl-role-tiny
   version: '2.000001'

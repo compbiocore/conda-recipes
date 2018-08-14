@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: faster but less secure than Class::Std
 build:
-  number: 0
+  number: 1
 package:
   name: perl-class-std-fast
   version: 0.0.8

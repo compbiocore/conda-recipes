@@ -3,7 +3,7 @@ about:
   license: unknown
   summary: helper module for PostScript::TextBlock
 build:
-  number: 0
+  number: 1
 package:
   name: perl-postscript
   version: '0.06'

@@ -3,7 +3,7 @@ about:
   license: Perl
   summary: Module of basic descriptive statistical functions
 build:
-  number: 4
+  number: 1
 package:
   name: perl-statistics-descriptive
   version: '3.0609'

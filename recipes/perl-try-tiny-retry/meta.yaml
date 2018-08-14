@@ -3,7 +3,7 @@ about:
   license: Apache-2.0
   summary: Just like Try::Tiny, but with retry instead of try.
 build:
-  number: 0
+  number: 1
 package:
   name: perl-try-tiny-retry
   version: '0.002'

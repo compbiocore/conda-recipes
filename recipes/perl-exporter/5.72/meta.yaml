@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Implements default import method for modules
 build:
-  number: 0
+  number: 1
 package:
   name: perl-exporter
   version: 5.72

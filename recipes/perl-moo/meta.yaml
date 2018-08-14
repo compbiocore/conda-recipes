@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Minimalist Object Orientation (with Moose compatibility)
 build:
-  number: 3
+  number: 1
 package:
   name: perl-moo
   version: '2.001000'

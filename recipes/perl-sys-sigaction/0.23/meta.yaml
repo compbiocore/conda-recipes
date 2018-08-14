@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Perl extension for Consistent Signal Handling
 build:
-  number: 0
+  number: 1
 package:
   name: perl-sys-sigaction
   version: 0.23

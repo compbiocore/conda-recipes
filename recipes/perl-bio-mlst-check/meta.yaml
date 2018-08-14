@@ -3,7 +3,7 @@ about:
   license: gpl_3
   summary: Multilocus sequence type checking using blast
 build:
-  number: 0
+  number: 1
 package:
   name: perl-bio-mlst-check
   version: 2.1.1706216

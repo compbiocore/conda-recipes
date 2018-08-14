@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Handy-dandy MIME mailing class
 build:
-  number: 0
+  number: 1
 package:
   name: perl-mime-lite
   version: '3.030'

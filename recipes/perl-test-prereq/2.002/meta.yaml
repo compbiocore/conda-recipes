@@ -3,7 +3,7 @@ about:
   license: artistic_2
   summary: check if Makefile.PL has the right pre-requisites
 build:
-  number: 0
+  number: 1
 package:
   name: perl-test-prereq
   version: 2.002

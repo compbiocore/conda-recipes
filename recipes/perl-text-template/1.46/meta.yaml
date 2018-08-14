@@ -3,7 +3,7 @@ about:
   license: unknown
   summary: Expand template text with embedded Perl
 build:
-  number: 0
+  number: 1
 package:
   name: perl-text-template
   version: 1.46

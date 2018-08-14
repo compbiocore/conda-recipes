@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Time zone object base class and factory
 build:
-  number: 0
+  number: 1
 package:
   name: perl-datetime-timezone
   version: 2.09

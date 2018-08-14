@@ -3,7 +3,7 @@ about:
   license: unknown
   summary: Read a file backwards by lines.
 build:
-  number: 0
+  number: 1
 package:
   name: perl-file-readbackwards
   version: '1.05'

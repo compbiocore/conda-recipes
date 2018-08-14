@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: PAR Packager
 build:
-  number: 2
+  number: 1
   skip: true
 package:
   name: perl-par-packer

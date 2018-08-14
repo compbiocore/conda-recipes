@@ -3,7 +3,7 @@ about:
   license: unrestricted
   summary: Easily generate well-formed, namespace-aware XML.
 build:
-  number: 0
+  number: 1
 package:
   name: perl-xml-writer
   version: '0.625'

@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: contributing to TAP::Harness
 build:
-  number: 0
+  number: 1
 package:
   name: perl-test-harness
   version: 3.36

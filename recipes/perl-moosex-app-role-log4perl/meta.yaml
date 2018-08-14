@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Add basic Log::Log4perl logging to a MooseX::App application as a role.
 build:
-  number: 0
+  number: 1
   skip: true
 package:
   name: perl-moosex-app-role-log4perl

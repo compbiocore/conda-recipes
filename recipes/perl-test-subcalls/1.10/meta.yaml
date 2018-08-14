@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Track the number of times subs are called
 build:
-  number: 0
+  number: 1
 package:
   name: perl-test-subcalls
   version: 1.1

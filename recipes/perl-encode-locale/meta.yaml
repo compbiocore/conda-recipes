@@ -3,7 +3,7 @@ about:
   license: Perl
   summary: Determine the locale encoding
 build:
-  number: 5
+  number: 1
 package:
   name: perl-encode-locale
   version: '1.05'

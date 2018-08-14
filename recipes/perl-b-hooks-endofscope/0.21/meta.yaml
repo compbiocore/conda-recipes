@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Execute code after a scope finished compilation
 build:
-  number: 0
+  number: 1
 package:
   name: perl-b-hooks-endofscope
   version: 0.21

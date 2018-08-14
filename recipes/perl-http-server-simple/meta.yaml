@@ -3,7 +3,7 @@ about:
   license: Perl_5
   summary: Lightweight HTTP server
 build:
-  number: 0
+  number: 1
 package:
   name: perl-http-server-simple
   version: '0.52'

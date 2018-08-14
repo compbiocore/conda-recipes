@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Use Hash::Util::FieldHash or ties, depending on availability
 build:
-  number: 0
+  number: 1
 package:
   name: perl-hash-util-fieldhash-compat
   version: 0.11

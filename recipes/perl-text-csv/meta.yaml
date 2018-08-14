@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: comma-separated values manipulator (using XS or PurePerl)
 build:
-  number: 0
+  number: 1
 package:
   name: perl-text-csv
   version: '1.33'

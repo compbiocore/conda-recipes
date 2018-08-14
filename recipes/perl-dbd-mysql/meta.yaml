@@ -3,7 +3,7 @@ about:
   license: Perl
   summary: MySQL driver for the Perl5 Database Interface (DBI)
 build:
-  number: 3
+  number: 1
 package:
   name: perl-dbd-mysql
   version: '4.033'

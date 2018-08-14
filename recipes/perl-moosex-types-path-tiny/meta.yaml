@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: MooseX::Types::Path::Tiny - Path::Tiny types and coercions for Moose
 build:
-  number: 0
+  number: 1
 package:
   name: perl-moosex-types-path-tiny
   version: 0.012

@@ -3,7 +3,7 @@ about:
   license: unknown
   summary: Modules for parsing/translating POD format documents
 build:
-  number: 0
+  number: 1
 package:
   name: perl-pod-parser
   version: 1.63

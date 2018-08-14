@@ -4,7 +4,7 @@ about:
   summary: Perl module to perform T-test on 2 independent samples Statistics::TTest::Sufficient
     - Perl module to perfrom T-Test on 2 indepdent samples using sufficient statistics
 build:
-  number: 0
+  number: 1
 package:
   name: perl-statistics-ttest
   version: 1.1

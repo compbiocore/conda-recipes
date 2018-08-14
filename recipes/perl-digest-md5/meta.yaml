@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Perl interface to the MD-5 algorithm
 build:
-  number: 3
+  number: 1
 package:
   name: perl-digest-md5
   version: '2.52'

@@ -3,7 +3,7 @@ about:
   license: unknown
   summary: Fast and easy to use classic heaps
 build:
-  number: 0
+  number: 1
 package:
   name: perl-heap-simple
   version: '0.13'

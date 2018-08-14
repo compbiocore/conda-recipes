@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Perl extension to provide a PerlIO layer to gzip/gunzip
 build:
-  number: 2
+  number: 1
 package:
   name: perl-io-gzip
   version: '0.20'

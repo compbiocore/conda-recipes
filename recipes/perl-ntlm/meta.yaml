@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: An NTLM authentication module
 build:
-  number: 2
+  number: 1
 package:
   name: perl-ntlm
   version: '1.09'

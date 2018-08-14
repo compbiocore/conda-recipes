@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Additional utils for Perl symbols manipulation
 build:
-  number: 0
+  number: 1
 package:
   name: perl-symbol-util
   version: 0.0203

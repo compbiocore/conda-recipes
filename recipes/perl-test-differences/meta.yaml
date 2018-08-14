@@ -3,7 +3,7 @@ about:
   license: Perl
   summary: Test strings and data structures and show differences if not ok
 build:
-  number: 0
+  number: 1
 package:
   name: perl-test-differences
   version: '0.64'

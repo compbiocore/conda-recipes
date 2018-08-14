@@ -3,7 +3,7 @@ about:
   license: unknown
   summary: Map charsets from and to UTF-16 unicode
 build:
-  number: 0
+  number: 1
 package:
   name: perl-unicode-map
   version: '0.112'

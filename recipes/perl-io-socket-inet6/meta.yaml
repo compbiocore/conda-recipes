@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Object interface for AF_INET/AF_INET6 domain sockets
 build:
-  number: 0
+  number: 1
 package:
   name: perl-io-socket-inet6
   version: '2.72'

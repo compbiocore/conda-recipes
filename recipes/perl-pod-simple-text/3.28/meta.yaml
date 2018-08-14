@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: format Pod as plaintext
 build:
-  number: 0
+  number: 1
 package:
   name: perl-pod-simple-text
   version: 3.28

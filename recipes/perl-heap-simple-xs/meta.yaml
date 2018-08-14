@@ -3,7 +3,7 @@ about:
   license: unknown
   summary: An XS implementation of the Heap::Simple interface
 build:
-  number: 0
+  number: 1
 package:
   name: perl-heap-simple-xs
   version: '0.10'

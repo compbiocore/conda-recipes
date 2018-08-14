@@ -3,7 +3,7 @@ about:
   license: Perl
   summary: Allow unsafe handling of signals in selected blocks
 build:
-  number: 0
+  number: 1
 package:
   name: perl-perl-unsafe-signals
   version: '0.03'

@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: BioPerl-Run - wrapper toolkit
 build:
-  number: 3
+  number: 1
 package:
   name: perl-bioperl-run
   version: '1.006900'

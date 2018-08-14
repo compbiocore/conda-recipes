@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: 'print a usage message from embedded pod documentation '
 build:
-  number: 0
+  number: 1
 package:
   name: perl-pod-usage
   version: 1.69

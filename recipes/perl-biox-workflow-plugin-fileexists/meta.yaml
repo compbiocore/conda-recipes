@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: a plugin to BioX::Workflow
 build:
-  number: 2
+  number: 1
   skip: true
 package:
   name: perl-biox-workflow-plugin-fileexists

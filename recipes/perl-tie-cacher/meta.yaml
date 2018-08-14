@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Cache a (sub)set of key/value pairs. Tie and OO interface.
 build:
-  number: 3
+  number: 1
 package:
   name: perl-tie-cacher
   version: '0.09'

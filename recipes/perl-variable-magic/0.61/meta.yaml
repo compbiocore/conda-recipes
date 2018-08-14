@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Associate user-defined magic to variables from Perl.
 build:
-  number: 0
+  number: 1
 package:
   name: perl-variable-magic
   version: 0.61

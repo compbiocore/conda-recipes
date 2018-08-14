@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: expand and unexpand tabs like unix expand(1) and unexpand(1)
 build:
-  number: 0
+  number: 1
 package:
   name: perl-text-tabs
   version: 2013.0523

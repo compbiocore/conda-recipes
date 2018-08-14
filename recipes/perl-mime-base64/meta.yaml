@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: The RFC 2045 encodings; base64 and quoted-printable
 build:
-  number: 0
+  number: 1
 package:
   name: perl-mime-base64
   version: 3.15

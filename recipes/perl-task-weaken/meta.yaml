@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Ensure that a platform has weaken support
 build:
-  number: 0
+  number: 1
 package:
   name: perl-task-weaken
   version: '1.04'

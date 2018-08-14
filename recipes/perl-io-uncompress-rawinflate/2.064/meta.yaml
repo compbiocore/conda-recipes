@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Read RFC 1951 files/buffers
 build:
-  number: 0
+  number: 1
 package:
   name: perl-io-uncompress-rawinflate
   version: 2.064

@@ -3,7 +3,7 @@ about:
   license: unknown
   summary: very fast base to base conversion
 build:
-  number: 0
+  number: 1
 package:
   name: perl-math-base-convert
   version: '0.11'

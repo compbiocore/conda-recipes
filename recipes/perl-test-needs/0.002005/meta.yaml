@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Skip tests when modules not available
 build:
-  number: 0
+  number: 1
 package:
   name: perl-test-needs
   version: 0.002005

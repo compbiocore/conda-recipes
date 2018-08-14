@@ -3,7 +3,7 @@ about:
   license: unknown
   summary: Perl extension for approximate matching (fuzzy matching)
 build:
-  number: 0
+  number: 1
 package:
   name: perl-string-approx
   version: 3.27

@@ -3,7 +3,7 @@ about:
   license: unknown
   summary: Module to handle parsing command line options
 build:
-  number: 0
+  number: 1
 package:
   name: perl-getopt-long
   version: '2.50'

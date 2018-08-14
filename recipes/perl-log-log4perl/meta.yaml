@@ -3,7 +3,7 @@ about:
   license: unknown
   summary: Log4j implementation for Perl
 build:
-  number: 2
+  number: 1
 package:
   name: perl-log-log4perl
   version: '1.47'

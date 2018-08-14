@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: declare version conflicts for your dist
 build:
-  number: 0
+  number: 1
 package:
   name: perl-dist-checkconflicts
   version: '0.11'

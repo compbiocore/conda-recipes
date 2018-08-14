@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Generate fast XS accessors without runtime compilation
 build:
-  number: 0
+  number: 1
 package:
   name: perl-class-xsaccessor
   version: 1.19

@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Simplified source filtering
 build:
-  number: 0
+  number: 1
 package:
   name: perl-filter-simple
   version: 0.91

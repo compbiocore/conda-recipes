@@ -3,7 +3,7 @@ about:
   license: artistic_2
   summary: Build an optimized subroutine parameter validator once, use it forever
 build:
-  number: 0
+  number: 1
 package:
   name: perl-params-validationcompiler
   version: 0.23

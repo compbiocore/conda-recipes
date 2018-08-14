@@ -5,7 +5,7 @@ about:
     ESTScan.pm contains the Perl part of the code that reads in the matrices file.
     The C code that does the actual computation is located in estscan.c.
 build:
-  number: 0
+  number: 1
 package:
   name: perl-estscan1
   version: '1.3'

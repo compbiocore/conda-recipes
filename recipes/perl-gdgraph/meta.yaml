@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Produces charts with GD
 build:
-  number: 4
+  number: 1
 package:
   name: perl-gdgraph
   version: '1.49'

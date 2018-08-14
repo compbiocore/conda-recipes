@@ -3,7 +3,7 @@ about:
   license: Perl
   summary: A generic archive extracting mechanism
 build:
-  number: 4
+  number: 1
 package:
   name: perl-archive-extract
   version: '0.76'

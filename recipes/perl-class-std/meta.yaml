@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Support for creating standard "inside-out" classes
 build:
-  number: 0
+  number: 1
 package:
   name: perl-class-std
   version: '0.013'

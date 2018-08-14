@@ -3,7 +3,7 @@ about:
   license: unknown
   summary: a re-usable XPath engine for DOM-like trees
 build:
-  number: 2
+  number: 1
 package:
   name: perl-xml-xpathengine
   version: '0.14'

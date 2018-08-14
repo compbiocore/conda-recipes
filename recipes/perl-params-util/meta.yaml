@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Simple, compact and correct param-checking functions
 build:
-  number: 2
+  number: 1
 package:
   name: perl-params-util
   version: '1.07'

@@ -2,6 +2,10 @@ about:
   home: http://metacpan.org/pod/Array::Utils
   license: unknown
   summary: small utils for array manipulation
+
+build:
+  number: 1
+
 package:
   name: perl-array-utils
   version: '0.5'

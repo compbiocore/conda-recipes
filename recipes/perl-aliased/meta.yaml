@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Use shorter versions of class names.
 build:
-  number: 0
+  number: 1
   skip: true
 package:
   name: perl-aliased

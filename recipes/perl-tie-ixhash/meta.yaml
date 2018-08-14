@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: ordered associative arrays for Perl
 build:
-  number: 2
+  number: 1
 package:
   name: perl-tie-ixhash
   version: '1.23'

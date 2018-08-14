@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Perl extension for formatting numbers
 build:
-  number: 2
+  number: 1
   skip: true
 package:
   name: perl-number-format

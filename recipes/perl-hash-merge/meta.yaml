@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Merges arbitrarily deep hashes into a single hash
 build:
-  number: 0
+  number: 1
 package:
   name: perl-hash-merge
   version: '0.200'

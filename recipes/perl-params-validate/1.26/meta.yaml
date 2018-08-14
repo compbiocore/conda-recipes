@@ -3,7 +3,7 @@ about:
   license: artistic_2
   summary: Validate method/function parameters
 build:
-  number: 0
+  number: 1
 package:
   name: perl-params-validate
   version: 1.26

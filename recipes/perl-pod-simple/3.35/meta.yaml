@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: framework for parsing Pod
 build:
-  number: 0
+  number: 1
 package:
   name: perl-pod-simple
   version: 3.35

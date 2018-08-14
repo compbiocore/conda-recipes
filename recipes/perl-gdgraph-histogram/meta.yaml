@@ -3,7 +3,7 @@ about:
   license: unknown
   summary: Histogram plotting module for Perl5
 build:
-  number: 2
+  number: 1
 package:
   name: perl-gdgraph-histogram
   version: '1.1'

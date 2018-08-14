@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Cyclic Redundency Check digests implementation
 build:
-  number: 0
+  number: 1
 package:
   name: perl-digest-crc32
   version: '0.01'

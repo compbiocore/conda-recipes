@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Traces memory leaks
 build:
-  number: 0
+  number: 1
 package:
   name: perl-test-leaktrace
   version: '0.16'

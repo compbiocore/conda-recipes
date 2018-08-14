@@ -3,7 +3,7 @@ about:
   license: unknown
   summary: Checks if the documentation of a module is comprehensive
 build:
-  number: 0
+  number: 1
 package:
   name: perl-pod-coverage
   version: 0.23

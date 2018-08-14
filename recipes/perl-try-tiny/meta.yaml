@@ -3,7 +3,7 @@ about:
   license: mit
   summary: minimal try/catch with proper preservation of $@
 build:
-  number: 4
+  number: 1
 package:
   name: perl-try-tiny
   version: '0.24'

@@ -3,7 +3,7 @@ about:
   license: GPLv2
   summary: Automatically optimise three of Velvet's assembly parameters.
 build:
-  number: 0
+  number: 1
 package:
   name: perl-velvetoptimiser
   version: 2.2.5

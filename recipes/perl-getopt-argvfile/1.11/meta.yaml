@@ -3,7 +3,7 @@ about:
   license: artistic_1
   summary: interpolates script options from files into @ARGV or another array
 build:
-  number: 0
+  number: 1
 package:
   name: perl-getopt-argvfile
   version: '1.11'

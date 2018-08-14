@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Perform diffs on files and record sets
 build:
-  number: 0
+  number: 1
 package:
   name: perl-text-diff
   version: '1.44'

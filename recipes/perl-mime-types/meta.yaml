@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Definition of MIME types
 build:
-  number: 0
+  number: 1
 package:
   name: perl-mime-types
   version: '2.12'

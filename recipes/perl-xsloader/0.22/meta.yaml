@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Dynamically load C libraries into Perl code
 build:
-  number: 0
+  number: 1
 package:
   name: perl-xsloader
   version: 0.22

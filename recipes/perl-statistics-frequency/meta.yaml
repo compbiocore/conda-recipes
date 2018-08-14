@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: simple counting of elements
 build:
-  number: 2
+  number: 1
 package:
   name: perl-statistics-frequency
   version: 0.04

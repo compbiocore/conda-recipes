@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Create composable bioinformatics hpc analyses.
 build:
-  number: 0
+  number: 1
 package:
   name: perl-hpc-runner-command
   version: 3.2.13

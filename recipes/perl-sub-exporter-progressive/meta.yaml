@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Only use Sub::Exporter if you need it
 build:
-  number: 2
+  number: 1
 package:
   name: perl-sub-exporter-progressive
   version: '0.001011'

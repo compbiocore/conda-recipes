@@ -3,7 +3,7 @@ about:
   license: Perl
   summary: Make sure you didn't emit any warnings while testing
 build:
-  number: 2
+  number: 1
 package:
   name: perl-test-nowarnings
   version: '1.04'

@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: HPC Runner::Slurm, Runner::MCE and Runner::Threads base class
 build:
-  number: 0
+  number: 1
   skip: true
 package:
   name: perl-hpc-runner

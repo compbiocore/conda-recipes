@@ -3,7 +3,7 @@ about:
   license: Perl
   summary: Install shared files
 build:
-  number: 4
+  number: 1
 package:
   name: perl-file-sharedir-install
   version: '0.10'

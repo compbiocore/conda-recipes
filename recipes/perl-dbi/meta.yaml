@@ -3,7 +3,7 @@ about:
   license: Perl
   summary: Database independent interface for Perl
 build:
-  number: 0
+  number: 1
 package:
   name: perl-dbi
   version: 1.64

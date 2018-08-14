@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: String::Util -- String processing utilities
 build:
-  number: 0
+  number: 1
 package:
   name: perl-string-util
   version: '1.26'

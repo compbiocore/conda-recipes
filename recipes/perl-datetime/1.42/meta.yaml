@@ -3,7 +3,7 @@ about:
   license: artistic_2
   summary: A date and time object for Perl
 build:
-  number: 0
+  number: 1
 package:
   name: perl-datetime
   version: 1.42

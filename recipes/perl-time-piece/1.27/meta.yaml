@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Object Oriented time objects
 build:
-  number: 0
+  number: 1
 package:
   name: perl-time-piece
   version: 1.27

@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Perl Archive Tookit
 build:
-  number: 0
+  number: 1
 package:
   name: perl-par
   version: 1.014

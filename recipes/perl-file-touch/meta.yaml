@@ -4,7 +4,7 @@ about:
   summary: update file access and modification times, optionally creating files if
     needed
 build:
-  number: 0
+  number: 1
 package:
   name: perl-file-touch
   version: 0.11

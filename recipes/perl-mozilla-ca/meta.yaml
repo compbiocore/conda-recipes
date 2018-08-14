@@ -3,7 +3,7 @@ about:
   license: unknown
   summary: Mozilla's CA cert bundle in PEM format
 build:
-  number: 0
+  number: 1
 package:
   name: perl-mozilla-ca
   version: '20160104'

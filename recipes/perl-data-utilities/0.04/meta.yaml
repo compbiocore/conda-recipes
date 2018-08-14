@@ -3,7 +3,7 @@ about:
   license: unknown
   summary: recursively compare Perl datatypes
 build:
-  number: 0
+  number: 1
 package:
   name: perl-data-utilities
   version: 0.04

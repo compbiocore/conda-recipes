@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Many-Core Engine for Perl providing parallel processing capabilities
 build:
-  number: 0
+  number: 1
 package:
   name: perl-mce
   version: 1.814

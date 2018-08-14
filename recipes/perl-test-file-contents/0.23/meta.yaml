@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Test routines for examining the contents of files
 build:
-  number: 0
+  number: 1
 package:
   name: perl-test-file-contents
   version: 0.23

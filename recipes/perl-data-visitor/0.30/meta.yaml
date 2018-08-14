@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Visitor style traversal of Perl data structures
 build:
-  number: 0
+  number: 1
 package:
   name: perl-data-visitor
   version: 0.3

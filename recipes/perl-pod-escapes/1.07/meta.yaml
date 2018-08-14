@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: for resolving Pod Elt...gt sequences
 build:
-  number: 0
+  number: 1
 package:
   name: perl-pod-escapes
   version: 1.07

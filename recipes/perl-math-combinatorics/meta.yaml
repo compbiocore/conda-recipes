@@ -3,7 +3,7 @@ about:
   license: unknown
   summary: Perform combinations and permutations on lists
 build:
-  number: 0
+  number: 1
 package:
   name: perl-math-combinatorics
   version: '0.09'

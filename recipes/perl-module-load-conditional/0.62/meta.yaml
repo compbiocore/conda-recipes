@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Looking up module information / loading at runtime
 build:
-  number: 0
+  number: 1
 package:
   name: perl-module-load-conditional
   version: 0.62

@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Open an HTML file with automatic charset detection
 build:
-  number: 2
+  number: 1
 package:
   name: perl-io-html
   version: '1.001'

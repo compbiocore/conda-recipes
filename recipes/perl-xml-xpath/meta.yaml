@@ -3,7 +3,7 @@ about:
   license: artistic_2
   summary: Parse and evaluate XPath statements.
 build:
-  number: 0
+  number: 1
 package:
   name: perl-xml-xpath
   version: '1.33'

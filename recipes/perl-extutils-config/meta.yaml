@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: A wrapper for perl's configuration
 build:
-  number: 0
+  number: 1
   skip: true
 package:
   name: perl-extutils-config

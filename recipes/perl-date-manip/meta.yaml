@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Date manipulation routines
 build:
-  number: 0
+  number: 1
 package:
   name: perl-date-manip
   version: '6.57'

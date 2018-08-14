@@ -4,7 +4,7 @@ about:
   summary: Perl module for calculating critical values and upper probabilities of
     common statistical distributions
 build:
-  number: 0
+  number: 1
 package:
   name: perl-statistics-distributions
   version: '1.02'

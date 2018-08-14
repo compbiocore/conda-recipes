@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: allows you to write your script in non-ASCII and non-UTF-8
 build:
-  number: 0
+  number: 1
 package:
   name: perl-encode
   version: 2.88

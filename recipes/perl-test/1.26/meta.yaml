@@ -3,7 +3,7 @@ about:
   license: unknown
   summary: provides a simple framework for writing test scripts
 build:
-  number: 0
+  number: 1
 package:
   name: perl-test
   version: 1.26

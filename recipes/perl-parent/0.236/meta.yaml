@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Establish an ISA relationship with base classes at compile time
 build:
-  number: 0
+  number: 1
 package:
   name: perl-parent
   version: 0.236

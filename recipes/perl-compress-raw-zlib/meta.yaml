@@ -3,7 +3,7 @@ about:
   license: Perl
   summary: Low-Level Interface to zlib compression library
 build:
-  number: 5
+  number: 1
 package:
   name: perl-compress-raw-zlib
   version: '2.069'

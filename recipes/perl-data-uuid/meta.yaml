@@ -3,7 +3,7 @@ about:
   license: Perl
   summary: Globally/Universally Unique Identifiers (GUIDs/UUIDs)
 build:
-  number: 4
+  number: 1
 package:
   name: perl-data-uuid
   version: '1.221'

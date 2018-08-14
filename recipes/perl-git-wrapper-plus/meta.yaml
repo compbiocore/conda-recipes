@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: A Toolkit for working with Git::Wrapper in an Object Oriented Way.
 build:
-  number: 0
+  number: 1
   skip: true
 package:
   name: perl-git-wrapper-plus

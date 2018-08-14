@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Perl pragma to declare constants
 build:
-  number: 0
+  number: 1
 package:
   name: perl-constant
   version: 1.33

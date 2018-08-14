@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Get metadata for files in directories processed by BioX::Workflow
 build:
-  number: 0
+  number: 1
   skip: true
 package:
   name: perl-biox-workflow-plugin-filedetails

@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: date conversion routines
 build:
-  number: 2
+  number: 1
 package:
   name: perl-http-date
   version: '6.02'

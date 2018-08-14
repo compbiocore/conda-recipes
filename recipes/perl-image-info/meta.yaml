@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Extract meta information from image files
 build:
-  number: 0
+  number: 1
 package:
   name: perl-image-info
   version: '1.38'

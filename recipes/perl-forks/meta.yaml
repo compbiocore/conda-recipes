@@ -3,7 +3,7 @@ about:
   license: Perl
   summary: drop-in replacement for Perl threads using fork()
 build:
-  number: 3
+  number: 1
 package:
   name: perl-forks
   version: '0.36'

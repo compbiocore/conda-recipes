@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Encoding and decoding of quoted-printable strings
 build:
-  number: 0
+  number: 1
 package:
   name: perl-mime-quotedprint
   version: 3.13

@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Serious testing for serious Perl
 build:
-  number: 0
+  number: 1
 package:
   name: perl-test-class-moose
   version: 0.8

@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Parse, Analyze and Manipulate Perl (without perl)
 build:
-  number: 0
+  number: 1
 package:
   name: perl-ppi
   version: 1.236

@@ -3,7 +3,7 @@ about:
   license: artistic_2
   summary: Pull out the modules a module explicitly uses
 build:
-  number: 0
+  number: 1
 package:
   name: perl-module-extract-use
   version: 1.043

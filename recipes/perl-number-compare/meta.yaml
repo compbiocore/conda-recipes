@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Numeric comparisons
 build:
-  number: 2
+  number: 1
 package:
   name: perl-number-compare
   version: '0.03'

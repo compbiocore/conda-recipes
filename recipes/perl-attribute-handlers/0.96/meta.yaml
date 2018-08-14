@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Simpler definition of attribute handlers
 build:
-  number: 0
+  number: 1
 package:
   name: perl-attribute-handlers
   version: 0.96

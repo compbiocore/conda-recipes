@@ -4,7 +4,7 @@ about:
   summary: Perl module for extracting the content contained in tables within an HTML
     document, either as text or encoded element trees.
 build:
-  number: 0
+  number: 1
 package:
   name: perl-html-tableextract
   version: '2.13'

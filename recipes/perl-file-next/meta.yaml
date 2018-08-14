@@ -3,7 +3,7 @@ about:
   license: artistic_2
   summary: File-finding iterator
 build:
-  number: 0
+  number: 1
 package:
   name: perl-file-next
   version: '1.16'

@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Wrap git(7) command-line interface
 build:
-  number: 0
+  number: 1
   skip: true
 package:
   name: perl-git-wrapper

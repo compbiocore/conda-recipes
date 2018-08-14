@@ -4,7 +4,7 @@ about:
   summary: Provides function returning the equivalent of ${^GLOBAL_PHASE} eq 'DESTRUCT'
     for older perls.
 build:
-  number: 2
+  number: 1
 package:
   name: perl-devel-globaldestruction
   version: '0.13'

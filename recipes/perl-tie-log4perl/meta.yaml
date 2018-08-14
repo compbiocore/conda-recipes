@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Tie a filehandle to log via Log4perl
 build:
-  number: 0
+  number: 1
 package:
   name: perl-tie-log4perl
   version: '0.1'

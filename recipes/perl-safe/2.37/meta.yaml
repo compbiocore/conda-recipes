@@ -3,7 +3,7 @@ about:
   license: unknown
   summary: Compile and execute code in restricted compartments
 build:
-  number: 0
+  number: 1
 package:
   name: perl-safe
   version: 2.37

@@ -4,7 +4,7 @@ about:
   summary: PERL modules for manipulating OBO-formatted ontologies, such as the Gene
     Ontology (GO)
 build:
-  number: 0
+  number: 1
 package:
   name: perl-onto-perl
   version: '1.45'

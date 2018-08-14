@@ -3,7 +3,7 @@ about:
   license: Perl
   summary: simple procedural interface to LWP
 build:
-  number: 4
+  number: 1
 package:
   name: perl-lwp-simple
   version: '6.15'

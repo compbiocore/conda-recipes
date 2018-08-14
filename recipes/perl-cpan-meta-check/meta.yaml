@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Verify requirements in a CPAN::Meta object
 build:
-  number: 2
+  number: 1
 package:
   name: perl-cpan-meta-check
   version: '0.012'

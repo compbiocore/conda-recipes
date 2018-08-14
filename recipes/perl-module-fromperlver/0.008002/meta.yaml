@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: install modules compatible with the running perl.
 build:
-  number: 0
+  number: 1
 package:
   name: perl-module-fromperlver
   version: '0.008002'

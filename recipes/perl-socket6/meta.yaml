@@ -3,7 +3,7 @@ about:
   license: unknown
   summary: IPv6 related part of the C socket.h defines and structure manipulators
 build:
-  number: 0
+  number: 1
 package:
   name: perl-socket6
   version: '0.25'

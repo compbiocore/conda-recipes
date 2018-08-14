@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Simple data types for common serialisation formats
 build:
-  number: 0
+  number: 1
 package:
   name: perl-types-serialiser
   version: '1.0'

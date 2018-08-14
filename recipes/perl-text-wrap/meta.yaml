@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: line wrapping to form simple paragraphs
 build:
-  number: 0
+  number: 1
 package:
   name: perl-text-wrap
   version: 2013.0523

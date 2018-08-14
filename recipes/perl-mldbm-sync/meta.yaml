@@ -3,7 +3,7 @@ about:
   license: unknown
   summary: safe concurrent access to MLDBM databases
 build:
-  number: 0
+  number: 1
 package:
   name: perl-mldbm-sync
   version: '0.30'

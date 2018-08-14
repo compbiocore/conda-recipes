@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Tools for working with directory and file names
 build:
-  number: 0
+  number: 1
 package:
   name: perl-pathtools
   version: 3.73

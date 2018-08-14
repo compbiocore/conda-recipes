@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: A Perl distribution for Next-Generation Sequencing (NGS) data analysis
 build:
-  number: 2
+  number: 1
 package:
   name: perl-bio-viennangs
   version: v0.18

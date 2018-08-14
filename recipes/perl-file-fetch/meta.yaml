@@ -3,7 +3,7 @@ about:
   license: Perl
   summary: A generic file fetching mechanism
 build:
-  number: 4
+  number: 1
 package:
   name: perl-file-fetch
   version: '0.48'

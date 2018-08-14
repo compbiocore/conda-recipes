@@ -4,7 +4,7 @@ about:
   summary: NGS reference implementations and helper code for the IGCG/TCGA Pan-Cancer
     Analysis Project
 build:
-  number: 3
+  number: 1
   skip: true
 package:
   name: perl-pcap

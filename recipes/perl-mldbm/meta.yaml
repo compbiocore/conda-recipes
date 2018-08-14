@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: store multi-level Perl hash structure in single level tied hash
 build:
-  number: 2
+  number: 1
 package:
   name: perl-mldbm
   version: '2.05'

@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Modules for reading, writing, and manipulating sequence features
 build:
-  number: 0
+  number: 1
 package:
   name: perl-bio-featureio
   version: 1.6.905

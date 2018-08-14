@@ -3,7 +3,7 @@ about:
   license: GPL
   summary: A generic file fetching mechanism
 build:
-  number: 4
+  number: 1
 package:
   name: perl-cgi
   version: '4.22'

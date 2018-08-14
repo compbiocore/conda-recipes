@@ -3,7 +3,7 @@ about:
   license: unknown
   summary: A perl module for building DOM Level 1 compliant document structures
 build:
-  number: 0
+  number: 1
 package:
   name: perl-xml-dom
   version: '1.45'

@@ -3,7 +3,7 @@ about:
   license: unknown
   summary: Read and write OLE storage files.
 build:
-  number: 0
+  number: 1
 package:
   name: perl-ole-storage_lite
   version: '0.19'

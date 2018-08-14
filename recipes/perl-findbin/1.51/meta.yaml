@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Locate directory of original perl script
 build:
-  number: 0
+  number: 1
 package:
   name: perl-findbin
   version: 1.51

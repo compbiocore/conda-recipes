@@ -3,7 +3,7 @@ about:
   license: Perl
   summary: Efficient bit vector, set of integers and "big int" math library
 build:
-  number: 0
+  number: 1
 package:
   name: perl-bit-vector
   version: '7.4'

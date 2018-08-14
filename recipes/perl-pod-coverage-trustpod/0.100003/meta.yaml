@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: allow a module's pod to contain Pod::Coverage hints
 build:
-  number: 0
+  number: 1
 package:
   name: perl-pod-coverage-trustpod
   version: 0.100003

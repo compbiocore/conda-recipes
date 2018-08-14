@@ -3,7 +3,7 @@ about:
   license: unknown
   summary: A pure perl implementation of the Heap::Simple interface
 build:
-  number: 0
+  number: 1
 package:
   name: perl-heap-simple-perl
   version: '0.14'

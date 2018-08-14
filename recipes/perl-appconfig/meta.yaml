@@ -4,7 +4,7 @@ about:
   summary: AppConfig is a bundle of Perl5 modules for reading configuration files
     and parsing command line arguments.
 build:
-  number: 0
+  number: 1
 package:
   name: perl-appconfig
   version: '1.71'

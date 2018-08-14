@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Detect encoding of the current terminal
 build:
-  number: 0
+  number: 1
 package:
   name: perl-term-encoding
   version: '0.02'

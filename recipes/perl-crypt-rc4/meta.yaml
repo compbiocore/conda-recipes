@@ -3,7 +3,7 @@ about:
   license: unknown
   summary: Perl implementation of the RC4 encryption algorithm
 build:
-  number: 0
+  number: 1
 package:
   name: perl-crypt-rc4
   version: '2.02'

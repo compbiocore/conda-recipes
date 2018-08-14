@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Inheritable, overridable class data
 build:
-  number: 0
+  number: 1
 package:
   name: perl-class-data-inheritable
   version: '0.08'

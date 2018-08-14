@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Write to a cross platform Excel binary file
 build:
-  number: 0
+  number: 1
 package:
   name: perl-spreadsheet-writeexcel
   version: '2.40'

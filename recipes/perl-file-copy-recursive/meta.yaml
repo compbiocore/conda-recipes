@@ -2,7 +2,7 @@ about:
   home: https://metacpan.org/pod/File::Copy::Recursive
   license: Perl
 build:
-  number: 2
+  number: 1
 package:
   name: perl-file-copy-recursive
   version: '0.38'

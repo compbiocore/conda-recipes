@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: warnings import function
 build:
-  number: 0
+  number: 1
 package:
   name: perl-warnings-register
   version: 1.03

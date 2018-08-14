@@ -3,7 +3,7 @@ about:
   license: apache_2_0
   summary: File path utility
 build:
-  number: 2
+  number: 1
 package:
   name: perl-path-tiny
   version: '0.076'

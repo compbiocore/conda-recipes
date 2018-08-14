@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Tie to an existing object.
 build:
-  number: 0
+  number: 1
 package:
   name: perl-tie-toobject
   version: 0.03

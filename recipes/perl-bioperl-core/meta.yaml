@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: '"Core" packages for the BioPerl toolkit; you really should install perl-bioperl.'
 build:
-  number: 2
+  number: 1
 package:
   name: perl-bioperl-core
   version: 1.6.924

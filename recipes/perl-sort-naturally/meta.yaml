@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: sort lexically, but sort numeral parts numerically
 build:
-  number: 0
+  number: 1
 package:
   name: perl-sort-naturally
   version: '1.03'

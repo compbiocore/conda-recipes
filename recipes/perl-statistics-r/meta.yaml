@@ -3,7 +3,7 @@ about:
   license: Perl5
   summary: Statistics::R - Perl interface with the R statistical program
 build:
-  number: 2
+  number: 1
 package:
   name: perl-statistics-r
   version: '0.34'

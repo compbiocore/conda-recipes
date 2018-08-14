@@ -4,7 +4,7 @@ about:
   summary: Pod::Checker verifies POD documentation contents for compliance with the
     POD format specifications
 build:
-  number: 0
+  number: 1
 package:
   name: perl-pod-checker
   version: 1.6

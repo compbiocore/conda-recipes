@@ -3,7 +3,7 @@ about:
   license: unknown
   summary: Regular expressions for XML tokens
 build:
-  number: 0
+  number: 1
 package:
   name: perl-xml-regexp
   version: '0.04'

@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Base class for type libraries
 build:
-  number: 0
+  number: 1
 package:
   name: perl-specio-exporter
   version: 0.36

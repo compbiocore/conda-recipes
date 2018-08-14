@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: JSON (JavaScript Object Notation) encoder/decoder
 build:
-  number: 2
+  number: 1
 package:
   name: perl-json
   version: '2.90'

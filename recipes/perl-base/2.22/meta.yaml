@@ -3,7 +3,7 @@ about:
   license: unknown
   summary: compile-time class fields
 build:
-  number: 0
+  number: 1
 package:
   name: perl-base
   version: 2.22

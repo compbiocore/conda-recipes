@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Read JSON into a Perl variable
 build:
-  number: 0
+  number: 1
 package:
   name: perl-json-parse
   version: '0.49'

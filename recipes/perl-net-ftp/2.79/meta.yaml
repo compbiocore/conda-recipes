@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: FTP Client class
 build:
-  number: 0
+  number: 1
 package:
   name: perl-net-ftp
   version: 2.79

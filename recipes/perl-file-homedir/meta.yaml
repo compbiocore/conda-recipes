@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Find your home and other directories on any platform
 build:
-  number: 2
+  number: 1
 package:
   name: perl-file-homedir
   version: '1.00'

@@ -3,7 +3,7 @@ about:
   license: BSD-3-Clause
   summary: perl modules for GO and other OBO ontologies
 build:
-  number: 2
+  number: 1
 package:
   name: perl-go-perl
   version: 0.15

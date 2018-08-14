@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: sugar for classes that have file or directory attributes
 build:
-  number: 0
+  number: 1
   skip: true
 package:
   name: perl-moosex-fileattribute

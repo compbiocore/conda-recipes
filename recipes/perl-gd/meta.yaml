@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Perl interface to the gd2 graphics library
 build:
-  number: 7
+  number: 1
 #  skip: true
 package:
   name: perl-gd

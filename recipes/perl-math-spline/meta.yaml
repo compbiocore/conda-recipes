@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Cubic Spline Interpolation of data
 build:
-  number: 0
+  number: 1
 package:
   name: perl-math-spline
   version: '0.02'

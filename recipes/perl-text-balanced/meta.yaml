@@ -3,7 +3,7 @@ about:
   license: Perl5
   summary: Text::Balanced - Extract delimited text sequences from strings
 build:
-  number: 2
+  number: 1
 package:
   name: perl-text-balanced
   version: '2.03'

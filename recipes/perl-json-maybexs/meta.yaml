@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Use Cpanel::JSON::XS with a fallback to JSON::XS and JSON::PP
 build:
-  number: 0
+  number: 1
 package:
   name: perl-json-maybexs
   version: '1.003008'

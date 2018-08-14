@@ -3,7 +3,7 @@ about:
   license: Perl
   summary: Run commands simply, with detailed diagnostics
 build:
-  number: 4
+  number: 1
 package:
   name: perl-ipc-system-simple
   version: '1.25'

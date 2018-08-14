@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Localization support for DateTime.pm
 build:
-  number: 0
+  number: 1
 package:
   name: perl-datetime-locale
   version: 1.12

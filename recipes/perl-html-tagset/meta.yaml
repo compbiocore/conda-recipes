@@ -3,7 +3,7 @@ about:
   license: unknown
   summary: data tables useful in parsing HTML
 build:
-  number: 2
+  number: 1
 package:
   name: perl-html-tagset
   version: '3.20'

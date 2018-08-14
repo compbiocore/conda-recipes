@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: OO interface to users netrc file
 build:
-  number: 0
+  number: 1
 package:
   name: perl-net-netrc
   version: 2.14

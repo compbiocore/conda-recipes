@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Cross-platform path specification manipulation
 build:
-  number: 0
+  number: 1
 package:
   name: perl-path-class
   version: '0.36'

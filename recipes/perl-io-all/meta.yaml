@@ -4,7 +4,7 @@ about:
   summary: Combines all of the best Perl IO modules into a single nifty object oriented
     interface
 build:
-  number: 0
+  number: 1
 package:
   name: perl-io-all
   version: '0.86'

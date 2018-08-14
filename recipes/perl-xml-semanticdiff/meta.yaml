@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Perl extension for comparing XML documents.
 build:
-  number: 0
+  number: 1
 package:
   name: perl-xml-semanticdiff
   version: '1.0004'

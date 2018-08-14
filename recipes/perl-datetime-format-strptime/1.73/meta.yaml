@@ -3,7 +3,7 @@ about:
   license: artistic_2
   summary: Parse and format strp and strf time patterns
 build:
-  number: 0
+  number: 1
 package:
   name: perl-datetime-format-strptime
   version: 1.73

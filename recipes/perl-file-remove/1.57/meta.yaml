@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Remove files and directories
 build:
-  number: 0
+  number: 1
 package:
   name: perl-file-remove
   version: 1.57

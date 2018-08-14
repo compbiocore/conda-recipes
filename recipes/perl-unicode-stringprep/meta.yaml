@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Preparation of Internationalized Strings (RFC 3454)
 build:
-  number: 2
+  number: 1
 package:
   name: perl-unicode-stringprep
   version: '1.105'

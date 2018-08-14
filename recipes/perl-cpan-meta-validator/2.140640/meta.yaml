@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: validate CPAN distribution metadata structures
 build:
-  number: 0
+  number: 1
 package:
   name: perl-cpan-meta-validator
   version: 2.14064

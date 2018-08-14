@@ -3,7 +3,7 @@ about:
   license: perl_5
   summary: Test::Toolbox - tools for testing
 build:
-  number: 0
+  number: 1
 package:
   name: perl-test-toolbox
   version: '0.4'

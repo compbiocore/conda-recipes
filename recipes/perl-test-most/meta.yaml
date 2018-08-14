@@ -3,7 +3,7 @@ about:
   license: unknown
   summary: Most commonly needed test functions and features
 build:
-  number: 2
+  number: 1
 package:
   name: perl-test-most
   version: '0.34'
