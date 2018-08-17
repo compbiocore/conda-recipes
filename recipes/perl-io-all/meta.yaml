@@ -1,0 +1,23 @@
+about:
+  home: https://github.com/ingydotnet/io-all-pm
+  license: perl_5
+  summary: Combines all of the best Perl IO modules into a single nifty object oriented
+    interface
+build:
+  number: 1
+package:
+  name: perl-io-all
+  version: '0.86'
+requirements:
+  build:
+  - perl-scalar-list-utils
+  - perl-extutils-makemaker
+  - perl
+  run:
+  - perl-scalar-list-utils
+  - perl-extutils-makemaker
+  - perl
+source:
+  fn: IO-All-0.86.tar.gz
+  md5: b257d3f742867825d018e74f5a5d549b
+  url: http://search.cpan.org/CPAN/authors/id/I/IN/INGY/IO-All-0.86.tar.gz

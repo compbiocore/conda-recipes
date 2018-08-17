@@ -1,0 +1,31 @@
+about:
+  home: http://metacpan.org/release/Eval-Closure
+  license: perl_5
+  summary: safely and cleanly create closures via string eval
+build:
+  number: 1
+package:
+  name: perl-eval-closure
+  version: 0.14
+requirements:
+  build:
+  - perl
+  - perl-app-cpanminus
+  - perl-test-requires
+  - perl-test-fatal
+  - perl-test-more
+  - perl-extutils-makemaker
+  - perl-io-handle
+  - perl-b
+  - perl-test2-suite
+  run:
+  - perl
+  - perl-app-cpanminus
+  - perl-test2-suite
+source:
+  fn: Eval-Closure-0.14.tar.gz
+  sha256: ea0944f2f5ec98d895bef6d503e6e4a376fea6383a6bc64c7670d46ff2218cad
+  url: https://cpan.metacpan.org/authors/id/D/DO/DOY/Eval-Closure-0.14.tar.gz
+test:
+  commands:
+  - perl -e "use Eval::Closure"

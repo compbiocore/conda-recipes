@@ -1,0 +1,22 @@
+about:
+  home: http://metacpan.org/pod/Statistics::Frequency
+  license: perl_5
+  summary: simple counting of elements
+build:
+  number: 1
+package:
+  name: perl-statistics-frequency
+  version: 0.04
+requirements:
+  build:
+  - perl-extutils-makemaker
+  - perl
+  run:
+  - perl
+source:
+  fn: Statistics-Frequency-0.04.tar.gz
+  md5: e1ecb945b642d574d3708d6ef5d0be0c
+  url: https://cpan.metacpan.org/authors/id/J/JH/JHI/Statistics-Frequency-0.04.tar.gz
+test:
+  commands:
+  - perl -e "use Statistics::Frequency"

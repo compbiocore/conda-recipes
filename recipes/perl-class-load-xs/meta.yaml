@@ -1,0 +1,33 @@
+about:
+  home: https://github.com/moose/Class-Load-XS
+  license: artistic_2
+  summary: XS implementation of parts of Class::Load
+build:
+  number: 1
+package:
+  name: perl-class-load-xs
+  version: '0.09'
+requirements:
+  build:
+  - perl
+  - perl-pathtools
+  - perl-extutils-makemaker
+  - perl-test-requires
+  - perl-class-load
+  - perl-module-implementation
+  - perl-apache-test
+  - perl-test-fatal
+  - perl-xsloader
+  - perl-test-simple
+  run:
+  - perl
+  - perl-xsloader
+  - perl-apache-test
+  - perl-class-load
+source:
+  fn: Class-Load-XS-0.09.tar.gz
+  md5: 98eb8daf7f23c872fc7f503a7e34f598
+  url: https://cpan.metacpan.org/authors/id/E/ET/ETHER/Class-Load-XS-0.09.tar.gz
+test:
+  commands:
+  - perl -e "use Class::Load::XS"

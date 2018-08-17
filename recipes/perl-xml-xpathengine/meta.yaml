@@ -1,0 +1,32 @@
+about:
+  home: http://metacpan.org/pod/XML-XPathEngine
+  license: unknown
+  summary: a re-usable XPath engine for DOM-like trees
+build:
+  number: 1
+package:
+  name: perl-xml-xpathengine
+  version: '0.14'
+requirements:
+  build:
+  - perl
+  run:
+  - perl
+source:
+  fn: XML-XPathEngine-0.14.tar.gz
+  md5: d840cbefa57c23041f0bed14940a6b22
+  url: http://cpan.metacpan.org/authors/id/M/MI/MIROD/XML-XPathEngine-0.14.tar.gz
+test:
+  commands:
+  - perl -e "use XML::XPathEngine"
+  - perl -e "use XML::XPathEngine::Boolean"
+  - perl -e "use XML::XPathEngine::Expr"
+  - perl -e "use XML::XPathEngine::Function"
+  - perl -e "use XML::XPathEngine::Literal"
+  - perl -e "use XML::XPathEngine::LocationPath"
+  - perl -e "use XML::XPathEngine::NodeSet"
+  - perl -e "use XML::XPathEngine::Number"
+  - perl -e "use XML::XPathEngine::Root"
+  # error is: Bareword "XML::XPathEngine::Step::test_nt_node" not allowed while "strict subs" in use
+#  - perl -e "use XML::XPathEngine::Step"
+  - perl -e "use XML::XPathEngine::Variable"

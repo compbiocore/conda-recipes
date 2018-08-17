@@ -1,0 +1,28 @@
+about:
+  home: http://metacpan.org/pod/Test-Output
+  license: perl_5
+  summary: Utilities to test STDOUT and STDERR messages.
+build:
+  number: 1
+package:
+  name: perl-test-output
+  version: '1.03'
+requirements:
+  build:
+  - perl-extutils-makemaker
+  - perl-sub-exporter
+  - perl-capture-tiny
+  - perl-test-simple
+  - perl
+  run:
+  - perl-capture-tiny
+  - perl-sub-exporter
+  - perl-test-simple
+  - perl
+source:
+  fn: Test-Output-1.03.tar.gz
+  md5: 903485edb382f5a18a5029978d1febf6
+  url: http://cpan.metacpan.org/authors/id/B/BD/BDFOY/Test-Output-1.03.tar.gz
+test:
+  commands:
+  - perl -e "use Test::Output"

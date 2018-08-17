@@ -1,0 +1,24 @@
+about:
+  home: http://metacpan.org/pod/Test::LongString
+  license: perl_5
+  summary: tests strings for equality, with more helpful failures
+package:
+  name: perl-test-longstring
+  version: '0.17'
+requirements:
+  build:
+  - perl-extutils-makemaker
+  - perl-test-builder-tester
+  - perl-test-simple
+  - perl
+  run:
+  - perl-test-builder-tester
+  - perl-test-simple
+  - perl
+source:
+  fn: Test-LongString-0.17.tar.gz
+  md5: 8baab770f61ebd5647a9dd3679f42fbd
+  url: https://cpan.metacpan.org/authors/id/R/RG/RGARCIA/Test-LongString-0.17.tar.gz
+test:
+  commands:
+  - perl -e "use Test::LongString"

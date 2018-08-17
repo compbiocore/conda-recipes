@@ -1,0 +1,16 @@
+about:
+  home: http://metacpan.org/pod/Class::Accessor
+  license: perl_5
+  summary: Automated accessor generation
+package:
+  name: perl-class-accessor
+  version: '0.34'
+requirements:
+  build:
+  - perl
+  run:
+  - perl
+source:
+  fn: Class-Accessor-0.34.tar.gz
+  md5: 0d9640d237a13276145f7e44b4855b89
+  url: http://cpan.metacpan.org/authors/id/K/KA/KASEI/Class-Accessor-0.34.tar.gz

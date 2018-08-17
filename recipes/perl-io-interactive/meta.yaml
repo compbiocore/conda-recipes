@@ -1,0 +1,28 @@
+about:
+  home: https://github.com/briandfoy/io-interactive
+  license: perl_5
+  summary: Utilities for interactive I/O
+build:
+  number: 1
+  skip: true
+package:
+  name: perl-io-interactive
+  version: '1.021'
+requirements:
+  build:
+  - gcc
+  - llvm
+  - perl-app-cpanminus
+  - perl-pathtools
+  - perl-extutils-makemaker
+  - perl
+  run:
+  - libgcc
+  - perl
+source:
+  fn: IO-Interactive-1.021.tar.gz
+  md5: 1636503b9e7b34d88450233e2504b73f
+  url: https://cpan.metacpan.org/authors/id/B/BD/BDFOY/IO-Interactive-1.021.tar.gz
+test:
+  commands:
+  - perl -e "use IO::Interactive"

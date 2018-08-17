@@ -1,0 +1,57 @@
+about:
+  home: http://metacpan.org/release/Test-Class-Moose/
+  license: perl_5
+  summary: Serious testing for serious Perl
+build:
+  number: 1
+package:
+  name: perl-test-class-moose
+  version: 0.8
+requirements:
+  build:
+  - perl
+  - perl-test2
+  - perl-app-cpanminus
+  - perl-test-more
+  - perl-test-warn
+  - perl-test-most
+  - perl-test-exception
+  - perl-extutils-makemaker
+  - perl-try-tiny
+  - perl-sub-attribute
+  - perl-test-requires
+  - perl-moose
+  - perl-namespace-autoclean
+  - perl-parallel-forkmanager
+  - perl-exception-class
+  - perl-capture-tiny
+  - perl-scope-guard
+  - perl-list-someutils
+  - perl-text-diff
+  run:
+  - perl
+  - perl-test2
+  - perl-app-cpanminus
+  - perl-test-more
+  - perl-test-warn
+  - perl-test-requires
+  - perl-test-most
+  - perl-extutils-makemaker
+  - perl-try-tiny
+  - perl-sub-attribute
+  - perl-moose
+  - perl-namespace-autoclean
+  - perl-parallel-forkmanager
+  - perl-exception-class
+  - perl-exception-class
+  - perl-capture-tiny
+  - perl-scope-guard
+  - perl-list-someutils
+  - perl-text-diff
+source:
+  fn: Test-Class-Moose-0.80.tar.gz
+  sha256: cfee8477bd8d8a4613a120ebf61d56875aa29b9e549fd270a1b5934c211283fa
+  url: https://cpan.metacpan.org/authors/id/D/DR/DROLSKY/Test-Class-Moose-0.80.tar.gz
+test:
+  commands:
+  - perl -e "use Test::Class::Moose"

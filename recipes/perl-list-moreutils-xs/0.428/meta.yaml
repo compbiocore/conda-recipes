@@ -1,0 +1,53 @@
+{% set name = "perl-list-moreutils-xs" %}
+{% set version = "0.428" %}
+{% set sha256 = "9d9fe621429dfe7cf2eb1299c192699ddebf060953e5ebdc1b4e293c6d6dd62d" %}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  fn: List-MoreUtils-XS-0.428.tar.gz
+  url: https://cpan.metacpan.org/authors/id/R/RE/REHSACK/List-MoreUtils-XS-0.428.tar.gz
+  sha256: {{ sha256 }}
+
+# If this is a new build for the same version, increment the build
+# number. If you do not include this key, it defaults to 0.
+build:
+  number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-file-path
+    - perl-carp
+    - perl-extutils-makemaker
+    - perl-storable
+    - perl-xsloader
+    - perl-base
+    - perl-ipc-cmd
+    #- perl-file-copy
+    #- perl-file-basename
+    #- perl-test-more
+    #- perl-file-spec
+
+  run:
+    - perl
+    - perl-xsloader
+
+test:
+  # Perl 'use' tests
+  imports:
+    - List::MoreUtils::XS
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+about:
+  home: https://metacpan.org/release/List-MoreUtils-XS
+  license: apache_2_0
+  summary: 'Provide the stuff missing in List::Util in XS'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

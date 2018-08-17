@@ -1,0 +1,73 @@
+{% set name = "perl-extutils-cbuilder" %}
+{% set version = "0.280230" %}
+{% set sha256 = "1daae1d7709709a26139984b3c4c36e9ff22912cde6a393ea30ef40058dc9cd5" %}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  fn: ExtUtils-CBuilder-0.280230.tar.gz
+  url: https://cpan.metacpan.org/authors/id/A/AM/AMBS/ExtUtils-CBuilder-0.280230.tar.gz
+  sha256: {{ sha256 }}
+
+# If this is a new build for the same version, increment the build
+# number. If you do not include this key, it defaults to 0.
+build:
+  number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-extutils-makemaker
+    - perl-file-temp
+    - perl-perl-ostype
+    - perl-ipc-cmd
+    - perl-text-parsewords
+    #- perl-file-spec
+    #- perl-test-more
+    #- perl-cwd
+    #- perl-io-file
+    #- perl-file-basename
+
+  run:
+    - perl
+    - perl-extutils-makemaker
+    - perl-file-temp
+    - perl-ipc-cmd
+    - perl-text-parsewords
+    - perl-perl-ostype
+    #- perl-file-spec
+    #- perl-cwd
+    #- perl-io-file
+    #- perl-file-basename
+
+test:
+  # Perl 'use' tests
+  commands:
+    - perl -e "use ExtUtils::CBuilder"
+    - perl -e "use ExtUtils::CBuilder::Base"
+    - perl -e "use ExtUtils::CBuilder::Platform::Unix"
+    - perl -e "use ExtUtils::CBuilder::Platform::VMS"
+    - perl -e "use ExtUtils::CBuilder::Platform::Windows"
+    - perl -e "use ExtUtils::CBuilder::Platform::Windows::BCC"
+    - perl -e "use ExtUtils::CBuilder::Platform::Windows::GCC"
+    - perl -e "use ExtUtils::CBuilder::Platform::Windows::MSVC"
+    - perl -e "use ExtUtils::CBuilder::Platform::aix"
+    - perl -e "use ExtUtils::CBuilder::Platform::android"
+    - perl -e "use ExtUtils::CBuilder::Platform::cygwin"
+    - perl -e "use ExtUtils::CBuilder::Platform::darwin"
+    - perl -e "use ExtUtils::CBuilder::Platform::dec_osf"
+    - perl -e "use ExtUtils::CBuilder::Platform::os2"
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+about:
+  home: http://search.cpan.org/dist/ExtUtils-CBuilder
+  license: perl_5
+  summary: 'Compile and link C code for Perl modules'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

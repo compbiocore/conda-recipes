@@ -1,0 +1,17 @@
+about:
+  home: http://metacpan.org/pod/Module::Load
+  license: perl_5
+  summary: Load modules in a DWIM style
+build:
+  number: 1
+package:
+  name: perl-module-load
+  version: 0.32
+requirements:
+  build:
+  - perl
+  run:
+  - perl
+test:
+  commands:
+  - perl -e "use Module::Load"

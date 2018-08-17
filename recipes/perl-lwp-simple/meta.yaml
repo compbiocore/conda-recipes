@@ -1,0 +1,26 @@
+about:
+  home: https://metacpan.org/pod/LWP::Simple
+  license: Perl
+  summary: simple procedural interface to LWP
+build:
+  number: 1
+package:
+  name: perl-lwp-simple
+  version: '6.15'
+requirements:
+  build:
+  - gcc
+  - perl-app-cpanminus
+  - perl-encode-locale
+  - perl-module-build
+  - perl
+  run:
+  - libgcc
+  - perl-encode-locale
+  - perl
+source:
+  fn: libwww-perl-6.15.tar.gz
+  url: https://cpan.metacpan.org/authors/id/E/ET/ETHER/libwww-perl-6.15.tar.gz
+test:
+  commands:
+  - perl -e "use LWP::Simple"

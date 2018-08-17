@@ -1,0 +1,23 @@
+about:
+  home: https://github.com/Test-More/test-exception
+  license: perl_5
+  summary: Test exception-based code
+build:
+  number: 1
+package:
+  name: perl-test-exception
+  version: '0.43'
+requirements:
+  build:
+  - perl
+  - perl-sub-uplevel
+  run:
+  - perl
+  - perl-sub-uplevel
+source:
+  fn: Test-Exception-0.43.tar.gz
+  md5: 572d355026fb0b87fc2b8c64b83cada0
+  url: https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Test-Exception-0.43.tar.gz
+test:
+  commands:
+  - perl -e "use Test::Exception"

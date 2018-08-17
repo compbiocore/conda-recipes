@@ -1,0 +1,20 @@
+about:
+  home: http://metacpan.org/pod/Math-Round
+  license: unknown
+  summary: Perl extension for rounding numbers
+package:
+  name: perl-math-round
+  version: '0.07'
+requirements:
+  build:
+  - perl-extutils-makemaker
+  - perl
+  run:
+  - perl
+source:
+  fn: Math-Round-0.07.tar.gz
+  md5: b74c5d2a3f891c19dafd7ce638732fd1
+  url: https://cpan.metacpan.org/authors/id/G/GR/GROMMEL/Math-Round-0.07.tar.gz
+test:
+  commands:
+  - perl -e "use Math::Round"

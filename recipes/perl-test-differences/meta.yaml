@@ -1,0 +1,23 @@
+about:
+  home: http://metacpan.org/pod/Test-Differences
+  license: Perl
+  summary: Test strings and data structures and show differences if not ok
+build:
+  number: 1
+package:
+  name: perl-test-differences
+  version: '0.64'
+requirements:
+  build:
+  - perl
+  - perl-capture-tiny
+  - perl-text-diff
+  - perl-module-build
+  run:
+  - perl
+  - perl-capture-tiny
+  - perl-text-diff
+source:
+  fn: Test-Differences-0.64.tar.gz
+  md5: ecfda620fe133e36a6e392d94ab8424d
+  url: https://cpan.metacpan.org/authors/id/D/DC/DCANTRELL/Test-Differences-0.64.tar.gz

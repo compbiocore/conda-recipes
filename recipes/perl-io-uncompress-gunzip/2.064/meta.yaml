@@ -1,0 +1,14 @@
+about:
+  home: http://metacpan.org/pod/IO::Uncompress::Gunzip
+  license: perl_5
+  summary: Read RFC 1952 files/buffers
+build:
+  number: 1
+package:
+  name: perl-io-uncompress-gunzip
+  version: 2.064
+requirements:
+  build:
+  - perl
+  run:
+  - perl

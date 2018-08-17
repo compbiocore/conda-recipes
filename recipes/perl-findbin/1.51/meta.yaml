@@ -1,0 +1,14 @@
+about:
+  home: http://metacpan.org/pod/FindBin
+  license: perl_5
+  summary: Locate directory of original perl script
+build:
+  number: 1
+package:
+  name: perl-findbin
+  version: 1.51
+requirements:
+  build:
+  - perl
+  run:
+  - perl

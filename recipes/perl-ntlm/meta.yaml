@@ -1,0 +1,23 @@
+about:
+  home: http://metacpan.org/pod/NTLM
+  license: perl_5
+  summary: An NTLM authentication module
+build:
+  number: 1
+package:
+  name: perl-ntlm
+  version: '1.09'
+requirements:
+  build:
+  - perl
+  - perl-digest-hmac
+  run:
+  - perl
+  - perl-digest-hmac
+source:
+  fn: NTLM-1.09.tar.gz
+  md5: da314ee94b14af2a2f39b6f2c0046e73
+  url: http://cpan.metacpan.org/authors/id/N/NB/NBEBOUT/NTLM-1.09.tar.gz
+test:
+  commands:
+  - perl -e "use Authen::NTLM"

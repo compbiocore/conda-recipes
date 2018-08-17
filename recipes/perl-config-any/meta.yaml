@@ -1,0 +1,35 @@
+about:
+  home: http://metacpan.org/pod/Config-Any
+  license: perl_5
+  summary: Load configuration from different file formats, transparently
+build:
+  number: 1
+package:
+  name: perl-config-any
+  version: '0.27'
+requirements:
+  build:
+  - toolchain
+  - gcc
+  - llvm
+  - perl
+  - perl-app-cpanminus
+  - perl-extutils-makemaker
+  run:
+  - perl
+  - libgcc
+  - perl-app-cpanminus
+source:
+  fn: Config-Any-0.27.tar.gz
+  md5: 0c8db36ebfeea250f554ebc50ee5b643
+  url: https://cpan.metacpan.org/authors/id/B/BR/BRICAS/Config-Any-0.27.tar.gz
+test:
+  commands:
+  - perl -e "use Config::Any"
+  - perl -e "use Config::Any::Base"
+  - perl -e "use Config::Any::General"
+  - perl -e "use Config::Any::INI"
+  - perl -e "use Config::Any::JSON"
+  - perl -e "use Config::Any::Perl"
+  - perl -e "use Config::Any::XML"
+  - perl -e "use Config::Any::YAML"

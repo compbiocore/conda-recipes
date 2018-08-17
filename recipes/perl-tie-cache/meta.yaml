@@ -1,0 +1,21 @@
+about:
+  home: http://metacpan.org/pod/Tie-Cache
+  license: unknown
+  summary: LRU Cache in Memory
+build:
+  number: 1
+package:
+  name: perl-tie-cache
+  version: '0.21'
+requirements:
+  build:
+  - perl
+  run:
+  - perl
+source:
+  fn: Tie-Cache-0.21.tar.gz
+  md5: 8210f295e8676c8540a5934f88bf5fed
+  url: http://cpan.metacpan.org/authors/id/C/CH/CHAMAS/Tie-Cache-0.21.tar.gz
+test:
+  commands:
+  - perl -e "use Tie::Cache"

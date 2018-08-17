@@ -1,0 +1,17 @@
+about:
+  home: http://metacpan.org/pod/Safe
+  license: unknown
+  summary: Compile and execute code in restricted compartments
+build:
+  number: 1
+package:
+  name: perl-safe
+  version: 2.37
+requirements:
+  build:
+  - perl
+  run:
+  - perl
+test:
+  commands:
+  - perl -e "use Safe"

@@ -1,0 +1,37 @@
+about:
+  home: http://metacpan.org/pod/Statistics-Basic
+  license: open_source
+  summary: ''
+build:
+  number: 1
+  skip: true
+package:
+  name: perl-statistics-basic
+  version: '1.6611'
+requirements:
+  build:
+  - perl-extutils-makemaker
+  - perl-number-format
+  - perl-scalar-list-utils
+  - perl
+  run:
+  - perl-number-format
+  - perl-scalar-list-utils
+  - perl
+source:
+  fn: Statistics-Basic-1.6611.tar.gz
+  md5: 1ee961c3a4b9c0a594dc3cfccbcd1ed1
+  url: https://cpan.metacpan.org/authors/id/J/JE/JETTERO/Statistics-Basic-1.6611.tar.gz
+test:
+  commands:
+  - perl -e "use Statistics::Basic"
+  - perl -e "use Statistics::Basic::ComputedVector"
+  - perl -e "use Statistics::Basic::Correlation"
+  - perl -e "use Statistics::Basic::Covariance"
+  - perl -e "use Statistics::Basic::LeastSquareFit"
+  - perl -e "use Statistics::Basic::Mean"
+  - perl -e "use Statistics::Basic::Median"
+  - perl -e "use Statistics::Basic::Mode"
+  - perl -e "use Statistics::Basic::StdDev"
+  - perl -e "use Statistics::Basic::Variance"
+  - perl -e "use Statistics::Basic::Vector"

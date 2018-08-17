@@ -1,0 +1,14 @@
+about:
+  home: http://metacpan.org/pod/B
+  license: perl_5
+  summary: The Perl Compiler Backend
+build:
+  number: 1
+package:
+  name: perl-b
+  version: 1.48
+requirements:
+  build:
+  - perl
+  run:
+  - perl

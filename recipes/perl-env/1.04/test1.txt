@@ -1,0 +1,71 @@
+Checking if your kit is complete...
+Looks good
+Generating a Unix-style Makefile
+Writing Makefile for Env
+Writing MYMETA.yml and MYMETA.json
+cp lib/Env.pm blib/lib/Env.pm
+Manifying blib/man3/Env.3
+PERL_DL_NONLAZY=1 /home/conda/miniconda2/conda-bld/perl-env_1526747398434/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_pl/bin/perl "-MExtUtils::Command::MM" "-MTest::Harness" "-e" "undef *Test::Harness::Switches; test_harness(0, 'blib/lib', 'blib/arch')" t/*.t
+t/array.t ............... ok
+t/env.t ................. ok
+t/release-pod-syntax.t .. skipped: these tests are for release candidate testing
+All tests successful.
+Files=3, Tests=14,  0 wallclock secs ( 0.01 usr  0.02 sys +  0.04 cusr  0.00 csys =  0.07 CPU)
+Result: PASS
+Installing /home/conda/miniconda2/conda-bld/perl-env_1526747398434/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_pl/lib/site_perl/5.20.3/Env.pm
+Installing /home/conda/miniconda2/conda-bld/perl-env_1526747398434/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_pl/man/man3/Env.3
+Appending installation info to /home/conda/miniconda2/conda-bld/perl-env_1526747398434/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_pl/lib/5.20.3/x86_64-linux-thread-multi/perllocal.pod
+BUILD START: perl-env-1.04-pl5.20.3_0
+    (actual version deferred until further download or env creation)
+updating index in: /home/conda/miniconda2/conda-bld/linux-64
+removing: perl-env-1.04-pl5.20.3_0.tar.bz2
+updating index in: /home/conda/miniconda2/conda-bld/noarch
+
+The following NEW packages will be INSTALLED:
+
+    perl:                    5.20.3.1-0      compbiocore
+    perl-extutils-makemaker: 6.66-pl5.20.3_1 local      
+
+Source cache directory is: /home/conda/miniconda2/conda-bld/src_cache
+Found source in cache: Env-1.04.tar.gz
+Extracting download
+BUILD START (revised): perl-env-1.04-pl5.20.3_0
+Package: perl-env-1.04-pl5.20.3_0
+source tree in: /home/conda/miniconda2/conda-bld/perl-env_1526747398434/work/Env-1.04
+number of files: 3
+Fixing permissions
+Fixing permissions
+Detected hard-coded path in text file lib/5.20.3/x86_64-linux-thread-multi/perllocal.pod
+Detected hard-coded path in text file lib/site_perl/5.20.3/x86_64-linux-thread-multi/auto/Env/.packlist
+/home/conda/miniconda2/conda-bld/linux-64/perl-env-1.04-pl5.20.3_0.tar.bz2
+updating index in: /home/conda/miniconda2/conda-bld
+updating index in: /home/conda/miniconda2/conda-bld/noarch
+updating index in: /home/conda/miniconda2/conda-bld/linux-64
+updating: perl-env-1.04-pl5.20.3_0.tar.bz2
+updating index in: /home/conda/miniconda2/conda-bld
+TEST START: /home/conda/miniconda2/conda-bld/linux-64/perl-env-1.04-pl5.20.3_0.tar.bz2
+Deleting work directory, /home/conda/miniconda2/conda-bld/perl-env_1526747398434/work/Env-1.04
+updating index in: /home/conda/miniconda2/conda-bld/linux-64
+updating index in: /home/conda/miniconda2/conda-bld/noarch
+
+The following NEW packages will be INSTALLED:
+
+    perl:     5.20.3.1-0      compbiocore
+    perl-env: 1.04-pl5.20.3_0 local      
+
+TEST END: /home/conda/miniconda2/conda-bld/linux-64/perl-env-1.04-pl5.20.3_0.tar.bz2
+# If you want to upload package(s) to anaconda.org later, type:
+
+anaconda upload /home/conda/miniconda2/conda-bld/linux-64/perl-env-1.04-pl5.20.3_0.tar.bz2
+
+# To have conda build upload to anaconda.org automatically, use
+# $ conda config --set anaconda_upload yes
+
+anaconda_upload is not set.  Not uploading wheels: []
+
+
+
+####################################################################################
+Source and build intermediates have been left in /home/conda/miniconda2/conda-bld.
+There are currently 429 accumulated.
+To remove them, you can run the ```conda build purge``` command

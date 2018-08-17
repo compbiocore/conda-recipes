@@ -1,0 +1,26 @@
+about:
+  home: http://metacpan.org/pod/PostScript
+  license: unknown
+  summary: helper module for PostScript::TextBlock
+build:
+  number: 1
+package:
+  name: perl-postscript
+  version: '0.06'
+requirements:
+  build:
+  - perl
+  run:
+  - perl
+source:
+  fn: PostScript-0.06.tar.gz
+  md5: 2a91cc23f2d8958e063f7ff09163faa0
+  patches:
+  - elements-version.patch
+  url: http://cpan.metacpan.org/authors/id/S/SH/SHAWNPW/PostScript-0.06.tar.gz
+test:
+  commands:
+  - perl -e "use PostScript::Document"
+  - perl -e "use PostScript::Elements"
+  - perl -e "use PostScript::Metrics"
+  - perl -e "use PostScript::TextBlock"

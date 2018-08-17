@@ -1,0 +1,14 @@
+about:
+  home: http://metacpan.org/pod/Text::Tabs
+  license: perl_5
+  summary: expand and unexpand tabs like unix expand(1) and unexpand(1)
+build:
+  number: 1
+package:
+  name: perl-text-tabs
+  version: 2013.0523
+requirements:
+  build:
+  - perl
+  run:
+  - perl

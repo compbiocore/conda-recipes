@@ -1,0 +1,35 @@
+about:
+  home: https://metacpan.org/pod/XML::Parser
+  license: Perl
+  summary: A perl module for parsing XML documents
+build:
+  number: 1
+package:
+  name: perl-xml-parser
+  version: '2.44'
+requirements:
+  build:
+  - gcc
+  - perl
+  - perl-app-cpanminus
+  - perl-module-build
+  - expat
+  - perl-libwww-perl
+  run:
+  - libgcc
+  - perl
+  - expat
+  - perl-libwww-perl
+source:
+  fn: XML-Parser-2.44.tar.gz
+  md5: af4813fe3952362451201ced6fbce379
+  url: https://cpan.metacpan.org/authors/id/T/TO/TODDR/XML-Parser-2.44.tar.gz
+test:
+  commands:
+  - perl -e "use XML::Parser"
+  - perl -e "use XML::Parser::Expat"
+  - perl -e "use XML::Parser::Style::Debug"
+  - perl -e "use XML::Parser::Style::Objects"
+  - perl -e "use XML::Parser::Style::Stream"
+  - perl -e "use XML::Parser::Style::Subs"
+  - perl -e "use XML::Parser::Style::Tree"

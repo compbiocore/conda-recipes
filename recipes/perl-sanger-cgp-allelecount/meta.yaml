@@ -1,0 +1,31 @@
+about:
+  home: https://github.com/cancerit/alleleCount
+  license: GPLv3
+  summary: Support code for NGS copy number algorithm
+build:
+  number: 1
+  skip: true
+package:
+  name: perl-sanger-cgp-allelecount
+  version: 2.1.2
+requirements:
+  build:
+  - gcc
+  - perl-app-cpanminus
+  - perl-module-build
+  - perl-sanger-cgp-vcf
+  - perl-bio-db-sam
+  - perl-bioperl
+  - perl
+  run:
+  - libgcc
+  - perl-sanger-cgp-vcf
+  - perl-bio-db-sam
+  - perl-bioperl
+  - perl
+source:
+  fn: alleleCount-v2.1.2.tar.gz
+  url: https://github.com/cancerit/alleleCount/archive/v2.1.2.tar.gz
+test:
+  commands:
+  - perl -e "use Sanger::CGP::AlleleCount"

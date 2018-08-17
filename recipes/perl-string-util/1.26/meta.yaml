@@ -1,0 +1,26 @@
+about:
+  home: http://metacpan.org/pod/String::Util
+  license: perl_5
+  summary: String::Util -- String processing utilities
+build:
+  number: 1
+package:
+  name: perl-string-util
+  version: '1.26'
+requirements:
+  build:
+  - perl
+  - perl-module-build
+  - perl-number-misc
+  - perl-test-toolbox
+  run:
+  - perl
+  - perl-number-misc
+  - perl-test-toolbox
+source:
+  fn: String-Util-1.26.tar.gz
+  md5: d0f13f8688bedef7174634bb57f7fbe4
+  url: https://cpan.metacpan.org/authors/id/M/MI/MIKO/String-Util-1.26.tar.gz
+test:
+  commands:
+  - perl -e "use String::Util"

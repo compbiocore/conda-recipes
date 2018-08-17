@@ -1,0 +1,34 @@
+about:
+  home: http://metacpan.org/release/Data-Visitor
+  license: perl_5
+  summary: Visitor style traversal of Perl data structures
+build:
+  number: 1
+package:
+  name: perl-data-visitor
+  version: 0.3
+requirements:
+  build:
+  - perl >=5.22,<6.0
+  - perl-test-requires
+  - perl-namespace-clean
+  - perl-moose
+  - perl-tie-toobject
+  - perl-extutils-makemaker
+  - perl-task-weaken
+  - perl-class-load >=0.06
+  run:
+  - perl >=5.22,<6.0
+  - perl-namespace-clean
+  - perl-task-weaken
+  - perl-moose
+  - perl-tie-toobject
+  - perl-class-load >=0.06
+source:
+  fn: Data-Visitor-0.30.tar.gz
+  sha256: 8ea24abcc3659e760aa94aee2ba7dd54cacaf20302705524143f39554009ed54
+  url: https://cpan.metacpan.org/authors/id/D/DO/DOY/Data-Visitor-0.30.tar.gz
+test:
+  commands:
+  - perl -e "use Data::Visitor"
+  - perl -e "use Data::Visitor::Callback"

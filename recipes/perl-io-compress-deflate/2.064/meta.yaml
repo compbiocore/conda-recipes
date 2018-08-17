@@ -1,0 +1,14 @@
+about:
+  home: http://metacpan.org/pod/IO::Compress::Deflate
+  license: perl_5
+  summary: Write RFC 1950 files/buffers
+build:
+  number: 1
+package:
+  name: perl-io-compress-deflate
+  version: 2.064
+requirements:
+  build:
+  - perl
+  run:
+  - perl

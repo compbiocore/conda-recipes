@@ -1,0 +1,27 @@
+about:
+  home: http://metacpan.org/pod/Statistics-TTest
+  license: perl_5
+  summary: Perl module to perform T-test on 2 independent samples Statistics::TTest::Sufficient
+    - Perl module to perfrom T-Test on 2 indepdent samples using sufficient statistics
+build:
+  number: 1
+package:
+  name: perl-statistics-ttest
+  version: 1.1
+requirements:
+  build:
+  - perl-statistics-distributions
+  - perl-statistics-descriptive
+  - perl
+  run:
+  - perl-statistics-distributions
+  - perl-statistics-descriptive
+  - perl
+source:
+  fn: Statistics-TTest-1.1.0.tar.gz
+  md5: 605466db48e2b16063abd16550e7d345
+  url: http://cpan.metacpan.org/authors/id/Y/YU/YUNFANG/Statistics-TTest-1.1.0.tar.gz
+test:
+  commands:
+  - perl -e "use Statistics::TTest"
+  - perl -e "use Statistics::PointEstimation"

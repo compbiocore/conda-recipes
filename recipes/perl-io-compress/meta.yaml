@@ -1,0 +1,52 @@
+about:
+  home: http://metacpan.org/pod/IO-Compress
+  license: perl_5
+  summary: IO Interface to compressed data files/buffers
+build:
+  number: 1
+package:
+  name: perl-io-compress
+  version: 2.069
+requirements:
+  build:
+  - perl
+  - perl-compress-raw-zlib
+  - perl-compress-raw-bzip2 >=2.069
+  - perl-scalar-list-utils
+  - perl-extutils-makemaker
+  run:
+  - perl
+  - perl-compress-raw-zlib
+  - perl-compress-raw-bzip2 >=2.069
+  - perl-scalar-list-utils
+source:
+  fn: IO-Compress-2.069.tar.gz
+  md5: b26925161e3f01919f60344d1bbb49c4
+  url: https://cpan.metacpan.org/authors/id/P/PM/PMQS/IO-Compress-2.069.tar.gz
+test:
+  commands:
+  - perl -e "use IO::Compress::Adapter::Bzip2"
+  - perl -e "use IO::Compress::Adapter::Deflate"
+  - perl -e "use IO::Compress::Adapter::Identity"
+  - perl -e "use IO::Compress::Base"
+  - perl -e "use IO::Compress::Base::Common"
+  - perl -e "use IO::Compress::Bzip2"
+  - perl -e "use IO::Compress::Deflate"
+  - perl -e "use IO::Compress::Gzip"
+  - perl -e "use IO::Compress::Gzip::Constants"
+  - perl -e "use IO::Compress::RawDeflate"
+  - perl -e "use IO::Compress::Zip"
+  - perl -e "use IO::Compress::Zip::Constants"
+  - perl -e "use IO::Compress::Zlib::Constants"
+  - perl -e "use IO::Compress::Zlib::Extra"
+  - perl -e "use IO::Uncompress::Adapter::Bunzip2"
+  - perl -e "use IO::Uncompress::Adapter::Identity"
+  - perl -e "use IO::Uncompress::Adapter::Inflate"
+  - perl -e "use IO::Uncompress::AnyInflate"
+  - perl -e "use IO::Uncompress::AnyUncompress"
+  - perl -e "use IO::Uncompress::Base"
+  - perl -e "use IO::Uncompress::Bunzip2"
+  - perl -e "use IO::Uncompress::Gunzip"
+  - perl -e "use IO::Uncompress::Inflate"
+  - perl -e "use IO::Uncompress::RawInflate"
+  - perl -e "use IO::Uncompress::Unzip"

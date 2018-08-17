@@ -1,0 +1,22 @@
+about:
+  home: https://metacpan.org/module/constant
+  license: perl_5
+  summary: Perl pragma to declare constants
+build:
+  number: 1
+package:
+  name: perl-constant
+  version: 1.33
+requirements:
+  build:
+  - perl
+  - perl-extutils-makemaker
+  run:
+  - perl
+source:
+  fn: constant-1.33.tar.gz
+  sha256: 79965d4130eb576670e27ca0ae6899ef0060c76da48b02b97682166882f1b504
+  url: https://cpan.metacpan.org/authors/id/R/RJ/RJBS/constant-1.33.tar.gz
+test:
+  commands:
+  - perl -e "use constant"

@@ -1,0 +1,122 @@
+{% set name = "perl-uri" %}
+{% set version = "1.74" %}
+{% set sha256 = "a9c254f45f89cb1dd946b689dfe433095404532a4543bdaab0b71ce0fdcdd53d" %}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  fn: URI-1.74.tar.gz
+  url: https://cpan.metacpan.org/authors/id/E/ET/ETHER/URI-1.74.tar.gz
+  sha256: {{ sha256 }}
+
+# If this is a new build for the same version, increment the build
+# number. If you do not include this key, it defaults to 0.
+build:
+  number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-carp
+    - perl-test
+    - perl-test-needs
+    - perl-extutils-makemaker
+    - perl-file-temp
+    - perl-exporter
+    - perl-parent
+    - perl-constant
+    - perl-data-dumper
+    - perl-mime-base64
+    - perl-encode
+    - perl-business-isbn
+    #- perl-strict
+    #- perl-integer
+    #- perl-scalar-util
+    #- perl-warnings
+    #- perl-net-domain
+    #- perl-utf8
+    #- perl-file-spec
+    #- perl-cwd
+    #- perl-test-more
+    #- perl-overload
+    #- perl-file-spec-functions
+
+  run:
+    - perl
+    - perl-carp
+    - perl-exporter
+    - perl-parent
+    - perl-constant
+    - perl-data-dumper
+    - perl-mime-base64
+    - perl-encode
+    - perl-business-isbn
+    #- perl-scalar-util
+    #- perl-warnings
+    #- perl-net-domain
+    #- perl-utf8
+    #- perl-integer
+    #- perl-cwd
+    #- perl-overload
+    #- perl-strict
+
+test:
+  # Perl 'use' tests
+  imports:
+    - URI
+    - URI::Escape
+    - URI::Heuristic
+    - URI::IRI
+    - URI::QueryParam
+    - URI::Split
+    - URI::URL
+    - URI::WithBase
+    - URI::data
+    - URI::file
+    - URI::file::Base
+    - URI::file::FAT
+    - URI::file::Mac
+    - URI::file::OS2
+    - URI::file::QNX
+    - URI::file::Unix
+    - URI::file::Win32
+    - URI::ftp
+    - URI::gopher
+    - URI::http
+    - URI::https
+    - URI::ldap
+    - URI::ldapi
+    - URI::ldaps
+    - URI::mailto
+    - URI::mms
+    - URI::news
+    - URI::nntp
+    - URI::pop
+    - URI::rlogin
+    - URI::rsync
+    - URI::rtsp
+    - URI::rtspu
+    - URI::sftp
+    - URI::sip
+    - URI::sips
+    - URI::snews
+    - URI::ssh
+    - URI::telnet
+    - URI::tn3270
+    - URI::urn
+    - URI::urn::isbn
+    - URI::urn::oid
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+about:
+  home: https://github.com/libwww-perl/URI
+  license: perl_5
+  summary: 'Uniform Resource Identifiers (absolute and relative)'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

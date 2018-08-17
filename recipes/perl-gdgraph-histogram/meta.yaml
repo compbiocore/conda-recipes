@@ -1,0 +1,25 @@
+about:
+  home: http://metacpan.org/pod/GDGraph-histogram
+  license: unknown
+  summary: Histogram plotting module for Perl5
+build:
+  number: 1
+package:
+  name: perl-gdgraph-histogram
+  version: '1.1'
+requirements:
+  build:
+  - perl
+  - perl-gdgraph
+  - libgd 2.2.*
+  run:
+  - perl
+  - perl-gdgraph
+  - libgd 2.2.*
+source:
+  fn: GDGraph-histogram-1.1.tar.gz
+  md5: 633c97212412d0d85bb3dc7251f5bad9
+  url: http://cpan.metacpan.org/authors/id/W/WH/WHIZDOG/GDGraph-histogram-1.1.tar.gz
+test:
+  commands:
+  - perl -e "use GD::Graph::histogram"

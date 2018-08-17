@@ -1,0 +1,38 @@
+about:
+  home: https://github.com/moose/MooseX-Clone
+  license: perl_5
+  summary: Fine-grained cloning support for Moose objects.
+build:
+  number: 1
+package:
+  name: perl-moosex-clone
+  version: 0.06
+requirements:
+  build:
+  - perl >=5.22,<6.0
+  - perl-hash-util-fieldhash-compat
+  - perl-extutils-makemaker
+  - perl-module-build-tiny
+  - perl-data-visitor
+  - perl-moose
+  - perl-namespace-autoclean
+  - perl-carp
+  run:
+  - perl >=5.22,<=6.0
+  - perl-hash-util-fieldhash-compat
+  - perl-data-visitor
+  - perl-carp
+  - perl-namespace-autoclean
+source:
+  fn: MooseX-Clone-0.06.tar.gz
+  sha256: cbd7825db9e74b053f524544a014f066fdce290316ebb568f87679181b398da7
+  url: https://cpan.metacpan.org/authors/id/E/ET/ETHER/MooseX-Clone-0.06.tar.gz
+test:
+  commands:
+  - perl -e "use MooseX::Clone"
+  - perl -e "use MooseX::Clone::Meta::Attribute::Trait::Clone"
+  - perl -e "use MooseX::Clone::Meta::Attribute::Trait::Clone::Base"
+  - perl -e "use MooseX::Clone::Meta::Attribute::Trait::Clone::Std"
+  - perl -e "use MooseX::Clone::Meta::Attribute::Trait::Copy"
+  - perl -e "use MooseX::Clone::Meta::Attribute::Trait::NoClone"
+  - perl -e "use MooseX::Clone::Meta::Attribute::Trait::StorableClone"

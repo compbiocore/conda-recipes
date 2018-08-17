@@ -1,0 +1,14 @@
+about:
+  home: http://metacpan.org/pod/File::Compare
+  license: perl_5
+  summary: Compare files or filehandles
+build:
+  number: 1
+package:
+  name: perl-file-compare
+  version: 1.1006
+requirements:
+  build:
+  - perl
+  run:
+  - perl

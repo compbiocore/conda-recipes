@@ -1,0 +1,84 @@
+{% set name = "perl-graphviz" %}
+{% set version = "2.24" %}
+{% set sha256 = "d95efac4cdeedb18283100efe3e00c59c1add524d9ce88c1c8a358359122f5ad" %}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  fn: GraphViz-2.24.tgz
+  url: https://cpan.metacpan.org/authors/id/R/RS/RSAVAGE/GraphViz-2.24.tgz
+  sha256: {{ sha256 }}
+
+# If this is a new build for the same version, increment the build
+# number. If you do not include this key, it defaults to 0.
+build:
+  number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-file-which
+    - perl-time-hires
+    - perl-test-pod
+    - perl-pod-usage
+    - perl-lib
+    - perl-xml-xpath
+    - perl-xml-twig
+    - perl-getopt-long
+    - perl-extutils-makemaker
+    - perl-ipc-run
+    - perl-carp
+    - perl-parse-recdescent
+    - graphviz
+    #- perl-warnings
+    #- perl-vars
+    #- perl-io-file
+    #- perl-lwp-simple
+    #- perl-test-more
+    #- perl-strict
+
+  run:
+    - perl
+    - perl-file-which
+    - perl-time-hires
+    - perl-lib
+    - perl-xml-xpath
+    - perl-carp
+    - perl-xml-twig
+    - perl-getopt-long
+    - perl-ipc-run
+    - perl-pod-usage
+    - perl-parse-recdescent
+    - graphviz
+    #- perl-io-file
+    #- perl-warnings
+    #- perl-vars
+    #- perl-lwp-simple
+    #- perl-strict
+
+test:
+  # Perl 'use' tests
+  imports:
+    - GraphViz
+    - GraphViz::Data::Grapher
+    - GraphViz::No
+    - GraphViz::Parse::RecDescent
+    - GraphViz::Parse::Yacc
+    - GraphViz::Parse::Yapp
+    - GraphViz::Regex
+    - GraphViz::Small
+    - GraphViz::XML
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+about:
+  home: http://metacpan.org/pod/GraphViz
+  license: perl_5
+  summary: "Interface to AT&T's GraphViz. Deprecated. See GraphViz2"
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

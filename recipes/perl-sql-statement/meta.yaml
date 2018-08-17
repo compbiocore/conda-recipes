@@ -1,0 +1,47 @@
+about:
+  home: https://metacpan.org/release/SQL-Statement
+  license: perl_5
+  summary: SQL parsing and processing engine
+build:
+  number: 1
+package:
+  name: perl-sql-statement
+  version: '1.407'
+requirements:
+  build:
+  - perl-clone
+  - perl-math-base-convert
+  - perl-module-runtime
+  - perl-params-util
+  - perl-text-soundex
+  - perl-test-deep
+  - perl
+  run:
+  - perl-clone
+  - perl-math-base-convert
+  - perl-module-runtime
+  - perl-params-util
+  - perl-text-soundex
+  - perl
+source:
+  fn: SQL-Statement-1.407.tar.gz
+  md5: abeedda4a2c085613cb77fb01631e5de
+  url: https://cpan.metacpan.org/authors/id/R/RE/REHSACK/SQL-Statement-1.407.tar.gz
+test:
+  commands:
+  - perl -e "use SQL::Dialects::ANSI"
+  - perl -e "use SQL::Dialects::AnyData"
+  - perl -e "use SQL::Dialects::CSV"
+  - perl -e "use SQL::Dialects::Role"
+  - perl -e "use SQL::Eval"
+  - perl -e "use SQL::Parser"
+  - perl -e "use SQL::Statement"
+  - perl -e "use SQL::Statement::Function"
+  - perl -e "use SQL::Statement::Functions"
+  - perl -e "use SQL::Statement::GetInfo"
+  - perl -e "use SQL::Statement::Operation"
+  - perl -e "use SQL::Statement::Placeholder"
+  - perl -e "use SQL::Statement::RAM"
+  - perl -e "use SQL::Statement::Term"
+  - perl -e "use SQL::Statement::TermFactory"
+  - perl -e "use SQL::Statement::Util"

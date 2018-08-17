@@ -1,0 +1,14 @@
+about:
+  home: http://metacpan.org/pod/warnings::register
+  license: perl_5
+  summary: warnings import function
+build:
+  number: 1
+package:
+  name: perl-warnings-register
+  version: 1.03
+requirements:
+  build:
+  - perl
+  run:
+  - perl

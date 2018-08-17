@@ -1,0 +1,75 @@
+{% set name = "perl-html-formatter" %}
+{% set version = "2.16" %}
+{% set sha256 = "cb0a0dd8aa5e8ba9ca214ce451bf4df33aa09c13e907e8d3082ddafeb30151cc" %}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  fn: HTML-Formatter-2.16.tar.gz
+  url: https://cpan.metacpan.org/authors/id/N/NI/NIGELM/HTML-Formatter-2.16.tar.gz
+  sha256: {{ sha256 }}
+
+# If this is a new build for the same version, increment the build
+# number. If you do not include this key, it defaults to 0.
+build:
+  number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-lib
+    - perl-data-dumper
+    - perl-file-slurper
+    - perl-carp
+    - perl-extutils-makemaker
+    - perl-encode
+    - perl-parent
+    - perl-base
+    - perl-test-warnings
+    - perl-html-tree
+    - perl-font-afm
+    #- perl-file-spec
+    #- perl-warnings
+    #- perl-io-handle
+    #- perl-test-more
+    #- perl-ipc-open3
+    #- perl-integer
+    #- perl-strict
+    #- perl-utf8
+
+  run:
+    - perl
+    - perl-data-dumper
+    - perl-carp
+    - perl-encode
+    - perl-parent
+    - perl-base
+    - perl-html-tree
+    - perl-font-afm
+    #- perl-utf8
+    #- perl-strict
+    #- perl-warnings
+    #- perl-integer
+
+test:
+  # Perl 'use' tests
+  commands:
+    - perl -e "use HTML::FormatMarkdown"
+    - perl -e "use HTML::FormatPS"
+    - perl -e "use HTML::FormatRTF"
+    - perl -e "use HTML::FormatText"
+    - perl -e "use HTML::Formatter"
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+about:
+  home: https://metacpan.org/release/HTML-Formatter
+  license: perl_5
+  summary: 'Base class for HTML formatters'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

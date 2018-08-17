@@ -1,0 +1,27 @@
+about:
+  home: https://github.com/rjbs/Sub-Install
+  license: perl_5
+  summary: install subroutines into packages easily
+build:
+  number: 1
+package:
+  name: perl-sub-install
+  version: '0.928'
+requirements:
+  build:
+  - perl-test-simple
+  - perl-scalar-list-utils
+  - perl-apache-test
+  - perl-extutils-makemaker
+  - perl
+  run:
+  - perl-apache-test
+  - perl-scalar-list-utils
+  - perl
+source:
+  fn: Sub-Install-0.928.tar.gz
+  md5: e1ce4f9cb6b2f6b8778b036c31afa5ab
+  url: http://cpan.metacpan.org/authors/id/R/RJ/RJBS/Sub-Install-0.928.tar.gz
+test:
+  commands:
+  - perl -e "use Sub::Install"

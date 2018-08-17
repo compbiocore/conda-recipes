@@ -1,0 +1,29 @@
+about:
+  home: http://metacpan.org/pod/Graph::Writer::Dot
+  license: perl_5
+  summary: Write out directed graph in Dot format
+build:
+  number: 1
+package:
+  name: perl-graph-readwrite
+  version: '2.09'
+requirements:
+  build:
+  - perl-graph
+  - perl-xml-parser
+  - perl-xml-writer
+  - perl-parse-yapp
+  - perl
+  run:
+  - perl-graph
+  - perl-xml-parser
+  - perl-xml-writer
+  - perl-parse-yapp
+  - perl
+source:
+  fn: Graph-ReadWrite-2.09.tar.gz
+  md5: 5cd9191eadd2fe8fe8bb431575434f67
+  url: https://cpan.metacpan.org/authors/id/N/NE/NEILB/Graph-ReadWrite-2.09.tar.gz
+test:
+  commands:
+  - perl -e "use Graph::Writer::Dot"

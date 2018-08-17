@@ -1,0 +1,23 @@
+about:
+  home: https://metacpan.org/pod/Devel::CheckBin
+  license: perl_5
+  summary: check that a command is available
+build:
+  number: 1
+  skip: true
+package:
+  name: perl-devel-checkbin
+  version: '0.04'
+requirements:
+  build:
+  - perl-extutils-makemaker
+  - perl
+  run:
+  - perl
+source:
+  fn: Devel::CheckBin-0.04.tar.gz
+  md5: 042b68e48d9b53de7d3ef4c726d57cb2
+  url: https://cpan.metacpan.org/authors/id/T/TO/TOKUHIROM/Devel-CheckBin-0.04.tar.gz
+test:
+  commands:
+  - perl -e "use Devel::CheckBin"

@@ -1,0 +1,21 @@
+about:
+  home: http://metacpan.org/pod/Compress::Raw::Bzip2
+  license: perl_5
+  summary: Low-Level Interface to bzip2 compression library
+build:
+  number: 1
+package:
+  name: perl-compress-raw-bzip2
+  version: 2.069
+requirements:
+  build:
+  - perl
+  run:
+  - perl
+source:
+  fn: Compress-Raw-Bzip2-2.069.tar.gz
+  md5: 18c4312b4fb8b644e9d697803687ea4f
+  url: https://cpan.metacpan.org/authors/id/P/PM/PMQS/Compress-Raw-Bzip2-2.069.tar.gz
+test:
+  commands:
+  - perl -e "use Compress::Raw::Bzip2"

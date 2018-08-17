@@ -1,0 +1,32 @@
+about:
+  home: https://github.com/Perl-Toolchain-Gang/File-Temp
+  license: perl_5
+  summary: return name and handle of a temporary file safely
+build:
+  number: 1
+package:
+  name: perl-file-temp
+  version: 0.2304
+requirements:
+  build:
+  - perl
+  - perl-exporter
+  - perl-file-path
+  - perl-constant
+  - perl-parent
+  - perl-extutils-makemaker
+  - perl-carp
+  run:
+  - perl
+  - perl-exporter
+  - perl-file-path
+  - perl-constant
+  - perl-parent
+  - perl-carp
+source:
+  fn: File-Temp-0.2304.tar.gz
+  sha256: 13415323e48f7c9f34efdedf3d35141a7c3435e2beb8c6b922229dc317d321ac
+  url: https://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN/File-Temp-0.2304.tar.gz
+test:
+  commands:
+  - perl -e "use File::Temp"

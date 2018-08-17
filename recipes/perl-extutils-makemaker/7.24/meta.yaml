@@ -1,0 +1,26 @@
+about:
+  home: https://metacpan.org/release/ExtUtils-MakeMaker
+  license: perl_5
+  summary: Create a module Makefile
+build:
+  number: 1
+  skip: true
+package:
+  name: perl-extutils-makemaker
+  version: 7.24
+requirements:
+  build:
+  - perl
+  - perl-app-cpanminus
+  - perl-data-dumper
+  run:
+  - perl
+  - perl-app-cpanminus
+  - perl-data-dumper
+source:
+  fn: ExtUtils-MakeMaker-7.24.tar.gz
+  sha256: 416abc97c3bb2cc72bef28852522f2859de53e37bf3d0ae8b292067d78755e69
+  url: https://cpan.metacpan.org/authors/id/B/BI/BINGOS/ExtUtils-MakeMaker-7.24.tar.gz
+test:
+  commands:
+  - perl -e "use ExtUtils::MakeMaker"

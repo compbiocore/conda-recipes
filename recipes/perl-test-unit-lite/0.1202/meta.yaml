@@ -1,0 +1,22 @@
+about:
+  home: http://metacpan.org/pod/Test::Unit::Lite
+  license: perl_5
+  summary: Unit testing without external dependencies
+build:
+  number: 1
+package:
+  name: perl-test-unit-lite
+  version: 0.1202
+requirements:
+  build:
+  - perl
+  - perl-module-build
+  run:
+  - perl
+source:
+  fn: Test-Unit-Lite-0.1202.tar.gz
+  sha256: 351d25ee7131628aaf7e3995fe1fffb893ae7fe6ef58cf3370ed320953f5b2a8
+  url: https://cpan.metacpan.org/authors/id/D/DE/DEXTER/Test-Unit-Lite-0.1202.tar.gz
+test:
+  commands:
+  - perl -e "use Test::Unit::Lite"

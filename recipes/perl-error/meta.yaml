@@ -1,0 +1,23 @@
+about:
+  home: http://metacpan.org/pod/Error
+  license: perl_5
+  summary: Error/exception handling in an OO-ish way
+build:
+  number: 1
+package:
+  name: perl-error
+  version: '0.17024'
+requirements:
+  build:
+  - perl-module-build
+  - perl
+  run:
+  - perl
+source:
+  fn: Error-0.17024.tar.gz
+  md5: 7e3676a7fb14f65f568f12d4b40a2a72
+  url: https://cpan.metacpan.org/authors/id/S/SH/SHLOMIF/Error-0.17024.tar.gz
+test:
+  commands:
+  - perl -e "use Error"
+  - perl -e "use Error::Simple"

@@ -1,0 +1,14 @@
+about:
+  home: http://metacpan.org/pod/File::Find
+  license: perl_5
+  summary: Traverse a directory tree.
+build:
+  number: 1
+package:
+  name: perl-file-find
+  version: 1.27
+requirements:
+  build:
+  - perl
+  run:
+  - perl

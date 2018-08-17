@@ -1,0 +1,13 @@
+diff --git a/Bio/SeqIO/phd.pm b/Bio/SeqIO/phd.pm.new
+index db5a6bd..7c24341 100644
+--- a/Bio/SeqIO/phd.pm
++++ b/Bio/SeqIO/phd.pm.new
+@@ -163,7 +163,7 @@ sub next_seq {
+         } elsif ($entry =~ /^END_SEQUENCE/) {
+             # the sequence may be over, but some other info can come after
+             next;
+-        } elsif ($entry =~ /^WR{/) {
++        } elsif ($entry =~ /^WR\{/) {
+             # Whole-Read items 
+             # Programs like Consed or Autofinish add it to phd file. See doc:
+             #   http://www.phrap.org/consed/distributions/README.16.0.txt

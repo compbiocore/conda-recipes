@@ -1,0 +1,14 @@
+about:
+  home: http://metacpan.org/pod/POSIX
+  license: perl_5
+  summary: ''
+build:
+  number: 1
+package:
+  name: perl-posix
+  version: 1.3803
+requirements:
+  build:
+  - perl
+  run:
+  - perl

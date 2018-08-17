@@ -1,0 +1,23 @@
+about:
+  home: http://metacpan.org/pod/Tree-DAG_Node
+  license: artistic_2
+  summary: An N-ary tree
+build:
+  number: 1
+package:
+  name: perl-tree-dag_node
+  version: '1.29'
+requirements:
+  build:
+  - perl-file-slurp-tiny
+  - perl
+  run:
+  - perl-file-slurp-tiny
+  - perl
+source:
+  fn: Tree-DAG_Node-1.29.tgz
+  md5: 0d2c2f7cb7f12afafd28bbab75e15442
+  url: https://cpan.metacpan.org/authors/id/R/RS/RSAVAGE/Tree-DAG_Node-1.29.tgz
+test:
+  commands:
+  - perl -e "use Tree::DAG_Node"

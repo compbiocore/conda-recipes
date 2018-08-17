@@ -1,0 +1,46 @@
+about:
+  home: http://metacpan.org/pod/XML-XPath
+  license: artistic_2
+  summary: Parse and evaluate XPath statements.
+build:
+  number: 1
+package:
+  name: perl-xml-xpath
+  version: '1.33'
+requirements:
+  build:
+  - perl-xml-parser
+  - perl-path-tiny
+  - perl
+  run:
+  - perl-xml-parser
+  - perl
+source:
+  fn: XML-XPath-1.33.tar.gz
+  md5: dcbd03d687de06a402fed58197eb94f1
+  url: https://cpan.metacpan.org/authors/id/M/MA/MANWAR/XML-XPath-1.33.tar.gz
+
+test:
+  commands:
+  - perl -e "use XML::XPath"
+  - perl -e "use XML::XPath::Boolean"
+  - perl -e "use XML::XPath::Builder"
+  - perl -e "use XML::XPath::Expr"
+  - perl -e "use XML::XPath::Function"
+  - perl -e "use XML::XPath::Literal"
+  - perl -e "use XML::XPath::LocationPath"
+  - perl -e "use XML::XPath::Node"
+  - perl -e "use XML::XPath::Node::Attribute"
+  - perl -e "use XML::XPath::Node::Comment"
+  - perl -e "use XML::XPath::Node::Element"
+  - perl -e "use XML::XPath::Node::Namespace"
+  - perl -e "use XML::XPath::Node::PI"
+  - perl -e "use XML::XPath::Node::Text"
+  - perl -e "use XML::XPath::NodeSet"
+  - perl -e "use XML::XPath::Number"
+  - perl -e "use XML::XPath::Parser"
+  - perl -e "use XML::XPath::PerlSAX"
+  - perl -e "use XML::XPath::Root"
+#  - perl -e "use XML::XPath::Step"
+  - perl -e "use XML::XPath::Variable"
+  - perl -e "use XML::XPath::XMLParser"

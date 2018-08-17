@@ -1,0 +1,47 @@
+{% set name = "perl-extutils-constant" %}
+{% set version = "0.25" %}
+{% set sha256 = "6933d0e963b62281ef7561068e6aecac8c4ac2b476b2bba09ab0b90fbac9d757" %}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  fn: ExtUtils-Constant-0.25.tar.gz
+  url: https://cpan.metacpan.org/authors/id/N/NW/NWCLARK/ExtUtils-Constant-0.25.tar.gz
+  sha256: {{ sha256 }}
+
+# If this is a new build for the same version, increment the build
+# number. If you do not include this key, it defaults to 0.
+build:
+  number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-extutils-makemaker
+
+  run:
+    - perl
+
+test:
+  # Perl 'use' tests
+  commands:
+    - perl -e "use ExtUtils::Constant"
+    - perl -e "use ExtUtils::Constant::Aaargh56Hash"
+    - perl -e "use ExtUtils::Constant::Base"
+    - perl -e "use ExtUtils::Constant::ProxySubs"
+    - perl -e "use ExtUtils::Constant::Utils"
+    - perl -e "use ExtUtils::Constant::XS"
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+about:
+  home: http://metacpan.org/pod/ExtUtils-Constant
+  license: unknown
+  summary: 'generate XS code to import C header constants'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

@@ -1,0 +1,14 @@
+about:
+  home: http://metacpan.org/pod/File::Spec
+  license: perl_5
+  summary: portably perform operations on file names
+build:
+  number: 1
+package:
+  name: perl-file-spec
+  version: 3.4801
+requirements:
+  build:
+  - perl
+  run:
+  - perl

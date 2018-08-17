@@ -1,0 +1,26 @@
+about:
+  home: http://dev.perl.org/
+  license: perl_5
+  summary: Tools for working with directory and file names
+build:
+  number: 1
+package:
+  name: perl-pathtools
+  version: 3.73
+requirements:
+  build:
+  - perl
+  - perl-extutils-makemaker
+  - perl-carp
+  - perl-test-more
+  run:
+  - perl
+  - perl-carp
+  - perl-test-more
+source:
+  fn: PathTools-3.73.tar.gz
+  sha256: c1eadef2eab07ff7ceb5a5b6bc12a6db51e376093942d1960c07c280984161d3
+  url: https://cpan.metacpan.org/authors/id/X/XS/XSAWYERX/PathTools-3.73.tar.gz
+test:
+  commands:
+  - perl -e "use File::Spec::Functions"

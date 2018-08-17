@@ -1,0 +1,36 @@
+about:
+  home: https://github.com/manwar/Term-ProgressBar
+  license: perl_5
+  summary: A progress bar for things that take a while
+build:
+  number: 1
+package:
+  name: perl-term-progressbar
+  version: 2.21
+requirements:
+  build:
+  - perl
+  - perl-test
+  - perl-extutils-makemaker
+  - perl-pod-escapes
+  - perl-carp
+  - perl-termreadkey
+  - perl-class-methodmaker
+  - perl-capture-tiny
+  - perl-test-exception
+  run:
+  - perl
+  - perl-test
+  - perl-pod-escapes
+  - perl-carp
+  - perl-termreadkey
+  - perl-class-methodmaker
+  - perl-capture-tiny
+  - perl-test-exception
+source:
+  fn: Term-ProgressBar-2.21.tar.gz
+  sha256: 66994f1a6ca94d8d92e3efac406142fb0d05033360c0acce2599862db9c30e44
+  url: http://search.cpan.org/CPAN/authors/id/M/MA/MANWAR/Term-ProgressBar-2.21.tar.gz
+test:
+  commands:
+  - perl -e "use Term::ProgressBar"

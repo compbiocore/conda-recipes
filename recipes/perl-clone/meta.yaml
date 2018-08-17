@@ -1,0 +1,21 @@
+about:
+  home: http://metacpan.org/pod/Clone
+  license: perl_5
+  summary: recursively copy Perl datatypes
+build:
+  number: 1
+package:
+  name: perl-clone
+  version: '0.38'
+requirements:
+  build:
+  - perl
+  run:
+  - perl
+source:
+  fn: Clone-0.38.tar.gz
+  md5: 17d119f9579b4b3ec43c87a4138ed44a
+  url: https://cpan.metacpan.org/authors/id/G/GA/GARU/Clone-0.38.tar.gz
+test:
+  commands:
+  - perl -e "use Clone"

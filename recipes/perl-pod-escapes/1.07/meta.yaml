@@ -1,0 +1,24 @@
+about:
+  home: http://metacpan.org/pod/Pod::Escapes
+  license: perl_5
+  summary: for resolving Pod Elt...gt sequences
+build:
+  number: 1
+package:
+  name: perl-pod-escapes
+  version: 1.07
+requirements:
+  build:
+  - perl
+  - perl-exporter
+  - perl-extutils-makemaker
+  run:
+  - perl
+  - perl-exporter
+source:
+  fn: Pod-Escapes-1.07.tar.gz
+  sha256: dbf7c827984951fb248907f940fd8f19f2696bc5545c0a15287e0fbe56a52308
+  url: https://cpan.metacpan.org/authors/id/N/NE/NEILB/Pod-Escapes-1.07.tar.gz
+test:
+  commands:
+  - perl -e "use Pod::Escapes"

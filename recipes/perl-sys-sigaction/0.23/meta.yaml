@@ -1,0 +1,22 @@
+about:
+  home: http://metacpan.org/pod/Sys::SigAction
+  license: perl_5
+  summary: Perl extension for Consistent Signal Handling
+build:
+  number: 1
+package:
+  name: perl-sys-sigaction
+  version: 0.23
+requirements:
+  build:
+  - perl
+  - perl-extutils-makemaker
+  run:
+  - perl
+source:
+  fn: Sys-SigAction-0.23.tar.gz
+  sha256: c4ef6c9345534031fcbbe2adc347fc7194d47afc945e7a44fac7e9563095d353
+  url: https://cpan.metacpan.org/authors/id/L/LB/LBAXTER/Sys-SigAction-0.23.tar.gz
+test:
+  commands:
+  - perl -e "use Sys::SigAction"

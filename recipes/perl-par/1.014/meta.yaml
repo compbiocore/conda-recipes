@@ -1,0 +1,27 @@
+about:
+  home: http://metacpan.org/pod/PAR
+  license: perl_5
+  summary: Perl Archive Tookit
+build:
+  number: 1
+package:
+  name: perl-par
+  version: 1.014
+requirements:
+  build:
+  - perl
+  - perl-archive-zip
+  - perl-par-dist
+  - perl-extutils-makemaker
+  - perl-app-cpanminus
+  run:
+  - perl
+  - perl-par-dist
+  - perl-archive-zip
+source:
+  fn: PAR-1.014.tar.gz
+  sha256: a8a6ebb9130e0466fce4eec9db7e666531d25a6eb818eff83963dc685942ed4b
+  url: https://cpan.metacpan.org/authors/id/R/RS/RSCHUPP/PAR-1.014.tar.gz
+test:
+  commands:
+  - perl -e "use PAR"

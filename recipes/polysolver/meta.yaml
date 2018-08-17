@@ -1,0 +1,60 @@
+# meta.yaml and build.sh taken from hla-polysolver and modified
+package:
+  name: hla-polysolver
+  version: "1.0.0"
+
+source:
+  git_rev: master
+  git_url: https://github.com/jason-weirather/hla-polysolver.git
+
+build:
+  number: 1
+
+requirements:
+  host:
+    - perl
+    - perl-math-basecalc
+    - perl-array-utils
+    - perl-vcftools-vcf
+    - perl-data-dumper
+    - perl-bio-samtools
+    - perl-bioperl
+    - mutect <=1.1.6
+    - perl-parallel-forkmanager
+    - perl-list-moreutils
+    - perl-list-util
+    - perl-posix
+    - novoalign
+    - zlib
+    - libgcc
+  run:
+    - libgcc
+    - zlib
+    - perl
+    - samtools <=0.1.18
+    - novoalign
+    - mutect <=1.1.6
+    - openjdk
+    - perl-math-basecalc
+    - perl-posix
+    - perl-bioperl
+    - perl-list-util
+    - perl-list-moreutils
+    - perl-parallel-forkmanager
+    - perl-data-dumper
+    - perl-bio-samtools
+    - perl-array-utils
+    - perl-vcftools-vcf
+test:
+  source_files:
+    - test/test.bam
+    - test/test.bam.bai
+    - test/test.tumor.bam
+    - test/test.tumor.bam.bai
+    - test/orig.winners.hla.txt
+    - test/orig.indiv.mutect.filtered.nonsyn.annotated
+    - test/orig.call_stats.hla_b_39_01_01_02l.out
+about:
+  home: https://github.com/jason-weirather/hla-polysolver
+  license: BSD
+  license_file: LICENSE

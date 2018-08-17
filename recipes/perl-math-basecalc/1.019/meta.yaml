@@ -1,0 +1,25 @@
+about:
+  home: http://metacpan.org/pod/Math::BaseCalc
+  license: perl_5
+  summary: Convert numbers between various bases
+build:
+  number: 1
+package:
+  name: perl-math-basecalc
+  version: 1.019
+requirements:
+  build:
+  - perl
+  - perl-extutils-makemaker
+  - perl-module-build
+  - perl-carp
+  run:
+  - perl
+  - perl-carp
+source:
+  fn: Math-BaseCalc-1.019.tar.gz
+  sha256: c74e2ba80ada8514b91134c7602e72b2cd330731c589597e951bf4a026efe9b8
+  url: https://cpan.metacpan.org/authors/id/K/KW/KWILLIAMS/Math-BaseCalc-1.019.tar.gz
+test:
+  commands:
+  - perl -e "use Math::BaseCalc"

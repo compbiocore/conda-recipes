@@ -1,0 +1,22 @@
+about:
+  home: http://testanything.org/
+  license: perl_5
+  summary: contributing to TAP::Harness
+build:
+  number: 1
+package:
+  name: perl-test-harness
+  version: 3.36
+requirements:
+  build:
+  - perl
+  - perl-extutils-makemaker
+  run:
+  - perl
+source:
+  fn: Test-Harness-3.36.tar.gz
+  sha256: e7566f13b041d028b56f184b77ec2545ec6f0bb5a0f8f5368f7e4a08b496b63e
+  url: https://cpan.metacpan.org/authors/id/L/LE/LEONT/Test-Harness-3.36.tar.gz
+test:
+  commands:
+  - perl -e "use Test::Harness"

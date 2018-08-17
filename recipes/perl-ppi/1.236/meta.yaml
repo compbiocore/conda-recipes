@@ -1,0 +1,137 @@
+about:
+  home: https://github.com/adamkennedy/PPI
+  license: perl_5
+  summary: Parse, Analyze and Manipulate Perl (without perl)
+build:
+  number: 1
+package:
+  name: perl-ppi
+  version: 1.236
+requirements:
+  build:
+  - perl >=5.22,<6.0
+  - perl-class-inspector
+  - perl-clone
+  - perl-test-deep
+  - perl-test-object
+  - perl-extutils-makemaker
+  - perl-file-remove
+  - perl-params-util
+  - perl-test-subcalls
+  - perl-io-string
+  - perl-digest-md5
+  - perl-list-moreutils
+  - perl-task-weaken
+  - perl-list-util
+  - perl-file-spec
+  - perl-test-more
+  - perl-hook-lexwrap
+  - perl-class-xsaccessor
+  run:
+  - perl >=5.22,<6.0
+  - perl-clone
+  - perl-params-util
+  - perl-io-string
+  - perl-digest-md5
+  - perl-list-moreutils
+  - perl-task-weaken
+  - perl-list-util
+  - perl-file-spec
+  - perl-hook-lexwrap
+  - perl-class-xsaccessor
+source:
+  fn: PPI-1.236.tar.gz
+  sha256: c6674b349c0b7d9a6d668e789a5e5215477d88ed4c8203aa69a2a50085308aec
+  url: https://cpan.metacpan.org/authors/id/M/MI/MITHALDU/PPI-1.236.tar.gz
+test:
+  commands:
+  - perl -e "use PPI"
+  - perl -e "use PPI::Cache"
+  - perl -e "use PPI::Document"
+  - perl -e "use PPI::Document::File"
+  - perl -e "use PPI::Document::Fragment"
+  - perl -e "use PPI::Document::Normalized"
+  - perl -e "use PPI::Dumper"
+  - perl -e "use PPI::Element"
+  - perl -e "use PPI::Exception"
+  - perl -e "use PPI::Exception::ParserRejection"
+  - perl -e "use PPI::Find"
+  - perl -e "use PPI::Lexer"
+  - perl -e "use PPI::Node"
+  - perl -e "use PPI::Normal"
+  - perl -e "use PPI::Normal::Standard"
+  - perl -e "use PPI::Statement"
+  - perl -e "use PPI::Statement::Break"
+  - perl -e "use PPI::Statement::Compound"
+  - perl -e "use PPI::Statement::Data"
+  - perl -e "use PPI::Statement::End"
+  - perl -e "use PPI::Statement::Expression"
+  - perl -e "use PPI::Statement::Given"
+  - perl -e "use PPI::Statement::Include"
+  - perl -e "use PPI::Statement::Include::Perl6"
+  - perl -e "use PPI::Statement::Null"
+  - perl -e "use PPI::Statement::Package"
+  - perl -e "use PPI::Statement::Scheduled"
+  - perl -e "use PPI::Statement::Sub"
+  - perl -e "use PPI::Statement::Unknown"
+  - perl -e "use PPI::Statement::UnmatchedBrace"
+  - perl -e "use PPI::Statement::Variable"
+  - perl -e "use PPI::Statement::When"
+  - perl -e "use PPI::Structure"
+  - perl -e "use PPI::Structure::Block"
+  - perl -e "use PPI::Structure::Condition"
+  - perl -e "use PPI::Structure::Constructor"
+  - perl -e "use PPI::Structure::For"
+  - perl -e "use PPI::Structure::Given"
+  - perl -e "use PPI::Structure::List"
+  - perl -e "use PPI::Structure::Subscript"
+  - perl -e "use PPI::Structure::Unknown"
+  - perl -e "use PPI::Structure::When"
+  - perl -e "use PPI::Token"
+  - perl -e "use PPI::Token::ArrayIndex"
+  - perl -e "use PPI::Token::Attribute"
+  - perl -e "use PPI::Token::BOM"
+  - perl -e "use PPI::Token::Cast"
+  - perl -e "use PPI::Token::Comment"
+  - perl -e "use PPI::Token::DashedWord"
+  - perl -e "use PPI::Token::Data"
+  - perl -e "use PPI::Token::End"
+  - perl -e "use PPI::Token::HereDoc"
+  - perl -e "use PPI::Token::Label"
+  - perl -e "use PPI::Token::Magic"
+  - perl -e "use PPI::Token::Number"
+  - perl -e "use PPI::Token::Number::Binary"
+  - perl -e "use PPI::Token::Number::Exp"
+  - perl -e "use PPI::Token::Number::Float"
+  - perl -e "use PPI::Token::Number::Hex"
+  - perl -e "use PPI::Token::Number::Octal"
+  - perl -e "use PPI::Token::Number::Version"
+  - perl -e "use PPI::Token::Operator"
+  - perl -e "use PPI::Token::Pod"
+  - perl -e "use PPI::Token::Prototype"
+  - perl -e "use PPI::Token::Quote"
+  - perl -e "use PPI::Token::Quote::Double"
+  - perl -e "use PPI::Token::Quote::Interpolate"
+  - perl -e "use PPI::Token::Quote::Literal"
+  - perl -e "use PPI::Token::Quote::Single"
+  - perl -e "use PPI::Token::QuoteLike"
+  - perl -e "use PPI::Token::QuoteLike::Backtick"
+  - perl -e "use PPI::Token::QuoteLike::Command"
+  - perl -e "use PPI::Token::QuoteLike::Readline"
+  - perl -e "use PPI::Token::QuoteLike::Regexp"
+  - perl -e "use PPI::Token::QuoteLike::Words"
+  - perl -e "use PPI::Token::Regexp"
+  - perl -e "use PPI::Token::Regexp::Match"
+  - perl -e "use PPI::Token::Regexp::Substitute"
+  - perl -e "use PPI::Token::Regexp::Transliterate"
+  - perl -e "use PPI::Token::Separator"
+  - perl -e "use PPI::Token::Structure"
+  - perl -e "use PPI::Token::Symbol"
+  - perl -e "use PPI::Token::Unknown"
+  - perl -e "use PPI::Token::Whitespace"
+  - perl -e "use PPI::Token::Word"
+  - perl -e "use PPI::Tokenizer"
+  - perl -e "use PPI::Transform"
+  - perl -e "use PPI::Transform::UpdateCopyright"
+  - perl -e "use PPI::Util"
+  - perl -e "use PPI::XSAccessor"

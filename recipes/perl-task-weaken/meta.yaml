@@ -1,0 +1,21 @@
+about:
+  home: http://metacpan.org/pod/Task-Weaken
+  license: perl_5
+  summary: Ensure that a platform has weaken support
+build:
+  number: 1
+package:
+  name: perl-task-weaken
+  version: '1.04'
+requirements:
+  build:
+  - perl
+  run:
+  - perl
+source:
+  fn: Task-Weaken-1.04.tar.gz
+  md5: affd0c395515bb95d29968404d7fe6de
+  url: http://cpan.metacpan.org/authors/id/A/AD/ADAMK/Task-Weaken-1.04.tar.gz
+test:
+  commands:
+  - perl -e "use Task::Weaken"

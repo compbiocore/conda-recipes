@@ -1,0 +1,33 @@
+about:
+  home: http://metacpan.org/pod/Font-AFM
+  license: perl_5
+  summary: Interface to Adobe Font Metrics files
+build:
+  number: 1
+package:
+  name: perl-font-afm
+  version: '1.20'
+requirements:
+  build:
+  - perl
+  run:
+  - perl
+source:
+  fn: Font-AFM-1.20.tar.gz
+  md5: b14ecf4dc4edbd63940aa354eb13c499
+  url: http://cpan.metacpan.org/authors/id/G/GA/GAAS/Font-AFM-1.20.tar.gz
+test:
+  commands:
+  - perl -e "use Font::AFM"
+  - perl -e "use Font::Metrics::Courier"
+  - perl -e "use Font::Metrics::CourierBold"
+  - perl -e "use Font::Metrics::CourierBoldOblique"
+  - perl -e "use Font::Metrics::CourierOblique"
+  - perl -e "use Font::Metrics::Helvetica"
+  - perl -e "use Font::Metrics::HelveticaBold"
+  - perl -e "use Font::Metrics::HelveticaBoldOblique"
+  - perl -e "use Font::Metrics::HelveticaOblique"
+  - perl -e "use Font::Metrics::TimesBold"
+  - perl -e "use Font::Metrics::TimesBoldItalic"
+  - perl -e "use Font::Metrics::TimesItalic"
+  - perl -e "use Font::Metrics::TimesRoman"

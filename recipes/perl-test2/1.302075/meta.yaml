@@ -1,0 +1,18 @@
+about:
+  home: http://metacpan.org/pod/Test2
+  license: perl_5
+  summary: Framework for writing test tools that all work together.
+build:
+  number: 1
+package:
+  name: perl-test2
+  version: 1.302075
+requirements:
+  build:
+  - perl
+  run:
+  - perl
+source:
+  fn: Test-Simple-1.302075.tar.gz
+  sha256: 86f2205498f96302e00331ac586bf366547e946e8637ad208d6317a2097d40b7
+  url: https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Test-Simple-1.302075.tar.gz

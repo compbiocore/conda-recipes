@@ -1,0 +1,48 @@
+{% set name = "perl-version" %}
+{% set version = "0.9923" %}
+{% set sha256 = "fabb187568d15ba996e0bdc3ff33476c3551f79a40e422c482e0b46b4526de28" %}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  fn: version-0.9923.tar.gz
+  url: https://cpan.metacpan.org/authors/id/J/JP/JPEACOCK/version-0.9923.tar.gz
+  sha256: {{ sha256 }}
+
+# If this is a new build for the same version, increment the build
+# number. If you do not include this key, it defaults to 0.
+build:
+  number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-parent
+    - perl-file-temp
+    - perl-extutils-makemaker
+    #- perl-test-more
+
+  run:
+    - perl
+
+test:
+  # Perl 'use' tests
+  commands:
+    - perl -e "use version"
+    - perl -e "use version::regex"
+    - perl -e "use version::vpp"
+    - perl -e "use version::vxs"
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+about:
+  home: http://metacpan.org/pod/version
+  license: perl_5
+  summary: 'Structured version objects'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml
