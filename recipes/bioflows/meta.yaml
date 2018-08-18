@@ -10,7 +10,7 @@ source:
   git_tag: bioflowsdir
   #git_rev: master 
 build:
-  number: 0
+  number: 1
   script: python setup.py install  --single-version-externally-managed --record=record.txt
 
 requirements:
@@ -40,3 +40,4 @@ requirements:
     - lftp
     - gatk
     - r-base
+    - hisat2
