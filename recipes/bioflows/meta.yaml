@@ -41,3 +41,5 @@ requirements:
     - gatk
     - r-base
     - hisat2
+    - salmon
+    - fastq-screen
