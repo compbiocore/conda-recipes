@@ -10,7 +10,6 @@ package:
 requirements:
   build:
   - gcc
-  - llvm
   - perl
   - perl-gdtextutil
   - perl-gd
