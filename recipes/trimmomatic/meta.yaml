@@ -1,7 +1,8 @@
 package:
   name: trimmomatic
   version: 0.36
-
+build:
+  number: 1
 source:
   fn: Trimmomatic-0.36.zip
   url: http://www.usadellab.org/cms/uploads/supplementary/Trimmomatic/Trimmomatic-0.36.zip
