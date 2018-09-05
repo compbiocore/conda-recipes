@@ -2,6 +2,7 @@ package:
   name: gcc
   version: 5.4.0
 
+
 source:
   fn: gcc-5.4.0.tar.gz
   url: ftp://gcc.gnu.org/pub/gcc/releases/gcc-5.4.0/gcc-5.4.0.tar.gz
@@ -33,7 +34,7 @@ source:
 #      sha256: 412538bb65c799ac98e17e8cfcdacbb257a57362acfaaff254b0fcae970126d2
 
 build:
-  number: 0
+  number: 1
   detect_binary_files_with_prefix: false
   skip: True  # [not unix]
 

@@ -12,7 +12,7 @@ source:
   - patches/build-vc14.patch
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -42,3 +42,4 @@ extra:
     - isuruf
     - jakirkham
     - saraedum
+
