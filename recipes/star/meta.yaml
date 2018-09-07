@@ -1,0 +1,26 @@
+{% set version = "2.6.1a" %}
+{% set sha256 = "dc87357211432c05123ce49966aae712dec590cbe27c1fd0193c3aeb8d4abe4b" %}
+
+package:
+  name: star
+  version: {{ version }}
+
+source:
+  url: https://github.com/alexdobin/STAR/archive/{{ version }}.tar.gz
+  sha256: {{ sha256 }}
+
+build:
+  number: 1
+
+test:
+  commands:
+    - STAR --version
+
+about:
+  home: https://github.com/alexdobin/STAR
+  license: GPLv3
+  summary: An RNA-seq read aligner.
+
+extra:
+  identifiers:
+    - biotools:star
