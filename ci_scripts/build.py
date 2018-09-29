@@ -181,14 +181,14 @@ def install(name, version, channel, environment, readme):
     readme : str
         path to README.md of Github repo
     '''
-    env_cmd = 'conda env create -f {0}'.format(environment)
+    env_cmd = 'conda env create -f {0} --yes'.format(environment)
     log.info('Setting up main environment: {0}'.format(env_cmd))
     call(env_cmd, shell=True)
 
     log.info('Activating environment: source activate main')
     call('source activate main', shell=True)
 
-    install_cmd = 'conda install --use-local %s=%s' % (name, version)
+    install_cmd = 'conda install --use-local %s=%s --yes' % (name, version)
     log.info('Installing: {0}'.format(install_cmd))
     proc = call(install_cmd, shell=True)
 
