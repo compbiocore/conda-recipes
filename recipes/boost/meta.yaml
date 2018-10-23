@@ -15,6 +15,7 @@ requirements:
     - bzip2 
     - icu
     - zlib 
+    - openmpi
   run:
     # python dependency is here due to libboost-python library that depends on
     # python version
@@ -23,6 +24,7 @@ requirements:
     - bzip2 
     - icu 
     - zlib
+    - openmpi
 
 about:
   home: http://www.boost.org/
