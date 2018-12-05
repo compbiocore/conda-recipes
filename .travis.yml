@@ -3,7 +3,8 @@ branches:
   only:
     - devel-gcc-5.4.0
 os:
-  -linux
+  - linux
+github_token: $GH_TOKEN
 
 sudo: required
 services:
