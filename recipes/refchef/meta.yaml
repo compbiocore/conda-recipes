@@ -1,0 +1,52 @@
+package:
+  name: refchef
+  version: "v0.0.5-conda"
+
+source:
+  git_url: https://github.com/compbiocore/refchef.git
+  git_tag: v0.0.5-conda
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # noarch_python: True
+  # preserve_egg_dir: True
+  # entry_points:
+    # Put any entry points (scripts to be generated automatically) here. The
+    # syntax is module:function.  For example
+    #
+    # - refchef = refchef:main
+    #
+    # Would create an entry point called refchef that calls refchef.main()
+
+
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - python
+    - setuptools
+
+  run:
+    - python
+    - argparse
+    - python-dotenv
+    - pyyaml
+    - pygithub
+    - yamlloader
+    - pandas
+    - terminaltables
+    - mock
+    - future
+    - pytest >=3
+    - coverage >=4.4
+    - pytest-cov >=2.0
+
+about:
+  home: https://github.com/compbiocore/refchef
+  license: GNU General Public License v3 or later (GPLv3+)
+  summary: 'Genome reference manager.'
+  license_family: GPL3
