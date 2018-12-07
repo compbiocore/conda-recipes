@@ -21,4 +21,4 @@ test:
 about:
   home: https://github.com/gmarcais/yaggo
   license: GPLv3
-  summary: This is a tester recipe that uses yaggo to test if our Travis-CI is working. For actual yaggo please go to the recipe.
+  summary: This is a tester recipe that uses yaggo to test if our Travis-CI is working.
