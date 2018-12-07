@@ -142,5 +142,4 @@ dependencies:
   - mkl-fft==1.0.3
   - mkl-random==1.0.1
   - tables==3.4.4
-prefix: /users/aguang/miniconda3/envs/conda
 

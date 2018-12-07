@@ -22,7 +22,7 @@ handler.setLevel(logging.INFO)
 log.addHandler(handler)
 log.setLevel(logging.INFO)
 
-def build_recipes(recipes, channel, environment, readme):
+def build_recipes(recipes, channel, environment, readme, al, ap):
     '''Build multiple recipes recursively.
     Parameters
     ----------
@@ -60,7 +60,7 @@ def build_recipes(recipes, channel, environment, readme):
                         build_call = build(root)
                         if build_call==0:
                             build_passed+=1
-                            install(name, version, channel, environment, readme)
+                            install(name, version, channel, environment, readme, al, ap)
                         else:
                             log.info("Failed build: {0}".format(root))
                             build_error+=1
@@ -164,7 +164,7 @@ def changed_recipes(diff_files):
             recipes.add('recipes/'+folder)
     return recipes
 
-def install(name, version, channel, environment, readme):
+def install(name, version, channel, environment, readme, al, ap):
     '''Install a built package. If there are dependency conflicts with the main environment,
     output to a log file and add conflict label. Otherwise add main label and add to main env.
 
@@ -181,7 +181,7 @@ def install(name, version, channel, environment, readme):
     readme : str
         path to README.md of Github repo
     '''
-    env_cmd = 'conda env create -f {0} --yes'.format(environment)
+    env_cmd = 'conda env create -f {0}'.format(environment)
     log.info('Setting up main environment: {0}'.format(env_cmd))
     call(env_cmd, shell=True)
 
@@ -194,19 +194,19 @@ def install(name, version, channel, environment, readme):
 
     if proc==0:
         log.info('No conflicts with main environment.')
-        upload(name, version, channel)
+        upload(name, version, channel, al, ap)
     else:
         log.info('%s conflicts with main environment' % name)
         ## TODO: modify readme todo...
         with open(readme,'a') as f:
             f.write(name+'\n')
         if os.environ['TRAVIS_SECURE_ENV_VARS'] == 'true':
-            upload(name, version, channel, label="conflict")
+            upload(name, version, channel, al, ap, label="conflict")
         else:
             log.info("Uploading not available in Pull Requests")
 #        dependency_conflicts.py
 
-def upload(name, version, channel, label="main"):
+def upload(name, version, channel, al, ap, label="main"):
     '''Upload a built package.
     Parameters
     ----------
@@ -223,14 +223,16 @@ def upload(name, version, channel, label="main"):
         config.bldpkgs_dir,
         '{0}-{1}*.tar.bz2'.format(name, version))
     built = glob.glob(built_glob)[0]
-    upload_cmd = 'anaconda -t {token} upload -u %s %s --label %s' % (channel, built, label)
+    login_cmd = 'anaconda login --username %s --password %s' % (al, ap)
+    upload_cmd = 'anaconda upload -u %s %s --label %s' % (channel, built, label)
     # Do not show decrypted token!
     log.info('Uploading: {0}'.format(upload_cmd))
     try:
-        proc = check_call(
-            upload_cmd.format(token=os.environ['ANACONDA_TOKEN']),
-            shell=True)
-        log.info(proc)
+        proc_login = check_call(login_cmd, shell=True)
+        log.info(proc_login)
+        proc_upload = check_call(
+            upload_cmd, shell=True)
+        log.info(proc_upload)
     except:
         log.info("Uploading failed; did you update the build version? The script will not force upload"+
             "so please manually upload if necessary.")
@@ -242,21 +244,22 @@ if __name__ == '__main__':
     parser.add_argument('range', help='commit range')
     parser.add_argument('-r', '--readme', help='path to README.md')
     parser.add_argument('-c', '--channel', help='channel to build and upload recipes to')
+    parser.add_argument('-al', '--anaconda_login', help='anaconda login')
+    parser.add_argument('-ap', '--anaconda_password', help='anaconda password')
     parser.add_argument('-e', '--environment', help='conda environment.yml to replicate base env from')
     opts = parser.parse_args()
 
     channel = opts.channel
     env = opts.environment
     readme = opts.readme
+    al = opts.anaconda_login
+    ap = opts.anaconda_password
 
-    #if os.environ['TRAVIS_COMMIT_RANGE']=='true':
-    #    diff_files_cmd = 'git diff --name-only {0}'.format(os.environ['TRAVIS_COMMIT_RANGE'])
-    #else:
-    #    diff_files_cmd = 'git diff --name-only'
+
     diff_files_cmd = 'git diff --name-only {0}'.format(opts.range)
     diff_files = check_output(diff_files_cmd, shell=True, universal_newlines=True, stderr=subprocess.STDOUT)
     log.info('Changed files are: {0}'.format(diff_files))
     recipes = changed_recipes(diff_files)
     log.info('Changed recipes are: {0}'.format(recipes))
 
-    build_recipes(recipes, channel, env, readme)
+    build_recipes(recipes, channel, env, readme, al, ap)
