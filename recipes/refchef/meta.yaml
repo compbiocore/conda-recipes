@@ -1,10 +1,10 @@
 package:
   name: refchef
-  version: "v0.0.5-conda"
+  version: "0.0.6"
 
 source:
   git_url: https://github.com/compbiocore/refchef.git
-  git_tag: v0.0.5-conda
+  git_tag: v0.0.6-conda
 #  patches:
    # List any patch files here
    # - fix.patch
