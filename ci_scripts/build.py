@@ -181,7 +181,7 @@ def install(name, version, channel, environment, readme):
     readme : str
         path to README.md of Github repo
     '''
-    env_cmd = 'conda env create -f {0} --yes'.format(environment)
+    env_cmd = 'conda env create -f {0}'.format(environment)
     log.info('Setting up main environment: {0}'.format(env_cmd))
     call(env_cmd, shell=True)
 
@@ -223,14 +223,16 @@ def upload(name, version, channel, label="main"):
         config.bldpkgs_dir,
         '{0}-{1}*.tar.bz2'.format(name, version))
     built = glob.glob(built_glob)[0]
-    upload_cmd = 'anaconda -t {token} upload -u %s %s --label %s' % (channel, built, label)
+    login_cmd = 'anaconda login --username %s --password %s' % (os.environ['ANACONDA_LOGIN'], os.environ['ANACONDA_PASSOWRD'])
+    upload_cmd = 'anaconda upload -u %s %s --label %s' % (channel, built, label)
     # Do not show decrypted token!
     log.info('Uploading: {0}'.format(upload_cmd))
     try:
-        proc = check_call(
-            upload_cmd.format(token=os.environ['ANACONDA_TOKEN']),
-            shell=True)
-        log.info(proc)
+        proc_login = check_call(login_cmd, shell=True)
+        log.info(proc_login)
+        proc_upload = check_call(
+            upload_cmd, shell=True)
+        log.info(proc_upload)
     except:
         log.info("Uploading failed; did you update the build version? The script will not force upload"+
             "so please manually upload if necessary.")
@@ -249,10 +251,7 @@ if __name__ == '__main__':
     env = opts.environment
     readme = opts.readme
 
-    #if os.environ['TRAVIS_COMMIT_RANGE']=='true':
-    #    diff_files_cmd = 'git diff --name-only {0}'.format(os.environ['TRAVIS_COMMIT_RANGE'])
-    #else:
-    #    diff_files_cmd = 'git diff --name-only'
+
     diff_files_cmd = 'git diff --name-only {0}'.format(opts.range)
     diff_files = check_output(diff_files_cmd, shell=True, universal_newlines=True, stderr=subprocess.STDOUT)
     log.info('Changed files are: {0}'.format(diff_files))
