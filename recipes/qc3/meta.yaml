@@ -1,0 +1,43 @@
+{% set version = "1.34" %}
+
+package:
+  name: qc3
+  version: {{ version }}
+
+build:
+  number: 1
+  skip: True # [not py27 or osx]
+
+source:
+  git_url: https://github.com/slzhao/QC3
+  git_rev: 9835305c0557be68ff8de1494a72bd2fe721fa77
+
+requirements:
+  host:
+    - perl
+    - r-base
+    - samtools
+    - perl-html-template
+  run:
+    - perl
+    - r-base
+    - samtools
+    - perl-html-template
+
+test:
+  commands:
+    - mkdir exampleDir
+    - cd exampleDir
+    - wget http://sourceforge.net/projects/qc3/files/example.tar.gz/download -O example.tar.gz
+    - tar zxvf example.tar.gz
+    - cd fastq
+    - qc3.pl -m f -i example_fastq_list.txt -o example_fastq_result
+    - cd ../bam
+    - qc3.pl -m b -i example_bam_list.txt -r ../bamQcDatabase/hg19_protein_coding.bed.Part -o example_bam_result1
+    - qc3.pl -m b -i example_bam_list.txt -g ../bamQcDatabase/Homo_sapiens.GRCh37.63_protein_coding_chr1-22-X-Y-M.gtf.Part -o example_bam_result2
+    - qc3.pl -m b -i example_bam_list.txt -r ../bamQcDatabase/hg19_protein_coding.bed.Part -g ../bamQcDatabase/Homo_sapiens.GRCh37.63_protein_coding_chr1-22-X-Y-M.gtf.Part -o example_bam_result3
+
+about:
+  home: https://github.com/slzhao/QC3
+  summary: QC3, a quality control tool designed for DNA sequencing data for raw data, alignment, and variant calling.
+
