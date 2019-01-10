@@ -87,7 +87,7 @@ def build(root):
     '''
     # Quote is need in case the root path has spaces in it.
     #build_cmd = 'conda build --dirty "%s"' % root
-    build_cmd = 'conda build -c compbiocore "%s"' % root
+    build_cmd = 'conda build -c compbiocore "%s" --perl 5.26.2' % root
     log.info('Building: {0}'.format(build_cmd))
     FNULL = open(os.devnull, 'w')
     proc = call(build_cmd, shell=True, stdout=FNULL, stderr=subprocess.STDOUT, close_fds=True)
