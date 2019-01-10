@@ -25,6 +25,7 @@ requirements:
     - perl-html-template
 
 test:
+  # bamsummary is breaking so tests have been removed, and that functionality won't work
   commands:
     - mkdir exampleDir
     - cd exampleDir
@@ -38,4 +39,3 @@ test:
 about:
   home: https://github.com/slzhao/QC3
   summary: QC3, a quality control tool designed for DNA sequencing data for raw data, alignment, and variant calling.
-
