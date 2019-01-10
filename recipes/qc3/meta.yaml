@@ -25,7 +25,7 @@ requirements:
     - perl-html-template
 
 test:
-  # bamsummary is breaking so tests have been removed, and that functionality won't work
+  # bamsummary breaks so tests have been removed, and that functionality won't work
   commands:
     - mkdir exampleDir
     - cd exampleDir
