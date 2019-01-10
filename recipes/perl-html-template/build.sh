@@ -18,7 +18,6 @@ else
     exit 1
 fi
 
-# Add more build steps here, if they are necessary.
 
 # See
 # http://docs.continuum.io/conda/build.html
