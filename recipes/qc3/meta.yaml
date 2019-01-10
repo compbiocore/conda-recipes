@@ -32,10 +32,8 @@ test:
     - tar zxvf example.tar.gz
     - cd fastq
     - qc3.pl -m f -i example_fastq_list.txt -o example_fastq_result
-    - cd ../bam
-    - qc3.pl -m b -i example_bam_list.txt -r ../bamQcDatabase/hg19_protein_coding.bed.Part -o example_bam_result1
-    - qc3.pl -m b -i example_bam_list.txt -g ../bamQcDatabase/Homo_sapiens.GRCh37.63_protein_coding_chr1-22-X-Y-M.gtf.Part -o example_bam_result2
-    - qc3.pl -m b -i example_bam_list.txt -r ../bamQcDatabase/hg19_protein_coding.bed.Part -g ../bamQcDatabase/Homo_sapiens.GRCh37.63_protein_coding_chr1-22-X-Y-M.gtf.Part -o example_bam_result3
+    - cd ../vcf
+    - qc3.pl -m v -i CV-7261.vcf.top40000.txt -o example_vcf_result1
 
 about:
   home: https://github.com/slzhao/QC3
