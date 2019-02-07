@@ -18,11 +18,13 @@ requirements:
     - r-base
     - samtools
     - perl-html-template
+    - perl-env
   run:
     - perl
     - r-base
     - samtools
     - perl-html-template
+    - perl-env
 
 test:
   commands:
