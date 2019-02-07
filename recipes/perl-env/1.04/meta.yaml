@@ -28,7 +28,7 @@ test:
   # Perl 'use' tests
   commands:
     - perl -e "use Env"
-    # these are all in Env.pm
+    # these are all in Env.pm.
 #    - perl -e "use Env::Array"
 #    - perl -e "use Env::Array::VMS"
 
