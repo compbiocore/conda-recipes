@@ -1,0 +1,20 @@
+build:
+  number: 1
+
+package:
+  name: phyldog
+  version: 1.0
+source:
+  git_rev: master
+  git_url: https://github.com/Boussau/PHYLDOG.git
+requirements:
+  build:
+    - gcc
+    - boost
+    - bpp-phyl
+    - cmake
+    - openmpi
+about:
+  home: https://pbil.univ-lyon1.fr/software/phyldog/
+  license: CeCILL
+  summary: PHYLDOG is a program allowing to simultaneously build gene and species trees when gene families have undergone duplications and losses. Trees and parameters are estimated in the maximum likelihood framework.

@@ -48,6 +48,7 @@ if [ "$(uname)" == "Linux" ]; then
         --with-python="${PYTHON}" \
         --with-python-root="${PREFIX} : ${PREFIX}/include/python${PY_VER}m ${PREFIX}/include/python${PY_VER}" \
         --with-icu="${PREFIX}" \
+        --with-libraries=mpi,serialization \
         | tee bootstrap.log 2>&1
 
     ./b2 -q \
@@ -64,5 +65,6 @@ if [ "$(uname)" == "Linux" ]; then
         linkflags="-L${LIBRARY_PATH}" \
         --layout=system \
         -j"${CPU_COUNT}" \
+        --user-config="${RECIPE_DIR}/user-config.jam" \
         install | tee b2.log 2>&1
 fi
