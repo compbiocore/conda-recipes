@@ -12,7 +12,7 @@ requirements:
     - gcc
     - boost
     - bpp-phyl
-    - cmake
+    - cmake=3.11.0
     - openmpi
 about:
   home: https://pbil.univ-lyon1.fr/software/phyldog/
