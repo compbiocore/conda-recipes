@@ -44,5 +44,5 @@ requirements:
 about:
   home: https://github.com/compbiocore/refchef
   license: GNU General Public License v3 or later (GPLv3+)
-  summary: 'Genome reference manager.'
+  summary: 'Genome reference manager. '
   license_family: GPL3
