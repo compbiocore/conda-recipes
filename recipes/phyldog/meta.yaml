@@ -14,6 +14,20 @@ requirements:
     - bpp-phyl
     - cmake=3.11.0
     - openmpi
+test:
+  # from https://pbil.univ-lyon1.fr/redmine/projects/phyldogtoolt/wiki/Tutorial
+  files:
+    - ExampleData.tar.gz
+    - inputFile.txt
+  commands:
+    - tar zxf ExampleData.tar.gz
+    - cd ExampleData
+    - python prepareData.py < ../inputFile.txt
+    - mv OptionFiles/listSpecies.txt OptionFiles/listSpecies.txtBACKUP 
+    - head -6 OptionFiles/listSpecies.txtBACKUP > OptionFiles/listSpecies.txt
+    - mv OptionFiles/listGenes.txt OptionFiles/listGenes.txtBACKUP 
+    - head -20 OptionFiles/listGenes.txtBACKUP > OptionFiles/listGenes.txt
+    - mpirun -np 2 ${PREFIX}/bin/phyldog param=OptionFiles/GeneralOptions.txt
 about:
   home: https://pbil.univ-lyon1.fr/software/phyldog/
   license: CeCILL
