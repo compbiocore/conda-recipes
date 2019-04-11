@@ -1,0 +1,33 @@
+{% set version = "4.1.1.0" %}
+{% set sha256 = "0d997aaf5c633643c07f0e5f74d0e20364a0f1304b04355bc6e073c65fab6554" %}
+
+package:
+  name: gatk4
+  version: '{{ version }}'
+
+source:
+  url: https://github.com/broadinstitute/gatk/releases/download/{{ version }}/gatk-{{ version }}.zip
+  sha256: '{{ sha256 }}'
+
+build:
+  noarch: generic
+  number: 1
+
+requirements:
+  host:
+  run:
+    - openjdk >=8,<9
+    - python
+
+test:
+  commands:
+    - gatk -h
+    - gatk --list
+    - gatk HaplotypeCaller --help
+
+about:
+  home: https://www.broadinstitute.org/gatk/
+  license: BSD-3-Clause
+  license_family: BSD
+  summary: Genome Analysis Toolkit (GATK4)
+  dev_url: https://github.com/broadinstitute/gatk
