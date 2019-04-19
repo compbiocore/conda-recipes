@@ -21,9 +21,9 @@ requirements:
 
 test:
   commands:
-    - gatk -h
-    - gatk --list
-    - gatk HaplotypeCaller --help
+    - gatk4 -h
+    - gatk4 --list
+    - gatk4 HaplotypeCaller --help
 
 about:
   home: https://www.broadinstitute.org/gatk/
