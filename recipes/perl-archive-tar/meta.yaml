@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/Archive::Tar
-  license: perl_5
-  summary: Manipulates TAR archives
 build:
   number: 1
 package:
@@ -30,3 +26,7 @@ test:
   - perl -e "use Archive::Tar"
   - perl -e "use Archive::Tar::Constant"
   - perl -e "use Archive::Tar::File"
+about:
+  home: http://metacpan.org/pod/Archive::Tar
+  license: perl_5
+  summary: Manipulates TAR archives
