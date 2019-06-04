@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/Clone::PP
-  license: perl_5
-  summary: Recursively copy Perl datatypes
 package:
   name: perl-clone-pp
   version: '1.06'
@@ -20,3 +16,7 @@ source:
 test:
   commands:
   - perl -e "use Clone::PP"
+about:
+  home: http://metacpan.org/pod/Clone::PP
+  license: perl_5
+  summary: Recursively copy Perl datatypes

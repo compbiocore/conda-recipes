@@ -1,7 +1,3 @@
-about:
-  home: https://sourceforge.net/projects/estscan/files/BTLib
-  license: open source
-  summary: Binary Search Tree library
 build:
   number: 1
 package:
@@ -19,3 +15,7 @@ source:
 test:
   commands:
   - perl -e 'use BTLib; $main::seq = BTLib->new;'
+about:
+  home: https://sourceforge.net/projects/estscan/files/BTLib
+  license: open source
+  summary: Binary Search Tree library

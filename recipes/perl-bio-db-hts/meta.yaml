@@ -1,7 +1,3 @@
-about:
-  home: https://metacpan.org/pod/Bio::DB::HTS
-  license: Apache v2.0
-  summary: Read files using HTSlib including BAM/CRAM, Tabix and BCF database files
 build:
   number: 1
   skip: true
@@ -26,3 +22,7 @@ source:
   md5: a09468d02a7e58673b177e60915f28b0
   url: https://cpan.metacpan.org/authors/id/R/RI/RISHIDEV/Bio-DB-HTS-2.7.tar.gz
 test:
+about:
+  home: https://metacpan.org/pod/Bio::DB::HTS
+  license: Apache v2.0
+  summary: Read files using HTSlib including BAM/CRAM, Tabix and BCF database files

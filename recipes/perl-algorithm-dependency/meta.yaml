@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/Algorithm-Dependency
-  license: perl_5
-  summary: Base class for implementing various dependency trees
 package:
   name: perl-algorithm-dependency
   version: '1.110'
@@ -26,3 +22,7 @@ source:
 test:
   commands:
   - perl -e "use Algorithm::Dependency"
+about:
+  home: http://metacpan.org/pod/Algorithm-Dependency
+  license: perl_5
+  summary: Base class for implementing various dependency trees

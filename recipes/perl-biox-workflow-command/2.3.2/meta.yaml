@@ -1,7 +1,3 @@
-about:
-  home: https://github.com/biosails/BioX-Workflow-Command
-  license: perl_5
-  summary: Opinionated Bioinformatics Genomics Workflow Creator
 build:
   number: 1
 package:
@@ -112,3 +108,7 @@ test:
   - biox stats -h
   - biox new -h
   - biox add -h
+about:
+  home: https://github.com/biosails/BioX-Workflow-Command
+  license: perl_5
+  summary: Opinionated Bioinformatics Genomics Workflow Creator

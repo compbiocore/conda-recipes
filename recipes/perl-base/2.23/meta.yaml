@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/base
-  license: unknown
-  summary: compile-time class fields
 build:
   number: 1
 package:
@@ -20,3 +16,7 @@ source:
 test:
   commands:
   - perl -e "use base"
+about:
+  home: http://metacpan.org/pod/base
+  license: unknown
+  summary: compile-time class fields

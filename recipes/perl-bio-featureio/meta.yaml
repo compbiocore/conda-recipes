@@ -1,7 +1,3 @@
-about:
-  home: https://metacpan.org/release/Bio-FeatureIO
-  license: perl_5
-  summary: Modules for reading, writing, and manipulating sequence features
 build:
   number: 1
 package:
@@ -37,3 +33,7 @@ test:
   - perl -e "use Bio::FeatureIO::ptt"
   - perl -e "use Bio::FeatureIO::vecscreen_simple"
   - perl -e "use Bio::SeqFeature::Annotated"
+about:
+  home: https://metacpan.org/release/Bio-FeatureIO
+  license: perl_5
+  summary: Modules for reading, writing, and manipulating sequence features

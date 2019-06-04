@@ -1,7 +1,3 @@
-about:
-  home: https://metacpan.org/module/constant
-  license: perl_5
-  summary: Perl pragma to declare constants
 build:
   number: 1
 package:
@@ -20,3 +16,7 @@ source:
 test:
   commands:
   - perl -e "use constant"
+about:
+  home: https://metacpan.org/module/constant
+  license: perl_5
+  summary: Perl pragma to declare constants

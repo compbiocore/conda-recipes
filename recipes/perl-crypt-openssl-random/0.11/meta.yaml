@@ -1,7 +1,3 @@
-about:
-  home: http://sourceforge.net/projects/perl-openssl/
-  license: perl_5
-  summary: OpenSSL/LibreSSL pseudo-random number generator access
 build:
   number: 1
   skip: true
@@ -23,3 +19,7 @@ source:
 test:
   commands:
   - perl -e "use Crypt::OpenSSL::Random"
+about:
+  home: http://sourceforge.net/projects/perl-openssl/
+  license: perl_5
+  summary: OpenSSL/LibreSSL pseudo-random number generator access

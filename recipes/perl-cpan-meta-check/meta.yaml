@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/CPAN-Meta-Check
-  license: perl_5
-  summary: Verify requirements in a CPAN::Meta object
 build:
   number: 1
 package:
@@ -22,3 +18,7 @@ source:
 test:
   commands:
   - perl -e "use CPAN::Meta::Check"
+about:
+  home: http://metacpan.org/pod/CPAN-Meta-Check
+  license: perl_5
+  summary: Verify requirements in a CPAN::Meta object

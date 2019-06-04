@@ -1,7 +1,3 @@
-about:
-  home: https://metacpan.org/release/Color-Theme
-  license: perl_5
-  summary: Color theme structure
 package:
   name: perl-color-theme
   version: '0.01'
@@ -29,3 +25,7 @@ test:
   - perl -e "use Color::Theme::Role"
   - perl -e "use Color::Theme::Role::ANSI"
   - perl -e "use Color::Theme::Util"
+about:
+  home: https://metacpan.org/release/Color-Theme
+  license: perl_5
+  summary: Color theme structure

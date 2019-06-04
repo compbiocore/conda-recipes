@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/BioPerl-Run
-  license: perl_5
-  summary: BioPerl-Run - wrapper toolkit
 build:
   number: 1
 package:
@@ -24,3 +20,7 @@ source:
   fn: BioPerl-Run-1.006900.tar.gz
   md5: c0ce55a64c1d7ab206c1b8f3d3ebd0aa
   url: http://cpan.metacpan.org/authors/id/C/CJ/CJFIELDS/BioPerl-Run-1.006900.tar.gz
+about:
+  home: http://metacpan.org/pod/BioPerl-Run
+  license: perl_5
+  summary: BioPerl-Run - wrapper toolkit

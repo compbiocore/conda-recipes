@@ -1,8 +1,3 @@
-about:
-  home: http://biophylo.blogspot.com/
-  license: perl_5
-  summary: An object-oriented Perl toolkit for analyzing and manipulating phyloinformatic
-    data.
 build:
   number: 1
 package:
@@ -165,3 +160,8 @@ test:
   - perl -e "use Bio::Phylo::Util::OptionalInterface"
   - perl -e "use Bio::Phylo::Util::StackTrace"
   - perl -e "use Bio::PhyloRole"
+about:
+  home: http://biophylo.blogspot.com/
+  license: perl_5
+  summary: An object-oriented Perl toolkit for analyzing and manipulating phyloinformatic
+    data.

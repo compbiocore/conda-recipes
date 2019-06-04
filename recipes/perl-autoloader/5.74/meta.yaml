@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/AutoLoader
-  license: perl_5
-  summary: load subroutines only on demand
 build:
   number: 1
 package:
@@ -15,3 +11,7 @@ requirements:
 test:
   commands:
   - perl -e "use AutoLoader"
+about:
+  home: http://metacpan.org/pod/AutoLoader
+  license: perl_5
+  summary: load subroutines only on demand

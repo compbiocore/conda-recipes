@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/Convert-BinHex
-  license: perl_5
-  summary: extract data from Macintosh BinHex files
 build:
   number: 1
 package:
@@ -21,3 +17,7 @@ source:
 test:
   commands:
   - perl -e "use Convert::BinHex"
+about:
+  home: http://metacpan.org/pod/Convert-BinHex
+  license: perl_5
+  summary: extract data from Macintosh BinHex files

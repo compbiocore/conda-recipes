@@ -1,7 +1,3 @@
-about:
-  home: https://github.com/moose/Class-Load
-  license: perl_5
-  summary: A working (require "Class::Name") and more
 package:
   name: perl-class-load
   version: '0.23'
@@ -37,3 +33,7 @@ test:
   commands:
   - perl -e "use Class::Load"
   - perl -e "use Class::Load::PP"
+about:
+  home: https://github.com/moose/Class-Load
+  license: perl_5
+  summary: A working (require "Class::Name") and more

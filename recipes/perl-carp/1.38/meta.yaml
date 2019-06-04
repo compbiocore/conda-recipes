@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/Carp
-  license: perl_5
-  summary: alternative warn and die for modules
 build:
   number: 1
 package:
@@ -24,3 +20,7 @@ test:
   commands:
   - perl -e "use Carp"
   - perl -e "use Carp::Heavy"
+about:
+  home: http://metacpan.org/pod/Carp
+  license: perl_5
+  summary: alternative warn and die for modules

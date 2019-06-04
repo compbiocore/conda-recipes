@@ -1,7 +1,3 @@
-about:
-  home: https://metacpan.org/pod/Compress::Raw::Zlib
-  license: Perl
-  summary: Low-Level Interface to zlib compression library
 build:
   number: 1
 package:
@@ -22,3 +18,7 @@ source:
 test:
   commands:
   - perl -e "use Compress::Raw::Zlib"
+about:
+  home: https://metacpan.org/pod/Compress::Raw::Zlib
+  license: Perl
+  summary: Low-Level Interface to zlib compression library

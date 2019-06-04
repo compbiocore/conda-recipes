@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/BioPerl
-  license: perl_5
-  summary: '"Core" packages for the BioPerl toolkit; you really should install perl-bioperl.'
 build:
   number: 1
 package:
@@ -89,3 +85,7 @@ source:
     - patches/phd.pm.patch
     - patches/Consed.pm.patch
     - patches/tuschl.pm.patch
+about:
+  home: http://metacpan.org/pod/BioPerl
+  license: perl_5
+  summary: '"Core" packages for the BioPerl toolkit; you really should install perl-bioperl.'

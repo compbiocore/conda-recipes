@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/Acme::Damn
-  license: perl_5
-  summary: '''Unbless'' Perl objects.'
 build:
   number: 1
 package:
@@ -21,3 +17,7 @@ source:
 test:
   commands:
   - perl -e "use Acme::Damn"
+about:
+  home: http://metacpan.org/pod/Acme::Damn
+  license: perl_5
+  summary: '''Unbless'' Perl objects.'

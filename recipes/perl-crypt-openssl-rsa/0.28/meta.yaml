@@ -1,7 +1,3 @@
-about:
-  home: https://metacpan.org/release/Crypt-OpenSSL-RSA
-  license: perl_5
-  summary: RSA encoding and decoding, using the openSSL libraries
 build:
   number: 1
   skip: true
@@ -23,3 +19,7 @@ source:
 test:
   commands:
   - perl -e "use Crypt::OpenSSL::RSA"
+about:
+  home: https://metacpan.org/release/Crypt-OpenSSL-RSA
+  license: perl_5
+  summary: RSA encoding and decoding, using the openSSL libraries

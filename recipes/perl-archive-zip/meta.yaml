@@ -1,7 +1,3 @@
-about:
-  home: https://metacpan.org/pod/Archive::Zip
-  license: Perl
-  summary: Provide an interface to ZIP archive files
 build:
   number: 1
 package:
@@ -17,3 +13,7 @@ requirements:
 source:
   fn: Archive-Zip-1.55.tar.gz
   url: https://cpan.metacpan.org/authors/id/P/PH/PHRED/Archive-Zip-1.55.tar.gz
+about:
+  home: https://metacpan.org/pod/Archive::Zip
+  license: Perl
+  summary: Provide an interface to ZIP archive files

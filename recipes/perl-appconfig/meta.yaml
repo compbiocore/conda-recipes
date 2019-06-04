@@ -1,8 +1,3 @@
-about:
-  home: http://metacpan.org/pod/AppConfig
-  license: perl_5
-  summary: AppConfig is a bundle of Perl5 modules for reading configuration files
-    and parsing command line arguments.
 build:
   number: 1
 package:
@@ -27,3 +22,8 @@ test:
   - perl -e "use AppConfig::Getopt"
   - perl -e "use AppConfig::State"
   - perl -e "use AppConfig::Sys"
+about:
+  home: http://metacpan.org/pod/AppConfig
+  license: perl_5
+  summary: AppConfig is a bundle of Perl5 modules for reading configuration files
+    and parsing command line arguments.

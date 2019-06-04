@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/Algorithm::Cluster
-  license: unknown
-  summary: Perl interface to the C Clustering Library
 build:
   number: 1
 package:
@@ -21,3 +17,7 @@ test:
   commands:
   - perl -e "use Algorithm::Cluster"
   - perl -e "use Algorithm::Cluster::Record"
+about:
+  home: http://metacpan.org/pod/Algorithm::Cluster
+  license: unknown
+  summary: Perl interface to the C Clustering Library

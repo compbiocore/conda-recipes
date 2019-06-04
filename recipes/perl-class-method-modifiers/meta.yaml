@@ -1,7 +1,3 @@
-about:
-  home: https://github.com/moose/Class-Method-Modifiers
-  license: perl_5
-  summary: Provides Moose-like method modifiers
 build:
   number: 1
 package:
@@ -21,3 +17,7 @@ source:
 test:
   commands:
   - perl -e "use Class::Method::Modifiers"
+about:
+  home: https://github.com/moose/Class-Method-Modifiers
+  license: perl_5
+  summary: Provides Moose-like method modifiers

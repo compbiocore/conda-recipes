@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/Canary-Stability
-  license: unknown
-  summary: canary to check perl compatibility for schmorp's modules
 build:
   number: 1
 package:
@@ -19,3 +15,7 @@ source:
 test:
   commands:
   - perl -e "use Canary::Stability"
+about:
+  home: http://metacpan.org/pod/Canary-Stability
+  license: unknown
+  summary: canary to check perl compatibility for schmorp's modules

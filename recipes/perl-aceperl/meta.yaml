@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/AcePerl
-  license: unknown
-  summary: Object-Oriented Access to ACEDB Databases
 build:
   number: 1
 package:
@@ -21,3 +17,7 @@ source:
 test:
   commands:
   - perl -e "use Ace"
+about:
+  home: http://metacpan.org/pod/AcePerl
+  license: unknown
+  summary: Object-Oriented Access to ACEDB Databases
