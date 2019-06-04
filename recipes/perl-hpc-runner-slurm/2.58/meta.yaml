@@ -1,7 +1,3 @@
-about:
-  home: https://bitbucket.org/jerowe/hpc-runner-slurm
-  license: perl_5
-  summary: 'Submit Bioinformatics HPC Workflows with the Slurm scheduler '
 build:
   number: 1
   skip: true
@@ -58,3 +54,7 @@ source:
 test:
   commands:
   - perl -e "use HPC::Runner::Slurm"
+about:
+  home: https://bitbucket.org/jerowe/hpc-runner-slurm
+  license: perl_5
+  summary: 'Submit Bioinformatics HPC Workflows with the Slurm scheduler '

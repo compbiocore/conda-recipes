@@ -1,7 +1,3 @@
-about:
-  home: https://metacpan.org/release/ExtUtils-MakeMaker
-  license: perl_5
-  summary: Create a module Makefile
 build:
   number: 1
   skip: true
@@ -24,3 +20,7 @@ source:
 test:
   commands:
   - perl -e "use ExtUtils::MakeMaker"
+about:
+  home: https://metacpan.org/release/ExtUtils-MakeMaker
+  license: perl_5
+  summary: Create a module Makefile

@@ -1,7 +1,3 @@
-about:
-  home: https://github.com/kentfredric/Git-Wrapper-Plus
-  license: perl_5
-  summary: A Toolkit for working with Git::Wrapper in an Object Oriented Way.
 build:
   number: 1
   skip: true
@@ -58,3 +54,7 @@ test:
   - perl -e "use Git::Wrapper::Plus::Tester"
   - perl -e "use Git::Wrapper::Plus::Util"
   - perl -e "use Git::Wrapper::Plus::Versions"
+about:
+  home: https://github.com/kentfredric/Git-Wrapper-Plus
+  license: perl_5
+  summary: A Toolkit for working with Git::Wrapper in an Object Oriented Way.

@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/release/DateTime
-  license: artistic_2
-  summary: A date and time object for Perl
 build:
   number: 1
 package:
@@ -44,3 +40,7 @@ test:
   commands:
   - perl -e "use DateTime"
   - perl -e "use DateTime::Duration"
+about:
+  home: http://metacpan.org/release/DateTime
+  license: artistic_2
+  summary: A date and time object for Perl

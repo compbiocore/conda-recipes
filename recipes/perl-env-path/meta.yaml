@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/Env::Path
-  license: unknown
-  summary: Advanced operations on path variables
 package:
   name: perl-env-path
   version: '0.19'
@@ -18,3 +14,7 @@ source:
 test:
   commands:
   - perl -e "use Env::Path"
+about:
+  home: http://metacpan.org/pod/Env::Path
+  license: unknown
+  summary: Advanced operations on path variables

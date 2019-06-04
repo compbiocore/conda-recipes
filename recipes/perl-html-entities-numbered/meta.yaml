@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/HTML-Entities-Numbered
-  license: unknown
-  summary: Conversion of numbered HTML entities
 build:
   number: 1
 package:
@@ -20,3 +16,7 @@ test:
   commands:
   - perl -e "use HTML::Entities::Numbered"
   - perl -e "use HTML::Entities::Numbered::Table"
+about:
+  home: http://metacpan.org/pod/HTML-Entities-Numbered
+  license: unknown
+  summary: Conversion of numbered HTML entities

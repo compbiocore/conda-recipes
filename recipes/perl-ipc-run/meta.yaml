@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/IPC-Run
-  license: perl_5
-  summary: system() and background procs w/ piping, redirs, ptys (Unix, Win32)
 build:
   number: 1
 package:
@@ -21,3 +17,7 @@ source:
 test:
   commands:
   - perl -e "use IPC::Run"
+about:
+  home: http://metacpan.org/pod/IPC-Run
+  license: perl_5
+  summary: system() and background procs w/ piping, redirs, ptys (Unix, Win32)

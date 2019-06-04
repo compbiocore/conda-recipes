@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/Font-TTF
-  license: artistic_2
-  summary: TTF font support for Perl
 build:
   number: 1
 package:
@@ -86,3 +82,7 @@ test:
   - perl -e "use Font::TTF::Woff::MetaData"
   - perl -e "use Font::TTF::Woff::PrivateData"
   - perl -e "use Font::TTF::XMLparse"
+about:
+  home: http://metacpan.org/pod/Font-TTF
+  license: artistic_2
+  summary: TTF font support for Perl

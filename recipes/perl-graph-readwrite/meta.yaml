@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/Graph::Writer::Dot
-  license: perl_5
-  summary: Write out directed graph in Dot format
 build:
   number: 1
 package:
@@ -27,3 +23,7 @@ source:
 test:
   commands:
   - perl -e "use Graph::Writer::Dot"
+about:
+  home: http://metacpan.org/pod/Graph::Writer::Dot
+  license: perl_5
+  summary: Write out directed graph in Dot format

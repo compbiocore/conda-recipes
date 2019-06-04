@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/Digest::SHA
-  license: perl_5
-  summary: Perl extension for SHA-1/224/256/384/512
 build:
   number: 1
 package:
@@ -15,3 +11,7 @@ requirements:
 test:
   commands:
   - perl -e "use Digest::SHA"
+about:
+  home: http://metacpan.org/pod/Digest::SHA
+  license: perl_5
+  summary: Perl extension for SHA-1/224/256/384/512

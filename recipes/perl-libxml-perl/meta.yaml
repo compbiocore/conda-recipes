@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/libxml-perl
-  license: unknown
-  summary: Perl SAX parser using nsgmls
 build:
   number: 1
 package:
@@ -33,3 +29,7 @@ test:
   - perl -e "use XML::PatAct::ToObjects"
   - perl -e "use XML::Perl2SAX"
   - perl -e "use XML::SAX2Perl"
+about:
+  home: http://metacpan.org/pod/libxml-perl
+  license: unknown
+  summary: Perl SAX parser using nsgmls

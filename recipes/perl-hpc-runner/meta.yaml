@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/HPC-Runner
-  license: perl_5
-  summary: HPC Runner::Slurm, Runner::MCE and Runner::Threads base class
 build:
   number: 1
   skip: true
@@ -46,3 +42,7 @@ source:
 test:
   commands:
   - perl -e "use HPC::Runner"
+about:
+  home: http://metacpan.org/pod/HPC-Runner
+  license: perl_5
+  summary: HPC Runner::Slurm, Runner::MCE and Runner::Threads base class

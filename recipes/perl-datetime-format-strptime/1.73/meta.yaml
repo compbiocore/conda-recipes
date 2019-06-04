@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/release/DateTime-Format-Strptime
-  license: artistic_2
-  summary: Parse and format strp and strf time patterns
 build:
   number: 1
 package:
@@ -40,3 +36,7 @@ test:
   commands:
   - perl -e "use DateTime::Format::Strptime"
   - perl -e "use DateTime::Format::Strptime::Types"
+about:
+  home: http://metacpan.org/release/DateTime-Format-Strptime
+  license: artistic_2
+  summary: Parse and format strp and strf time patterns

@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/go-perl
-  license: BSD-3-Clause
-  summary: perl modules for GO and other OBO ontologies
 build:
   number: 1
 package:
@@ -24,3 +20,7 @@ source:
 test:
   commands:
   - perl -e "use GO::Parser"
+about:
+  home: http://metacpan.org/pod/go-perl
+  license: BSD-3-Clause
+  summary: perl modules for GO and other OBO ontologies

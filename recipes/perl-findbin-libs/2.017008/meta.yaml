@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/FindBin::libs
-  license: perl_5
-  summary: locate and a 'use lib' or export directories based on $FindBin::Bin.
 build:
   number: 1
 package:
@@ -31,3 +27,7 @@ source:
   url: https://cpan.metacpan.org/authors/id/L/LE/LEMBARK/FindBin-libs-2.017008.tar.gz
 test:
   imports:
+about:
+  home: http://metacpan.org/pod/FindBin::libs
+  license: perl_5
+  summary: locate and a 'use lib' or export directories based on $FindBin::Bin.

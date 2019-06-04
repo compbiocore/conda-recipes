@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/Encode
-  license: perl_5
-  summary: allows you to write your script in non-ASCII and non-UTF-8
 build:
   number: 1
 package:
@@ -24,3 +20,7 @@ source:
 test:
   commands:
   - perl -e "use Encode"
+about:
+  home: http://metacpan.org/pod/Encode
+  license: perl_5
+  summary: allows you to write your script in non-ASCII and non-UTF-8

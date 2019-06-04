@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/IO-stringy
-  license: unknown
-  summary: write a file which is updated atomically
 build:
   number: 1
 package:
@@ -25,3 +21,7 @@ test:
   - perl -e "use IO::ScalarArray"
   - perl -e "use IO::Stringy"
   - perl -e "use IO::Wrap"
+about:
+  home: http://metacpan.org/pod/IO-stringy
+  license: unknown
+  summary: write a file which is updated atomically

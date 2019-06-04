@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/List::Uniq
-  license: perl_5
-  summary: extract the unique elements of a list
 package:
   name: perl-list-uniq
   version: '0.20'
@@ -15,3 +11,7 @@ source:
   fn: List-Uniq-0.20.tar.gz
   md5: 06abbe2fddf2522b9100d672a48fae59
   url: http://cpan.metacpan.org/authors/id/J/JF/JFITZ/List-Uniq-0.20.tar.gz
+about:
+  home: http://metacpan.org/pod/List::Uniq
+  license: perl_5
+  summary: extract the unique elements of a list

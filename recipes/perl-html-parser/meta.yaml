@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/HTML-Parser
-  license: perl_5
-  summary: HTML parser class
 build:
   number: 1
 package:
@@ -27,3 +23,7 @@ test:
   - perl -e "use HTML::Parser"
   - perl -e "use HTML::PullParser"
   - perl -e "use HTML::TokeParser"
+about:
+  home: http://metacpan.org/pod/HTML-Parser
+  license: perl_5
+  summary: HTML parser class

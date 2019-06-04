@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/HTTP-Message
-  license: perl_5
-  summary: HTTP style messages
 build:
   number: 1
 package:
@@ -38,3 +34,7 @@ test:
   - perl -e "use HTTP::Request::Common"
   - perl -e "use HTTP::Response"
   - perl -e "use HTTP::Status"
+about:
+  home: http://metacpan.org/pod/HTTP-Message
+  license: perl_5
+  summary: HTTP style messages

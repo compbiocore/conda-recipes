@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/IO-Compress
-  license: perl_5
-  summary: IO Interface to compressed data files/buffers
 build:
   number: 1
 package:
@@ -50,3 +46,7 @@ test:
   - perl -e "use IO::Uncompress::Inflate"
   - perl -e "use IO::Uncompress::RawInflate"
   - perl -e "use IO::Uncompress::Unzip"
+about:
+  home: http://metacpan.org/pod/IO-Compress
+  license: perl_5
+  summary: IO Interface to compressed data files/buffers

@@ -1,7 +1,3 @@
-about:
-  home: https://metacpan.org/pod/IPC::System::Simple
-  license: Perl
-  summary: Run commands simply, with detailed diagnostics
 build:
   number: 1
 package:
@@ -22,3 +18,7 @@ source:
 test:
   commands:
   - perl -e "use IPC::System::Simple"
+about:
+  home: https://metacpan.org/pod/IPC::System::Simple
+  license: Perl
+  summary: Run commands simply, with detailed diagnostics

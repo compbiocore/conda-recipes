@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/GDGraph
-  license: perl_5
-  summary: Produces charts with GD
 build:
   number: 1
 package:
@@ -25,3 +21,7 @@ source:
 test:
   commands:
   - perl -e "use GD::Graph"
+about:
+  home: http://metacpan.org/pod/GDGraph
+  license: perl_5
+  summary: Produces charts with GD

@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/libwww-perl
-  license: perl_5
-  summary: The World-Wide Web library for Perl
 build:
   number: 1
 package:
@@ -65,3 +61,7 @@ test:
   - perl -e "use LWP::RobotUA"
   - perl -e "use LWP::Simple"
   - perl -e "use LWP::UserAgent"
+about:
+  home: http://metacpan.org/pod/libwww-perl
+  license: perl_5
+  summary: The World-Wide Web library for Perl

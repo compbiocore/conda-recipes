@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/ExtUtils::ParseXS
-  license: unknown
-  summary: converts Perl XS code into C code
 package:
   name: perl-extutils-parsexs
   version: '3.28'
@@ -22,3 +18,7 @@ test:
   - perl -e "use ExtUtils::Typemaps::InputMap"
   - perl -e "use ExtUtils::Typemaps::OutputMap"
   - perl -e "use ExtUtils::Typemaps::Type"
+about:
+  home: http://metacpan.org/pod/ExtUtils::ParseXS
+  license: unknown
+  summary: converts Perl XS code into C code

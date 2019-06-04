@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/Font-AFM
-  license: perl_5
-  summary: Interface to Adobe Font Metrics files
 build:
   number: 1
 package:
@@ -31,3 +27,7 @@ test:
   - perl -e "use Font::Metrics::TimesBoldItalic"
   - perl -e "use Font::Metrics::TimesItalic"
   - perl -e "use Font::Metrics::TimesRoman"
+about:
+  home: http://metacpan.org/pod/Font-AFM
+  license: perl_5
+  summary: Interface to Adobe Font Metrics files

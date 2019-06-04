@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/Data-Utilities
-  license: unknown
-  summary: recursively compare Perl datatypes
 build:
   number: 1
 package:
@@ -26,3 +22,7 @@ test:
   - perl -e "use Data::Merger"
   - perl -e "use Data::Transformator"
   - perl -e "use Data::Utilities"
+about:
+  home: http://metacpan.org/pod/Data-Utilities
+  license: unknown
+  summary: recursively compare Perl datatypes

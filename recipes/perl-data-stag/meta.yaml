@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/Data-Stag
-  license: unknown
-  summary: Structured Tags
 build:
   number: 1
 package:
@@ -61,3 +57,7 @@ test:
   - perl -e "use Data::Stag::XSLHandler"
   - perl -e "use Data::Stag::XSLTHandler"
   - perl -e "use Data::Stag::null"
+about:
+  home: http://metacpan.org/pod/Data-Stag
+  license: unknown
+  summary: Structured Tags

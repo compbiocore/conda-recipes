@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/JSON::MaybeXS
-  license: perl_5
-  summary: Use Cpanel::JSON::XS with a fallback to JSON::XS and JSON::PP
 build:
   number: 1
 package:
@@ -26,3 +22,7 @@ source:
 test:
   commands:
   - perl -e "use JSON::MaybeXS"
+about:
+  home: http://metacpan.org/pod/JSON::MaybeXS
+  license: perl_5
+  summary: Use Cpanel::JSON::XS with a fallback to JSON::XS and JSON::PP

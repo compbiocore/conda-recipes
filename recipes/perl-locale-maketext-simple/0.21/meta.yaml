@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/Locale::Maketext::Simple
-  license: perl_5
-  summary: Simple interface to Locale::Maketext::Lexicon
 build:
   number: 1
 package:
@@ -15,3 +11,7 @@ requirements:
 test:
   commands:
   - perl -e "use Locale::Maketext::Simple"
+about:
+  home: http://metacpan.org/pod/Locale::Maketext::Simple
+  license: perl_5
+  summary: Simple interface to Locale::Maketext::Lexicon

@@ -1,7 +1,3 @@
-about:
-  home: https://metacpan.org/release/Exporter-Tiny
-  license: perl_5
-  summary: Exporter with the features of Sub::Exporter but only core dependencies
 build:
   number: 1
 package:
@@ -22,3 +18,7 @@ test:
   commands:
   - perl -e "use Exporter::Shiny"
   - perl -e "use Exporter::Tiny"
+about:
+  home: https://metacpan.org/release/Exporter-Tiny
+  license: perl_5
+  summary: Exporter with the features of Sub::Exporter but only core dependencies

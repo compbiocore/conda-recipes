@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/ExtUtils-Helpers
-  license: perl_5
-  summary: Various portability utilities for module builders
 build:
   number: 1
   skip: true
@@ -27,3 +23,7 @@ test:
   - perl -e "use ExtUtils::Helpers::Unix"
   - perl -e "use ExtUtils::Helpers::VMS"
   - perl -e "use ExtUtils::Helpers::Windows"
+about:
+  home: http://metacpan.org/pod/ExtUtils-Helpers
+  license: perl_5
+  summary: Various portability utilities for module builders

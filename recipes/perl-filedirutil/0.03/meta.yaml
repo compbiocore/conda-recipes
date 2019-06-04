@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/FileDirUtil
-  license: agpl_3
-  summary: A Moose Role for basic File IO
 build:
   number: 1
 package:
@@ -28,3 +24,7 @@ source:
 test:
   commands:
   - perl -e "use FileDirUtil"
+about:
+  home: http://metacpan.org/pod/FileDirUtil
+  license: agpl_3
+  summary: A Moose Role for basic File IO

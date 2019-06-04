@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/Devel::Size
-  license: perl_5
-  summary: Perl extension for finding the memory usage of Perl variables
 build:
   number: 1
 package:
@@ -22,3 +18,7 @@ source:
 test:
   commands:
   - perl -e "use Devel::Size"
+about:
+  home: http://metacpan.org/pod/Devel::Size
+  license: perl_5
+  summary: Perl extension for finding the memory usage of Perl variables

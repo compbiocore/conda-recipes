@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/GDGraph-histogram
-  license: unknown
-  summary: Histogram plotting module for Perl5
 build:
   number: 1
 package:
@@ -23,3 +19,7 @@ source:
 test:
   commands:
   - perl -e "use GD::Graph::histogram"
+about:
+  home: http://metacpan.org/pod/GDGraph-histogram
+  license: unknown
+  summary: Histogram plotting module for Perl5

@@ -1,7 +1,3 @@
-about:
-  home: https://metacpan.org/pod/File::ShareDir::Install
-  license: Perl
-  summary: Install shared files
 build:
   number: 1
 package:
@@ -22,3 +18,7 @@ source:
 test:
   commands:
   - perl -e "use File::ShareDir::Install"
+about:
+  home: https://metacpan.org/pod/File::ShareDir::Install
+  license: Perl
+  summary: Install shared files

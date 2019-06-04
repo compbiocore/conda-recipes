@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/release/DateTime-Locale
-  license: perl_5
-  summary: Localization support for DateTime.pm
 build:
   number: 1
 package:
@@ -37,3 +33,7 @@ test:
   - perl -e "use DateTime::Locale::Data"
   - perl -e "use DateTime::Locale::FromData"
   - perl -e "use DateTime::Locale::Util"
+about:
+  home: http://metacpan.org/release/DateTime-Locale
+  license: perl_5
+  summary: Localization support for DateTime.pm

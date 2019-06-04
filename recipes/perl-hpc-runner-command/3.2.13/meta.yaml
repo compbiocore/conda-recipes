@@ -1,7 +1,3 @@
-about:
-  home: https://github.com/biosails/HPC-Runner-Command
-  license: perl_5
-  summary: Create composable bioinformatics hpc analyses.
 build:
   number: 1
 package:
@@ -115,3 +111,7 @@ test:
   - hpcrunner.pl submit_jobs --help
   - hpcrunner.pl execute_job --help
   - hpcrunner.pl execute_array --help
+about:
+  home: https://github.com/biosails/HPC-Runner-Command
+  license: perl_5
+  summary: Create composable bioinformatics hpc analyses.

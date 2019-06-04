@@ -1,7 +1,3 @@
-about:
-  home: https://bitbucket.org/jerowe/hpc-runner-pbs
-  license: perl_5
-  summary: Submit jobs to a PBS job scheduler.
 package:
   name: perl-hpc-runner-pbs
   version: '0.12'
@@ -21,3 +17,7 @@ source:
 test:
   commands:
   - perl -e "use HPC::Runner::PBS"
+about:
+  home: https://bitbucket.org/jerowe/hpc-runner-pbs
+  license: perl_5
+  summary: Submit jobs to a PBS job scheduler.

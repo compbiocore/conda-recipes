@@ -1,7 +1,3 @@
-about:
-  home: https://metacpan.org/pod/File::Copy::Link
-  license: Perl
-  summary: Perl extension for replacing a link by a copy of the linked file.
 build:
   number: 1
   skip: true
@@ -26,3 +22,7 @@ source:
 test:
   commands:
   - perl -e "use File::Copy::Link"
+about:
+  home: https://metacpan.org/pod/File::Copy::Link
+  license: Perl
+  summary: Perl extension for replacing a link by a copy of the linked file.

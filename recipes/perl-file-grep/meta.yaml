@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/File::Grep
-  license: unknown
-  summary: Find matches to a pattern in a series of files and related functions
 package:
   name: perl-file-grep
   version: '0.02'
@@ -17,3 +13,7 @@ source:
 test:
   commands:
   - perl -e "use File::Grep"
+about:
+  home: http://metacpan.org/pod/File::Grep
+  license: unknown
+  summary: Find matches to a pattern in a series of files and related functions

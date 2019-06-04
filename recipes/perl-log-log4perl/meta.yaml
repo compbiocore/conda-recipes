@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/Log-Log4perl
-  license: unknown
-  summary: Log4j implementation for Perl
 build:
   number: 1
 package:
@@ -32,3 +28,7 @@ test:
   - perl -e "use Log::Log4perl::Config"
   - perl -e "use Log::Log4perl::Level"
   - perl -e "use Log::Log4perl::Logger"
+about:
+  home: http://metacpan.org/pod/Log-Log4perl
+  license: unknown
+  summary: Log4j implementation for Perl

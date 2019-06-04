@@ -1,7 +1,3 @@
-about:
-  home: https://github.com/rjbs/Data-OptList
-  license: perl_5
-  summary: parse and validate simple name/value option pairs
 package:
   name: perl-data-optlist
   version: '0.110'
@@ -28,3 +24,7 @@ source:
 test:
   commands:
   - perl -e "use Data::OptList"
+about:
+  home: https://github.com/rjbs/Data-OptList
+  license: perl_5
+  summary: parse and validate simple name/value option pairs

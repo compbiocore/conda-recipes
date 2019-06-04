@@ -1,7 +1,3 @@
-about:
-  home: https://github.com/dagolden/File-chdir
-  license: perl_5
-  summary: a more sensible way to change directories
 package:
   name: perl-file-chdir
   version: '0.1010'
@@ -22,3 +18,7 @@ source:
 test:
   commands:
   - perl -e "use File::chdir"
+about:
+  home: https://github.com/dagolden/File-chdir
+  license: perl_5
+  summary: a more sensible way to change directories

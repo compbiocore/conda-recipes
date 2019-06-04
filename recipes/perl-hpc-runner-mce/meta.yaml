@@ -1,7 +1,3 @@
-about:
-  home: https://bitbucket.org/jerowe/hpc-runner-mce
-  license: perl_5
-  summary: Job submission using MCE
 package:
   name: perl-hpc-runner-mce
   version: '2.41'
@@ -21,3 +17,7 @@ source:
 test:
   commands:
   - perl -e "use HPC::Runner::MCE"
+about:
+  home: https://bitbucket.org/jerowe/hpc-runner-mce
+  license: perl_5
+  summary: Job submission using MCE

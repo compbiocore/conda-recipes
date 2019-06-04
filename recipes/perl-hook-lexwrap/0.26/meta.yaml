@@ -1,7 +1,3 @@
-about:
-  home: https://github.com/karenetheridge/Hook-LexWrap
-  license: perl_5
-  summary: Lexically scoped subroutine wrappers
 build:
   number: 1
 package:
@@ -24,3 +20,7 @@ source:
 test:
   commands:
   - perl -e "use Hook::LexWrap"
+about:
+  home: https://github.com/karenetheridge/Hook-LexWrap
+  license: perl_5
+  summary: Lexically scoped subroutine wrappers

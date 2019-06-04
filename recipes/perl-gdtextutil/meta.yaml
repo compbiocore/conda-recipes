@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/GDTextUtil
-  license: unknown
-  summary: Text utilities for use with GD
 build:
   number: 1
 package:
@@ -24,3 +20,7 @@ source:
 test:
   commands:
   - perl -e "use GD::Text"
+about:
+  home: http://metacpan.org/pod/GDTextUtil
+  license: unknown
+  summary: Text utilities for use with GD

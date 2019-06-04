@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/HTML-TreeBuilder-XPath
-  license: perl_5
-  summary: add XPath support to HTML::TreeBuilder
 build:
   number: 1
 package:
@@ -23,3 +19,7 @@ source:
 test:
   commands:
   - perl -e "use HTML::TreeBuilder::XPath"
+about:
+  home: http://metacpan.org/pod/HTML-TreeBuilder-XPath
+  license: perl_5
+  summary: add XPath support to HTML::TreeBuilder

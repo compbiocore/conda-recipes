@@ -1,9 +1,3 @@
-about:
-  home: http://estscan.sourceforge.net
-  license: open source
-  summary: Detects coding regions in DNA sequences even if they are of low quality.
-    ESTScan.pm contains the Perl part of the code that reads in the matrices file.
-    The C code that does the actual computation is located in estscan.c.
 build:
   number: 1
 package:
@@ -22,3 +16,9 @@ source:
 test:
   commands:
   - perl -e "use ESTScan1"
+about:
+  home: http://estscan.sourceforge.net
+  license: open source
+  summary: Detects coding regions in DNA sequences even if they are of low quality.
+    ESTScan.pm contains the Perl part of the code that reads in the matrices file.
+    The C code that does the actual computation is located in estscan.c.

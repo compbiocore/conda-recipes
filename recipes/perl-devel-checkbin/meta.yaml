@@ -1,7 +1,3 @@
-about:
-  home: https://metacpan.org/pod/Devel::CheckBin
-  license: perl_5
-  summary: check that a command is available
 build:
   number: 1
   skip: true
@@ -21,3 +17,7 @@ source:
 test:
   commands:
   - perl -e "use Devel::CheckBin"
+about:
+  home: https://metacpan.org/pod/Devel::CheckBin
+  license: perl_5
+  summary: check that a command is available

@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/HTTP-Cookies
-  license: perl_5
-  summary: HTTP cookie jars
 build:
   number: 1
 package:
@@ -23,3 +19,7 @@ source:
 test:
   commands:
   - perl -e "use HTTP::Cookies"
+about:
+  home: http://metacpan.org/pod/HTTP-Cookies
+  license: perl_5
+  summary: HTTP cookie jars

@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/Data::Walk
-  license: open_source
-  summary: Traverse Perl data structures.
 build:
   number: 1
 package:
@@ -21,3 +17,7 @@ source:
 test:
   commands:
   - perl -e "use Data::Walk"
+about:
+  home: http://metacpan.org/pod/Data::Walk
+  license: open_source
+  summary: Traverse Perl data structures.
