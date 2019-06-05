@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/MailTools
-  license: perl_5
-  summary: Various e-mail related modules
 build:
   number: 1
 package:
@@ -32,3 +28,7 @@ test:
   - perl -e "use Mail::Mailer"
   - perl -e "use Mail::Send"
   - perl -e "use Mail::Util"
+about:
+  home: http://metacpan.org/pod/MailTools
+  license: perl_5
+  summary: Various e-mail related modules

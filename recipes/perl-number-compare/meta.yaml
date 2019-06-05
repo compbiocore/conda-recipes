@@ -1,7 +1,3 @@
-about:
-  home: https://metacpan.org/pod/Number::Compare
-  license: perl_5
-  summary: Numeric comparisons
 build:
   number: 1
 package:
@@ -19,3 +15,7 @@ source:
 test:
   commands:
   - perl -e "use Number::Compare"
+about:
+  home: https://metacpan.org/pod/Number::Compare
+  license: perl_5
+  summary: Numeric comparisons

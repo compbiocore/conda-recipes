@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/Math-Combinatorics
-  license: unknown
-  summary: Perform combinations and permutations on lists
 build:
   number: 1
 package:
@@ -19,3 +15,7 @@ source:
 test:
   commands:
   - perl -e "use Math::Combinatorics"
+about:
+  home: http://metacpan.org/pod/Math-Combinatorics
+  license: unknown
+  summary: Perform combinations and permutations on lists

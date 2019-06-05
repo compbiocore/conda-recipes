@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/NTLM
-  license: perl_5
-  summary: An NTLM authentication module
 build:
   number: 1
 package:
@@ -21,3 +17,7 @@ source:
 test:
   commands:
   - perl -e "use Authen::NTLM"
+about:
+  home: http://metacpan.org/pod/NTLM
+  license: perl_5
+  summary: An NTLM authentication module

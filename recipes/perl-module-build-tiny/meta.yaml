@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/Module-Build-Tiny
-  license: perl_5
-  summary: A tiny replacement for Module::Build
 build:
   number: 1
 package:
@@ -24,3 +20,7 @@ source:
 test:
   commands:
   - which perl
+about:
+  home: http://metacpan.org/pod/Module-Build-Tiny
+  license: perl_5
+  summary: A tiny replacement for Module::Build

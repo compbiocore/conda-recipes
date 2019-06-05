@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/MLDBM-Sync
-  license: unknown
-  summary: safe concurrent access to MLDBM databases
 build:
   number: 1
 package:
@@ -23,3 +19,7 @@ source:
 test:
   commands:
   - perl -e "use MLDBM::Sync"
+about:
+  home: http://metacpan.org/pod/MLDBM-Sync
+  license: unknown
+  summary: safe concurrent access to MLDBM databases

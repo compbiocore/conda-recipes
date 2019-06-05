@@ -1,24 +1,19 @@
 package:
   name: perl-module-build
   version: "0.4224"
-
 source:
   fn: Module-Build-0.4224.tar.gz
   url: https://cpan.metacpan.org/authors/id/L/LE/LEONT/Module-Build-0.4224.tar.gz
   md5: b74c2f6e84b60aad3a3defd30b6f0f4d
-
 build:
   number: 1
-
 requirements:
   build:
     - gcc
     - perl
-
   run:
     - libgcc
     - perl
-
 about:
   home: http://metacpan.org/pod/Module-Build
   license: perl_5

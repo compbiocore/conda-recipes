@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/Net-HTTP
-  license: perl_5
-  summary: Low-level HTTP connection (client)
 build:
   number: 1
 package:
@@ -26,3 +22,7 @@ test:
   - perl -e "use Net::HTTP::Methods"
   - perl -e "use Net::HTTP::NB"
   - perl -e "use Net::HTTPS"
+about:
+  home: http://metacpan.org/pod/Net-HTTP
+  license: perl_5
+  summary: Low-level HTTP connection (client)

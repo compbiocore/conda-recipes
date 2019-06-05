@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/Math-Round
-  license: unknown
-  summary: Perl extension for rounding numbers
 package:
   name: perl-math-round
   version: '0.07'
@@ -18,3 +14,7 @@ source:
 test:
   commands:
   - perl -e "use Math::Round"
+about:
+  home: http://metacpan.org/pod/Math-Round
+  license: unknown
+  summary: Perl extension for rounding numbers

@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/Net::SSLeay
-  license: perl_5
-  summary: Perl extension for using OpenSSL
 build:
   number: 1
 package:
@@ -24,3 +20,7 @@ source:
 test:
   commands:
   - perl -e "use Net::SSLeay"
+about:
+  home: http://metacpan.org/pod/Net::SSLeay
+  license: perl_5
+  summary: Perl extension for using OpenSSL

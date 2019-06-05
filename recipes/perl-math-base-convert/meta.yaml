@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/Math-Base-Convert
-  license: unknown
-  summary: very fast base to base conversion
 build:
   number: 1
 package:
@@ -17,3 +13,7 @@ source:
   md5: aed8356d8e2870ee1d27a7b6c5752714
   url: https://cpan.metacpan.org/authors/id/M/MI/MIKER/Math-Base-Convert-0.11.tar.gz
 test:
+about:
+  home: http://metacpan.org/pod/Math-Base-Convert
+  license: unknown
+  summary: very fast base to base conversion

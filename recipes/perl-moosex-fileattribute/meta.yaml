@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/MooseX-FileAttribute
-  license: perl_5
-  summary: sugar for classes that have file or directory attributes
 build:
   number: 1
   skip: true
@@ -26,3 +22,7 @@ source:
   md5: 6024b41ed243cfcb65f97ed0b7750627
   url: http://cpan.metacpan.org/authors/id/J/JR/JROCKWAY/MooseX-FileAttribute-0.02.tar.gz
 test:
+about:
+  home: http://metacpan.org/pod/MooseX-FileAttribute
+  license: perl_5
+  summary: sugar for classes that have file or directory attributes

@@ -1,7 +1,3 @@
-about:
-  home: https://github.com/briandfoy/module-extract-use
-  license: artistic_2
-  summary: Pull out the modules a module explicitly uses
 build:
   number: 1
 package:
@@ -26,3 +22,7 @@ source:
 test:
   commands:
   - perl -e "use Module::Extract::Use"
+about:
+  home: https://github.com/briandfoy/module-extract-use
+  license: artistic_2
+  summary: Pull out the modules a module explicitly uses

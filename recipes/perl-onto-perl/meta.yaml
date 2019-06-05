@@ -1,8 +1,3 @@
-about:
-  home: http://metacpan.org/pod/ONTO-PERL
-  license: perl_5
-  summary: PERL modules for manipulating OBO-formatted ontologies, such as the Gene
-    Ontology (GO)
 build:
   number: 1
 package:
@@ -23,3 +18,8 @@ source:
 test:
   commands:
   - perl -e "use OBO::Core::Term"
+about:
+  home: http://metacpan.org/pod/ONTO-PERL
+  license: perl_5
+  summary: PERL modules for manipulating OBO-formatted ontologies, such as the Gene
+    Ontology (GO)

@@ -1,7 +1,3 @@
-about:
-  home: https://metacpan.org/pod/MooseX::App::Role::Log4perl
-  license: perl_5
-  summary: Add basic Log::Log4perl logging to a MooseX::App application as a role.
 build:
   number: 1
   skip: true
@@ -25,3 +21,7 @@ source:
 test:
   commands:
   - perl -e "use MooseX::App::Role::Log4perl"
+about:
+  home: https://metacpan.org/pod/MooseX::App::Role::Log4perl
+  license: perl_5
+  summary: Add basic Log::Log4perl logging to a MooseX::App application as a role.

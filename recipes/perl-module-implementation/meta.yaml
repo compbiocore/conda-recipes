@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/release/Module-Implementation
-  license: artistic_2
-  summary: Loads one of several alternate underlying implementations for a module
 build:
   number: 1
 package:
@@ -25,3 +21,7 @@ source:
 test:
   commands:
   - perl -e "use Module::Implementation"
+about:
+  home: http://metacpan.org/release/Module-Implementation
+  license: artistic_2
+  summary: Loads one of several alternate underlying implementations for a module

@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/Number-Format
-  license: perl_5
-  summary: Perl extension for formatting numbers
 build:
   number: 1
   skip: true
@@ -21,3 +17,7 @@ source:
 test:
   commands:
   - perl -e "use Number::Format"
+about:
+  home: http://metacpan.org/pod/Number-Format
+  license: perl_5
+  summary: Perl extension for formatting numbers
