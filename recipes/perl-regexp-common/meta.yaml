@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/Regexp-Common
-  license: mit
-  summary: Provide commonly requested regular expressions
 package:
   name: perl-regexp-common
   version: '2016060801'
@@ -30,3 +26,7 @@ test:
   - perl -e "use Regexp::Common::profanity"
   - perl -e "use Regexp::Common::whitespace"
   - perl -e "use Regexp::Common::zip"
+about:
+  home: http://metacpan.org/pod/Regexp-Common
+  license: mit
+  summary: Provide commonly requested regular expressions

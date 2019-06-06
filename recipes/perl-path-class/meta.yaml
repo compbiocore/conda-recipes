@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/Path-Class
-  license: perl_5
-  summary: Cross-platform path specification manipulation
 build:
   number: 1
 package:
@@ -23,3 +19,7 @@ test:
   - perl -e "use Path::Class::Dir"
   - perl -e "use Path::Class::Entity"
   - perl -e "use Path::Class::File"
+about:
+  home: http://metacpan.org/pod/Path-Class
+  license: perl_5
+  summary: Cross-platform path specification manipulation

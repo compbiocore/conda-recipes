@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/PostScript
-  license: unknown
-  summary: helper module for PostScript::TextBlock
 build:
   number: 1
 package:
@@ -24,3 +20,7 @@ test:
   - perl -e "use PostScript::Elements"
   - perl -e "use PostScript::Metrics"
   - perl -e "use PostScript::TextBlock"
+about:
+  home: http://metacpan.org/pod/PostScript
+  license: unknown
+  summary: helper module for PostScript::TextBlock

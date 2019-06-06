@@ -1,7 +1,3 @@
-about:
-  home: https://github.com/rjbs/Pod-Coverage-TrustPod
-  license: perl_5
-  summary: allow a module's pod to contain Pod::Coverage hints
 build:
   number: 1
 package:
@@ -26,3 +22,7 @@ source:
 test:
   commands:
   - perl -e "use Pod::Coverage::TrustPod"
+about:
+  home: https://github.com/rjbs/Pod-Coverage-TrustPod
+  license: perl_5
+  summary: allow a module's pod to contain Pod::Coverage hints

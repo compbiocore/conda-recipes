@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/Pod::Parser
-  license: unknown
-  summary: Modules for parsing/translating POD format documents
 build:
   number: 1
 package:
@@ -22,3 +18,7 @@ source:
 test:
   commands:
   - perl -e "use Pod::Parser"
+about:
+  home: http://metacpan.org/pod/Pod::Parser
+  license: unknown
+  summary: Modules for parsing/translating POD format documents

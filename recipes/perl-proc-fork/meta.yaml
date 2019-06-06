@@ -1,7 +1,3 @@
-about:
-  home: http://github.com/ap/Proc-Fork
-  license: perl_5
-  summary: simple, intuitive interface to the fork() system call
 package:
   name: perl-proc-fork
   version: '0.804'
@@ -19,3 +15,7 @@ source:
 test:
   commands:
   - perl -e "use Proc::Fork"
+about:
+  home: http://github.com/ap/Proc-Fork
+  license: perl_5
+  summary: simple, intuitive interface to the fork() system call

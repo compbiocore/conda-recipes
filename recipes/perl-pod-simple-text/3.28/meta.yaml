@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/Pod::Simple::Text
-  license: perl_5
-  summary: format Pod as plaintext
 build:
   number: 1
 package:
@@ -12,3 +8,7 @@ requirements:
   - perl
   run:
   - perl
+about:
+  home: http://metacpan.org/pod/Pod::Simple::Text
+  license: perl_5
+  summary: format Pod as plaintext

@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/release/Package-Stash
-  license: perl_5
-  summary: routines for manipulating stashes
 build:
   number: 1
 package:
@@ -36,3 +32,7 @@ test:
   commands:
   - perl -e "use Package::Stash"
   - perl -e "use Package::Stash::PP"
+about:
+  home: http://metacpan.org/release/Package-Stash
+  license: perl_5
+  summary: routines for manipulating stashes

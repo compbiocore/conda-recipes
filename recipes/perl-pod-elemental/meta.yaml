@@ -1,7 +1,3 @@
-about:
-  home: https://github.com/rjbs/Pod-Elemental
-  license: perl_5
-  summary: work with nestable Pod elements
 build:
   number: 1
 package:
@@ -34,3 +30,7 @@ source:
 test:
   commands:
   - perl -e "use Pod::Elemental"
+about:
+  home: https://github.com/rjbs/Pod-Elemental
+  license: perl_5
+  summary: work with nestable Pod elements

@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/PerlIO
-  license: perl_5
-  summary: On demand loader for PerlIO layers and root of PerlIO::* name space
 build:
   number: 1
 package:
@@ -12,3 +8,7 @@ requirements:
   - perl
   run:
   - perl
+about:
+  home: http://metacpan.org/pod/PerlIO
+  license: perl_5
+  summary: On demand loader for PerlIO layers and root of PerlIO::* name space

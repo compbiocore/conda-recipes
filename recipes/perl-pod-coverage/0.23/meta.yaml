@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/Pod::Coverage
-  license: unknown
-  summary: Checks if the documentation of a module is comprehensive
 build:
   number: 1
 package:
@@ -26,3 +22,7 @@ source:
 test:
   commands:
   - perl -e "Pod::Coverage"
+about:
+  home: http://metacpan.org/pod/Pod::Coverage
+  license: unknown
+  summary: Checks if the documentation of a module is comprehensive

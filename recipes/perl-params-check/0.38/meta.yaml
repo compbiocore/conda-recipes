@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/Params::Check
-  license: perl_5
-  summary: Templated based param validation
 build:
   number: 1
 package:
@@ -15,3 +11,7 @@ requirements:
 test:
   commands:
   - perl -e "use Params::Check"
+about:
+  home: http://metacpan.org/pod/Params::Check
+  license: perl_5
+  summary: Templated based param validation

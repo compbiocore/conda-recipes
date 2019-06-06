@@ -1,7 +1,3 @@
-about:
-  home: https://github.com/adamkennedy/PPI
-  license: perl_5
-  summary: Parse, Analyze and Manipulate Perl (without perl)
 build:
   number: 1
 package:
@@ -135,3 +131,7 @@ test:
   - perl -e "use PPI::Transform::UpdateCopyright"
   - perl -e "use PPI::Util"
   - perl -e "use PPI::XSAccessor"
+about:
+  home: https://github.com/adamkennedy/PPI
+  license: perl_5
+  summary: Parse, Analyze and Manipulate Perl (without perl)
