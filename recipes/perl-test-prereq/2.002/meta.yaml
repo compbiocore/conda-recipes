@@ -1,7 +1,3 @@
-about:
-  home: https://github.com/briandfoy/test-prereq
-  license: artistic_2
-  summary: check if Makefile.PL has the right pre-requisites
 build:
   number: 1
 package:
@@ -33,3 +29,7 @@ test:
   commands:
   - perl -e "use Test::Prereq"
   - perl -e "use Test::Prereq::Build"
+about:
+  home: https://github.com/briandfoy/test-prereq
+  license: artistic_2
+  summary: check if Makefile.PL has the right pre-requisites

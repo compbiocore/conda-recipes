@@ -1,7 +1,3 @@
-about:
-  home: https://github.com/ingydotnet/test-yaml-pm
-  license: perl_5
-  summary: Testing Module for YAML Implementations
 build:
   number: 1
 package:
@@ -21,3 +17,7 @@ source:
 test:
   commands:
   - perl -e "use Test::YAML tests => 1; pass;"
+about:
+  home: https://github.com/ingydotnet/test-yaml-pm
+  license: perl_5
+  summary: Testing Module for YAML Implementations

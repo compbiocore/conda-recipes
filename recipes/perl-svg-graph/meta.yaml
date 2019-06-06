@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/SVG-Graph
-  license: unknown
-  summary: Visualize your data in Scalable Vector Graphics (SVG) format.
 build:
   number: 1
 package:
@@ -48,3 +44,7 @@ test:
   - perl -e "use SVG::Graph::Glyph::scatter"
   - perl -e "use SVG::Graph::Glyph::tree"
   - perl -e "use SVG::Graph::Glyph::wedge"
+about:
+  home: http://metacpan.org/pod/SVG-Graph
+  license: unknown
+  summary: Visualize your data in Scalable Vector Graphics (SVG) format.

@@ -1,7 +1,3 @@
-about:
-  home: https://github.com/vcftools/vcftools
-  license: LGPLv3
-  summary: cpanm ready distribution of VCFtools Perl libraries
 build:
   number: 1
   skip: false
@@ -24,3 +20,7 @@ source:
 test:
   commands:
   - perl -e "use Vcf;"
+about:
+  home: https://github.com/vcftools/vcftools
+  license: LGPLv3
+  summary: cpanm ready distribution of VCFtools Perl libraries

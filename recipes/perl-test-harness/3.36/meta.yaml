@@ -1,7 +1,3 @@
-about:
-  home: http://testanything.org/
-  license: perl_5
-  summary: contributing to TAP::Harness
 build:
   number: 1
 package:
@@ -20,3 +16,7 @@ source:
 test:
   commands:
   - perl -e "use Test::Harness"
+about:
+  home: http://testanything.org/
+  license: perl_5
+  summary: contributing to TAP::Harness

@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/Test2::Suite
-  license: perl_5
-  summary: Distribution with a rich set of tools built upon the Test2 framework.
 package:
   name: perl-test2-suite
   version: '0.000061'
@@ -90,3 +86,7 @@ test:
   - perl -e "use Test2::Util::Sub"
   - perl -e "use Test2::Util::Table"
   - perl -e "use Test2::Util::Table::LineBreak"
+about:
+  home: http://metacpan.org/pod/Test2::Suite
+  license: perl_5
+  summary: Distribution with a rich set of tools built upon the Test2 framework.

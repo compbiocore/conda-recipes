@@ -1,7 +1,3 @@
-about:
-  home: https://metacpan.org/pod/Tie::Hash::Indexed
-  license: perl_5
-  summary: Ordered hashes for Perl
 build:
   number: 1
 package:
@@ -20,3 +16,7 @@ source:
 test:
   commands:
   - perl -e "use Tie::Hash::Indexed"
+about:
+  home: https://metacpan.org/pod/Tie::Hash::Indexed
+  license: perl_5
+  summary: Ordered hashes for Perl

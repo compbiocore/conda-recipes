@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/Safe
-  license: unknown
-  summary: Compile and execute code in restricted compartments
 build:
   number: 1
 package:
@@ -15,3 +11,7 @@ requirements:
 test:
   commands:
   - perl -e "use Safe"
+about:
+  home: http://metacpan.org/pod/Safe
+  license: unknown
+  summary: Compile and execute code in restricted compartments

@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/Time::Local
-  license: perl_5
-  summary: efficiently compute time from local and GMT time
 build:
   number: 1
 package:
@@ -15,3 +11,7 @@ requirements:
 test:
   commands:
   - perl -e "use Time::Local"
+about:
+  home: http://metacpan.org/pod/Time::Local
+  license: perl_5
+  summary: efficiently compute time from local and GMT time

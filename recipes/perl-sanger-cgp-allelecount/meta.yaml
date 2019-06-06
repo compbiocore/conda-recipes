@@ -1,7 +1,3 @@
-about:
-  home: https://github.com/cancerit/alleleCount
-  license: GPLv3
-  summary: Support code for NGS copy number algorithm
 build:
   number: 1
   skip: true
@@ -29,3 +25,7 @@ source:
 test:
   commands:
   - perl -e "use Sanger::CGP::AlleleCount"
+about:
+  home: https://github.com/cancerit/alleleCount
+  license: GPLv3
+  summary: Support code for NGS copy number algorithm

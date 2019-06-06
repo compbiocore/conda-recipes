@@ -1,8 +1,3 @@
-about:
-  home: https://github.com/cancerit/VAGrENT
-  license: GPLv3
-  summary: A toolset for comparing genomic variants to reference genome annotation
-    to identify potential biological consequences
 build:
   number: 1
   skip: true
@@ -28,3 +23,8 @@ source:
 test:
   commands:
   - perl -e "use Sanger::CGP::Vagrent"
+about:
+  home: https://github.com/cancerit/VAGrENT
+  license: GPLv3
+  summary: A toolset for comparing genomic variants to reference genome annotation
+    to identify potential biological consequences

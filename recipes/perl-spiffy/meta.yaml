@@ -1,7 +1,3 @@
-about:
-  home: https://github.com/ingydotnet/spiffy-pm
-  license: perl_5
-  summary: Spiffy Perl Interface Framework For You
 build:
   number: 1
 package:
@@ -19,3 +15,7 @@ source:
 test:
   commands:
   - perl -e "use Spiffy"
+about:
+  home: https://github.com/ingydotnet/spiffy-pm
+  license: perl_5
+  summary: Spiffy Perl Interface Framework For You

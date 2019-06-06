@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/Text::ASCIITable
-  license: perl_5
-  summary: Create a nice formatted table using ASCII characters.
 build:
   number: 1
 package:
@@ -22,3 +18,7 @@ source:
 test:
   commands:
   - perl -e "use Text::ASCIITable"
+about:
+  home: http://metacpan.org/pod/Text::ASCIITable
+  license: perl_5
+  summary: Create a nice formatted table using ASCII characters.

@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/Test::Files
-  license: unknown
-  summary: A Test::Builder based module to ease testing with files and dirs
 package:
   name: perl-test-files
   version: '0.14'
@@ -25,3 +21,7 @@ source:
 test:
   commands:
   - perl -e "use Test::Files"
+about:
+  home: http://metacpan.org/pod/Test::Files
+  license: unknown
+  summary: A Test::Builder based module to ease testing with files and dirs

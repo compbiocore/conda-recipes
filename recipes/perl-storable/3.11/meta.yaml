@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/Storable
-  license: perl_5
-  summary: persistence for Perl data structures
 build:
   number: 1
 package:
@@ -22,3 +18,7 @@ source:
 test:
   commands:
   - perl -e "use Storable"
+about:
+  home: http://metacpan.org/pod/Storable
+  license: perl_5
+  summary: persistence for Perl data structures

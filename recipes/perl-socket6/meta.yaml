@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/Socket6
-  license: unknown
-  summary: IPv6 related part of the C socket.h defines and structure manipulators
 build:
   number: 1
 package:
@@ -19,3 +15,7 @@ source:
 test:
   commands:
   - perl -e "use Socket6"
+about:
+  home: http://metacpan.org/pod/Socket6
+  license: unknown
+  summary: IPv6 related part of the C socket.h defines and structure manipulators

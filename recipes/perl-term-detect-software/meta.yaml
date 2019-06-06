@@ -1,7 +1,3 @@
-about:
-  home: https://metacpan.org/release/Term-Detect-Software
-  license: perl_5
-  summary: Detect terminal (emulator) software and its capabilities
 package:
   name: perl-term-detect-software
   version: '0.21'
@@ -23,3 +19,7 @@ source:
 test:
   commands:
   - perl -e "use Term::Detect::Software"
+about:
+  home: https://metacpan.org/release/Term-Detect-Software
+  license: perl_5
+  summary: Detect terminal (emulator) software and its capabilities

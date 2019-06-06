@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/Test::Builder::Tester
-  license: unknown
-  summary: test testsuites that have been built with Test::Builder
 package:
   name: perl-test-builder-tester
   version: '1.23_002'
@@ -10,3 +6,7 @@ requirements:
   - perl
   run:
   - perl
+about:
+  home: http://metacpan.org/pod/Test::Builder::Tester
+  license: unknown
+  summary: test testsuites that have been built with Test::Builder

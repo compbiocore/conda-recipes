@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/Time::HiRes
-  license: perl_5
-  summary: High resolution alarm, sleep, gettimeofday, interval timers
 build:
   number: 1
 package:
@@ -15,3 +11,7 @@ requirements:
 test:
   commands:
   - perl -e "use Time::HiRes"
+about:
+  home: http://metacpan.org/pod/Time::HiRes
+  license: perl_5
+  summary: High resolution alarm, sleep, gettimeofday, interval timers

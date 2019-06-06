@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/Tie::Log4perl
-  license: perl_5
-  summary: Tie a filehandle to log via Log4perl
 build:
   number: 1
 package:
@@ -22,3 +18,7 @@ source:
 test:
   commands:
   - perl -e "use Tie::Log4perl"
+about:
+  home: http://metacpan.org/pod/Tie::Log4perl
+  license: perl_5
+  summary: Tie a filehandle to log via Log4perl

@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/URI
-  license: perl_5
-  summary: Uniform Resource Identifiers (absolute and relative)
 build:
   number: 1
 package:
@@ -17,3 +13,7 @@ source:
   sha256: 9c8eca0d7f39e74bbc14706293e653b699238eeb1a7690cc9c136fb8c2644115
   url: https://cpan.metacpan.org/authors/id/E/ET/ETHER/URI-1.71.tar.gz
 test:
+about:
+  home: http://metacpan.org/pod/URI
+  license: perl_5
+  summary: Uniform Resource Identifiers (absolute and relative)

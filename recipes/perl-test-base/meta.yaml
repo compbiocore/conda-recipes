@@ -1,7 +1,3 @@
-about:
-  home: https://github.com/ingydotnet/test-base-pm
-  license: perl_5
-  summary: A Data Driven Testing Framework
 build:
   number: 1
 package:
@@ -25,3 +21,7 @@ test:
   commands:
   - perl -e "use Test::Base::Filter"
   - perl -e "use Test::Base tests => 1; pass;"
+about:
+  home: https://github.com/ingydotnet/test-base-pm
+  license: perl_5
+  summary: A Data Driven Testing Framework

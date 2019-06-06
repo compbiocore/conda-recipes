@@ -1,7 +1,3 @@
-about:
-  home: https://metacpan.org/pod/Test::Trap
-  license: perl_5
-  summary: Trap exit codes, exceptions, output, etc
 build:
   number: 1
   skip: false
@@ -29,3 +25,7 @@ test:
   imports:
   requires:
   - perl >5.22.0
+about:
+  home: https://metacpan.org/pod/Test::Trap
+  license: perl_5
+  summary: Trap exit codes, exceptions, output, etc

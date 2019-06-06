@@ -1,7 +1,3 @@
-about:
-  home: http://github.com/rjbs/Test-Deep/
-  license: perl_5
-  summary: Extremely flexible deep comparison
 build:
   number: 1
 package:
@@ -18,3 +14,7 @@ source:
   fn: Test-Deep-1.120.tar.gz
   md5: a90859f4f362578d1671e3b9aae0d8c1
   url: https://cpan.metacpan.org/authors/id/R/RJ/RJBS/Test-Deep-1.120.tar.gz
+about:
+  home: http://github.com/rjbs/Test-Deep/
+  license: perl_5
+  summary: Extremely flexible deep comparison

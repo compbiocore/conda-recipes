@@ -1,7 +1,3 @@
-about:
-  home: https://metacpan.org/release/Term-App-Roles
-  license: perl_5
-  summary: Collection of roles for terminal-based application
 package:
   name: perl-term-app-roles
   version: '0.01'
@@ -25,3 +21,7 @@ test:
   commands:
   - perl -e "use Term::App::Role::Attrs"
   - perl -e "use Term::App::Roles"
+about:
+  home: https://metacpan.org/release/Term-App-Roles
+  license: perl_5
+  summary: Collection of roles for terminal-based application

@@ -1,7 +1,3 @@
-about:
-  home: https://github.com/rjbs/Sub-Exporter
-  license: perl_5
-  summary: a sophisticated exporter for custom-built routines
 package:
   name: perl-sub-exporter
   version: '0.987'
@@ -29,3 +25,7 @@ test:
   commands:
   - perl -e "use Sub::Exporter"
   - perl -e "use Sub::Exporter::Util"
+about:
+  home: https://github.com/rjbs/Sub-Exporter
+  license: perl_5
+  summary: a sophisticated exporter for custom-built routines

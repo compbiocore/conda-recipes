@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/Statistics-Basic
-  license: open_source
-  summary: ''
 build:
   number: 1
   skip: true
@@ -35,3 +31,7 @@ test:
   - perl -e "use Statistics::Basic::StdDev"
   - perl -e "use Statistics::Basic::Variance"
   - perl -e "use Statistics::Basic::Vector"
+about:
+  home: http://metacpan.org/pod/Statistics-Basic
+  license: open_source
+  summary: ''

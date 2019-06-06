@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/Test-XML
-  license: perl_5
-  summary: Compare XML in perl tests
 build:
   number: 1
 package:
@@ -30,3 +26,7 @@ source:
   md5: 490b487e07908358eb64a3c3c5b48143
   url: http://cpan.metacpan.org/authors/id/S/SE/SEMANTICO/Test-XML-0.08.tar.gz
 test:
+about:
+  home: http://metacpan.org/pod/Test-XML
+  license: perl_5
+  summary: Compare XML in perl tests

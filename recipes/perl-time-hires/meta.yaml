@@ -1,14 +1,11 @@
 package:
   name: perl-time-hires
   version: '1.9728'
-
 source:
   fn: Time-HiRes-1.9728.tar.gz
   url: https://cpan.metacpan.org/authors/id/R/RJ/RJBS/Time-HiRes-1.9728.tar.gz
-
 build:
   number: 1
-
 requirements:
   build:
     ##- gcc # [linux]
@@ -19,11 +16,9 @@ requirements:
   run:
     ##- libgcc # [linux]
     - perl
-
 test:
   imports:
     - Time::HiRes
-
 about:
   home: https://metacpan.org/pod/Time::HiRes
   license: Perl

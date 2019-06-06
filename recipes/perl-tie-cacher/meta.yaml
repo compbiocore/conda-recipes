@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/Tie::Cacher
-  license: perl_5
-  summary: Cache a (sub)set of key/value pairs. Tie and OO interface.
 build:
   number: 1
 package:
@@ -21,3 +17,7 @@ source:
 test:
   commands:
   - perl -e "use Tie::Cacher"
+about:
+  home: http://metacpan.org/pod/Tie::Cacher
+  license: perl_5
+  summary: Cache a (sub)set of key/value pairs. Tie and OO interface.

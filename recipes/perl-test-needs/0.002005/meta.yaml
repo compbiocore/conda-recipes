@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/Test-Needs
-  license: perl_5
-  summary: Skip tests when modules not available
 build:
   number: 1
 package:
@@ -20,3 +16,7 @@ source:
 test:
   commands:
   - perl -e "use Test::Needs"
+about:
+  home: http://metacpan.org/pod/Test-Needs
+  license: perl_5
+  summary: Skip tests when modules not available

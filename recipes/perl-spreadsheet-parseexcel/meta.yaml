@@ -1,7 +1,3 @@
-about:
-  home: http://github.com/runrig/spreadsheet-parseexcel/
-  license: perl_5
-  summary: Read information from an Excel file.
 build:
   number: 1
 package:
@@ -47,3 +43,7 @@ test:
   - perl -e "use Spreadsheet::ParseExcel::Utility"
   - perl -e "use Spreadsheet::ParseExcel::Workbook"
   - perl -e "use Spreadsheet::ParseExcel::Worksheet"
+about:
+  home: http://github.com/runrig/spreadsheet-parseexcel/
+  license: perl_5
+  summary: Read information from an Excel file.

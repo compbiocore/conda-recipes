@@ -1,7 +1,3 @@
-about:
-  home: https://metacpan.org/pod/Text::Glob
-  license: perl_5
-  summary: match globbing patterns against text
 package:
   name: perl-text-glob
   version: '0.11'
@@ -17,3 +13,7 @@ source:
 test:
   commands:
   - perl -e "use Text::Glob"
+about:
+  home: https://metacpan.org/pod/Text::Glob
+  license: perl_5
+  summary: match globbing patterns against text

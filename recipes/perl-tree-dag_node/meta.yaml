@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/Tree-DAG_Node
-  license: artistic_2
-  summary: An N-ary tree
 build:
   number: 1
 package:
@@ -21,3 +17,7 @@ source:
 test:
   commands:
   - perl -e "use Tree::DAG_Node"
+about:
+  home: http://metacpan.org/pod/Tree-DAG_Node
+  license: artistic_2
+  summary: An N-ary tree

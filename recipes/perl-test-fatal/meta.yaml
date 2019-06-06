@@ -1,15 +1,8 @@
-about:
-  home: https://github.com/rjbs/Test-Fatal
-  license: perl_5
-  summary: incredibly simple helpers for testing code with exceptions
-
 build:
   number: 1
-
 package:
   name: perl-test-fatal
   version: '0.014'
-
 requirements:
   host:
   - perl
@@ -24,3 +17,7 @@ source:
 test:
   imports:
     - Test::Fatal
+about:
+  home: https://github.com/rjbs/Test-Fatal
+  license: perl_5
+  summary: incredibly simple helpers for testing code with exceptions

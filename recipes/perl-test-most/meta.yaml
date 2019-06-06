@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/Test-Most
-  license: unknown
-  summary: Most commonly needed test functions and features
 build:
   number: 1
 package:
@@ -30,3 +26,7 @@ test:
   commands:
   - perl -e "use Test::Most"
   - perl -e "use Test::Most::Exception"
+about:
+  home: http://metacpan.org/pod/Test-Most
+  license: unknown
+  summary: Most commonly needed test functions and features

@@ -1,7 +1,3 @@
-about:
-  home: https://github.com/karenetheridge/Test-Object
-  license: perl_5
-  summary: Thoroughly testing objects via registered handlers
 build:
   number: 1
 package:
@@ -27,3 +23,7 @@ test:
   commands:
   - perl -e "use Test::Object"
   - perl -e "use Test::Object::Test"
+about:
+  home: https://github.com/karenetheridge/Test-Object
+  license: perl_5
+  summary: Thoroughly testing objects via registered handlers

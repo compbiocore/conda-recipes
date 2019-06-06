@@ -1,7 +1,3 @@
-about:
-  home: https://github.com/dagolden/Version-Next
-  license: apache_2_0
-  summary: increment module version numbers simply and correctly
 package:
   name: perl-version-next
   version: '1.000'
@@ -27,3 +23,7 @@ source:
 test:
   commands:
   - perl -e "use Version::Next"
+about:
+  home: https://github.com/dagolden/Version-Next
+  license: apache_2_0
+  summary: increment module version numbers simply and correctly
