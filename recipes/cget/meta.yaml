@@ -17,15 +17,15 @@ build:
 
 requirements:
   host:
-    - click ==6.6
+    - click
     - pip
     - python <3
-    - six >=1.10
+    - six
     - subprocess32
   run:
-    - click ==6.6
+    - click
     - python
-    - six >=1.10
+    - six
     - subprocess32
 
 test:
