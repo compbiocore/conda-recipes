@@ -1,8 +1,3 @@
-about:
-  home: http://deweylab.biostat.wisc.edu/detonate/
-  license: GPLv3
-  summary: DETONATE (DE novo TranscriptOme rNa-seq Assembly with or without the Truth
-    Evaluation) consists of two component packages, RSEM-EVAL and REF-EVAL.
 package:
   name: rsem-eval
   version: 1.9
@@ -24,3 +19,8 @@ source:
 test:
   commands:
   - rsem-eval-calculate-score --version
+about:
+  home: http://deweylab.biostat.wisc.edu/detonate/
+  license: GPLv3
+  summary: DETONATE (DE novo TranscriptOme rNa-seq Assembly with or without the Truth
+    Evaluation) consists of two component packages, RSEM-EVAL and REF-EVAL.

@@ -1,7 +1,3 @@
-about:
-  home: http://github.com/Toblerity/Fiona
-  license: BSD
-  summary: Fiona reads and writes spatial data files
 build:
   entry_points:
   - fio=fiona.fio.main:main_group
@@ -33,3 +29,7 @@ test:
   commands:
   - perl -e "use fiona"
   - perl -e "use fiona.fio"
+about:
+  home: http://github.com/Toblerity/Fiona
+  license: BSD
+  summary: Fiona reads and writes spatial data files

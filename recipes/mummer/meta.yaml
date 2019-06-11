@@ -1,7 +1,3 @@
-about:
-  home: 'http://mummer.sourceforge.net/'
-  license: "The Artistic License"
-  summary: "MUMmer is a system for rapidly aligning entire genomes"
 build:
   number: 1
   skip: False
@@ -26,7 +22,10 @@ test:
     - "nucmer -h &> /dev/null"
     - "promer -h &> /dev/null"
     - "show-aligns -h &> /dev/null"
-
 extra:
   identifiers:
     - biotools:mummer
+about:
+  home: 'http://mummer.sourceforge.net/'
+  license: "The Artistic License"
+  summary: "MUMmer is a system for rapidly aligning entire genomes"

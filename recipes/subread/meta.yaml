@@ -1,11 +1,6 @@
-about:
-    home: http://subread.sourceforge.net/
-    license: GPLv3
-    summary: High-performance read alignment, quantification, and mutation discovery
 package:
     name: subread
     version: 1.5.3
-
 build:
   number: 1
 source:
@@ -17,7 +12,6 @@ source:
     #fn: subread-1.5.3-MacOSX-x86_64.tar.gz                                                              # [osx]
     #url: https://sourceforge.net/projects/subread/files/subread-1.5.3/subread-1.5.3-MacOSX-x86_64.tar.gz # [osx]
     #md5: d1d9d05226484a1df184f7ef6d541ffa # [osx]
-
 requirements:
   build:
     - zlib
@@ -28,3 +22,7 @@ requirements:
 test:
     commands:
         - featureCounts -v 2>&1 > /dev/null
+about:
+    home: http://subread.sourceforge.net/
+    license: GPLv3
+    summary: High-performance read alignment, quantification, and mutation discovery

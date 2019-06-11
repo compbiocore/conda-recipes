@@ -2,10 +2,7 @@
 {% set version = "1.2.28" %}
 {% set md5 = "a589c7b8f3fdb59ec4bb33aa27b44dd3" %}
 
-about:
-  home: http://deweylab.biostat.wisc.edu/rsem/
-  license: GPLv3
-  summary: RSEM (RNA-Seq by Expectation-Maximization)
+
 
 package:
   name: {{ name }} 
@@ -32,3 +29,8 @@ source:
   md5: {{ md5 }} 
   patches:
     - Makefile.patch
+
+about:
+  home: http://deweylab.biostat.wisc.edu/rsem/
+  license: GPLv3
+  summary: RSEM (RNA-Seq by Expectation-Maximization)
