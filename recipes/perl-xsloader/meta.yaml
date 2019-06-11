@@ -1,7 +1,6 @@
 package:
   name: perl-xsloader
   version: "0.16"
-
 source:
   #fn: XSLoader-0.16.tar.gz
   #url: http://cpan.metacpan.org/authors/id/S/SA/SAPER/XSLoader-0.16.tar.gz
@@ -9,17 +8,13 @@ source:
 #  patches:
    # List any patch files here
    # - fix.patch
-
 build:
   number: 1
-
 requirements:
   build:
     - perl
-
   run:
     - perl
-
 test:
   # Perl 'use' tests
   # imports:
@@ -30,12 +25,10 @@ test:
   # requires:
     # Put any additional test requirements here.  For example
     # - nose
-
 about:
   home: https://metacpan.org/module/Math::BigInt
   license: perl_5
   summary: 'Dynamically load C libraries into Perl code'
-
 # See
 # http://docs.continuum.io/conda/build.html for
 # more information about meta.yaml

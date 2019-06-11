@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/XML-Parser-Lite
-  license: perl_5
-  summary: Lightweight pure-perl XML Parser (based on regexps)
 build:
   number: 1
 package:
@@ -20,3 +16,7 @@ source:
 test:
   commands:
   - perl -e "use XML::Parser::Lite"
+about:
+  home: http://metacpan.org/pod/XML-Parser-Lite
+  license: perl_5
+  summary: Lightweight pure-perl XML Parser (based on regexps)

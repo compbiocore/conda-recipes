@@ -1,7 +1,3 @@
-about:
-  home: https://github.com/ingydotnet/yaml-pm
-  license: perl_5
-  summary: "YAML Ain't Markup Language\u2122"
 build:
   number: 1
 package:
@@ -41,3 +37,7 @@ test:
   - perl -e "use YAML::Type::undef"
   - perl -e "use YAML::Types"
   - perl -e "use YAML::Warning"
+about:
+  home: https://github.com/ingydotnet/yaml-pm
+  license: perl_5
+  summary: "YAML Ain't Markup Language\u2122"

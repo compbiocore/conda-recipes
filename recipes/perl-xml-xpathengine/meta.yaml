@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/XML-XPathEngine
-  license: unknown
-  summary: a re-usable XPath engine for DOM-like trees
 build:
   number: 1
 package:
@@ -30,3 +26,7 @@ test:
   # error is: Bareword "XML::XPathEngine::Step::test_nt_node" not allowed while "strict subs" in use
 #  - perl -e "use XML::XPathEngine::Step"
   - perl -e "use XML::XPathEngine::Variable"
+about:
+  home: http://metacpan.org/pod/XML-XPathEngine
+  license: unknown
+  summary: a re-usable XPath engine for DOM-like trees

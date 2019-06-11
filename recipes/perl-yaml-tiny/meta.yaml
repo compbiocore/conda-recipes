@@ -1,7 +1,3 @@
-about:
-  home: http://search.cpan.org/dist/YAML-Tiny/lib/YAML/Tiny.pm
-  license: perl
-  summary: Read/Write YAML files with as little code as possible
 build:
   number: 1
 package:
@@ -19,3 +15,7 @@ source:
 test:
   commands:
   - perl -e "use YAML::Tiny"
+about:
+  home: http://search.cpan.org/dist/YAML-Tiny/lib/YAML/Tiny.pm
+  license: perl
+  summary: Read/Write YAML files with as little code as possible

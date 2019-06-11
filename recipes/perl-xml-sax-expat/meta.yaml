@@ -1,7 +1,3 @@
-about:
-  home: http://metacpan.org/pod/XML-SAX-Expat
-  license: perl_5
-  summary: SAX Driver for Expat
 build:
   number: 1
 package:
@@ -27,3 +23,7 @@ source:
 test:
   commands:
   - perl -e "use XML::SAX::Expat"
+about:
+  home: http://metacpan.org/pod/XML-SAX-Expat
+  license: perl_5
+  summary: SAX Driver for Expat
