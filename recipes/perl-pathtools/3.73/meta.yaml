@@ -1,14 +1,18 @@
 build:
-  number: 1
+  number: 2
 package:
   name: perl-pathtools
   version: 3.73
 requirements:
   build:
+  - {{ compiler('c') }}
+
+  host:
   - perl
   - perl-extutils-makemaker
   - perl-carp
   - perl-test-more
+
   run:
   - perl
   - perl-carp
