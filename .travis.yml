@@ -12,7 +12,7 @@ services:
 
 # set up docker image
 before_install:
-  - docker pull compbiocore/dockerfiles:v1
+  - docker pull compbiocore/cb-3-12-0_gcc-5-4-0
   - docker run --name cbc -it -d compbiocore/dockerfiles:v1 /bin/bash
   - docker exec cbc sh -c 'cd /home/conda; git clone --branch=devel-gcc-5.4.0 https://github.com/compbiocore/conda-recipes.git'
 
