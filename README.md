@@ -4,7 +4,7 @@ This is the conda recipe repository for the [Computational Biology Core (CBC)](h
 
 # Build system
 
-The build system for all the recipes is CentOS 6 with conda build 3. A Docker image of our build system is on [Dockerhub](https://hub.docker.com/r/compbiocore/dockerfiles/) if needed.
+The build system for all the recipes is CentOS 7 with conda build 3 and GCC 8.2.0. A Docker image of our build system is on [Dockerhub](https://hub.docker.com/r/compbiocore/dockerfiles/) if needed.
 
 # Build command
 
