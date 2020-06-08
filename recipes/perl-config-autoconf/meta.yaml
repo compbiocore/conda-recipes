@@ -9,7 +9,6 @@ package:
   version: '0.311'
 requirements:
   build:
-  - gcc
   - perl-capture-tiny
   - perl
   run:

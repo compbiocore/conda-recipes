@@ -9,7 +9,6 @@ source:
   git_url: https://github.com/Boussau/PHYLDOG.git
 requirements:
   build:
-    - gcc
     - boost
     - bpp-phyl
     - cmake=3.11.0

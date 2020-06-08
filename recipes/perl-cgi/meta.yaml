@@ -9,7 +9,6 @@ package:
   version: '4.22'
 requirements:
   build:
-  - gcc
   - perl-app-cpanminus
   - perl-module-build
   - perl

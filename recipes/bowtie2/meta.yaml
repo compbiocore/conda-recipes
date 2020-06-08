@@ -17,7 +17,6 @@ source:
 
 requirements:
   build:
-    - gcc   # [linux]
     - llvm  # [osx]
     - python
     - tbb

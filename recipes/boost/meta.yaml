@@ -11,7 +11,6 @@ build:
 requirements:
   build:
     - python
-    - gcc 
     - bzip2 
     - icu
     - zlib 

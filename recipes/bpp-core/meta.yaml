@@ -16,7 +16,6 @@ source:
 
 requirements:
   build:
-  - gcc # [not osx]
   - llvm # [osx]
   - cmake
 

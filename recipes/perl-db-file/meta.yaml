@@ -9,7 +9,6 @@ package:
   version: 1.835
 requirements:
   build:
-  - gcc
   - libdb
   - perl
   run:

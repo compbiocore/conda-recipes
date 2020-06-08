@@ -23,7 +23,6 @@ build:
 
 requirements:
   build:
-    - gcc >=5.4.0 
     - pkg-config
     - mkl
     - bzip2 
@@ -41,7 +40,6 @@ requirements:
     - tk 
     - zlib
   run:
-    - gcc >=5.4.0
     - mkl
     - bzip2
     - cairo 

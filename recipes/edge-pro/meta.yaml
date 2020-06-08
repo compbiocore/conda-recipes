@@ -19,7 +19,6 @@ source:
 
 requirements:
   build:
-    - gcc  # [not osx]
   run:
     - bowtie2 
     - libgcc # [not osx]

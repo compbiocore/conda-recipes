@@ -7,7 +7,6 @@ package:
   version: '0.006'
 requirements:
   build:
-  - gcc
   - llvm
   - perl-test-simple
   - perl-test-exception

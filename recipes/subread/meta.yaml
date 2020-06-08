@@ -21,10 +21,8 @@ source:
 requirements:
   build:
     - zlib
-    - gcc
   run:
     - zlib
-    - gcc
 test:
     commands:
         - featureCounts -v 2>&1 > /dev/null

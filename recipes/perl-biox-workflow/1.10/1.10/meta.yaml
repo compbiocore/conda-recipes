@@ -7,7 +7,6 @@ package:
   version: '0.10'
 requirements:
   build:
-  - gcc
   - llvm
   - perl-app-cpanminus
   - perl-pathtools

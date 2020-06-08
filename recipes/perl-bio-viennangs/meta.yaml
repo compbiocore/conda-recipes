@@ -31,7 +31,6 @@ requirements:
     - perl-app-cpanminus
     - libgcc # [linux]
     - llvm # [osx]
-    - gcc # [linux]
 
   run:
     - bedtools >=2.24

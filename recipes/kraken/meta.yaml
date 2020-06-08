@@ -24,7 +24,6 @@ build:
 requirements:
   build:
     - perl
-    - gcc 
 
   run:
     - jellyfish #1.*

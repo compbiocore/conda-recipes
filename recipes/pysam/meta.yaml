@@ -16,7 +16,6 @@ requirements:
     - python
     - cython
     - pip
-    - gcc
     - xz
     - zlib
     - bzip2

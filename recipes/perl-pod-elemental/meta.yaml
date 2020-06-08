@@ -9,7 +9,6 @@ package:
   version: '0.103004'
 requirements:
   build:
-  - gcc
   - llvm
   - perl
   - perl-app-cpanminus

@@ -13,7 +13,6 @@ build:
 
 requirements:
   build:
-    - gcc
     - bison
     - flex
   run:

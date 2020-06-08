@@ -12,7 +12,6 @@ build:
 
 requirements:
   build:
-    - gcc
     - pkg-config
     - libgtextutils
   run:

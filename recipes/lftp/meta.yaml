@@ -29,7 +29,6 @@ requirements:
     - {{native}}openssl
     - expat
     - zlib 
-    - gcc 5.4.0 
 
   run:
     - {{native}}openssl

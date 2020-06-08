@@ -16,7 +16,6 @@ package:
   version: {{ version }}
 requirements:
   build:
-  - gcc  # [not osx]
   - bzip2
   - curl
   - xz

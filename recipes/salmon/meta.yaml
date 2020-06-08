@@ -22,7 +22,6 @@ source:
 
 requirements:
   build:
-    - gcc #==4.8.5 # [linux]
     - libgcc #==4.8.5# [linux]
     - autoconf 
     - boost

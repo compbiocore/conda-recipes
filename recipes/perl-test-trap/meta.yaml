@@ -10,7 +10,6 @@ package:
   version: 0.3.2
 requirements:
   build:
-  - gcc
   - perl >5.22.0
   - perl-data-dump
   - perl-test-simple

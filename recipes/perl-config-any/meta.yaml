@@ -10,7 +10,6 @@ package:
 requirements:
   build:
   - toolchain
-  - gcc
   - llvm
   - perl
   - perl-app-cpanminus

@@ -11,7 +11,6 @@ package:
   version: 1.11.1
 requirements:
   build:
-  - gcc
   - perl-app-cpanminus
   - perl-file-sharedir-install
   - perl-module-build

@@ -9,7 +9,6 @@ package:
   version: '6.15'
 requirements:
   build:
-  - gcc
   - perl-app-cpanminus
   - perl-encode-locale
   - perl-module-build

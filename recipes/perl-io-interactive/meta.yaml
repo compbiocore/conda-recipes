@@ -10,7 +10,6 @@ package:
   version: '1.021'
 requirements:
   build:
-  - gcc
   - llvm
   - perl-app-cpanminus
   - perl-pathtools

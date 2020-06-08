@@ -18,7 +18,6 @@ extra:
 
 requirements:
   build:
-    - gcc # [not osx]
     - perl 
     - libxml2
   run:
