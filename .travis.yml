@@ -2,6 +2,7 @@ language: generic
 branches:
   only:
     - devel-gcc-5.4.0
+    - devel-gcc-8.2.0
 os:
   - linux
 github_token: $GH_TOKEN
